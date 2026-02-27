@@ -715,6 +715,9 @@ class DRAuditOrchestrator:
 
         # YELLOW with low confidence → iterate
         confidence = parsed_report.get("classification", {}).get("confidence", 1.0)
+		if confidence is None:
+            return False
+
         if confidence < 0.3:
             return True
 
