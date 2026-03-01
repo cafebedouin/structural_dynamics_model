@@ -54,6 +54,7 @@ import re
 import subprocess
 import sys
 import time
+from collections import Counter
 from pathlib import Path
 
 # --- Path Setup ---
@@ -139,6 +140,64 @@ def _compact_types(perspectives):
         if t and t not in type_to_ctx:
             type_to_ctx[t] = ctx
     return ", ".join(f"{t} ({ctx})" for t, ctx in type_to_ctx.items())
+
+
+def _explain_h1_band(h1, perspectives):
+    """Dynamic H^1 band explanation using observer perspective data."""
+    if h1 is None:
+        return "unknown"
+    if not perspectives or not isinstance(perspectives, dict):
+        # Fallback to static labels when perspectives unavailable
+        static = {0: "gauge-invariant (all observers agree)",
+                  1: "minimal fracture", 2: "moderate fracture",
+                  3: "power-scaling driven", 4: "hub-conflict driven",
+                  5: "high fracture", 6: "maximally fractured"}
+        return static.get(h1, "unknown")
+
+    observers = ["powerless", "moderate", "institutional", "analytical"]
+    obs_types = {o: perspectives.get(o) for o in observers if perspectives.get(o)}
+
+    if h1 == 0:
+        return "All observers agree. Neither hub produces classification divergence."
+
+    if h1 == 3 and len(obs_types) >= 4:
+        type_counts = Counter(obs_types.values())
+        majority_type = type_counts.most_common(1)[0][0]
+        dissenters = [o for o, t in obs_types.items() if t != majority_type]
+        agreers = [o for o, t in obs_types.items() if t == majority_type]
+        if len(dissenters) == 1:
+            return (f"Hub 1 (power-scaled extraction) drives a 3+1 split: "
+                    f"{dissenters[0]} sees {obs_types[dissenters[0]]} while "
+                    f"{', '.join(agreers)} see {majority_type}.")
+
+    if h1 == 4 and len(obs_types) >= 4:
+        type_counts = Counter(obs_types.values())
+        if len(type_counts) == 2:
+            types = list(type_counts.keys())
+            bloc_a = [o for o, t in obs_types.items() if t == types[0]]
+            bloc_b = [o for o, t in obs_types.items() if t == types[1]]
+            return (f"Hub 2 (effective immutability) drives a 2+2 split: "
+                    f"{', '.join(bloc_a)} see {types[0]}; "
+                    f"{', '.join(bloc_b)} see {types[1]}.")
+
+    if h1 == 5 and len(obs_types) >= 4:
+        type_counts = Counter(obs_types.values())
+        parts = []
+        for t, count in type_counts.most_common():
+            who = [o for o, ot in obs_types.items() if ot == t]
+            parts.append(f"{', '.join(who)} → {t}")
+        return f"Both hubs contribute — 3 types across 4 observers: {'; '.join(parts)}."
+
+    if h1 == 6 and len(obs_types) >= 4:
+        parts = [f"{o} → {t}" for o, t in obs_types.items()]
+        return f"Maximally fractured — all 4 observers disagree: {'; '.join(parts)}."
+
+    # Fallback for edge cases (h1=1,2, or insufficient observer data)
+    static = {0: "gauge-invariant (all observers agree)",
+              1: "minimal fracture", 2: "moderate fracture",
+              3: "power-scaling driven", 4: "hub-conflict driven",
+              5: "high fracture", 6: "maximally fractured"}
+    return static.get(h1, "unknown")
 
 
 def find_constraint_entry(pipeline_data, constraint_id):
@@ -537,11 +596,9 @@ def build_level2_convergence(constraint_id, pipeline_data):
     # H^1 band (cohomological obstruction)
     h1 = entry.get("h1_band")
     if h1 is not None:
-        h1_desc = {0: "gauge-invariant (all observers agree)",
-                   1: "minimal fracture", 2: "moderate fracture",
-                   3: "power-scaling driven", 4: "hub-conflict driven",
-                   5: "high fracture", 6: "maximally fractured"}
-        lines.append(f"    H^1 band:         {h1} — {h1_desc.get(h1, 'unknown')}")
+        perspectives = entry.get("perspectives", {})
+        h1_explanation = _explain_h1_band(h1, perspectives)
+        lines.append(f"    H^1 band:         {h1} — {h1_explanation}")
 
     return "\n".join(lines)
 
@@ -877,6 +934,57 @@ def build_structural_section(constraint_id, corpus_data, pattern_text, covering_
     return "\n".join(lines)
 
 
+# --- Trigger Glosses ---
+
+_TRIGGER_GLOSSES = {
+    "signature_override_artifact": (
+        "Metric disagreement explained by a known signature override "
+        "— architectural artifact, not a genuine anomaly."),
+    "deep_deception": (
+        "Claims naturality but fails Boltzmann, yet metrics predict mountain "
+        "— metrically deep deception."),
+    "metric_structural_divergence": (
+        "MaxEnt sees ambiguity (high entropy) but Dirac orbit is unambiguous "
+        "— metric uncertainty without structural uncertainty."),
+    "confirmed_liminal": (
+        "Triple confirmation of genuine liminality: high entropy, "
+        "multi-type orbit, and active drift."),
+    "coverage_gap": (
+        "Multi-type orbit detected but dr_mismatch didn't flag it "
+        "— known diagnostic blind spot at analytical context."),
+    "accelerating_pathology": (
+        "FPN zone migration plus purity drift — static contamination "
+        "AND temporal degradation both active."),
+    "contamination_cascade": (
+        "FPN equilibrium divergence plus network drift — contamination "
+        "actively propagating, not just latent."),
+    "dormant_extraction": (
+        "Metrically clean appearance but extractive structural fingerprint "
+        "— hidden or naturalized extraction."),
+    "maxent_shadow_divergence": (
+        "MaxEnt strongly favors a type different from signature override "
+        "target — override may mask metric-preferred classification."),
+    "convergent_structural_stress": (
+        "3+ stress indicators converge with a rare anomaly signal "
+        "— metrically confident but structurally stressed."),
+    "snare_leaning_tangled": (
+        "Classified tangled_rope but snare-lean ratio exceeds threshold "
+        "— behaves more like snare than classification suggests."),
+    "maxent_divergence": (
+        "Indexed and classical MaxEnt disagree: observer-dependence has "
+        "probabilistic consequences beyond categorical shifts (Theorem 4)."),
+    "hub_conflict": (
+        "Hub 1 and Hub 2 produce conflicting classification signals "
+        "at this constraint."),
+    "epistemic_trap": (
+        "Powerless observer's restricted classification diverges from "
+        "full-data view — trapped in gauge-fixed frame."),
+    "classical_oracle_failure": (
+        "MaxEnt is confident but H^1>0: looking carefully from one position "
+        "misses what comparing across positions reveals (Theorem 4)."),
+}
+
+
 # --- Section F: ABDUCTIVE FLAGS ---
 
 def build_abductive_section(constraint_id, pipeline_data):
@@ -899,14 +1007,15 @@ def build_abductive_section(constraint_id, pipeline_data):
 
     lines.append(f"  **{len(triggers)} trigger(s) fired:**")
     lines.append("")
-    lines.append("  | Trigger Class | Confidence | Anomaly | Category |")
-    lines.append("  |---|---|---|---|")
+    lines.append("  | Trigger Class | Confidence | Anomaly | Category | Interpretation |")
+    lines.append("  |---|---|---|---|---|")
     for t in sorted(triggers, key=lambda x: x.get("confidence", 0), reverse=True):
         tc = t.get("trigger_class", "—")
         conf = t.get("confidence", 0)
         anom = t.get("anomaly_type", "—")
         cat = t.get("category", "—")
-        lines.append(f"  | {tc} | {conf:.2f} | {anom} | {cat} |")
+        gloss = _TRIGGER_GLOSSES.get(tc, "—")
+        lines.append(f"  | {tc} | {conf:.2f} | {anom} | {cat} | {gloss} |")
 
     return "\n".join(lines)
 
@@ -996,6 +1105,143 @@ def build_level2_verdict_body(constraint_id, pipeline_data):
             lines.append(f"    {sub}: {signal}")
     else:
         lines.append("  Tensions: none")
+
+    return "\n".join(lines)
+
+
+# --- Theorem Instantiation ---
+
+_THEOREM_TEXTS = {
+    "T1": (
+        "T1 (Cover Story): At least one observer sees this constraint as "
+        "benign (rope/tangled_rope) while another sees it as extractive "
+        "(snare). The constraint functions as a cover story — its apparent "
+        "type depends on observer position."
+    ),
+    "T2": (
+        "T2 (Discrete Blocs): H^1 >= 3 means observer classifications "
+        "cluster into discrete blocs that cannot be smoothly deformed into "
+        "each other. The constraint lives in a topologically non-trivial "
+        "region of the classification sheaf."
+    ),
+    "T3": (
+        "T3 (Spectral Dominance): The institutional observer's classification "
+        "diverges from the majority of other observers. The power-scaled "
+        "extraction metric (chi) produces a qualitatively different result "
+        "at the institutional index — the spectrum is dominated by a single "
+        "observer position."
+    ),
+    "T4_positive": (
+        "T4 (Oracle Gap): A classical oracle (single-position MaxEnt) is "
+        "confident, but cross-position comparison (H^1 > 0) reveals "
+        "structure invisible from any single vantage point. Looking carefully "
+        "from one position misses what comparing across positions reveals."
+    ),
+    "T5_compliant": (
+        "T5 (Functor Axiom — satisfied): Classification across index "
+        "dimensions factors through a single Boltzmann distribution. "
+        "The constraint's type assignments are thermodynamically consistent "
+        "— no hidden coupling between observer positions."
+    ),
+    "T5_non_compliant": (
+        "T5 (Functor Axiom — violated): Classification does NOT factor "
+        "through a single Boltzmann distribution. Observer positions are "
+        "thermodynamically coupled — the constraint's type depends on which "
+        "observers you condition on, not just their individual measurements."
+    ),
+    "T6_hub1": (
+        "T6 (Hub Correspondence — Hub 1): H^1 = 3 maps to Hub 1 "
+        "(power-scaled extraction). A single observer's chi-value diverges "
+        "from the other three, producing a 3+1 classification split."
+    ),
+    "T6_hub2": (
+        "T6 (Hub Correspondence — Hub 2): H^1 = 4 maps to Hub 2 "
+        "(effective immutability). Two pairs of observers disagree, producing "
+        "a 2+2 classification split driven by the immutability axis."
+    ),
+    "T6_both": (
+        "T6 (Hub Correspondence — Both Hubs): H^1 >= 5 means both Hub 1 "
+        "(power-scaled extraction) and Hub 2 (effective immutability) "
+        "contribute to classification fracture. Three or more distinct types "
+        "appear across observers."
+    ),
+}
+
+
+def build_theorem_instantiation(constraint_id, pipeline_data, orbit_data):
+    """Theorem instantiation section — maps diagnostics to formal theorems."""
+    lines = ["", "--- THEOREM INSTANTIATION ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  Not yet in batch — run full pipeline to include.")
+        return "\n".join(lines)
+
+    active_theorems = []
+
+    perspectives = entry.get("perspectives", {})
+    h1 = entry.get("h1_band")
+    triggers = entry.get("abductive_triggers", [])
+    coupling = entry.get("coupling", {})
+    boltzmann = coupling.get("boltzmann") if isinstance(coupling, dict) else None
+
+    # T1 (Cover Story): any observer sees rope/tangled_rope AND another sees snare
+    if perspectives:
+        types_seen = set(perspectives.values())
+        benign = types_seen & {"rope", "tangled_rope"}
+        extractive = types_seen & {"snare"}
+        if benign and extractive:
+            active_theorems.append(_THEOREM_TEXTS["T1"])
+
+    # T2 (Discrete Blocs): h1_band in {3, 4, 5, 6}
+    if h1 is not None and h1 >= 3:
+        active_theorems.append(_THEOREM_TEXTS["T2"])
+
+    # T3 (Spectral Dominance): institutional != majority of other 3
+    if perspectives:
+        inst_type = perspectives.get("institutional")
+        others = [perspectives.get(o) for o in ["powerless", "moderate", "analytical"]
+                  if perspectives.get(o)]
+        if inst_type and len(others) >= 3:
+            other_counts = Counter(others)
+            majority_type = other_counts.most_common(1)[0][0]
+            if inst_type != majority_type:
+                active_theorems.append(_THEOREM_TEXTS["T3"])
+
+    # T4 (Oracle Gap): triggers contain maxent_divergence or classical_oracle_failure
+    trigger_classes = {t.get("trigger_class") for t in triggers}
+    if trigger_classes & {"maxent_divergence", "classical_oracle_failure"}:
+        active_theorems.append(_THEOREM_TEXTS["T4_positive"])
+
+    # T5 (Functor Axiom): boltzmann compliant or non_compliant
+    if boltzmann == "compliant":
+        active_theorems.append(_THEOREM_TEXTS["T5_compliant"])
+    elif boltzmann == "non_compliant":
+        active_theorems.append(_THEOREM_TEXTS["T5_non_compliant"])
+
+    # T6 (Hub Correspondence): H^1=3→Hub1, H^1=4→Hub2, H^1>=5→Both
+    if h1 == 3:
+        active_theorems.append(_THEOREM_TEXTS["T6_hub1"])
+    elif h1 == 4:
+        active_theorems.append(_THEOREM_TEXTS["T6_hub2"])
+    elif h1 is not None and h1 >= 5:
+        active_theorems.append(_THEOREM_TEXTS["T6_both"])
+
+    if not active_theorems:
+        lines.append("  No theorems active at this constraint.")
+        return "\n".join(lines)
+
+    for i, text in enumerate(active_theorems):
+        lines.append(f"  {text}")
+        if i < len(active_theorems) - 1:
+            lines.append("")
+
+    lines.append("")
+    lines.append(f"  **{len(active_theorems)} of 6 theorems active.**")
 
     return "\n".join(lines)
 
@@ -1109,8 +1355,17 @@ def generate_report(constraint_id, data, iteration_round=None):
     # Level 2: Diagnostic Convergence
     l2_convergence = build_level2_convergence(constraint_id, data["pipeline"])
     l2_maxent = build_maxent_section(constraint_id, data["pipeline"])
+    # NOTE: Indexed-mode MaxEnt (chi-scaled per observer) probabilities are not
+    # available in enriched_pipeline.json. Would require new Prolog queries to
+    # expose per-index MaxEnt distributions. (Gap analysis Change 5)
     l2_abductive = build_abductive_section(constraint_id, data["pipeline"])
     l2_verdict = build_level2_verdict_body(constraint_id, data["pipeline"])
+    l2_theorems = build_theorem_instantiation(
+        constraint_id, data["pipeline"], data["orbit"]
+    )
+    # NOTE: FPN neighbor topology / contamination network paths are not available
+    # in the Python data layer. Would require new Prolog queries to expose
+    # fpn_neighbor/3 and contamination propagation data. (Gap analysis Change 4)
 
     # Level 3: Corpus Positioning
     l3_distribution = build_level3_distribution(
@@ -1128,7 +1383,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_abductive, l2_verdict,
+        l2_convergence, l2_maxent, l2_abductive, l2_verdict, l2_theorems,
         build_level_header(3, "CORPUS POSITIONING"),
         l3_distribution, l3_structural,
     ]

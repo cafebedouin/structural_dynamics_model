@@ -540,8 +540,10 @@ write_coupling_object(S, C) :-
 %% boltzmann_label(+Result, -Label)
 %  Normalize boltzmann compliance term to a simple atom.
 boltzmann_label(compliant, compliant) :- !.
+boltzmann_label(compliant(_), compliant) :- !.
 boltzmann_label(non_compliant, non_compliant) :- !.
 boltzmann_label(non_compliant(_), non_compliant) :- !.
+boltzmann_label(non_compliant(_, _), non_compliant) :- !.
 boltzmann_label(inconclusive(_), inconclusive) :- !.
 boltzmann_label(inconclusive, inconclusive) :- !.
 boltzmann_label(_, unknown).
