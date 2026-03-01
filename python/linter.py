@@ -717,3 +717,39 @@ def lint_file(filepath):
             )
 
     return errors
+
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print(f"Usage: {sys.argv[0]} <file_or_dir> [...]", file=sys.stderr)
+        sys.exit(2)
+
+    paths = []
+    for arg in sys.argv[1:]:
+        if os.path.isdir(arg):
+            for root, _dirs, files in os.walk(arg):
+                for f in sorted(files):
+                    if f.endswith('.pl'):
+                        paths.append(os.path.join(root, f))
+        elif os.path.isfile(arg):
+            paths.append(arg)
+        else:
+            print(f"Warning: {arg} not found, skipping", file=sys.stderr)
+
+    total_errors = 0
+    error_counts = {}
+    for filepath in paths:
+        errors = lint_file(filepath)
+        total_errors += len(errors)
+        for e in errors:
+            code = e.split(":")[0]
+            error_counts[code] = error_counts.get(code, 0) + 1
+
+    print(f"\nFiles checked: {len(paths)}")
+    print(f"Total errors:  {total_errors}")
+    if error_counts:
+        print("\nBreakdown by error code:")
+        for code, count in sorted(error_counts.items(), key=lambda x: -x[1]):
+            print(f"  {code}: {count}")
+
+    sys.exit(1 if total_errors else 0)
