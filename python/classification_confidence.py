@@ -367,8 +367,6 @@ def generate_report(all_metrics, override_data, constraints, dists_override, dis
         for cid, od in override_data.items():
             if not od:
                 continue
-            sig = all_metrics_by_id.get(cid, {}).get("signature") or "none" if 'all_metrics_by_id' in dir() else "unknown"
-            # Use constraints dict instead
             sig = constraints.get(cid, {}).get("signature") or "none"
             so = sig_override[sig]
             so["total"] += 1

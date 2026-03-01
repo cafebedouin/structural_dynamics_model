@@ -781,6 +781,8 @@ def main():
     )
     args = parser.parse_args()
 
+    # parser.error exits if neither flag given, so constraints is always bound
+    constraints = None
     if args.mvp:
         constraints = MVP_CONSTRAINTS
     elif args.constraints:

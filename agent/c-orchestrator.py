@@ -1129,7 +1129,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Run SCOPE only, print manifest")
     args = parser.parse_args()
 
-    # Resolve topic
+    # Resolve topic (parser.error exits if no source, so topic is always bound)
+    topic = None
     if args.topic:
         topic = args.topic
     elif args.input_file:
