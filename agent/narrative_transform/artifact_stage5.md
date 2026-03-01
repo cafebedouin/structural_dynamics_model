@@ -23,7 +23,7 @@ STEP 1 — THE ENGINE (logic only):
   Output: A state machine / hook / module that is UGLY but CORRECT.
   No UI. No aesthetics. Just working constraint physics.
   
-  UCZ smoke test: Run dispatch('adjustC1', 0.9) 5x.
+  UCZ smoke test: Call constraintReducer(state, {type: 'adjustC1', value: 0.9}) 5x.
   Stochastic UCZ must produce ≥2 different outcomes.
   If all 5 identical → UCZ is secretly deterministic. Fix before Step 2.
 
@@ -50,28 +50,48 @@ STEP 3 — THE BINDING (integration):
 
 The Engine, Viewports, and Binding steps are generated in separate passes. To prevent incompatible outputs, each step must fulfill a contract:
 
-```javascript
+```typescript
 // STEP 1 ENGINE must export:
-export function getState(): CanonicalState;       // Current state per 3.2 schema
-export function dispatch(action: string, payload: object): void;  // Modify state
-export function subscribe(callback: (state) => void): () => void; // Listen for changes
-export function tick(dt: number): void;            // Advance time (if temporal UCZs)
+
+// State type — plain object, never a class instance
+type CanonicalState = {
+  constraints: Record<string, ConstraintState>;
+  transformationRules: Record<string, TransformationRuleState>;
+  couplings: Record<string, CouplingState>;
+  system: SystemState;
+};
+
+// Pure initial state factory
+function createInitialState(): CanonicalState;
+
+// Pure reducer — returns new state, never mutates
+function constraintReducer(state: CanonicalState, action: Action): CanonicalState;
+
+// Pure index derivation — no side effects, no subscriptions
+function deriveIndexView(state: CanonicalState, index: IndexPosition): IndexView;
+
+// Pure coupling propagation — called inside reducer, not externally
+function propagateCouplings(state: CanonicalState): CanonicalState;
+
+// Temporal advancement (if needed) — also pure, called via dispatch
+function advanceTime(state: CanonicalState, dt: number): CanonicalState;
 
 // STEP 2 VIEWPORTS must:
-// - Accept getState() return value as sole data source
-// - Call dispatch() for all user actions (never modify state directly)
-// - Call subscribe() to re-render on state changes
+// - Accept state as props (passed from parent), NOT call getState()
+// - Emit actions via dispatch (from useReducer), NOT modify state
+// - Re-render via React's own state mechanism, NOT manual subscribe()
 // - Export one component per index position
 
 // STEP 3 BINDING must:
-// - Import Engine and all Viewport components
-// - Wire subscribe → re-render
-// - Wire user events → dispatch
+// - Use useReducer(constraintReducer, createInitialState())
+// - Pass state + dispatch to Viewport components as props
 // - Implement index switching (including hysteresis flag setting)
 // - Be the ONLY place where Engine and Viewports are aware of each other
 ```
 
-**Between-step validation:** Before proceeding from Step 1 to Step 2, the human operator verifies the Engine exports the required API. Before Step 3, verify Viewports call the Engine interface, not internal state.
+**DO NOT use a mutable class with subscribe/notifyListeners.** The observer pattern causes double-render bugs when dispatch() and tick() both call notifyListeners(). React's useReducer provides the subscription mechanism — use it.
+
+**Between-step validation:** Before proceeding from Step 1 to Step 2, the human operator verifies the Engine exports pure functions matching the contract above. Before Step 3, verify Viewports receive state as props, not via external getState() calls.
 
 **Why this works:** Each step has a single focus. The model doesn't have to hold aesthetics and logic simultaneously. The human operator can review each step and catch drift before it compounds.
 

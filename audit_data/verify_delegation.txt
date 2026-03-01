@@ -1,0 +1,50 @@
+prolog/boltzmann_compliance.pl:233:%  Computes metrics and delegates to drl_core:classify_from_metrics/6
+prolog/boltzmann_compliance.pl:253:    drl_core:classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type).
+prolog/covering_analysis.pl:501:            drl_core:classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type0),
+prolog/data_validation.pl:242:%  and delegates to drl_core:classify_from_metrics/6 (Single Source of Truth).
+prolog/data_validation.pl:248:        drl_core:classify_from_metrics(C, Extr, Chi, Supp, Context, Type)
+prolog/drl_composition.pl:169:% Delegates to drl_core:classify_from_metrics/6 (Single Source of Truth)
+prolog/drl_composition.pl:176:    drl_core:classify_from_metrics(C, BaseX, Chi, Supp, Context, Type).
+prolog/drl_core.pl:59:    classify_from_metrics/6,        % classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type)
+prolog/drl_core.pl:112:% Type-Specific Tests (Indexed) — delegate to classify_from_metrics/6
+prolog/drl_core.pl:114:% Each is_X/3 computes metrics and calls classify_from_metrics with Type bound.
+prolog/drl_core.pl:122:    classify_from_metrics(C, BaseEps, Chi, Supp, Context, mountain), !.
+prolog/drl_core.pl:129:    classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare), !.
+prolog/drl_core.pl:136:    classify_from_metrics(C, BaseEps, Chi, Supp, Context, scaffold), !.
+prolog/drl_core.pl:143:    classify_from_metrics(C, BaseEps, Chi, Supp, Context, rope), !.
+prolog/drl_core.pl:150:    classify_from_metrics(C, BaseEps, Chi, Supp, Context, tangled_rope), !.
+prolog/drl_core.pl:157:    classify_from_metrics(C, BaseEps, Chi, Supp, Context, piton), !.
+prolog/drl_core.pl:164:% classify_from_metrics(+C, +BaseEps, +Chi, +Supp, +Context, -Type)
+prolog/drl_core.pl:300:classify_from_metrics(C, BaseEps, _Chi, Supp, Context, mountain) :-
+prolog/drl_core.pl:314:classify_from_metrics(C, BaseEps, _Chi, _Supp, _Context, piton) :-
+prolog/drl_core.pl:323:classify_from_metrics(C, BaseEps, Chi, Supp, Context, snare) :-
+prolog/drl_core.pl:333:classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
+prolog/drl_core.pl:341:classify_from_metrics(C, BaseEps, Chi, _Supp, Context, rope) :-
+prolog/drl_core.pl:352:classify_from_metrics(C, BaseEps, Chi, Supp, _Context, tangled_rope) :-
+prolog/drl_core.pl:366:classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
+prolog/drl_core.pl:379:classify_from_metrics(_C, BaseEps, Chi, _Supp, _Context, naturalized) :-
+prolog/drl_core.pl:385:classify_from_metrics(_C, _BaseEps, _Chi, _Supp, _Context, unknown).
+prolog/drl_core.pl:419:% Delegates to classify_from_metrics/6 (Single Source of Truth).
+prolog/drl_core.pl:425:    classify_from_metrics(C, BaseEps, Chi, Supp, Context, Type).
+prolog/drl_core.pl:538:% go unchallenged from lower-power positions.  See classify_from_metrics/6.
+prolog/gap_diagnostic.pl:485:gate_description(Gate, 'See classify_from_metrics/6') :- format(atom(_), '~w', [Gate]).
+prolog/gap_diagnostic.pl:715:        format('`classify_from_metrics/6` should handle the low-chi, high-epsilon region '),
+prolog/gap_diagnostic.pl:727:        format('Also investigate whether `classify_from_metrics/6` needs additional '),
+prolog/gap_diagnostic.pl:735:        format('region. Investigate whether `classify_from_metrics/6` needs a new classification '),
+prolog/genuine_findings_query.pl:80:        (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, mountain) -> format('MATCHES_MOUNTAIN: true~n') ; format('MATCHES_MOUNTAIN: false~n')),
+prolog/genuine_findings_query.pl:81:        (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, snare) -> format('MATCHES_SNARE: true~n') ; format('MATCHES_SNARE: false~n')),
+prolog/genuine_findings_query.pl:82:        (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, scaffold) -> format('MATCHES_SCAFFOLD: true~n') ; format('MATCHES_SCAFFOLD: false~n')),
+prolog/genuine_findings_query.pl:83:        (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, rope) -> format('MATCHES_ROPE: true~n') ; format('MATCHES_ROPE: false~n')),
+prolog/genuine_findings_query.pl:84:        (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, tangled_rope) -> format('MATCHES_TANGLED_ROPE: true~n') ; format('MATCHES_TANGLED_ROPE: false~n')),
+prolog/genuine_findings_query.pl:85:        (drl_core:classify_from_metrics(C, BE2, Chi2, Supp2, Context, piton) -> format('MATCHES_PITON: true~n') ; format('MATCHES_PITON: false~n')),
+prolog/global_delta_report.pl:95:        (drl_core:classify_from_metrics(C, BaseEps, Chi_actual, Supp, Ctx, Type_actual_raw)
+prolog/global_delta_report.pl:97:        (drl_core:classify_from_metrics(C, BaseEps, Chi_canonical, Supp, Ctx, Type_canonical_raw)
+prolog/invertibility_analysis.pl:417:    drl_core:classify_from_metrics(C, BaseEps, Chi1, Supp, SrcCtx, Type1),
+prolog/invertibility_analysis.pl:418:    drl_core:classify_from_metrics(C, BaseEps, Chi2, Supp, TgtCtx, Type2),
+prolog/invertibility_analysis.pl:472:    drl_core:classify_from_metrics(C, BaseEps, Chi1, Supp, SrcCtx, MetricType1),
+prolog/invertibility_analysis.pl:473:    drl_core:classify_from_metrics(C, BaseEps, Chi2, Supp, TgtCtx, MetricType2),
+prolog/logical_fingerprint.pl:347:% with classify_from_metrics/6.
+prolog/maxent_classifier.pl:5:% classify_from_metrics/6 cascade. Produces probability distributions,
+prolog/omega1_audit.pl:448:            drl_core:classify_from_metrics(C, BaseEps, Chi, Supp, Ctx, MetricType),
+prolog/omega1_audit.pl:531:    ->  format('PASS (all ~w unknowns confirmed via classify_from_metrics/6)~n', [NU])
+prolog/transition_paths.pl:131:    drl_core:classify_from_metrics(C, E, Chi, S, Context, Type).

@@ -1,0 +1,22 @@
+agent/app.py:15:if "GEMINI_API_KEY" in st.secrets:
+agent/app.py:16:    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
+agent/app.py:17:elif "GOOGLE_API_KEY" in st.secrets:
+agent/app.py:18:    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+agent/c-app.py:15:if "ANTHROPIC_API_KEY" in st.secrets:
+agent/c-app.py:16:    os.environ["ANTHROPIC_API_KEY"] = st.secrets["ANTHROPIC_API_KEY"]
+agent/c-orchestrator.py:83:        _anthropic_client = anthropic.Anthropic()   # reads ANTHROPIC_API_KEY from env
+agent/story_generator_base.py:58:DEFAULT_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-pro")
+agent/story_generator_base.py:91:        api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+agent/story_generator_base.py:92:        if api_key:
+agent/story_generator_base.py:93:            _client = genai.Client(api_key=api_key)
+agent/uke_narrative_orchestrator.py:276:            api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+agent/uke_narrative_orchestrator.py:277:            if api_key:
+agent/uke_narrative_orchestrator.py:278:                self._client = genai.Client(api_key=api_key)
+agent/uke_narrative_orchestrator.py:338:    if os.environ.get("ANTHROPIC_API_KEY"):
+agent/uke_narrative_orchestrator.py:341:        _log.warning("ANTHROPIC_API_KEY not set — Claude stages will fail")
+agent/uke_narrative_orchestrator.py:343:    if os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY"):
+agent/uke_narrative_orchestrator.py:346:        _log.warning("GOOGLE_API_KEY/GEMINI_API_KEY not set — stage 0 will fail")
+python/regenerate_stories.py:216:        api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+python/regenerate_stories.py:217:        if not api_key:
+python/regenerate_stories.py:219:                "Set GOOGLE_API_KEY or GEMINI_API_KEY environment variable."
+python/regenerate_stories.py:222:        self.client = genai.Client(api_key=api_key)

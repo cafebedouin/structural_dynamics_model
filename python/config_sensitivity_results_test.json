@@ -1,0 +1,44 @@
+{
+  "baseline_pass": 1151,
+  "baseline_fail": 0,
+  "summary": [
+    {
+      "param": "sigmoid_midpoint",
+      "original": 0.5,
+      "pm10_failures": 0,
+      "pm25_failures": 0,
+      "rating": "Inert"
+    }
+  ],
+  "raw_results": {
+    "sigmoid_midpoint": {
+      "original": 0.5,
+      "perturbations": {
+        "+10%": {
+          "perturbed": 0.55,
+          "pass_count": 1151,
+          "fail_count": 0,
+          "error": null
+        },
+        "-10%": {
+          "perturbed": 0.45,
+          "pass_count": 1151,
+          "fail_count": 0,
+          "error": null
+        },
+        "+25%": {
+          "perturbed": 0.625,
+          "pass_count": 1151,
+          "fail_count": 0,
+          "error": null
+        },
+        "-25%": {
+          "perturbed": 0.375,
+          "pass_count": 1151,
+          "fail_count": 0,
+          "error": null
+        }
+      }
+    }
+  }
+}

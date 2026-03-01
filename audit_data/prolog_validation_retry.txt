@@ -1,0 +1,100 @@
+  │  4. Update constraint_metric/3 declarations with data
+  │  5. Re-run classification to resolve perspectival gap
+  └─
+
+  ┌─ [omega_extraction_blindness_zombie_reasoning_2026] CONCEPTUAL CLARIFICATION
+  │  Constraint: zombie_reasoning_2026
+  │  Gap: Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  │
+  │  CRITICAL: Extraction Masking Detected
+  │  Powerless see: SNARE (extractive trap)
+  │  Institutions see: ROPE (functional rule)
+  │
+  │  RESOLUTION STRATEGY:
+  │  1. Interview affected individuals (N=10+):
+  │     - Who benefits from zombie_reasoning_2026?
+  │     - Can you change/exit this constraint?
+  │     - What would happen if you tried?
+  │  2. Interview institutional actors (N=10+):
+  │     - What function does zombie_reasoning_2026 serve?
+  │     - Who would object to removing it?
+  │     - What alternatives exist?
+  │  3. Document benefit flows:
+  │     - Track who gains vs. who loses from status quo
+  │     - Measure asymmetric benefit distribution
+  │  4. Decision tree:
+  │     IF extraction confirmed → Reclassify as SNARE
+  │     IF functional & fair → Reclassify as ROPE
+  │     IF context-dependent → Add indexical resolution
+  └─
+
+====================================================
+[PASS] testsets/zombie_reasoning_2026.pl
+
+### START LLM REFINEMENT MANIFEST: zombie_reasoning_2026 ###
+
+[PERSPECTIVAL_GAPS]
+  - Constraint "zombie_reasoning_2026": Individual sees snare, but Institution sees rope.
+
+[ONTOLOGICAL_MISMATCHES]
+  - None detected.
+
+[UNRESOLVED_OMEGAS]
+  - downstream_harm_quantification (empirical): Quantification of downstream costs from terminology confusion
+  - omega_extraction_blindness_zombie_reasoning_2026 (conceptual): Constraint zombie_reasoning_2026 appears extractive (Snare) to individuals but functional (Rope) to institutions...
+  - reasoning_definition_boundary (empirical): Whether reasoning and pattern-matching have a definable boundary
+  - terminology_correction_feasibility (empirical): Whether precise terminology is technically feasible
+  - vendor_intent_disambiguation (empirical): Whether terminology imprecision is intentional or due to confusion
+
+### END REFINEMENT MANIFEST ###
+[ELAPSED] testsets/zombie_reasoning_2026.pl: 0.009s
+
+==================================================
+           TEST SUITE SUMMARY
+==================================================
+Passed: 910
+Failed: 0
+==================================================
+
+====================================================
+   DATA VALIDATION SUITE                           
+====================================================
+
+Running validation checks...
+
+[CHECK 1: Constraint Completeness]
+  Checking 1 constraints...
+  ✓ All constraints complete
+
+[CHECK 2: Metric Range Validation]
+  Checking 3 metrics...
+  ✓ All metrics in valid range
+
+[CHECK 3: Classification Consistency]
+  Checking 1 constraints for consistency...
+  ✓ All classifications consistent with metrics
+
+[CHECK 4: Edge Case Detection]
+  ✓ No mandatrophies detected
+  ✓ No pitons detected
+  ✓ No extreme values
+
+[CHECK 5: Domain Coverage]
+  Found 1 domain categories
+    - mountain: 1 constraint(s)
+
+  ⚠ Underrepresented categories (<3 constraints):
+    - mountain
+
+====================================================
+   VALIDATION SUMMARY                              
+====================================================
+
+Results:
+  Errors:   0
+  Warnings: 0
+  Info:     1
+
+✓ DATA QUALITY: EXCELLENT - No issues detected
+
+====================================================

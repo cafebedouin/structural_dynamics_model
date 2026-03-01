@@ -1,0 +1,103 @@
+Parsed 11 power_role_heuristic/4 clauses
+Parsed 6 exit_modulation/2 clauses
+Total constants: 17
+Total perturbation runs: 68
+
+Running baseline suite...
+Baseline: 910 passed, 0 failed
+
+  [1/68] prh_powerless___true +25% → 0 new failures
+  [2/68] prh_powerless___true -10% → 0 new failures
+  [3/68] prh_powerless___true +10% → 0 new failures
+  [4/68] prh_powerless___true -25% → 0 new failures
+  [5/68] prh_powerless___false -10% → 0 new failures
+  [6/68] prh_powerless___false +10% → 0 new failures
+  [7/68] prh_powerless___false -25% → 0 new failures
+  [8/68] prh_powerless___false +25% → 0 new failures
+  [9/68] prh_moderate___true -10% → 0 new failures
+  [10/68] prh_moderate___true +10% → 0 new failures
+  [11/68] prh_moderate___true +25% → 0 new failures
+  [12/68] prh_moderate___true -25% → 0 new failures
+  [13/68] prh_moderate___false +10% → 0 new failures
+  [14/68] prh_moderate___false -10% → 0 new failures
+  [15/68] prh_moderate___false +25% → 0 new failures
+  [16/68] prh_moderate___false -25% → 0 new failures
+  [17/68] prh_powerful___true +10% → 0 new failures
+  [18/68] prh_powerful___true -10% → 0 new failures
+  [19/68] prh_powerful___true +25% → 0 new failures
+  [20/68] prh_powerful___true -25% → 0 new failures
+  [21/68] prh_powerful___false +10% → 0 new failures
+  [22/68] prh_powerful___false -10% → 0 new failures
+  [23/68] prh_powerful___false +25% → 0 new failures
+  [24/68] prh_powerful___false -25% → 0 new failures
+  [25/68] prh_organized___true +10% → 0 new failures
+  [26/68] prh_organized___true +25% → 0 new failures
+  [27/68] prh_organized___true -10% → 0 new failures
+  [28/68] prh_organized___true -25% → 0 new failures
+  [29/68] prh_organized___false +10% → 0 new failures
+  [30/68] prh_organized___false -10% → 0 new failures
+  [31/68] prh_organized___false +25% → 0 new failures
+  [32/68] prh_organized___false -25% → 0 new failures
+  [33/68] prh_institutional_true__ +10% → 0 new failures
+  [34/68] prh_institutional_true__ -10% → 0 new failures
+  [35/68] prh_institutional_true__ +25% → 0 new failures
+  [36/68] prh_institutional_true__ -25% → 0 new failures
+  [37/68] prh_institutional_false__ +10% → 0 new failures
+  [38/68] prh_institutional_false__ +25% → 0 new failures
+  [39/68] prh_institutional_false__ -10% → 0 new failures
+  [40/68] prh_institutional_false__ -25% → 0 new failures
+  [41/68] prh_analytical____ +10% → 0 new failures
+  [42/68] prh_analytical____ -10% → 0 new failures
+  [43/68] prh_analytical____ +25% → 0 new failures
+  [44/68] prh_analytical____ -25% → 0 new failures
+  [45/68] em_trapped +10% → 0 new failures
+  [46/68] em_trapped -10% → 0 new failures
+  [47/68] em_trapped +25% → 0 new failures
+  [48/68] em_trapped -25% → 0 new failures
+  [49/68] em_identity_locked +10% → 0 new failures
+  [50/68] em_identity_locked -10% → 0 new failures
+  [51/68] em_identity_locked +25% → 0 new failures
+  [52/68] em_identity_locked -25% → 0 new failures
+  [53/68] em_constrained +10% → 0 new failures
+  [54/68] em_constrained -10% → 0 new failures
+  [55/68] em_constrained +25% → 0 new failures
+  [56/68] em_constrained -25% → 0 new failures
+  [57/68] em_mobile +10% → 0 new failures
+  [58/68] em_mobile -10% → 0 new failures
+  [59/68] em_mobile +25% → 0 new failures
+  [60/68] em_mobile -25% → 0 new failures
+  [61/68] em_arbitrage +10% → 0 new failures
+  [62/68] em_arbitrage -10% → 0 new failures
+  [63/68] em_arbitrage +25% → 0 new failures
+  [64/68] em_arbitrage -25% → 0 new failures
+  [65/68] em_analytical +10% → 0 new failures
+  [66/68] em_analytical -10% → 0 new failures
+  [67/68] em_analytical +25% → 0 new failures
+  [68/68] em_analytical -25% → 0 new failures
+
+## Directionality Sensitivity Sweep Results
+Baseline: 910 passed, 0 failed
+
+| Constant | Current | ±10% Max Failures | ±25% Max Failures | Rating |
+|---------------------------------------------|---------|-------------------|-------------------|----------|
+| em_analytical                               |     0.0 |                 0 |                 0 | Inert    |
+| em_arbitrage                                |   -0.03 |                 0 |                 0 | Inert    |
+| em_constrained                              |    0.02 |                 0 |                 0 | Inert    |
+| em_identity_locked                          |    0.04 |                 0 |                 0 | Inert    |
+| em_mobile                                   |     0.0 |                 0 |                 0 | Inert    |
+| em_trapped                                  |    0.05 |                 0 |                 0 | Inert    |
+| prh_analytical____                          |    0.72 |                 0 |                 0 | Inert    |
+| prh_institutional_false__                   |     0.1 |                 0 |                 0 | Inert    |
+| prh_institutional_true__                    |    0.15 |                 0 |                 0 | Inert    |
+| prh_moderate___false                        |    0.65 |                 0 |                 0 | Inert    |
+| prh_moderate___true                         |     0.7 |                 0 |                 0 | Inert    |
+| prh_organized___false                       |     0.4 |                 0 |                 0 | Inert    |
+| prh_organized___true                        |    0.45 |                 0 |                 0 | Inert    |
+| prh_powerful___false                        |    0.46 |                 0 |                 0 | Inert    |
+| prh_powerful___true                         |     0.5 |                 0 |                 0 | Inert    |
+| prh_powerless___false                       |     0.9 |                 0 |                 0 | Inert    |
+| prh_powerless___true                        |    0.85 |                 0 |                 0 | Inert    |
+
+**Summary**: 0 Critical, 0 Moderate, 0 Error, 17 Inert (of 17 constants)
+
+Results saved to /home/scott/bin/structural_dynamics_model/python/directionality_sensitivity_results.json

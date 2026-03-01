@@ -1,0 +1,50 @@
+prolog/abductive_helpers.pl:97:fpn_zone(EP, pure)         :- EP >= 0.80, !.
+prolog/abductive_helpers.pl:98:fpn_zone(EP, clean)        :- EP >= 0.60, !.
+prolog/abductive_helpers.pl:99:fpn_zone(EP, contaminated) :- EP >= 0.40, !.
+prolog/abductive_helpers.pl:100:fpn_zone(EP, compromised)  :- EP >= 0.20, !.
+prolog/abductive_helpers.pl:118:    Bonus is min(0.10, N * 0.02),
+prolog/abductive_report.pl:158:        (   PctExplained > 85.0
+prolog/abductive_triggers.pl:102:    compute_confidence(EvidenceLines, 0.85, Confidence),
+prolog/abductive_triggers.pl:153:    compute_confidence(EvidenceLines, 0.70, Confidence),
+prolog/abductive_triggers.pl:208:    compute_confidence(EvidenceLines, 0.65, Confidence),
+prolog/abductive_triggers.pl:264:    compute_confidence(EvidenceLines, 0.75, Confidence),
+prolog/abductive_triggers.pl:317:    compute_confidence(EvidenceLines, 0.60, Confidence),
+prolog/abductive_triggers.pl:380:    compute_confidence(EvidenceLines, 0.75, Confidence),
+prolog/abductive_triggers.pl:496:    RareBonus = 0.05,
+prolog/abductive_triggers.pl:497:    BaseConf is 0.45 + NSignals * 0.06 + RareBonus,
+prolog/abductive_triggers.pl:551:    compute_confidence(EvidenceLines, 0.70, Confidence),
+prolog/abductive_triggers.pl:602:    compute_confidence(EvidenceLines, 0.65, Confidence),
+prolog/abductive_triggers.pl:641:    Coupling > 0.10,
+prolog/abductive_triggers.pl:663:    BaseConf is min(0.70, 0.50 + NVoids * 0.05),
+prolog/abductive_triggers.pl:732:    compute_confidence(EvidenceLines, 0.65, Confidence),
+prolog/abductive_triggers.pl:790:    compute_confidence(EvidenceLines, 0.80, Confidence),
+prolog/abductive_triggers.pl:849:    compute_confidence(EvidenceLines, 0.75, Confidence),
+prolog/abductive_triggers.pl:914:    compute_confidence(EvidenceLines, 0.70, Confidence),
+prolog/abductive_triggers.pl:977:    BaseConf is 0.55 + min(0.15, H1 * 0.03),
+prolog/boltzmann_compliance.pl:41:   BOLTZMANN COMPLIANCE ENGINE v5.0
+prolog/boltzmann_compliance.pl:59:   resolve_modal_signature_conflict (v5.1).
+prolog/boltzmann_compliance.pl:509:    ->  (   Excess =< 0.01
+prolog/config_validation.pl:158:    Diff > 0.0001,
+prolog/config_validation.pl:179:    assertz(config:param(boltzmann_coupling_threshold, 1.5)),
+prolog/config_validation.pl:189:    assertz(config:param(dependency_coupling_threshold, -0.1)),
+prolog/config_validation.pl:209:    assertz(config:param(purity_action_sound_floor, 0.10)),
+prolog/config_validation.pl:221:    assertz(config:param(excess_factor_floor, 0.9)),
+prolog/config_validation.pl:259:    assertz(config:param(sigmoid_lower, 2.0)),
+prolog/constraint_indexing.pl:313:power_role_heuristic(powerless,     _, true,  0.85).
+prolog/constraint_indexing.pl:314:power_role_heuristic(powerless,     _, false, 0.90).
+prolog/constraint_indexing.pl:315:power_role_heuristic(moderate,      _, true,  0.70).
+prolog/constraint_indexing.pl:316:power_role_heuristic(moderate,      _, false, 0.65).
+prolog/constraint_indexing.pl:317:power_role_heuristic(powerful,      _, true,  0.50).
+prolog/constraint_indexing.pl:318:power_role_heuristic(powerful,      _, false, 0.46).
+prolog/constraint_indexing.pl:319:power_role_heuristic(organized,     _, true,  0.45).
+prolog/constraint_indexing.pl:320:power_role_heuristic(organized,     _, false, 0.40).
+prolog/constraint_indexing.pl:321:power_role_heuristic(institutional, true, _,  0.15).
+prolog/constraint_indexing.pl:322:power_role_heuristic(institutional, false, _, 0.10).
+prolog/constraint_indexing.pl:323:power_role_heuristic(analytical,    _, _,     0.72).
+prolog/constraint_indexing.pl:329:exit_modulation(trapped,         0.05).
+prolog/constraint_indexing.pl:330:exit_modulation(identity_locked, 0.04).
+prolog/constraint_indexing.pl:331:exit_modulation(constrained,     0.02).
+prolog/constraint_indexing.pl:332:exit_modulation(mobile,          0.00).
+prolog/constraint_indexing.pl:333:exit_modulation(arbitrage,      -0.03).
+prolog/constraint_indexing.pl:334:exit_modulation(analytical,      0.00).
+prolog/constraint_indexing.pl:746:    Supp =< 0.05, Eps =< 0.25, !.

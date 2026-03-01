@@ -1,0 +1,24 @@
+Warning: /home/scott/bin/structural_dynamics_model/prolog/drl_core.pl:69:
+Warning:    Local definition of drl_core:base_extractiveness/2 overrides weak import from constraint_data
+Warning: /home/scott/bin/structural_dynamics_model/prolog/drl_core.pl:69:
+Warning:    Local definition of drl_core:suppression_score/2 overrides weak import from constraint_data
+--- STARTING DYNAMIC VALIDATION ---
+
+[1] EXECUTING: testsets/absorbing_markov_chains.pl
+
+[SCENARIO MANAGER] Clearing Knowledge Base...
+[OK] Knowledge Base is empty.
+[SCENARIO MANAGER] Loading: testsets/absorbing_markov_chains.pl...
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/absorbing_markov_chains.pl:205:
+Warning:    Clauses of constraint_absorbing_markov_chains:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/structural_dynamics_model/prolog/testsets/absorbing_markov_chains.pl:195
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_absorbing_markov_chains:omega_variable/5. to suppress this message
+Warning: /home/scott/bin/structural_dynamics_model/prolog/testsets/absorbing_markov_chains.pl:215:
+Warning:    Clauses of constraint_absorbing_markov_chains:omega_variable/5 are not together in the source-file
+Warning:    Earlier definition at /home/scott/bin/structural_dynamics_model/prolog/testsets/absorbing_markov_chains.pl:195
+Warning:    Current predicate: narrative_ontology:omega_variable/3
+Warning:    Use :- discontiguous constraint_absorbing_markov_chains:omega_variable/5. to suppress this message
+[SCENARIO MANAGER] Performing Global Repair...
+[FAIL] Exception for testsets/absorbing_markov_chains.pl: error(existence_error(procedure,data_repair:repair_interval/1),context(prolog_stack([frame(24,call(data_repair:repair_interval/1),data_repair:repair_interval(absorbing_markov_chains)),frame(23,pred_line(forall/2,/usr/lib/swi-prolog/boot/apply.pl:52),forall(narrative_ontology:interval(absorbing_markov_chains,0,2),data_repair:repair_interval(absorbing_markov_chains))),frame(22,pred_line(scenario_manager:load_and_run/2,/home/scott/bin/structural_dynamics_model/prolog/scenario_manager.pl:109),scenario_manager:load_and_run(testsets/absorbing_markov_chains.pl,absorbing_markov_chains)),frame(21,foreign(system: <meta-call> / 1),<meta-call>(validation_suite:(...;...))),frame(20,pred_line(catch/3,/usr/lib/swi-prolog/boot/init.pl:565),catch(validation_suite:(...;...),error(existence_error(procedure,...),context(...,_688)),validation_suite:(...,...))),frame(19,pred_line(catch_with_backtrace/3,/usr/lib/swi-prolog/boot/init.pl:645),catch_with_backtrace(validation_suite:(...;...),error(existence_error(procedure,...),context(...,_764)),validation_suite:(...,...)))]),_440))
+ERROR: -g ['validation_suite'], run_dynamic_suite, halt: false
