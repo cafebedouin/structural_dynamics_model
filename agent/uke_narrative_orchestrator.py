@@ -549,6 +549,11 @@ class UKEOrchestrator:
             self.skip_engine = True
             return
 
+        # gen_prompt, schema, and example are loaded for availability checks
+        # (if any is missing, engine is disabled). The actual prompt assembly
+        # delegates to story_generator_base.build_prompt() which loads its own copies.
+        # These loaded protocols are also the injection point if narrative-derived
+        # constraint stories ever need different prompts than analytical ones.
         protocol_files = {
             "uke_scope":  _REPO_ROOT / "prompts" / "uke_scope_v2_json.md",
             "gen_prompt": _REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md",
@@ -1263,6 +1268,14 @@ class UKEOrchestrator:
             cached_reports = self._load_stage_output("constraint_reports")
             if cached_reports:
                 result.stage_outputs["constraint_reports"] = cached_reports
+
+            # Also restore scope_manifest for summary output
+            manifest_path = self.output_dir / "scope_manifest.json"
+            if manifest_path.exists():
+                try:
+                    result.scope_manifest = json.loads(manifest_path.read_text())
+                except Exception:
+                    pass
 
         # ── Stage 0: Constraint Logic Extraction (Gemini) ─────────────
         if start_idx <= 0:

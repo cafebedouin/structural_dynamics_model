@@ -1,3 +1,4 @@
+# ARCHIVED: Superseded by uke_narrative_orchestrator.py (constraint engine integration)
 """UKE Pipeline — Gemini + Claude orchestrator with air-gap enforcement.
 
 Two modes:
