@@ -30,6 +30,8 @@
 :- use_module(grothendieck_cohomology).
 :- use_module(diagnostic_summary).
 :- use_module(post_synthesis).
+:- use_module(drl_fpn, [fpn_ep/3, fpn_intrinsic/2]).
+:- use_module(drl_purity_network, [constraint_neighbors/3]).
 
 :- use_module(library(lists)).
 :- use_module(library(http/json)).
@@ -56,6 +58,10 @@ run_json_report :-
     constraint_indexing:default_context(MaxEntCtx),
     maxent_classifier:maxent_precompute(Constraints, MaxEntCtx),
     format(user_error, '[json] MaxEnt precompute done.~n', []),
+
+    % Run indexed MaxEnt (uses power-scaled χ; requires priors from precompute)
+    catch(maxent_classifier:maxent_indexed_run(MaxEntCtx, _IndexedSummary), _, true),
+    format(user_error, '[json] MaxEnt indexed run done.~n', []),
 
     % Run FPN if enabled (provides fpn_ep/3 state for diagnostic_summary probes)
     (   config:param(fpn_enabled, 1)
@@ -264,6 +270,11 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     write_json_string(S, PBand),
     format(S, ',~n', []),
 
+    % contamination_network (FPN topology)
+    format(S, '      "contamination_network": ', []),
+    write_contamination_network(S, C, MaxEntCtx),
+    format(S, ',~n', []),
+
     % coupling
     format(S, '      "coupling": ', []),
     write_coupling_object(S, C),
@@ -355,6 +366,16 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     % maxent_top_type (shadow classifier's top pick)
     write_maxent_top_type_field(S, C, MaxEntCtx),
 
+    % maxent_indexed (indexed-mode distribution using power-scaled χ)
+    format(S, '      "maxent_indexed": ', []),
+    write_maxent_indexed(S, C, MaxEntCtx),
+    format(S, ',~n', []),
+
+    % maxent_divergence (classical vs indexed TV distance)
+    format(S, '      "maxent_divergence": ', []),
+    write_maxent_divergence(S, C, MaxEntCtx),
+    format(S, ',~n', []),
+
     % h1_band (cohomological obstruction — perspectival fracture measure)
     (   catch(grothendieck_cohomology:cohomological_obstruction(C, _H0, H1), _, fail)
     ->  format(S, '      "h1_band": ~w,~n', [H1])
@@ -440,6 +461,80 @@ write_maxent_top_type_field(S, C, Ctx) :-
         write_json_string(S, TopType),
         format(S, ',~n', [])
     ;   format(S, '      "maxent_top_type": null,~n', [])
+    ).
+
+/* ================================================================
+   INDEXED MAXENT + DIVERGENCE
+   ================================================================ */
+
+%% write_maxent_indexed(+Stream, +Constraint, +Context)
+%  Writes the indexed-mode MaxEnt distribution object (power-scaled χ).
+write_maxent_indexed(S, C, Ctx) :-
+    (   maxent_classifier:maxent_indexed_distribution(C, Ctx, Dist)
+    ->  % Compute normalized entropy inline (shannon_entropy not exported)
+        foldl(idx_entropy_acc, Dist, 0.0, RawH),
+        HMax is log(6),
+        (HMax > 0 -> HNorm is RawH / HMax ; HNorm = 0.0),
+        % Find top type by probability
+        msort_by_prob_desc(Dist, [TopType-TopProb|_]),
+        format(S, '{~n', []),
+        format(S, '        "context": "analytical",~n', []),
+        format(S, '        "distribution": {', []),
+        write_maxent_dist_entries(S, Dist),
+        format(S, '},~n', []),
+        format(S, '        "entropy": ', []),
+        write_json_number(S, HNorm),
+        format(S, ',~n', []),
+        format(S, '        "top_type": ', []),
+        write_json_string(S, TopType),
+        format(S, ',~n', []),
+        format(S, '        "top_prob": ', []),
+        write_json_number(S, TopProb),
+        format(S, '~n', []),
+        format(S, '      }', [])
+    ;   format(S, 'null', [])
+    ).
+
+idx_entropy_acc(_Type-P, Acc, NewAcc) :-
+    (   P > 1.0e-15
+    ->  NewAcc is Acc - P * log(P)
+    ;   NewAcc = Acc
+    ).
+
+msort_by_prob_desc(Dist, Sorted) :-
+    maplist(flip_pair, Dist, Flipped),
+    msort(Flipped, SortedAsc),
+    reverse(SortedAsc, SortedDesc),
+    maplist(flip_pair, SortedDesc, Sorted).
+
+flip_pair(A-B, B-A).
+
+%% write_maxent_divergence(+Stream, +Constraint, +Context)
+%  Writes the total variation distance between classical and indexed MaxEnt.
+write_maxent_divergence(S, C, Ctx) :-
+    (   maxent_classifier:maxent_classical_vs_indexed(C, Ctx, Classical, Indexed)
+    ->  % Total variation distance: TV = 0.5 × Σ|P(x) - Q(x)|
+        findall(AbsDiff, (
+            member(T-PC, Classical),
+            member(T-PI, Indexed),
+            AbsDiff is abs(PC - PI)
+        ), Diffs),
+        sum_list(Diffs, SumDiffs),
+        TV is SumDiffs / 2.0,
+        % Interpretation thresholds
+        (   TV < 0.01 -> Interp = near_zero
+        ;   TV =< 0.10 -> Interp = moderate
+        ;   Interp = large
+        ),
+        format(S, '{~n', []),
+        format(S, '        "total_variation": ', []),
+        write_json_number(S, TV),
+        format(S, ',~n', []),
+        format(S, '        "interpretation": ', []),
+        write_json_string(S, Interp),
+        format(S, '~n', []),
+        format(S, '      }', [])
+    ;   format(S, 'null', [])
     ).
 
 /* ================================================================
@@ -547,6 +642,99 @@ boltzmann_label(non_compliant(_, _), non_compliant) :- !.
 boltzmann_label(inconclusive(_), inconclusive) :- !.
 boltzmann_label(inconclusive, inconclusive) :- !.
 boltzmann_label(_, unknown).
+
+/* ================================================================
+   CONTAMINATION NETWORK (FPN TOPOLOGY)
+   ================================================================ */
+
+%% write_contamination_network(+Stream, +Constraint, +Context)
+%  Writes the contamination_network JSON object: intrinsic/effective purity,
+%  propagation delta, and neighbor list with edge metadata.
+write_contamination_network(S, C, Context) :-
+    % Intrinsic purity: prefer FPN cache, fall back to purity_score/2
+    (   catch(fpn_intrinsic(C, IP0), _, fail), IP0 \= -1.0
+    ->  IP = IP0
+    ;   (   catch(purity_scoring:purity_score(C, IP1), _, fail), IP1 \= -1.0
+        ->  IP = IP1
+        ;   IP = null
+        )
+    ),
+    % Effective purity: from FPN iteration state
+    (   catch(fpn_ep(C, Context, EP0), _, fail), EP0 \= -1.0
+    ->  EP = EP0
+    ;   EP = IP   % no FPN or no data → effective = intrinsic
+    ),
+    % Delta = effective - intrinsic (negative = contaminated)
+    (   IP \= null, EP \= null
+    ->  Delta is EP - IP
+    ;   Delta = null
+    ),
+    % Neighbors
+    (   catch(constraint_neighbors(C, Context, Neighbors), _, fail)
+    ->  true
+    ;   Neighbors = []
+    ),
+    % Write JSON object
+    format(S, '{~n', []),
+    format(S, '        "intrinsic_purity": ', []),
+    write_json_number(S, IP),
+    format(S, ',~n', []),
+    format(S, '        "effective_purity": ', []),
+    write_json_number(S, EP),
+    format(S, ',~n', []),
+    format(S, '        "propagation_delta": ', []),
+    write_json_number(S, Delta),
+    format(S, ',~n', []),
+    format(S, '        "neighbors": ', []),
+    write_neighbor_array(S, Neighbors, Context),
+    format(S, '~n', []),
+    format(S, '      }', []).
+
+%% write_neighbor_array(+Stream, +Neighbors, +Context)
+%  Writes JSON array of neighbor objects.
+write_neighbor_array(S, [], _) :- !, format(S, '[]', []).
+write_neighbor_array(S, Neighbors, Context) :-
+    format(S, '[~n', []),
+    write_neighbor_items(S, Neighbors, Context),
+    format(S, '~n        ]', []).
+
+%% write_neighbor_items(+Stream, +Neighbors, +Context)
+%  Writes neighbor objects. Last item has no trailing comma.
+write_neighbor_items(_, [], _).
+write_neighbor_items(S, [neighbor(Other, Str, Src)], Ctx) :-
+    !, write_one_neighbor(S, Other, Str, Src, Ctx).
+write_neighbor_items(S, [neighbor(Other, Str, Src)|Rest], Ctx) :-
+    write_one_neighbor(S, Other, Str, Src, Ctx),
+    format(S, ',~n', []),
+    write_neighbor_items(S, Rest, Ctx).
+
+%% write_one_neighbor(+Stream, +Other, +Strength, +Source, +Context)
+%  Writes a single neighbor JSON object with purity and type.
+write_one_neighbor(S, Other, Strength, Source, Context) :-
+    % Neighbor's purity (effective if FPN ran, else intrinsic)
+    (   catch(fpn_ep(Other, Context, NP0), _, fail), NP0 \= -1.0
+    ->  NP = NP0
+    ;   (   catch(purity_scoring:purity_score(Other, NP1), _, fail), NP1 \= -1.0
+        ->  NP = NP1
+        ;   NP = null
+        )
+    ),
+    % Neighbor's classification type
+    (   catch(drl_core:dr_type(Other, Context, NType), _, fail)
+    ->  true
+    ;   NType = null
+    ),
+    format(S, '          {"constraint_id": ', []),
+    write_json_string(S, Other),
+    format(S, ', "edge_type": ', []),
+    write_json_string(S, Source),
+    format(S, ', "edge_strength": ', []),
+    write_json_number(S, Strength),
+    format(S, ', "neighbor_purity": ', []),
+    write_json_number(S, NP),
+    format(S, ', "neighbor_type": ', []),
+    write_json_string(S, NType),
+    format(S, '}', []).
 
 /* ================================================================
    OMEGAS

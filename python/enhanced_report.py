@@ -555,6 +555,100 @@ def build_level1_identity(constraint_id, pipeline_data, prolog_output):
     return "\n".join(lines)
 
 
+# --- Level 1 (cont): CONTAMINATION NETWORK (FPN topology) ---
+
+
+def build_contamination_network(constraint_id, pipeline_data):
+    """L1: FPN contamination topology — intrinsic vs effective purity
+    and neighbor network."""
+    lines = ["", "--- CONTAMINATION NETWORK ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  [constraint not in batch]")
+        return "\n".join(lines)
+
+    cn = entry.get("contamination_network")
+    if cn is None:
+        # Graceful fallback for older pipeline output
+        lines.append("  No contamination network — purity is intrinsic.")
+        return "\n".join(lines)
+
+    ip = cn.get("intrinsic_purity")
+    ep = cn.get("effective_purity")
+    delta = cn.get("propagation_delta")
+    neighbors = cn.get("neighbors", [])
+
+    # Purity comparison
+    if ip is not None and ep is not None:
+        lines.append(f"    Intrinsic purity:   {ip:.4f}")
+        lines.append(f"    Effective purity:   {ep:.4f}")
+        if delta is not None:
+            lines.append(f"    Propagation delta:  {delta:+.4f}")
+    else:
+        lines.append("    Purity metrics:     N/A")
+
+    # Neighbor table
+    if not neighbors:
+        lines.append("")
+        lines.append("  No contamination network — purity is intrinsic.")
+    else:
+        lines.append("")
+        lines.append(f"    Network neighbors ({len(neighbors)}):")
+        lines.append("")
+        lines.append("    | Neighbor | Type | Edge | Strength | Purity |")
+        lines.append("    |----------|------|------|----------|--------|")
+        for n in neighbors:
+            nid = n.get("constraint_id", "?")
+            ntype = n.get("neighbor_type") or "?"
+            etype = n.get("edge_type") or "?"
+            strength = n.get("edge_strength")
+            npurity = n.get("neighbor_purity")
+            s_str = f"{strength:.2f}" if strength is not None else "N/A"
+            p_str = f"{npurity:.4f}" if npurity is not None else "N/A"
+            lines.append(
+                f"    | {nid} | {ntype} | {etype} | {s_str} | {p_str} |"
+            )
+
+        # One-sentence interpretation
+        lines.append("")
+        if delta is not None and delta < -0.0001:
+            ranked = sorted(
+                [n for n in neighbors if n.get("neighbor_purity") is not None],
+                key=lambda n: n["neighbor_purity"],
+            )
+            if ranked:
+                worst = ranked[0]
+                lines.append(
+                    f"  Purity degraded from {ip:.4f} to {ep:.4f} "
+                    f"by contamination from {len(neighbors)} neighbor(s), "
+                    f"primarily {worst['constraint_id']} "
+                    f"({worst.get('edge_type', '?')}, "
+                    f"purity {worst['neighbor_purity']:.4f})."
+                )
+            else:
+                lines.append(
+                    f"  Purity degraded from {ip:.4f} to {ep:.4f} "
+                    f"by contamination from {len(neighbors)} neighbor(s)."
+                )
+        elif delta is not None and delta > 0.0001:
+            lines.append(
+                f"  Purity improved from {ip:.4f} to {ep:.4f} — "
+                f"cleaned by {len(neighbors)} neighbor(s)."
+            )
+        else:
+            lines.append(
+                f"  No significant contamination — "
+                f"purity unchanged across {len(neighbors)} neighbor(s)."
+            )
+
+    return "\n".join(lines)
+
+
 # --- Level 2: CLASSIFICATION CONVERGENCE (from old Section A L2 fields) ---
 
 def build_level2_convergence(constraint_id, pipeline_data):
@@ -798,6 +892,57 @@ def build_maxent_section(constraint_id, pipeline_data):
         dist_parts = [f"{t}: {p:.3f}" for t, p in sorted_probs if p > 0]
         if dist_parts:
             lines.append(f"  Distribution:  {', '.join(dist_parts)}")
+
+    # --- Indexed-mode MaxEnt (power-scaled χ) ---
+    indexed = entry.get("maxent_indexed")
+    divergence = entry.get("maxent_divergence")
+
+    if indexed is not None:
+        idx_dist = indexed.get("distribution", {})
+        idx_entropy = indexed.get("entropy")
+        idx_top = indexed.get("top_type")
+        idx_top_p = indexed.get("top_prob")
+
+        lines.append("")
+        lines.append("  Indexed MaxEnt (\u03c7-scaled, analytical context):")
+        if idx_top and idx_top_p is not None:
+            lines.append(f"  Top Type:      {idx_top} (P={idx_top_p:.4f})")
+        if idx_entropy is not None:
+            lines.append(f"  Entropy:       {idx_entropy:.4f}")
+        if idx_dist:
+            sorted_idx = sorted(idx_dist.items(), key=lambda x: -x[1])[:3]
+            idx_parts = [f"{t}: {p:.3f}" for t, p in sorted_idx if p > 0]
+            if idx_parts:
+                lines.append(f"  Distribution:  {', '.join(idx_parts)}")
+
+    if divergence is not None:
+        tv = divergence.get("total_variation")
+        interp = divergence.get("interpretation")
+
+        if tv is not None:
+            lines.append("")
+            lines.append(
+                f"  Classical/Indexed TV Distance: {tv:.4f} ({interp})"
+            )
+
+            if interp == "near_zero":
+                lines.append(
+                    "  Classical and indexed MaxEnt agree — observer-dependence "
+                    "does not alter probabilistic classification."
+                )
+            elif interp == "moderate":
+                lines.append(
+                    "  Moderate divergence — observer-dependence shifts "
+                    "probabilistic weights without changing the top "
+                    "classification."
+                )
+            elif interp == "large":
+                lines.append(
+                    "  Significant divergence — observer-dependence changes "
+                    "the probabilistic landscape. Classical Oracle Gap "
+                    "(Theorem 4): single-position analysis misses this "
+                    "structure."
+                )
 
     return "\n".join(lines)
 
@@ -1355,17 +1500,14 @@ def generate_report(constraint_id, data, iteration_round=None):
     # Level 2: Diagnostic Convergence
     l2_convergence = build_level2_convergence(constraint_id, data["pipeline"])
     l2_maxent = build_maxent_section(constraint_id, data["pipeline"])
-    # NOTE: Indexed-mode MaxEnt (chi-scaled per observer) probabilities are not
-    # available in enriched_pipeline.json. Would require new Prolog queries to
-    # expose per-index MaxEnt distributions. (Gap analysis Change 5)
+    # Indexed-mode MaxEnt now embedded in build_maxent_section (Gap analysis Change 5 — resolved)
     l2_abductive = build_abductive_section(constraint_id, data["pipeline"])
     l2_verdict = build_level2_verdict_body(constraint_id, data["pipeline"])
     l2_theorems = build_theorem_instantiation(
         constraint_id, data["pipeline"], data["orbit"]
     )
-    # NOTE: FPN neighbor topology / contamination network paths are not available
-    # in the Python data layer. Would require new Prolog queries to expose
-    # fpn_neighbor/3 and contamination propagation data. (Gap analysis Change 4)
+    # Level 1: FPN contamination topology (Gap analysis Change 4 — resolved)
+    l1_contamination = build_contamination_network(constraint_id, data["pipeline"])
 
     # Level 3: Corpus Positioning
     l3_distribution = build_level3_distribution(
@@ -1381,7 +1523,7 @@ def generate_report(constraint_id, data, iteration_round=None):
     sections = [
         banner,
         build_level_header(1, "SELF-CONSISTENCY"),
-        l1_identity, l1_orbit, l1_omega,
+        l1_identity, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
         l2_convergence, l2_maxent, l2_abductive, l2_verdict, l2_theorems,
         build_level_header(3, "CORPUS POSITIONING"),

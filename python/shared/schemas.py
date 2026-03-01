@@ -68,6 +68,8 @@ class PipelineConstraint:
     domain: str = ""                              # legacy domain classification
     topic_domain: str | None = None               # topic domain; null for some constraints (6/1034)
     maxent_top_type: str = ""                     # argmax of maxent_probs
+    maxent_indexed: dict | None = None            # indexed-mode distribution {context, distribution, entropy, top_type, top_prob}
+    maxent_divergence: dict | None = None         # {total_variation, interpretation}
     h1_band: int = 0                              # cohomological obstruction band [0..6]
 
     # --- Structural objects ---
@@ -85,6 +87,9 @@ class PipelineConstraint:
     beneficiaries: list = field(default_factory=list)  # [str]
     victims: list = field(default_factory=list)     # [str]
     drift_events: list = field(default_factory=list)  # [{type, severity}]
+
+    # --- Contamination network (FPN topology) ---
+    contamination_network: dict = field(default_factory=dict)  # {intrinsic_purity, effective_purity, propagation_delta, neighbors: [...]}
 
     # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
     diagnostic_verdict: dict | None = None        # {verdict, agreements, expected_conflicts, ...}
@@ -162,6 +167,8 @@ PIPELINE_FIELDS = [
     ("raw_maxent_probs",            dict,         False),
     ("maxent_entropy",              (int, float), False),
     ("maxent_top_type",             str,          False),
+    ("maxent_indexed",              dict,         True),   # null when indexed run unavailable
+    ("maxent_divergence",           dict,         True),   # null when either mode missing
     ("h1_band",                     int,          False),
     ("drift_events",                list,         False),
     # --- Nullable: incomplete entries (1-2 constraints) ---
@@ -175,6 +182,8 @@ PIPELINE_FIELDS = [
     ("topic_domain",                str,          True),   # 6/1034 null
     ("resistance",                  (int, float), True),   # always null
     ("resolution_strategy",         str,          True),   # always null (deferred)
+    # --- Contamination network (FPN topology) ---
+    ("contamination_network",       dict,         False),  # {intrinsic_purity, effective_purity, propagation_delta, neighbors}
     # --- Diagnostic verdict (per-constraint subsystem synthesis) ---
     ("diagnostic_verdict",          dict,         True),   # null if diagnostic_summary fails
     # --- Post-synthesis divergence flags (T12) ---

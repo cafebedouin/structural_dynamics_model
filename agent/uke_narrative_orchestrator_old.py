@@ -3,7 +3,6 @@
 Two modes:
   - narrative: Stage 0 (Gemini) → Stages 1-5 (Claude)
     Story translation preserving constraint topology.
-    NEW: Constraint story generation + Prolog engine between Stages 1 and 2.
   - artifact: Stage 0 (Gemini) → Stages 1-6 (Claude)
     Software artifact generation from constraint topology.
 
@@ -18,18 +17,12 @@ Usage:
     # Artifact mode
     python3 uke_narrative_orchestrator.py --mode artifact narrative_transform/originals/eighty_yard_run.md
     python3 uke_narrative_orchestrator.py --mode artifact --dry-run story.txt
-
-    # Skip constraint engine (fall back to original pipeline)
-    python3 uke_narrative_orchestrator.py --skip-engine originals/story.md
 """
 
 import argparse
-import json
 import logging
 import os
 import re
-import subprocess
-import sys
 import time
 from dataclasses import dataclass, field
 from functools import lru_cache
@@ -49,59 +42,6 @@ ORIGINALS_DIR = NARRATIVE_TRANSFORM_DIR / "originals"
 STORIES_DIR = NARRATIVE_TRANSFORM_DIR / "stories"
 ARTIFACTS_DIR = NARRATIVE_TRANSFORM_DIR / "artifacts"
 LOGIC_NARRATIVE_PATH = NARRATIVE_TRANSFORM_DIR / "logic_narrative_v4.1.md"
-
-
-# ---------------------------------------------------------------------------
-# DR engine integration (optional — degrades gracefully if unavailable)
-# ---------------------------------------------------------------------------
-
-_DR_ENGINE_AVAILABLE = False
-_REPO_ROOT = None
-
-def _init_dr_engine():
-    """Attempt to import the DR constraint story infrastructure.
-
-    Returns True if the Prolog engine pipeline is available.
-    """
-    global _DR_ENGINE_AVAILABLE, _REPO_ROOT
-
-    # The agent/ directory sits one level below the DR repo root
-    candidate_root = Path(__file__).resolve().parent.parent
-    pipeline_script = candidate_root / "python" / "run_pipeline.py"
-    report_script = candidate_root / "python" / "enhanced_report.py"
-
-    if pipeline_script.exists() and report_script.exists():
-        if str(candidate_root) not in sys.path:
-            sys.path.insert(0, str(candidate_root))
-        try:
-            from agent.story_generator_base import (
-                process_response,
-                save_story,
-                strip_json_fences,
-                build_prompt,
-                _SYSTEM_INSTRUCTION,
-                REPO_ROOT,
-            )
-            _REPO_ROOT = REPO_ROOT
-            _DR_ENGINE_AVAILABLE = True
-            _log.info("DR engine available at %s", candidate_root)
-            return True
-        except ImportError as e:
-            _log.warning("DR engine import failed: %s", e)
-    else:
-        _log.info("DR engine not found (no run_pipeline.py at %s)", candidate_root)
-
-    return False
-
-# Lazy init on first use
-_dr_engine_initialized = False
-
-def _ensure_dr_engine():
-    global _dr_engine_initialized
-    if not _dr_engine_initialized:
-        _init_dr_engine()
-        _dr_engine_initialized = True
-    return _DR_ENGINE_AVAILABLE
 
 
 # ---------------------------------------------------------------------------
@@ -127,14 +67,13 @@ PIPELINE_MODES = {
 
 # Stage data flow: which prior outputs feed each stage.
 # "source" = original text, "dr_logic" = logic reference, "stage_N" = output of stage N.
-# "constraint_reports" = Prolog engine reports (NEW — air-gap safe, no source material)
 STAGE_INPUTS = {
     "narrative": {
         "stage_0": ["source", "dr_logic"],
         "stage_1": ["stage_0", "dr_logic"],
         "stage_2": ["stage_1", "dr_logic"],
         "stage_3": ["stage_1", "stage_2", "dr_logic"],
-        "stage_4": ["stage_1", "stage_2", "stage_3", "constraint_reports"],  # AIR GAP: no source, no stage_0
+        "stage_4": ["stage_1", "stage_2", "stage_3"],       # AIR GAP: no source, no stage_0
         "stage_5": ["stage_4", "stage_1"],
     },
     "artifact": {
@@ -193,7 +132,7 @@ def _title_to_filename(title: str) -> str:
 @dataclass
 class StepResult:
     """Result of a single pipeline stage."""
-    step: str           # stage_0 .. stage_6, scope, constraint_gen, prolog_engine
+    step: str           # stage_0 .. stage_6
     status: str         # success | error | skipped | gate_halt
     data: Any = None
     error: str = ""
@@ -218,10 +157,6 @@ class PipelineResult:
     output_dir: Path | None = None
     story_path: Path | None = None
     original_title: str = ""
-    # NEW: constraint engine artifacts
-    scope_manifest: dict | None = None
-    constraint_stories: list[dict] = field(default_factory=list)
-    constraint_report_paths: list[Path] = field(default_factory=list)
 
 
 # ---------------------------------------------------------------------------
@@ -381,10 +316,11 @@ class GoogleProvider:
                 _log.warning("Gemini retry %d after %ss (server error): %s", attempt + 1, wait, e)
                 time.sleep(wait)
             except errors.ClientError as e:
+                # Retry on 429 (rate limit), fail fast on other 4xx
                 if getattr(e, "code", 0) == 429:
                     if attempt == max_retries - 1:
                         raise
-                    wait = 2 ** attempt * 5
+                    wait = 2 ** attempt * 5  # longer backoff for rate limits
                     _log.warning("Gemini retry %d after %ss (rate limit): %s", attempt + 1, wait, e)
                     time.sleep(wait)
                 else:
@@ -421,21 +357,10 @@ class UKEOrchestrator:
 
     Supports two modes:
       - narrative: 6-stage story translation (stage0.md .. stage5.md)
-        NEW: Optional constraint engine integration between stages 1 and 2.
       - artifact: 7-stage software generation (artifact_stage0.md .. artifact_stage6.md)
 
     Stage 0: Google Gemini (constraint extraction)
     Remaining stages: Anthropic Claude
-
-    Constraint Engine (narrative mode, optional):
-      After Stage 1, the pipeline can:
-      1. Run UKE_SCOPE on the Stage 1 formalization (not the source story)
-      2. Generate constraint story JSONs from the SCOPE manifest
-      3. Run the Prolog engine to produce diagnostic reports
-      4. Feed those reports to Stage 4 as additional structural context
-
-      This is air-gap safe: the constraint stories and reports derive from
-      the abstract structural topology, not from source-identifying material.
     """
 
     DEFAULT_MODELS = {
@@ -451,25 +376,26 @@ class UKEOrchestrator:
     TEMPERATURES = {
         "stage_0": 0.1,
         "stage_1": 0.1,
-        "stage_2": 0.3,
-        "stage_3": 0.3,
-        "stage_4": 0.8,
-        "stage_5": 0.3,
-        "stage_6": 0.2,
+        "stage_2": 0.3,   # validation/naturalization
+        "stage_3": 0.3,   # editorial/path selection
+        "stage_4": 0.8,   # narrative generation / interaction design
+        "stage_5": 0.3,   # audit / artifact generation
+        "stage_6": 0.2,   # artifact validation
     }
 
+    # Mode-specific temperature overrides
     TEMPERATURE_OVERRIDES = {
         "narrative": {
-            "stage_2": 0.7,
-            "stage_4": 0.8,
-            "stage_5": 0.3,
+            "stage_2": 0.7,   # naturalization needs creativity
+            "stage_4": 0.8,   # narrative generation
+            "stage_5": 0.3,   # subtractive audit
         },
         "artifact": {
-            "stage_2": 0.1,
-            "stage_3": 0.5,
-            "stage_4": 0.5,
-            "stage_5": 0.7,
-            "stage_6": 0.2,
+            "stage_2": 0.1,   # validation (precision)
+            "stage_3": 0.5,   # path/modality selection
+            "stage_4": 0.5,   # interaction design
+            "stage_5": 0.7,   # artifact generation (creative)
+            "stage_6": 0.2,   # validation (precision)
         },
     }
 
@@ -490,7 +416,6 @@ class UKEOrchestrator:
         dr_logic_path: str | Path | None = None,
         output_dir: str | Path | None = None,
         skip_final_audit: bool = False,
-        skip_engine: bool = False,          # NEW: skip constraint engine
         dry_run: bool = False,
         force_gate: bool = False,
         progress_callback: Callable[[str, str], None] | None = None,
@@ -504,7 +429,6 @@ class UKEOrchestrator:
 
         self.models = {**self.DEFAULT_MODELS, **(models or {})}
         self.skip_final_audit = skip_final_audit
-        self.skip_engine = skip_engine
         self.dry_run = dry_run
         self.force_gate = force_gate
         self._progress = progress_callback or (lambda step, msg: print(f"[{step}] {msg}"))
@@ -537,35 +461,6 @@ class UKEOrchestrator:
         # Build provider registry
         self.providers = _build_providers()
 
-        # ── NEW: Load constraint engine protocols ────────────────────
-        self.engine_protocols: dict[str, str] = {}
-        if not self.skip_engine and self.mode == "narrative":
-            self._load_engine_protocols()
-
-    def _load_engine_protocols(self):
-        """Load UKE_SCOPE, generation prompt, and schema for constraint engine."""
-        if not _ensure_dr_engine() or _REPO_ROOT is None:
-            self._progress("engine", "DR engine not available — constraint reports disabled")
-            self.skip_engine = True
-            return
-
-        protocol_files = {
-            "uke_scope":  _REPO_ROOT / "prompts" / "uke_scope_v2_json.md",
-            "gen_prompt": _REPO_ROOT / "prompts" / "constraint_story_generation_prompt_json.md",
-            "schema":     _REPO_ROOT / "python" / "constraint_story_schema.json",
-            "example":    _REPO_ROOT / "json" / "antifragility.json",
-        }
-
-        for key, path in protocol_files.items():
-            if path.exists():
-                self.engine_protocols[key] = _load_context_file(str(path))
-            else:
-                self._progress("engine", f"Missing protocol file: {path.name} — constraint reports disabled")
-                self.skip_engine = True
-                return
-
-        self._progress("engine", "Constraint engine protocols loaded")
-
     # ------------------------------------------------------------------
     # Core call dispatcher
     # ------------------------------------------------------------------
@@ -597,31 +492,6 @@ class UKEOrchestrator:
             max_tokens=max_tok,
         )
         return text, tin, tout, model, provider_name
-
-    def _call_engine(
-        self,
-        prompt: str,
-        system_instruction: str = "",
-        temperature: float = 0.2,
-        max_tokens: int = 8192,
-    ) -> tuple[str, int, int]:
-        """Call Claude for constraint engine steps (SCOPE, generation).
-
-        Uses the stage_1 model config (architect role).
-        """
-        provider_name, model = self.models["stage_1"]
-        provider = self.providers.get(provider_name)
-        if provider is None:
-            raise RuntimeError(f"No provider registered for '{provider_name}'")
-
-        text, tin, tout = provider.call(
-            prompt=prompt,
-            model=model,
-            system_instruction=system_instruction,
-            temperature=temperature,
-            max_tokens=max_tokens,
-        )
-        return text, tin, tout
 
     # ------------------------------------------------------------------
     # Persistence helpers
@@ -665,52 +535,67 @@ class UKEOrchestrator:
 
     @staticmethod
     def _extract_code_block(text: str) -> str | None:
-        """Extract the dominant code block from text."""
+        """Extract the dominant code block from text, handling preamble/postamble.
+
+        Handles:
+          - Raw code (starts with import/export/etc.)
+          - Code wrapped in markdown fences (```tsx ... ```)
+          - Code preceded by commentary ("Here's the artifact:\n\n```tsx\n...")
+          - Multiple small code blocks (returns None — not a single artifact)
+        """
         stripped = text.strip()
+
+        # Case 1: raw code — no fences, starts with code patterns
         code_starts = (
             "import ", "export ", "'use client'", '"use client"',
-            "const ", "function ", "class ", "type ", "interface ",
-            "// ", "/* ", "<!DOCTYPE", "<html",
+            "const ", "function ", "// ", "/* ",
         )
-        if any(stripped.startswith(prefix) for prefix in code_starts):
+        if stripped.startswith(code_starts):
             return stripped
 
-        fences = list(re.finditer(r'```\w*\n(.*?)```', stripped, re.DOTALL))
-        if len(fences) == 1:
-            return fences[0].group(1).strip()
-        if len(fences) > 1:
-            blocks = [(f.group(1).strip(), len(f.group(1))) for f in fences]
-            blocks.sort(key=lambda x: x[1], reverse=True)
-            if blocks[0][1] > blocks[1][1] * 3:
-                return blocks[0][0]
+        # Case 2: find code fences — extract the largest one
+        fence_pattern = re.compile(
+            r'^```[^\n]*\n(.*?)^```', re.MULTILINE | re.DOTALL
+        )
+        blocks = fence_pattern.findall(stripped)
+        if not blocks:
+            return None
+
+        # Use the largest code block (the artifact, not inline snippets)
+        largest = max(blocks, key=len).strip()
+
+        # Must be substantial (>200 chars) and look like code, not a snippet
+        if len(largest) > 200 and largest.startswith(code_starts):
+            return largest
+
         return None
 
     @staticmethod
     def _is_code_output(text: str) -> bool:
-        """Check if the output is code (for artifact mode)."""
-        stripped = text.strip()
-        code_indicators = (
-            "import ", "export ", "'use client'", '"use client"',
-            "const ", "function ", "class ", "type ",
-        )
-        return any(stripped.startswith(ind) for ind in code_indicators)
+        """Detect whether stage output is primarily code (not markdown prose)."""
+        return UKEOrchestrator._extract_code_block(text) is not None
 
+    @staticmethod
     def _save_final_output(
-        self,
-        content: str,
-        original_title: str,
-        output_dir: Path,
-        is_code: bool = False,
+        text: str, original_title: str, output_dir: Path, is_code: bool = False,
     ) -> Path:
-        """Save the final output (story or artifact) to the output directory."""
+        """Save final output to the mode-specific directory.
+
+        Appends original title at the end (Python, not AI).
+        For code artifacts: extracts code from fences/preamble, uses .tsx.
+        Returns the path of the saved file.
+        """
         if is_code:
-            code = self._extract_code_block(content)
-            if code:
-                content = code
+            content = UKEOrchestrator._extract_code_block(text) or text.strip()
             ext = ".tsx"
-            base = _title_to_filename(original_title) if original_title != "Unknown" else "artifact"
+            # Derive filename from first component/function name or fallback
+            name_match = re.search(
+                r'(?:export\s+(?:default\s+)?function|const)\s+(\w+)', content
+            )
+            base = _title_to_filename(name_match.group(1)) if name_match else "artifact"
             trailer = f"\n// Original: {original_title}\n"
         else:
+            content = text.strip()
             ext = ".md"
             title = _extract_title(content)
             base = _title_to_filename(title)
@@ -719,6 +604,7 @@ class UKEOrchestrator:
         output_dir.mkdir(parents=True, exist_ok=True)
         out_path = output_dir / f"{base}{ext}"
 
+        # Handle collision
         if out_path.exists():
             counter = 2
             while out_path.exists():
@@ -734,23 +620,35 @@ class UKEOrchestrator:
 
     @staticmethod
     def _check_validation_gate(step: StepResult) -> str:
-        """Check if a validation stage output indicates PASS or FAIL."""
+        """Check if a validation stage output indicates PASS or FAIL.
+
+        Returns 'pass' or 'halt'.
+        """
         if not step.data:
             return "halt"
+
         text = step.data
+
+        # Look for explicit FAIL markers
         fail_patterns = [r'\bFAIL\b', r'\bHALT\b', r'VALIDATION:\s*FAIL', r'GATE:\s*FAIL']
         pass_patterns = [r'\bPASS\b', r'VALIDATION:\s*PASS', r'GATE:\s*PASS']
+
         has_fail = any(re.search(p, text, re.IGNORECASE) for p in fail_patterns)
         has_pass = any(re.search(p, text, re.IGNORECASE) for p in pass_patterns)
+
+        # Any FAIL halts, regardless of whether PASS also appears
+        # (e.g., "Test 1: PASS ... Test 3: FAIL ... Overall: FAIL")
         if has_fail:
             return "halt"
         if has_pass:
             return "pass"
+
+        # Ambiguous — halt by default (safe for batch runs)
         _log.warning("Validation gate output ambiguous for %s, halting", step.step)
         return "halt"
 
     # ------------------------------------------------------------------
-    # Artifact-specific prompt suffixes (unchanged from original)
+    # Artifact-specific prompt suffixes
     # ------------------------------------------------------------------
 
     ARTIFACT_PROMPT_SUFFIXES = {
@@ -826,12 +724,13 @@ class UKEOrchestrator:
     }
 
     def _get_prompt_suffix(self, stage: str) -> str:
+        """Return stage-specific prompt suffix, or generic fallback."""
         if self.mode == "artifact" and stage in self.ARTIFACT_PROMPT_SUFFIXES:
             return self.ARTIFACT_PROMPT_SUFFIXES[stage]
         return "Follow the protocol in your system instructions for this stage."
 
     # ------------------------------------------------------------------
-    # Generic stage runner (used by artifact mode)
+    # Generic stage runner (used by artifact mode, usable by narrative)
     # ------------------------------------------------------------------
 
     def _run_stage_generic(
@@ -850,12 +749,15 @@ class UKEOrchestrator:
             self._progress(stage, f"Running stage {stage_num} (Claude)...")
 
         t0 = time.time()
+
         input_keys = STAGE_INPUTS[self.mode][stage]
 
+        # Air gap enforcement
         if is_air_gap:
             assert "source" not in input_keys, f"Air gap violation: source in {stage}"
             assert "stage_0" not in input_keys, f"Air gap violation: stage_0 in {stage}"
 
+        # Assemble prompt from input keys
         prompt_parts = []
         for key in input_keys:
             if key == "source":
@@ -865,17 +767,13 @@ class UKEOrchestrator:
                     prompt_parts.append(
                         f"=== INDEXED CONSTRAINT LOGIC REFERENCE ===\n{self.dr_logic}\n\n"
                     )
-            elif key == "constraint_reports":
-                content = stage_outputs.get(key, "")
-                if content:
-                    prompt_parts.append(
-                        f"=== CONSTRAINT ENGINE REPORTS ===\n{content}\n\n"
-                    )
             else:
+                # key is "stage_N"
                 content = stage_outputs.get(key, "")
                 snum = key.split("_")[1]
                 prompt_parts.append(f"=== STAGE {snum} OUTPUT ===\n{content}\n\n")
 
+        # Stage-specific prompt suffixes
         prompt_parts.append(self._get_prompt_suffix(stage))
         prompt = "".join(prompt_parts)
 
@@ -895,321 +793,6 @@ class UKEOrchestrator:
                 duration_s=time.time() - t0,
             )
 
-    # ==================================================================
-    # NEW: Constraint Engine Steps
-    # ==================================================================
-
-    def _step_scope(self, stage_1_output: str) -> StepResult:
-        """Run UKE_SCOPE on Stage 1 formalization to decompose constraint axes.
-
-        ╔═════════════════════════════════════════════════════════╗
-        ║  AIR GAP: Operates on Stage 1's abstract structural    ║
-        ║  topology, NOT on the source story. The SCOPE output   ║
-        ║  contains no source-identifying information.           ║
-        ╚═════════════════════════════════════════════════════════╝
-        """
-        self._progress("scope", "Running UKE_SCOPE on Stage 1 formalization...")
-        t0 = time.time()
-
-        prompt = (
-            "Analyze the following constraint formalization using the UKE_SCOPE protocol.\n\n"
-            "This is an abstract structural specification extracted from a source narrative. "
-            "Your job is to identify the general constraint dynamics (e.g., 'agency depletion "
-            "through contradictory authority,' 'unrequited love as asymmetric extraction') "
-            "and decompose them into independent axes suitable for constraint story generation.\n\n"
-            "CRITICAL: Use abstract structural language for claim_ids, human_readable names, "
-            "and structural_delta fields. Do NOT reference any specific characters, settings, "
-            "or narrative details from the formalization — extract the GENERAL DYNAMIC only.\n\n"
-            "=== CONSTRAINT FORMALIZATION ===\n"
-            f"{stage_1_output}\n\n"
-            "Select exactly 3 axes for generation (or fewer if the topology is genuinely simple).\n\n"
-            "Remember: OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON."
-        )
-
-        try:
-            text, tin, tout = self._call_engine(
-                prompt,
-                system_instruction=self.engine_protocols["uke_scope"],
-                temperature=0.2,
-                max_tokens=8192,
-            )
-        except Exception as e:
-            self._progress("scope", f"SCOPE call failed: {e}")
-            return StepResult(
-                step="scope", status="error", error=str(e),
-                duration_s=time.time() - t0,
-            )
-
-        # Parse JSON
-        try:
-            from agent.story_generator_base import strip_json_fences
-            manifest = json.loads(strip_json_fences(text))
-        except (json.JSONDecodeError, ImportError) as e:
-            # Fallback strip
-            cleaned = re.sub(r'^```\w*\n?', '', text.strip())
-            cleaned = re.sub(r'\n?```$', '', cleaned.strip())
-            try:
-                manifest = json.loads(cleaned)
-            except json.JSONDecodeError:
-                self._progress("scope", f"JSON parse failed: {e}")
-                return StepResult(
-                    step="scope", status="error",
-                    error=f"JSON parse failed: {e}\nRaw:\n{text[:500]}",
-                    duration_s=time.time() - t0,
-                )
-
-        # Validate minimum fields
-        required = ["axes", "generation_sequence"]
-        missing = [f for f in required if f not in manifest]
-        if missing:
-            self._progress("scope", f"Manifest missing fields: {missing}")
-            return StepResult(
-                step="scope", status="error",
-                error=f"Missing fields: {missing}",
-                data=manifest,
-                duration_s=time.time() - t0,
-            )
-
-        # Log fracture warnings
-        fracture = manifest.get("fracture_scan", {})
-        if fracture.get("f03_hasty_generalization") or fracture.get("f34_epistemic_trespass"):
-            self._progress("scope", f"Fracture warning: {fracture.get('notes', '')}")
-
-        seq = manifest.get("generation_sequence", [])
-        self._progress("scope", f"SCOPE complete — {len(seq)} axes: {seq}")
-
-        # Save manifest
-        if self.output_dir:
-            self.output_dir.mkdir(parents=True, exist_ok=True)
-            manifest_path = self.output_dir / "scope_manifest.json"
-            manifest_path.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
-
-        return StepResult(
-            step="scope", status="success", data=manifest,
-            tokens_in=tin, tokens_out=tout,
-            duration_s=time.time() - t0,
-        )
-
-    def _step_generate_constraint_stories(self, manifest: dict) -> StepResult:
-        """Generate constraint story JSONs from SCOPE manifest axes.
-
-        Uses the same generation logic as c-orchestrator._step_generate,
-        but imports the infrastructure from story_generator_base.
-        """
-        self._progress("constraint_gen", "Generating constraint story JSONs...")
-        t0 = time.time()
-
-        from agent.story_generator_base import (
-            process_response, save_story, build_prompt, _SYSTEM_INSTRUCTION,
-        )
-
-        sequence = manifest.get("generation_sequence", [])
-        axes_by_id = {a["claim_id"]: a for a in manifest.get("axes", [])}
-        generated_stories = []
-        total_tin, total_tout = 0, 0
-
-        for i, claim_id in enumerate(sequence):
-            axis = axes_by_id.get(claim_id)
-            if not axis:
-                self._progress("constraint_gen", f"Axis {claim_id} not found, skipping")
-                continue
-
-            self._progress("constraint_gen", f"[{i+1}/{len(sequence)}] Generating {claim_id}...")
-
-            # Build source description from axis fields
-            source_desc = (
-                f"TOPIC: {manifest.get('domain', 'Structural Analysis')}\n"
-                f"CONSTRAINT: {claim_id}\n"
-                f"Structural delta: {axis.get('structural_delta', 'Unknown')}\n"
-                f"Primary observable: {axis.get('primary_observable', 'Unknown')}\n"
-                f"Hypothesis type: {axis.get('hypothesis', 'Unknown')}\n"
-                f"Epsilon bin: {axis.get('epsilon_bin', 'Unknown')}"
-            )
-            if axis.get("beneficiary"):
-                source_desc += f"\nBeneficiary: {axis['beneficiary']}"
-            if axis.get("victim"):
-                source_desc += f"\nVictim: {axis['victim']}"
-
-            # Build upstream context for downstream axes
-            upstream_context = ""
-            for upstream_id in axis.get("downstream_of", []):
-                upstream_story = next(
-                    (s for s in generated_stories
-                     if s["header"]["constraint_id"] == upstream_id),
-                    None,
-                )
-                if upstream_story:
-                    upstream_context += (
-                        f"\nUPSTREAM CONSTRAINT: {upstream_id}\n"
-                        f"  claimed_type: {upstream_story['base_properties'].get('claimed_type', 'unknown')}\n"
-                        f"  affects_constraint: {upstream_id} → {claim_id}\n"
-                    )
-
-            prompt = build_prompt(source_desc, upstream_context)
-
-            try:
-                text, tin, tout = self._call_engine(
-                    prompt,
-                    system_instruction=_SYSTEM_INSTRUCTION,
-                    temperature=0.2,
-                    max_tokens=8192,
-                )
-                total_tin += tin
-                total_tout += tout
-            except Exception as e:
-                self._progress("constraint_gen", f"API error for {claim_id}: {e}")
-                continue
-
-            if not text:
-                self._progress("constraint_gen", f"Empty response for {claim_id}")
-                continue
-
-            # Process and validate
-            story_dict, errors = process_response(text)
-
-            if story_dict is None or errors:
-                # Retry once with error feedback
-                self._progress("constraint_gen", f"Validation errors for {claim_id}, retrying...")
-                feedback = ""
-                if errors:
-                    feedback = "\nYour previous attempt had these validation errors:\n"
-                    for err in errors:
-                        feedback += f"  - {err}\n"
-                    feedback += "Fix these specific errors while keeping the rest correct.\n"
-
-                retry_prompt = build_prompt(source_desc, upstream_context + feedback)
-                try:
-                    text, tin2, tout2 = self._call_engine(
-                        retry_prompt,
-                        system_instruction=_SYSTEM_INSTRUCTION,
-                        temperature=0.2,
-                        max_tokens=8192,
-                    )
-                    total_tin += tin2
-                    total_tout += tout2
-                    story_dict, errors = process_response(text)
-                except Exception as e:
-                    self._progress("constraint_gen", f"Retry failed for {claim_id}: {e}")
-                    continue
-
-            if story_dict is None or errors:
-                self._progress("constraint_gen", f"Failed to generate valid story for {claim_id}")
-                continue
-
-            # Save to DR corpus (enables Prolog engine to find them)
-            json_path, pl_path = save_story(story_dict, overwrite=True)
-            if json_path:
-                generated_stories.append(story_dict)
-                self._progress("constraint_gen", f"Saved {claim_id}")
-
-                # Also save to run output dir
-                if self.output_dir:
-                    self.output_dir.mkdir(parents=True, exist_ok=True)
-                    run_json = self.output_dir / f"{claim_id}.json"
-                    run_json.write_text(json.dumps(story_dict, indent=2), encoding="utf-8")
-
-        self._progress(
-            "constraint_gen",
-            f"Generated {len(generated_stories)}/{len(sequence)} stories"
-        )
-        return StepResult(
-            step="constraint_gen", status="success", data=generated_stories,
-            tokens_in=total_tin, tokens_out=total_tout,
-            duration_s=time.time() - t0,
-        )
-
-    def _step_prolog_engine(self, constraint_ids: list[str]) -> StepResult:
-        """Run the Prolog engine pipeline and generate enhanced reports.
-
-        Steps:
-        1. run_pipeline (compile .pl, load into engine)
-        2. enhanced_report.py (per-constraint diagnostic reports)
-
-        Returns report texts concatenated as the step data.
-        """
-        if not constraint_ids:
-            return StepResult(step="prolog_engine", status="skipped")
-
-        self._progress("prolog_engine", f"Running Prolog engine for {len(constraint_ids)} constraints...")
-        t0 = time.time()
-
-        # Step 1: Corpus update (compile JSON → .pl, load into engine)
-        try:
-            sys.path.insert(0, str(_REPO_ROOT / "python"))
-            from run_pipeline import run_pipeline
-            pipeline_result = run_pipeline(
-                progress=lambda step, msg: self._progress("prolog_engine", f"[pipeline] {msg}"),
-                parallel=4,
-            )
-            if pipeline_result.errors:
-                for e in pipeline_result.errors:
-                    self._progress("prolog_engine", f"pipeline warning: {e}")
-        except Exception as e:
-            self._progress("prolog_engine", f"Pipeline failed: {e}")
-            return StepResult(
-                step="prolog_engine", status="error", error=str(e),
-                duration_s=time.time() - t0,
-            )
-
-        # Step 2: Enhanced reports
-        try:
-            proc = subprocess.run(
-                ["python3", "python/enhanced_report.py"] + constraint_ids,
-                cwd=str(_REPO_ROOT),
-                capture_output=True,
-                text=True,
-                timeout=300,
-            )
-            if proc.returncode != 0:
-                self._progress("prolog_engine", f"enhanced_report.py returned {proc.returncode}")
-        except subprocess.TimeoutExpired:
-            self._progress("prolog_engine", "Report generation timed out (300s)")
-        except Exception as e:
-            self._progress("prolog_engine", f"Report generation failed: {e}")
-            return StepResult(
-                step="prolog_engine", status="error", error=str(e),
-                duration_s=time.time() - t0,
-            )
-
-        # Collect report texts
-        reports_dir = _REPO_ROOT / "outputs" / "constraint_reports"
-        report_paths = []
-        report_texts = []
-        for cid in constraint_ids:
-            rpath = reports_dir / f"{cid}_report.md"
-            if rpath.exists():
-                report_paths.append(rpath)
-                try:
-                    report_texts.append(rpath.read_text(encoding="utf-8"))
-                except Exception:
-                    pass
-
-                # Also copy to run output dir
-                if self.output_dir:
-                    self.output_dir.mkdir(parents=True, exist_ok=True)
-                    dest = self.output_dir / f"{cid}_report.md"
-                    dest.write_text(rpath.read_text(encoding="utf-8"), encoding="utf-8")
-
-        self._progress(
-            "prolog_engine",
-            f"Reports generated: {len(report_paths)}/{len(constraint_ids)}"
-        )
-
-        # Concatenate reports into a single text block for Stage 4
-        combined_reports = ""
-        for i, (cid, text) in enumerate(zip(constraint_ids, report_texts)):
-            combined_reports += f"\n{'='*60}\n"
-            combined_reports += f"CONSTRAINT REPORT: {cid}\n"
-            combined_reports += f"{'='*60}\n"
-            combined_reports += text
-            combined_reports += "\n"
-
-        return StepResult(
-            step="prolog_engine", status="success",
-            data={"report_paths": report_paths, "combined_text": combined_reports},
-            duration_s=time.time() - t0,
-        )
-
     # ------------------------------------------------------------------
     # Pipeline dispatch
     # ------------------------------------------------------------------
@@ -1226,7 +809,7 @@ class UKEOrchestrator:
         return self._run_artifact(source_story, from_stage, source_path)
 
     # ------------------------------------------------------------------
-    # Narrative pipeline (with constraint engine integration)
+    # Narrative pipeline (preserved from original implementation)
     # ------------------------------------------------------------------
 
     def _run_narrative(
@@ -1235,7 +818,7 @@ class UKEOrchestrator:
         from_stage: str = "stage_0",
         source_path: Path | None = None,
     ) -> PipelineResult:
-        """Execute the UKE_Narrative pipeline (6 stages + optional constraint engine)."""
+        """Execute the UKE_Narrative pipeline (6 stages)."""
         result = PipelineResult(
             run_id=f"uke_{int(time.time())}",
             mode="narrative",
@@ -1257,12 +840,6 @@ class UKEOrchestrator:
                 self._progress(stage, f"Loaded from cache ({len(cached)} chars)")
             else:
                 self._progress(stage, "WARNING: No cached output found, pipeline may fail")
-
-        # Also check for cached constraint reports
-        if self.output_dir:
-            cached_reports = self._load_stage_output("constraint_reports")
-            if cached_reports:
-                result.stage_outputs["constraint_reports"] = cached_reports
 
         # ── Stage 0: Constraint Logic Extraction (Gemini) ─────────────
         if start_idx <= 0:
@@ -1292,69 +869,6 @@ class UKEOrchestrator:
                 return result
             result.stage_outputs["stage_1"] = step.data
             self._save_stage_output("stage_1", step.data, result)
-
-        # ══════════════════════════════════════════════════════════════
-        # NEW: Constraint Engine (between Stage 1 and Stage 2)
-        #
-        # Runs UKE_SCOPE on Stage 1 output → generates constraint story
-        # JSONs → runs Prolog engine → produces diagnostic reports.
-        #
-        # AIR GAP SAFE: SCOPE operates on the Stage 1 formalization
-        # (abstract structural topology), not on the source story.
-        # Constraint stories and reports contain no source-identifying
-        # material.
-        # ══════════════════════════════════════════════════════════════
-        if start_idx <= 1 and not self.skip_engine:
-            stage_1_out = result.stage_outputs.get("stage_1", "")
-
-            # Step A: SCOPE decomposition
-            step = self._step_scope(stage_1_out)
-            result.steps.append(step)
-
-            if step.status == "success" and step.data:
-                manifest = step.data
-                result.scope_manifest = manifest
-                self._save_stage_output(
-                    "scope_manifest",
-                    json.dumps(manifest, indent=2),
-                    result,
-                )
-
-                # Step B: Generate constraint story JSONs
-                step = self._step_generate_constraint_stories(manifest)
-                result.steps.append(step)
-
-                if step.status == "success" and step.data:
-                    stories = step.data
-                    result.constraint_stories = stories
-                    constraint_ids = [
-                        s["header"]["constraint_id"] for s in stories
-                    ]
-
-                    # Step C: Prolog engine + reports
-                    step = self._step_prolog_engine(constraint_ids)
-                    result.steps.append(step)
-
-                    if step.status == "success" and step.data:
-                        result.constraint_report_paths = step.data.get("report_paths", [])
-                        combined_text = step.data.get("combined_text", "")
-                        result.stage_outputs["constraint_reports"] = combined_text
-                        self._save_stage_output(
-                            "constraint_reports", combined_text, result
-                        )
-                        self._progress(
-                            "engine",
-                            f"Constraint engine complete — {len(result.constraint_report_paths)} reports ready"
-                        )
-                    else:
-                        self._progress("engine", "Prolog engine failed — continuing without reports")
-                else:
-                    self._progress("engine", "Constraint story generation failed — continuing without reports")
-            else:
-                self._progress("engine", "SCOPE failed — continuing without constraint reports")
-
-        elif self.skip_engine:
-            self._progress("engine", "Constraint engine skipped (--skip-engine)")
 
         # ── Stage 2: Naturalization (Claude) ──────────────────────────
         if start_idx <= 2:
@@ -1386,10 +900,7 @@ class UKEOrchestrator:
             stage_1_out = result.stage_outputs.get("stage_1", "")
             stage_2_out = result.stage_outputs.get("stage_2", "")
             stage_3_out = result.stage_outputs.get("stage_3", "")
-            constraint_reports = result.stage_outputs.get("constraint_reports", "")
-            step = self._run_stage_4_narrative(
-                stage_1_out, stage_2_out, stage_3_out, constraint_reports
-            )
+            step = self._run_stage_4_narrative(stage_1_out, stage_2_out, stage_3_out)
             result.steps.append(step)
             if step.status == "error":
                 result.total_duration_s = time.time() - t0
@@ -1422,7 +933,7 @@ class UKEOrchestrator:
         return result
 
     # ------------------------------------------------------------------
-    # Artifact pipeline (generic loop with validation gates — unchanged)
+    # Artifact pipeline (generic loop with validation gates)
     # ------------------------------------------------------------------
 
     def _run_artifact(
@@ -1445,6 +956,7 @@ class UKEOrchestrator:
         t0 = time.time()
         start_idx = self.all_stages.index(from_stage)
 
+        # Load cached outputs for stages before from_stage
         for stage in self.all_stages[:start_idx]:
             cached = self._load_stage_output(stage)
             if cached:
@@ -1457,6 +969,7 @@ class UKEOrchestrator:
             if i < start_idx:
                 continue
 
+            # Stage 0 reuses the narrative stage 0 (same extraction logic)
             if stage == "stage_0":
                 step = self._run_stage_0(source_story)
             else:
@@ -1472,10 +985,12 @@ class UKEOrchestrator:
             result.stage_outputs[stage] = step.data
             self._save_stage_output(stage, step.data, result)
 
+            # Dry run: stop after stage 0
             if self.dry_run and stage == "stage_0":
                 self._progress("dry_run", "Stage 0 complete — dry-run stops here")
                 break
 
+            # Validation gate check
             if stage in self.validation_gates and not self.force_gate:
                 gate_result = self._check_validation_gate(step)
                 if gate_result == "halt":
@@ -1485,7 +1000,8 @@ class UKEOrchestrator:
                         f"--resume --from-stage {self.all_stages[i + 1] if i + 1 < len(self.all_stages) else stage}")
                     break
 
-        gen_stage = "stage_5"
+        # Save final artifact if pipeline completed through generation stage
+        gen_stage = "stage_5"  # artifact generation
         if gen_stage in result.stage_outputs:
             final_text = result.stage_outputs[gen_stage]
             artifact_path = self._save_final_output(
@@ -1689,72 +1205,32 @@ class UKEOrchestrator:
         stage_1_output: str,
         stage_2_output: str,
         stage_3_output: str,
-        constraint_reports: str = "",       # NEW parameter
     ) -> StepResult:
         """Stage 4: Narrative Generation (Claude).
 
         ╔══════════════════════════════════════════════════════╗
         ║  AIR GAP ENFORCED: This stage receives ONLY         ║
-        ║  Stages 1-3 output + constraint engine reports.     ║
-        ║  The original story and Stage 0 output are NEVER    ║
-        ║  included in this call.                             ║
-        ║                                                     ║
-        ║  Constraint reports are AIR GAP SAFE: they derive   ║
-        ║  from abstract structural topology via UKE_SCOPE,   ║
-        ║  not from the source narrative.                     ║
+        ║  Stages 1-3 output. The original story and          ║
+        ║  Stage 0 output are NEVER included in this call.    ║
         ╚══════════════════════════════════════════════════════╝
         """
         self._progress("stage_4", "Generating narrative (Claude, air gap active)...")
         t0 = time.time()
 
-        prompt_parts = [
-            "Write a complete story based on the following specifications.\n\n",
-            "=== CONSTRAINT MECHANICS (Stage 1) ===\n",
-            stage_1_output,
-            "\n\n",
-            "=== CONTEXT & WORLD (Stage 2) ===\n",
-            stage_2_output,
-            "\n\n",
-            "=== EDITORIAL DECISIONS (Stage 3) ===\n",
-            stage_3_output,
-            "\n\n",
-        ]
-
-        # NEW: Include constraint engine reports if available
-        if constraint_reports:
-            prompt_parts.extend([
-                "=== STRUCTURAL ANALYSIS (Constraint Engine) ===\n",
-                "The following diagnostic reports were produced by the Prolog constraint "
-                "engine analyzing the structural topology of this story's constraints. "
-                "Use them to inform structural depth:\n"
-                "- DRIFT ANALYSIS shows how constraints tighten or loosen over time — "
-                "use for pacing and character arc intensity\n"
-                "- COUPLING SCORES show how constraints interact — strongly coupled "
-                "constraints should feel entangled in the narrative\n"
-                "- PERSPECTIVAL GAPS (H^1 band, mandatrophy gap) show the distance "
-                "between how different characters experience the same constraint — "
-                "this IS the story's central dramatic tension\n"
-                "- SIGNATURES (false_natural_law, coordination_washing) reveal what "
-                "the constraint PRETENDS to be vs what it IS — characters inside may "
-                "believe the cover story\n"
-                "- THEOREM INSTANTIATIONS describe the structural physics — T4 (oracle gap) "
-                "means confident observers are wrong; T2 (discrete blocs) means "
-                "perspectives can't be reconciled by talking\n\n"
-                "Do NOT reference any of this terminology in the story. These are "
-                "structural instructions for you, the author. The story must be "
-                "COMPLETELY INVISIBLE to framework analysis.\n\n",
-                constraint_reports,
-                "\n\n",
-            ])
-
-        prompt_parts.append(
+        prompt = (
+            "Write a complete story based on the following specifications.\n\n"
+            "=== CONSTRAINT MECHANICS (Stage 1) ===\n"
+            f"{stage_1_output}\n\n"
+            "=== CONTEXT & WORLD (Stage 2) ===\n"
+            f"{stage_2_output}\n\n"
+            "=== EDITORIAL DECISIONS (Stage 3) ===\n"
+            f"{stage_3_output}\n\n"
             "Follow the generation protocol in your system instructions. "
             "Write the story now. Framework must be COMPLETELY INVISIBLE. "
             "Find new events in this world that embody the constraint logic — "
             "this is reimagining, not adaptation. "
             "Stay in the world completely. Trust the structure."
         )
-        prompt = "".join(prompt_parts)
 
         try:
             text, tin, tout, model, provider = self._call("stage_4", prompt)
@@ -1823,62 +1299,109 @@ class UKEOrchestrator:
 VALID_PROVIDERS = {"google", "anthropic"}
 
 
-def _parse_model_overrides(args, parser) -> dict[str, tuple[str, str]] | None:
-    """Parse --stage-N-model flags into model override dict."""
+def _parse_model_overrides(args, parser) -> dict:
+    """Parse --stage-N-model overrides from CLI args."""
     overrides = {}
     for stage in ALL_POSSIBLE_STAGES:
         attr = f"{stage}_model"
-        value = getattr(args, attr, None)
-        if value:
-            if ":" not in value:
-                parser.error(f"--{stage.replace('_', '-')}-model must be provider:model (got '{value}')")
-            provider, model = value.split(":", 1)
+        val = getattr(args, attr, None)
+        if val and ":" in val:
+            provider, model = val.split(":", 1)
             if provider not in VALID_PROVIDERS:
-                parser.error(f"Unknown provider '{provider}'. Valid: {VALID_PROVIDERS}")
+                parser.error(f"Unknown provider '{provider}'. Use: {VALID_PROVIDERS}")
             overrides[stage] = (provider, model)
-    return overrides if overrides else None
+    return overrides
 
 
-def _run_single(args, parser):
-    """Run the pipeline on a single story."""
-    # Resolve story source
-    story_path = None
-    source_story = None
+def _print_run_summary(result: PipelineResult, mode: str, output_dir: Path):
+    """Print summary for a single pipeline run."""
+    mode_label = "UKE_NARRATIVE" if mode == "narrative" else "UKE_ARTIFACT"
+    print(f"\n{'=' * 70}")
+    print(f"{mode_label} PIPELINE SUMMARY")
+    print("=" * 70)
+    print(f"  Run ID:         {result.run_id}")
+    print(f"  Mode:           {mode}")
+    print(f"  Original title: {result.original_title}")
+    print(f"  Output dir:     {output_dir}")
+    print()
+
+    for s in result.steps:
+        tok = f" ({s.tokens_in:,}→{s.tokens_out:,} tokens)" if s.tokens_in else ""
+        dur = f" [{s.duration_s:.1f}s]" if s.duration_s else ""
+        model_info = f" [{s.provider}:{s.model_used}]" if s.model_used else ""
+        print(f"  {s.step:12s} {s.status:10s}{tok}{dur}{model_info}")
+        if s.error:
+            print(f"    error: {s.error[:200]}")
+
+    print(f"\n  Total tokens: {result.total_tokens_in:,} → {result.total_tokens_out:,}")
+    print(f"  Total time:   {result.total_duration_s:.1f}s")
+
+    if result.story_path:
+        label = "Final story" if mode == "narrative" else "Final artifact"
+        print(f"\n  {label}:  {result.story_path}")
+        try:
+            print(f"  Output length: {len(result.story_path.read_text()):,} chars")
+        except Exception:
+            pass
+
+    air_gap = PIPELINE_MODES[mode]["air_gap_stage"]
+    air_num = air_gap.split("_")[1]
+    print(f"\n  ╔══════════════════════════════════════════════════════╗")
+    print(f"  ║  AIR GAP STATUS: ENFORCED                           ║")
+    print(f"  ║  Stage {air_num} never received source story or Stage 0.    ║")
+    print(f"  ╚══════════════════════════════════════════════════════╝")
+
+
+def _run_single(args, parser) -> PipelineResult:
+    """Run the pipeline on a single story. Returns the PipelineResult."""
+    mode_config = PIPELINE_MODES[args.mode]
+
+    # Resolve story path
+    story_path_str = args.story or args.story_file
+    story_path: Path | None = None
 
     if args.resume:
         output_dir = Path(args.resume)
-        source_file = output_dir / "source_story.txt"
-        if source_file.exists():
-            source_story = source_file.read_text(encoding="utf-8")
-        else:
-            parser.error(f"No source_story.txt in {output_dir}")
-    else:
-        path = args.story or getattr(args, "story_file", None)
-        if path:
-            story_path = Path(path)
-            if not story_path.exists():
-                parser.error(f"File not found: {story_path}")
+        story_cache = output_dir / "source_story.txt"
+        if story_cache.exists():
+            source_story = story_cache.read_text(encoding="utf-8")
+            story_path = story_cache
+        elif story_path_str:
+            story_path = Path(story_path_str)
             source_story = story_path.read_text(encoding="utf-8")
         else:
-            parser.error("Provide a story file or --resume directory")
+            source_story = ""
+    elif story_path_str:
+        story_path = Path(story_path_str)
+        source_story = story_path.read_text(encoding="utf-8")
+    else:
+        # Auto-discover from originals directory
+        originals = sorted(ORIGINALS_DIR.glob("*.md"))
+        if len(originals) == 1:
+            story_path = originals[0]
+            source_story = story_path.read_text(encoding="utf-8")
+            print(f"Auto-selected: {story_path.name}")
+        elif originals:
+            parser.error(
+                f"Multiple stories in {ORIGINALS_DIR}. Specify one or use --batch:\n"
+                + "\n".join(f"  {p.name}" for p in originals)
+            )
+            return  # unreachable but satisfies type checker
+        else:
+            parser.error(f"No stories found in {ORIGINALS_DIR}")
+            return
 
     model_overrides = _parse_model_overrides(args, parser)
 
-    # Output directory
-    if args.resume:
-        output_dir = Path(args.resume)
-    elif args.output_dir:
-        output_dir = Path(args.output_dir)
-    else:
-        prefix = "uke_artifact" if args.mode == "artifact" else "uke_output"
-        slug = _title_to_filename(story_path.stem) if story_path else "input"
-        output_dir = Path(f"{prefix}_{slug}_{int(time.time())}")
+    # Determine output directory
+    prefix = "uke_artifact" if args.mode == "artifact" else "uke_output"
+    output_dir = Path(args.resume or args.output_dir or f"{prefix}_{int(time.time())}")
 
+    # Save source story for resume capability
     output_dir.mkdir(parents=True, exist_ok=True)
-
-    # Save source for resume
-    if not args.resume and source_story:
-        (output_dir / "source_story.txt").write_text(source_story, encoding="utf-8")
+    story_save = output_dir / "source_story.txt"
+    if source_story and not story_save.exists():
+        story_save.write_text(source_story, encoding="utf-8")
 
     orch = UKEOrchestrator(
         mode=args.mode,
@@ -1886,51 +1409,17 @@ def _run_single(args, parser):
         dr_logic_path=args.dr_logic,
         output_dir=output_dir,
         skip_final_audit=args.skip_final_audit,
-        skip_engine=args.skip_engine,           # NEW flag
         dry_run=args.dry_run,
         force_gate=args.force_gate,
     )
 
-    result = orch.run(
-        source_story,
-        from_stage=args.from_stage,
-        source_path=story_path,
-    )
-
-    # Print summary
-    print(f"\n{'=' * 70}")
-    print(f"PIPELINE SUMMARY — {args.mode.upper()} MODE")
-    print(f"{'=' * 70}")
-
-    for s in result.steps:
-        tok = f" ({s.tokens_in:,}→{s.tokens_out:,} tokens)" if s.tokens_in else ""
-        dur = f" [{s.duration_s:.1f}s]" if s.duration_s else ""
-        model = f" ({s.model_used})" if s.model_used else ""
-        print(f"  {s.step:20s} {s.status:10s}{tok}{dur}{model}")
-        if s.error:
-            print(f"    error: {s.error[:200]}")
-
-    print(f"\n  Total tokens: {result.total_tokens_in:,} → {result.total_tokens_out:,}")
-    print(f"  Total time:   {result.total_duration_s:.1f}s")
-
-    # NEW: constraint engine summary
-    if result.scope_manifest:
-        seq = result.scope_manifest.get("generation_sequence", [])
-        print(f"\n  Constraint engine: {len(seq)} axes decomposed, "
-              f"{len(result.constraint_stories)} stories generated, "
-              f"{len(result.constraint_report_paths)} reports produced")
-
-    if result.story_path:
-        print(f"\n  Output: {result.story_path}")
-
-    # Cost estimate
-    cost_in = result.total_tokens_in / 1_000_000 * 3.0
-    cost_out = result.total_tokens_out / 1_000_000 * 15.0
-    print(f"  Est cost: ~${cost_in + cost_out:.2f}")
+    result = orch.run(source_story, from_stage=args.from_stage, source_path=story_path)
+    _print_run_summary(result, args.mode, output_dir)
+    return result
 
 
 def _run_batch(args, parser):
-    """Run the pipeline on all stories in originals/."""
+    """Run the pipeline on all stories in originals/. Skips already-completed ones."""
     originals = sorted(ORIGINALS_DIR.glob("*.md"))
     if not originals:
         parser.error(f"No stories found in {ORIGINALS_DIR}")
@@ -1940,7 +1429,13 @@ def _run_batch(args, parser):
     mode_config = PIPELINE_MODES[args.mode]
     output_base = mode_config["output_dir"]
 
+    # Determine which stories already have output
     def _is_completed(story_path: Path) -> bool:
+        """Check if a final output already exists for this story.
+
+        Scans output dir files for the traceability marker matching
+        this story's title (handles AI-generated output filenames).
+        """
         text = story_path.read_text(encoding="utf-8")
         title = _extract_title(text)
         marker = f"Original: {title}"
@@ -1972,7 +1467,6 @@ def _run_batch(args, parser):
     print(f"  Source dir:     {ORIGINALS_DIR}")
     print(f"  Output dir:     {output_base}")
     print(f"  Stories found:  {total}")
-    print(f"  Engine:         {'enabled' if not args.skip_engine else 'disabled'}")
     if skip_count:
         print(f"  Already done:   {skip_count} (skipping)")
         for p in skipped:
@@ -1984,6 +1478,7 @@ def _run_batch(args, parser):
         print("Nothing to do.")
         return
 
+    # Track results for summary table
     batch_results: list[tuple[Path, PipelineResult | None, str]] = []
     batch_t0 = time.time()
     batch_tokens_in = 0
@@ -2012,7 +1507,6 @@ def _run_batch(args, parser):
             dr_logic_path=args.dr_logic,
             output_dir=output_dir,
             skip_final_audit=args.skip_final_audit,
-            skip_engine=args.skip_engine,
             dry_run=args.dry_run,
             force_gate=args.force_gate,
         )
@@ -2022,6 +1516,7 @@ def _run_batch(args, parser):
             batch_tokens_in += result.total_tokens_in
             batch_tokens_out += result.total_tokens_out
 
+            # Determine status
             final_step = result.steps[-1] if result.steps else None
             if final_step and final_step.status == "gate_halt":
                 status = "GATE_HALT"
@@ -2042,6 +1537,7 @@ def _run_batch(args, parser):
             batch_results.append((story_path, None, "CRASH"))
             print(f"\n  >> CRASH: {e}")
 
+    # ── Batch summary table ──────────────────────────────────────────
     batch_duration = time.time() - batch_t0
 
     print(f"\n\n{'=' * 70}")
@@ -2049,6 +1545,7 @@ def _run_batch(args, parser):
     print(f"{'=' * 70}")
     print()
 
+    # Table header
     print(f"  {'Story':<35s} {'Status':<12s} {'Tokens In':>10s} {'Tokens Out':>10s} {'Time':>7s}")
     print(f"  {'─' * 35} {'─' * 12} {'─' * 10} {'─' * 10} {'─' * 7}")
 
@@ -2067,6 +1564,7 @@ def _run_batch(args, parser):
             name = p.stem[:33]
             print(f"  {name:<35s} {'SKIPPED':<12s} {'—':>10s} {'—':>10s} {'—':>7s}")
 
+    # Totals
     ok_count = sum(1 for _, _, s in batch_results if s == "OK")
     fail_count = sum(1 for _, _, s in batch_results if s != "OK")
 
@@ -2074,8 +1572,10 @@ def _run_batch(args, parser):
     print(f"  Tokens:   {batch_tokens_in:,} → {batch_tokens_out:,}")
     print(f"  Duration: {batch_duration:.0f}s ({batch_duration / 60:.1f}m)")
 
-    cost_in = batch_tokens_in / 1_000_000 * 3.0
-    cost_out = batch_tokens_out / 1_000_000 * 15.0
+    # Cost estimate (Sonnet 4.5 pricing as of Feb 2026)
+    # Gemini stage 0 is cheap enough to ignore for estimation
+    cost_in = batch_tokens_in / 1_000_000 * 3.0    # $3/MTok input
+    cost_out = batch_tokens_out / 1_000_000 * 15.0  # $15/MTok output
     print(f"  Est cost: ~${cost_in + cost_out:.2f} (Sonnet input ${cost_in:.2f} + output ${cost_out:.2f})")
 
 
@@ -2108,14 +1608,13 @@ def main():
     )
     parser.add_argument("--skip-final-audit", action="store_true",
                         help="Skip final audit stage (stage 5 narrative / stage 6 artifact)")
-    parser.add_argument("--skip-engine", action="store_true",
-                        help="Skip constraint engine (SCOPE → stories → Prolog reports)")
     parser.add_argument("--force-gate", action="store_true",
                         help="Do not halt on validation gate failures (artifact mode)")
     parser.add_argument("--dry-run", action="store_true", help="Run Stage 0 only")
     parser.add_argument("--batch", action="store_true",
                         help="Process all stories in originals/. Skips already-completed ones.")
 
+    # Model overrides (provider:model format) for all possible stages
     for stage in ALL_POSSIBLE_STAGES:
         parser.add_argument(
             f"--{stage.replace('_', '-')}-model",
@@ -2124,6 +1623,7 @@ def main():
 
     args = parser.parse_args()
 
+    # Validate --from-stage against selected mode
     mode_config = PIPELINE_MODES[args.mode]
     if args.from_stage not in mode_config["stages"]:
         parser.error(
