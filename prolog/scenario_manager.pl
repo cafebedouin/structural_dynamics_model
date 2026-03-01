@@ -6,6 +6,7 @@
 
 :- use_module(narrative_ontology).
 :- use_module(test_harness).
+:- use_module(data_repair).
 
 % 1. FORCE DYNAMIC STATE
 % This prevents "Redefined static procedure" errors even if the dataset 
