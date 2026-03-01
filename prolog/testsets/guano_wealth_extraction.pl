@@ -197,6 +197,8 @@ test(piton_threshold) :-
  * DIRECTIONALITY LOGIC:
  *   The directionality of each perspective derives from structural position in the extraction flow. Harvesters have d ≈ 0.95 (full targets): powerless + trapped + victim → high f(d) → high χ. Tributaries have d ≈ 0.92 (near-full targets): powerless + trapped + victim + multigenenerational → high χ. Chincha elite have d ≈ 0.05 (full beneficiaries): institutional + arbitrage + beneficiary → negative f(d) → negative χ (experienced as coordination benefit). Merchant traders have d ≈ 0.50 (symmetric): moderate power + constrained exit + mixed beneficiary/victim → χ moderate. The ceremonial system has d ≈ 0.15 (beneficiary with institutional inertia): performs legitimation function for elite. Analytical observer has d ≈ 0.73 (observer position): sees structural pattern from outside, risks false summit (naturalizing contingency as necessity).
  *
+ * MANDATROPHY ANALYSIS:
+ *   [RESOLVED MANDATROPHY] Reviewed 2026-03-01. Override: false_natural_law.
  */
 
 /* ==========================================================================

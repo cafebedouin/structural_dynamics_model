@@ -197,6 +197,8 @@ test(piton_threshold) :-
  * DIRECTIONALITY LOGIC:
  *   Directionality for each perspective is derived from exit options and structural position. Infrastructure operators (institutional/arbitrage) experience low d because they have upgrade and substitution options — they remain beneficiaries. Civilization (institutional/constrained) experiences moderate-high d because it cannot exit infrastructure without collapse, but also benefits from coordination — it is trapped but not powerless. Individual humans (moderate/trapped) experience very high d because exit (removing augmentation) means cognitive death — they are structural targets. The biological substrate (powerless/trapped) experiences maximum d because it has no agency and no alternatives — it is a pure victim. The regulatory theater (analytical/analytical) experiences moderate d because it observes the system but cannot redirect it. The natural law perspective experiences the same d as analytical observers in general, but risks naturalizing the d value as physical law rather than institutional choice.
  *
+ * MANDATROPHY ANALYSIS:
+ *   [RESOLVED MANDATROPHY] Reviewed 2026-03-01. Override: false_natural_law.
  */
 
 /* ==========================================================================
