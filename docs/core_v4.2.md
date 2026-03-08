@@ -15,7 +15,7 @@
 **Deferential Realism prevents both errors** through systematic constraint classification.
 
 **The framework provides:**
-- Six constraint categories (Mountains, Ropes, Tangled Ropes, Snares, Scaffolds, Pitons)
+- Seven constraint categories (Mountains, Ropes, Tangled Ropes, Snares, Scaffolds, Pitons, Naturalized)
 - Four indices for specifying perspective (WHO/WHEN/WHERE/HOW_MUCH)
 - Tests distinguishing each category
 - Power-scaling mechanism (same constraint experienced differently by power position)
@@ -46,7 +46,7 @@ Deferential Realism integrates five philosophical branches with three applied do
 ### **Philosophical Foundations:**
 
 1. **Epistemology** - How to classify constraints accurately through indexical specification, Six-Test Battery, power-scaling assessment
-2. **Logic** - How to reason validly about constraint-types through formal operators, inference rules, containment logic
+2. **Logic** - How to reason validly about constraint-types through formal operators, inference rules, containment logic; Stages 7-9 extend this to structural physics: Boltzmann compliance testing (natural law verification), purity scoring (continuous health measurement), and network contamination propagation
 3. **Metaphysics** - What exists: constraints constitute entities; patterns of limits define possibility-space
 4. **Ethics** - How to act appropriately: six conditional virtues (Acceptance, Resistance, Reform, Construction, Maintenance, Containment)
 5. **Aesthetics** - What beauty looks like: elegant alignment vs. grotesque fraud; constraint as creative material
@@ -251,6 +251,14 @@ Every constraint falls into one of six fundamental types, distinguished by how t
 - **Relief test**: Only invested parties would mourn removal
 
 **Why this matters:** Political/relational energy is finite. Pitons drain it without benefit.
+
+### 7. Naturalized (Power-Scaling Ambiguity)
+
+**Definition:** Constraints with high base extraction (ε > 0.45) compressed below detection threshold (χ < 0.40) by power scaling. The extraction is real but appears natural — the primary substrate for false summit rhetoric.
+
+**Action:** **investigate_naturalization** — probe the gap between base and effective extraction to determine whether apparent immutability is structural or power-mediated.
+
+---
 
 **Special subtype - Internalized Piton (I-Piton):**
 - Original Snare internalized as habit/identity
@@ -762,7 +770,8 @@ See the accompanying paper for formal proofs and `validation/validation_report.m
 - Corpus Western-leaning (needs non-WEIRD replication)
 - Extraction thresholds may be context-dependent
 - Power modifiers calibrated from limited sample
-- Temporal dynamics underspecified (observe degradation, lack predictive model)
+- Temporal dynamics partially specified: drift classification and cascade prediction implemented (Stage 9); calibration thresholds still in shadow mode pending validation
+- Stages 7-9 (Boltzmann, Purity, Network) run in shadow mode alongside core classification — not yet integrated into primary outputs pending threshold calibration
 - Fuzzy boundaries between categories (especially Tangled Rope/Snare border)
 - Verification architecture incomplete: structural linter and classification engine exist; meta-engine for triage and Omega tracking for resolution are designed but not yet fully implemented
 - Template version is strongest predictor of file quality — v5.2 necessary (not sufficient) for structural correctness

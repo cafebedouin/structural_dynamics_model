@@ -1682,6 +1682,128 @@ Currently, FNL/CI_Rope/FCR are already active (they fire in `constraint_signatur
 
 ---
 
+## §7. Cross-Domain Bridges & Diagnostic Extensions
+
+### 7.1 Psychological Domain Bridge (psych_bridge.pl)
+
+The psychological bridge maps DR constraint types to clinical/developmental vocabulary without modifying classification logic. Each exported predicate is a named alias that delegates to the corresponding `drl_core` classifier after performing a metric swap.
+
+**Metric swap mechanism:** `with_psych_metric(+C, +Goal)` (unexported helper) temporarily asserts `constraint_metric(C, suppression_requirement, Depth)` from any existing `internalization_depth` metric via `setup_call_cleanup/3`, then calls the Goal. This allows psychological data (internalization depth) to substitute for structural data (suppression requirement) when running the standard classifier.
+
+**Alias mapping:**
+
+| Predicate | DR Type | Output Atom | Clinical Interpretation |
+|-----------|---------|-------------|------------------------|
+| `is_substrate/3` | mountain | `substrate` | Biological/neurological limits |
+| `is_negotiable_pattern/3` | rope | `negotiable_pattern` | Healthy, functional habits |
+| `is_hybrid_pattern/3` | tangled_rope | `hybrid_pattern` | Habits that both serve and harm |
+| `is_self_extraction/3` | snare | `self_extraction` | Self-destructive patterns (e.g., addiction) |
+| `is_developmental_support/3` | scaffold | `developmental_support` | Temporary supports (e.g., therapy) |
+| `is_abandoned_camp/3` | piton | `abandoned_camp` | Obsolete coping mechanisms |
+
+All predicates take `(+Constraint, +Context, -Type)`. No external callers currently exist — the module is exported for domain-specific psychology analysis.
+
+**Implementation:** `psych_bridge.pl`, 6 exported predicates + 1 helper.
+
+---
+
+### 7.2 UKE Status Bridge (uke_dr_bridge.pl)
+
+The UKE (Urgency-Knowledge-Energy) bridge maps DR classifications and feasibility assessments to actionable recommendation statuses.
+
+**Primary predicate:** `uke_status(+RecID, -Status, -Reasons)` — takes a recommendation ID, resolves its affected constraint via `affects_constraint/2`, retrieves the DR type and feasibility, then routes through a priority-ordered status determination.
+
+**Status mapping (priority order):**
+
+| Priority | Condition | Status | Meaning |
+|----------|-----------|--------|---------|
+| 1 | Type = mountain | `fantasy` | Cannot modify a natural constraint |
+| 2 | Type = snare, load-bearing, no scaffold | `blocked` | Load-bearing snare removal without safety net |
+| 3 | Type ∈ {rope, snare, piton}, viable, no vetoes | `viable` | No structural or political obstacles |
+| 4 | Type = tangled_rope | `aspirational` | Requires systemic reform, not immediate action |
+| 5 | Type = unknown | `investigate` | Constraint metrics incomplete |
+| 6 | Feasibility = blocked_by_veto | `blocked` | Political actors vetoing change |
+
+**Load-bearing detection:** `is_load_bearing(+C)` checks `dr_type(C, snare)` AND `constraint_metric(C, extractiveness, X)` AND `X >` `snare_load_bearing_threshold` (config value: 0.70). A load-bearing snare is one where removal without a scaffold would cause structural collapse.
+
+**Caller:** `report_generator.pl:79`
+
+**Limitation:** Assumes single affected constraint per recommendation (no backtracking on `affects_constraint/2`).
+
+**Implementation:** `uke_dr_bridge.pl`, 1 exported predicate + 2 helpers.
+
+---
+
+### 7.3 Post-Synthesis Divergence Detection (post_synthesis.pl)
+
+Post-synthesis checks detect divergence between diagnostic verdicts and abductive trigger counts — a canary signal that the diagnostic and anomaly-detection subsystems disagree.
+
+**Primary predicate:** `post_synthesis_check(+C, +Summary, -Flags)` — takes a constraint and its `diagnostic_summary/7` term, queries abductive triggers, and returns a list of `flag/2` terms.
+
+**Two divergence cases:**
+
+1. **`red_without_triggers`** — Red diagnostic verdict + zero genuine abductive triggers. The diagnosis says "problematic" but no anomaly explanation was found. Flag fields: `verdict-red`, `genuine_trigger_count-0`, `total_trigger_count-N`.
+
+2. **`green_with_triggers`** — Green diagnostic verdict + ≥ threshold genuine triggers. The diagnosis says "clean" despite multiple anomalies detected. Threshold: `config:param(post_synthesis_green_trigger_threshold)` (default: 2). Flag fields: `verdict-green`, `genuine_trigger_count-N`, `trigger_classes-[...]`.
+
+**Trigger filtering:** `is_genuine_trigger/1` filters triggers by `Classification = genuine` (vs `artifact`). Only genuine triggers count toward divergence.
+
+**Yellow verdict:** Explicitly ignored — yellow is already ambiguous and does not warrant a divergence flag.
+
+**Self-test:** `post_synthesis_selftest/0` runs 5 hardcoded test cases covering both divergence types and expected non-divergence.
+
+**Caller:** `json_report.pl:407`
+
+**Implementation:** `post_synthesis.pl`, 161 lines, 6 predicates.
+
+---
+
+### 7.4 Inferred Coupling Protocol (inferred_coupling_protocol.pl)
+
+The inferred coupling protocol validates temporal coupling inference by correcting a bug in the gradient computation and testing the corrected version against designed pairs with known expected results.
+
+**The bug:** `drl_modal_logic:dr_gradient_at/3` uses a bare `!` (cut) inside `findall/3`. When `findall` backtracks over timepoints, the cut stops all choice points — returning only 1 gradient instead of N-1 for N timepoints. This cascades to `infer_structural_coupling/3`, which relies on complete gradient data.
+
+**The fix:** `gradient_at/3` (`inferred_coupling_protocol.pl:115-123`) replaces the bare cut with `once/1`, providing local cut semantics that preserve the outer `findall` backtracking. The gradient metric is hardcoded to `extractiveness`.
+
+**5-phase validation protocol:**
+
+1. **Discovery** — Find constraints with `measurement/5` data
+2. **Gradient verification** — Confirm each measured constraint produces ≥2 gradients
+3. **Designed pair testing** — Test 4 known constraint pairs:
+   - `pair_1_tech_ecosystem`: quantum_decryption_risk_2026 ↔ smartphone_ubiquity (expected 1.0)
+   - `pair_2_institutional_erosion`: regulatory_capture ↔ institutional_trust_decay (expected 1.0)
+   - `pair_3_commons_degradation`: tragedy_of_the_commons ↔ pareto_principle (expected 1.0)
+   - `pair_4_negative_control`: hawthorne_effect ↔ rotation_seven_black_soil (expected 0.0)
+4. **Network impact** — Measure component merging when inferred edges are added to baseline (explicit + shared_agent)
+5. **Bridge analysis** — Identify cross-domain bridge edges and type contamination
+
+**Coupling computation:** `compute_coupling/3` computes a sign-agreement ratio: `Strength = Matches / L`, where Matches counts same-sign gradient pairs. Threshold: `config:param(network_coupling_threshold)`.
+
+**Implementation:** `inferred_coupling_protocol.pl`, 510 lines, ~15 core predicates + BFS graph utilities.
+
+---
+
+### 7.5 Giant Component Analysis (giant_component_analysis.pl)
+
+Analyzes the constraint network's percolation structure — whether a giant component exists, at what coupling threshold it emerges, and how contamination propagates through it.
+
+**4 phases:**
+
+1. **Network Topology at Default Threshold** — Maps the existing network using the current `network_coupling_threshold`. Reports degree distribution, component sizes, type/purity landscape, and top 20 super-spreaders. Pre-computes all edges at threshold 0.01 (near-zero capture) and caches node properties.
+
+2. **Threshold Sweep (Erdős–Rényi Phase Transition)** — Sweeps coupling threshold from **0.10 to 0.90 in steps of 0.05** (17 points). At each threshold, `explicit` and `shared_agent` edges always survive; only `inferred_coupling` edges are filtered. Reports edge count, component count, and largest component size at each step. Detects the percolation threshold where a giant component emerges.
+
+3. **Contamination Propagation** — Runs fixed-point iteration to steady state. Maps type contamination paths through the network. Reports immunity scores and cross-type contamination vulnerability.
+
+4. **Context Comparison** — Repeats the analysis in 3 power contexts: `institutional`, `moderate`, `analytical`. Compares component structures across perspectives to identify context-dependent giant components.
+
+**Key predicates:** `run_giant_component_analysis/0` (orchestrator), `run_phase1/0` through `run_phase4/0`, `precompute_all_edges/2`, `sweep_thresholds/3`, `edges_at_threshold/2`, `compute_components/2`, `purity_zone/2`.
+
+**Implementation:** `giant_component_analysis.pl`, 1279 lines, 70+ predicates.
+
+---
+
 ## Conclusion
 
 **What We've Built:**

@@ -389,6 +389,22 @@ Your practical ability to route around or escape the constraint.
 - Exit would require becoming a different person, not just paying a cost
 - Binding is cognitive (identity fusion, epistemic closure) rather than material
 - Hub 2: mountain at immediate, rope at biographical and beyond (perceptual filter, not structural immobility)
+- Phase transition at biographical horizon — see effective_immutability table below
+
+**Effective Immutability by Exit Option × Time Horizon:**
+
+| Exit Option | Immediate | Biographical | Generational | Historical | Civilizational |
+|-------------|-----------|--------------|--------------|------------|----------------|
+| trapped | mountain | mountain | mountain | rope | rope |
+| **identity_locked** | **mountain** | **rope** | **rope** | **rope** | **rope** |
+| constrained | mountain | mountain | rope | rope | rope |
+| mobile | rope | rope | rope | rope | rope |
+| arbitrage | rope | rope | rope | rope | rope |
+| analytical | — | — | — | — | mountain ∧ rope |
+
+`identity_locked` is the only exit option that flips at the biographical boundary (1–50 years). The comment in `constraint_indexing.pl:179` explains: "Perceptual filter, not structural immobility." Identity fusion prevents exit within 1 year (mountain), but identity can be reconstructed over a lifetime (rope). Compare `trapped`, which remains mountain through generational timescales — physical/economic barriers resist individual lifespans. The `analytical` row at civilizational is non-deterministic by design (both mountain and rope succeed; metric gates determine which fires first).
+
+**Implementation:** `effective_immutability/3` in `constraint_indexing.pl:172-205`; wrapper `effective_immutability_for_context/2` at line 207.
 
 **constrained** â€” Can exit but at high cost
 - Example: Professional with golden handcuffs, homeowner in declining market
@@ -1990,6 +2006,29 @@ Don't waste energy maintaining or fighting Pitons:
 
 ---
 
+#### B.6a Coordination Vitality Gates (v7.0)
+
+The v7.0 revision added a **piton pre-check** that fires before the snare gate when coordination vitality is explicitly declared dead or degrading.
+
+**Predicates:**
+
+- `coordination_vitality(+C, +Status)` — Multifile/dynamic fact in `narrative_ontology.pl:337`. Status is `dead`, `degrading`, or `active`. Default clause fails (coordination presumed alive unless declared in testset files).
+- `coordination_dead(+C)` — Succeeds if `coordination_vitality(C, dead)` or `coordination_vitality(C, degrading)`. Defined in `drl_core.pl:295-298`.
+
+**Classification effect:** When `coordination_dead(C)` succeeds, the pre-check clause (`classify_from_metrics/6` at `drl_core.pl:314-321`) fires before the snare gate:
+
+```
+Piton_precheck(C) ↔ coordination_dead(C) ∧ ε(C) > 0.10 ∧ theater(C) ≥ 0.70
+```
+
+This clause does **not** check χ or suppression. A dead-coordination constraint with high theater is a piton regardless of extraction level. The `piton_epsilon_floor` (0.10) floor prevents zero-extraction mountains from piton misclassification.
+
+**Diagnostic evidence:** Dead and degrading pitons show mean ε = 0.66 (consistent with terminal pitons), while transitional pitons with live coordination show mean ε ≈ 0.39.
+
+**Limitation:** Coordination vitality must be manually declared in testset files — there is no auto-detection mechanism. Only three status values exist (dead, degrading, active) with no temporal modeling of when coordination died or degradation rate.
+
+---
+
 #### B.7 Naturalized Operator
 
 ##### Conceptual Overview
@@ -2436,6 +2475,76 @@ param(power_modifier_analytical, 1.15).
 ```
 
 **Reference:** logic_thresholds.md Â§1 for complete power modifier registry
+
+---
+
+#### Coalition Power Resolution
+
+When a `powerless` agent faces a snare-like constraint with enough identified victims, the system upgrades their effective power to `organized` — modeling the emergence of collective action capacity from shared structural harm.
+
+**Predicate:** `resolve_coalition_power(+Power, +Constraint, -ResolvedPower)` in `constraint_indexing.pl:348-370`
+
+**Preconditions (all must hold for upgrade):**
+1. Input power = `powerless`
+2. Base extraction ≥ `snare_epsilon_floor` (0.46) — constraint extracts enough to motivate collective action
+3. Suppression ≥ `snare_suppression_floor` — active suppression creates shared grievance
+4. Constraint has identified victims (`narrative_ontology:constraint_victim/2`)
+5. Victim count ≥ `critical_mass_threshold` (config value: 3) — minimum coalition size
+
+**Result:** `powerless` → `organized`. All other power levels pass through unchanged (fallthrough clause at line 370).
+
+**Circularity avoidance:** The preconditions use snare-property heuristics (raw metric checks) rather than calling `dr_type/3`, which would create a circular dependency since coalition resolution feeds into `extractiveness_for_agent/3`, which feeds into `classify_from_metrics/6`.
+
+**Effect on classification:** The upgrade changes the power input to the sigmoid directionality function, which changes χ. A constraint that classifies as snare from a powerless perspective may classify as rope or tangled_rope from the upgraded organized perspective — reflecting the real structural shift that collective action produces.
+
+**Limitations:** Only upgrades from powerless (no downgrade mechanism). No time-horizon sensitivity — coalition strength is constant across all temporal perspectives. No modeling of coalition formation dynamics or fragility.
+
+**Implementation:** Called by `extractiveness_for_agent/3` at `constraint_indexing.pl:381`.
+
+---
+
+#### Observer Accessibility & the Restriction Operator
+
+The restriction operator formalizes the epistemic trap: a powerless observer experiences extraction (χ) but cannot decompose it into structural components. This is the mechanism that makes snares look like "just how things are."
+
+**Predicate:** `observer_accessible(+C, +Context, -RestrictedView)` in `constraint_indexing.pl:663-681`
+
+**Output structure:** `view(Chi, VisibleEps, VisibleSupp, VisibleTheater, KnownBeneficiaries, PerceivedMutability)` — where inaccessible features return `unknown` and felt-only features return the Chi proxy.
+
+**Feature Accessibility Table:**
+
+| Power Level   | raw_extraction | suppression | beneficiaries | alternatives | theater_ratio | cross_context |
+|---------------|----------------|-------------|---------------|--------------|---------------|---------------|
+| powerless     | none           | felt_only   | none          | none         | none          | none          |
+| moderate      | partial        | partial     | partial       | partial      | partial       | none          |
+| powerful      | partial        | partial     | partial       | full         | partial       | none          |
+| organized     | partial        | full        | full          | full         | partial       | none          |
+| institutional | full           | full        | full          | full         | full          | none          |
+| analytical    | full           | full        | full          | full         | full          | full          |
+
+**Access level semantics:**
+- `full` — true metric value returned
+- `partial` — true metric value returned (same data as full; precision difference is conceptual, not quantitative in current implementation)
+- `felt_only` — Chi proxy returned (observer experiences the effect but cannot separate components)
+- `none` — `unknown` returned (feature not accessible from this position)
+
+**Beneficiary restriction:** At `partial` access, returns the first `max(1, N//2)` beneficiaries (half-knowledge). At `none`, returns empty list.
+
+**Classification from restricted data:** `classify_from_restricted(+C, +Context, -RestrictedType)` (`constraint_indexing.pl:734-758`) applies a simplified threshold cascade using only observer-accessible features:
+
+| Type          | Conditions                                              |
+|---------------|---------------------------------------------------------|
+| mountain      | supp ≤ 0.05 ∧ ε ≤ 0.25 ∧ mutability = mountain        |
+| snare         | χ ≥ 0.66 ∧ ε ≥ 0.46 ∧ supp ≥ 0.60                     |
+| rope          | χ ≤ 0.35 ∧ ε ≤ 0.45                                    |
+| piton         | theater ≥ 0.70 ∧ χ ≤ 0.25 ∧ ε > 0.10                  |
+| indeterminate | fallback                                                |
+
+These thresholds are hardcoded (not config-driven), unlike the full `classify_from_metrics/6`.
+
+**Testable prediction** (documented at `constraint_indexing.pl:589-590`): The set of constraints where `classify_from_restricted/3` differs from `dr_type/3` should match the set with `gauge_fixed = true`. The gap between restricted and full classification measures the epistemic cost of the observer's position.
+
+**Called from:** `diagnostic_summary.pl:301`, `abductive_triggers.pl:884` (Trigger 15: epistemic trap detection), `quantum_verification_report.pl:345`.
 
 ---
 
@@ -3511,6 +3620,27 @@ When analysis hits irreducible uncertainty, route to **Omega variables**:
 **Usage:** Acknowledge limit, flag for meta-analysis, don't pretend certainty.
 
 **See:** Omega variables track what we CAN'T know, preventing false confidence.
+
+#### Mandatrophy Reconciliation
+
+A **mandatrophy** is a specialized omega: a Mountain (natural fact) that functions as a Snare (extraction trap). The paradox arises when a constraint is classified as mountain (immutable) but has extractiveness > 0.7 — extraction levels normally associated with snares.
+
+**Detection:** `detect_omega(+Name, -mandatrophy)` in `narrative_ontology.pl:303-310` succeeds when:
+1. Constraint classified as mountain via `constraint_classification/3`
+2. Extractiveness > 0.7 (hardcoded, not config-parameterized)
+3. NOT `is_mandatrophy_resolved(Name)`
+
+**Resolution:** Two hardcoded resolutions exist (`narrative_ontology.pl:298-299`):
+- `is_mandatrophy_resolved(gale_shapley)` — "The Algorithm is the Mandate." The matching algorithm imposes costs (ε > 0.7) but is structurally immutable in the same way gravity is — no agent chose this mechanism.
+- `is_mandatrophy_resolved(planetary_boundaries)` — "The Biological Limit is the Mandate." Carrying capacity extracts from those who exceed it, but the limit is a natural fact.
+
+**Two resolution paths:** The system checks for mandatrophy resolution via two independent attribute lookups:
+1. `has_mandatrophy_declaration/1` — checks `attribute(C, lifecycle, mandatrophy)` (used by `check_indexical_relativity/1`)
+2. `is_indexical_resolution_declared/1` — checks `attribute(ID, indexical_resolution, resolved)` (used by `detect_mandatrophy_omega/1`)
+
+**Aggregation:** `count_unresolved_omegas(-Count)` uses `aggregate_all/3` to count system-wide unresolved mandatrophy omegas.
+
+**Implementation:** `narrative_ontology.pl:94-327`. The 0.7 threshold appears in three places (lines 277, 305, 320) and is not parameterized in `config.pl`.
 
 ---
 

@@ -736,3 +736,54 @@ Two additional threshold divergences discovered during systematic doc-vs-source 
 
 **Files modified:**
 - `docs/logic_thresholds.md` — §3e scaffold formal + table, §3f piton formal + table
+
+---
+
+### C13. Purity Zone Taxonomy Divergence: Three Incompatible Definitions
+
+Three modules define independent `purity_zone/2` predicates with different zone atom names, zone counts, and threshold sources.
+
+**1. logical_fingerprint.pl (5-zone, config-driven + hardcoded):**
+
+| Zone | Condition | Source |
+|------|-----------|--------|
+| `pristine` | S ≥ 0.90 | hardcoded |
+| `sound` | S ≥ 0.70 | hardcoded |
+| `borderline` | S ≥ 0.50 | hardcoded |
+| `contaminated` | S ≥ 0.30 | hardcoded |
+| `degraded` | fallback | — |
+
+Defined at `logical_fingerprint.pl:593-599`. Used for coupling purity display in fingerprint reports. (This module also defines separate 5-zone `extraction_zone/2` and `suppression_zone/2` taxonomies using config-driven thresholds — those are distinct from purity zones.)
+
+**2. fpn_report.pl (4-zone, hardcoded):**
+
+| Zone | Condition | Source |
+|------|-----------|--------|
+| `sound` | EP ≥ 0.70 | hardcoded |
+| `contested` | EP ≥ 0.50 | hardcoded |
+| `degraded` | EP ≥ 0.30 | hardcoded |
+| `critical` | fallback | — |
+
+Defined at `fpn_report.pl:109-112`. Used in FPN (Fixed-Point Network) purity reports.
+
+**3. giant_component_analysis.pl (4-zone, config-driven):**
+
+| Zone | Condition | Source |
+|------|-----------|--------|
+| `sound` | P ≥ `purity_action_sound_floor` | config.pl |
+| `borderline` | P ≥ `purity_action_escalation_floor` | config.pl |
+| `warning` | P ≥ `purity_action_degraded_floor` | config.pl |
+| `degraded` | fallback | — |
+
+Defined at `giant_component_analysis.pl:576-582`. Used in network percolation analysis.
+
+**Divergence summary:**
+
+- `sound` is the only zone atom shared across all three definitions.
+- Unique atoms by module: `pristine` and `contaminated` (logical_fingerprint only), `contested` and `critical` (fpn_report only), `warning` (giant_component_analysis only).
+- `borderline` appears in logical_fingerprint and giant_component_analysis but not fpn_report.
+- `degraded` appears in all three but at different positions in the cascade (fallback in two, mid-range in one).
+- fpn_report uses hardcoded numeric thresholds throughout. giant_component_analysis uses config params throughout. logical_fingerprint uses hardcoded thresholds.
+- The 0.70 boundary for `sound` is consistent where comparable (logical_fingerprint and fpn_report both use 0.70; giant_component_analysis uses a config param whose value may differ).
+
+No unified purity zone vocabulary exists across these modules — resolution deferred.
