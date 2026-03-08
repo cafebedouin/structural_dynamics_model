@@ -183,6 +183,14 @@ test(piton_threshold) :-
     domain_priors:theater_ratio(model_of_models_regression, TR),
     TR >= 0.70.
 
+% Regression: civilizational/analytical MUST return both mountain and rope.
+% The dual clause in constraint_indexing.pl is load-bearing: mountain clause
+% feeds the mountain gate, rope clause feeds snare_immutability_check via
+% backtracking. Deleting either clause silently breaks classification.
+test(civilizational_analytical_dual_perception) :-
+    findall(P, constraint_indexing:effective_immutability(civilizational, analytical, P), Ps),
+    sort(Ps, [mountain, rope]).
+
 :- end_tests(model_of_models_regression_tests).
 
 /* ==========================================================================

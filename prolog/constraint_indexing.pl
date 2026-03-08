@@ -192,6 +192,8 @@ effective_immutability(historical, _, rope).
 % Civilizational time horizon: analytical perspective can see structural reality
 % Both mountain AND rope are valid perceptions from analytical - the metric gates
 % determine which fires first (mountain checked before snare/rope in classification order).
+% NOTE: Non-deterministic by design. Callers querying rope (snare gate) succeed via
+% backtracking past the mountain clause. Callers using ->/2 see only mountain.
 effective_immutability(civilizational, analytical, mountain).
 effective_immutability(civilizational, analytical, rope).
 % Non-analytical exit options still perceive everything as changeable (rope)
@@ -671,7 +673,9 @@ observer_accessible(C, Context, RestrictedView) :-
     restrict_continuous(Power, theater_ratio, C, theater, 0.0, VisibleTheater),
     % Restrict beneficiary knowledge
     restrict_beneficiaries(Power, C, KnownBeneficiaries),
-    % Perceived mutability (always accessible via direct experience)
+    % Perceived mutability (always accessible via direct experience).
+    % Uses ->/2 deliberately: returns first perception (mountain before rope).
+    % Dual-perception cases (civilizational/analytical) are handled by drl_core's backtracking.
     (effective_immutability_for_context(Context, Mut) -> PerceivedMutability = Mut ; PerceivedMutability = unknown),
     RestrictedView = view(Chi, VisibleEps, VisibleSupp, VisibleTheater,
                           KnownBeneficiaries, PerceivedMutability).
