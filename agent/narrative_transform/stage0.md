@@ -1,7 +1,7 @@
 ## STAGE 0: CONSTRAINT SCOPING & EXTRACTION
 
 **Model:** Gemini or equivalent analytical model
-**Input:** Source narrative text
+**Input:** Source narrative text + Symbolic Logic Reference (logic_symbolic.md)
 **Output:** Scoped constraint manifest with generation order
 
 **Principle:** Observe before classify. Select before generate. The source text may contain 4–10 constraints. Exactly three proceed to generation. The rest become background pressure.
@@ -55,7 +55,7 @@ For each constraint identified in A1, estimate base properties and run index cal
 
 ```
 ε (extractiveness): 0.0–1.0
-  Routing estimate only. Low = coordination-heavy. High = extraction-heavy.
+  Estimate from source evidence. Low = coordination-heavy. High = extraction-heavy.
 
 Supp (suppression): 0.0–1.0
   Near-zero = natural emergence. High = requires active force.
@@ -74,14 +74,17 @@ P (Power):    powerless π=1.5 | moderate π=1.0 | powerful π=0.6
 
 T (Time):     immediate | biographical | generational | civilizational
 
-E (Exit):     trapped | constrained | mobile | arbitrage | analytical
+E (Exit):     trapped | identity_locked | constrained | mobile | arbitrage | analytical
 
-S (Scope):    local σ=0.8 | national σ=1.0 | global σ=1.2
+S (Scope):    local σ=0.8 | regional σ=0.9 | national σ=1.0
+              continental σ=1.1 | global σ=1.2 | universal σ=1.0
 
 χ = ε × π(P) × σ(S)
 ```
 
-Classify per character using structural signatures in `logic_narrative.md §IV`. If all characters route to the same type, adjust ε or power differential until indexical variance emerges — this is routing toward drama, not measuring reality.
+Classify per character using type definitions and thresholds in `logic_symbolic.md §IV`.
+
+**Important:** Classify what the source contains. If all characters route to the same type for a given constraint, that's a finding about the source — not a problem to fix. ε estimates should reflect the source's actual structural dynamics. Do not adjust ε to create indexical variance; variance manipulation is Stage 2's responsibility.
 
 **B3. Constraint Graph**
 
@@ -156,7 +159,7 @@ All non-selected constraints become background pressure — not omega material t
 - Appear as an offstage presence the reader feels but doesn't see dramatized
 - Become the subject of a future expansion
 
-Document each deferred constraint with one sentence on what narrative work it does from offstage.
+Document each deferred constraint with one sentence on what structural work it does from offstage.
 
 ---
 
@@ -176,8 +179,8 @@ Document each deferred constraint with one sentence on what narrative work it do
         <downstream_of>none</downstream_of>
         <feeds_into>C3</feeds_into>
       </graph>
-      <character_experiences>
-        <character name="[name]">
+      <character_classifications>
+        <character name="[as named in source]">
           <index>
             <power>powerless</power>
             <time>biographical</time>
@@ -186,9 +189,8 @@ Document each deferred constraint with one sentence on what narrative work it do
           </index>
           <chi>0.00</chi>
           <type>[classification]</type>
-          <experience>[Story-specific language, no framework terms]</experience>
         </character>
-      </character_experiences>
+      </character_classifications>
       <indexical_variance>[Different characters → different types from same constraint]</indexical_variance>
       <selection_reason>[Why this constraint is structurally central]</selection_reason>
     </constraint>
@@ -197,7 +199,7 @@ Document each deferred constraint with one sentence on what narrative work it do
   <deferred>
     <constraint id="C4" name="[name]">
       <hypothesis>[type]</hypothesis>
-      <offstage_function>[What narrative work this does as background pressure]</offstage_function>
+      <offstage_function>[What structural work this does as background pressure]</offstage_function>
     </constraint>
   </deferred>
 
@@ -225,9 +227,10 @@ Document each deferred constraint with one sentence on what narrative work it do
 ☐ Generation order follows graph topology, not narrative intuition
 ☐ Each deferred constraint has offstage_function documented
 ☐ At least one Tangled Rope in selected three
-☐ No framework terminology in constraint descriptions or experience fields
+☐ No framework terminology in constraint descriptions
+☐ No <experience> fields — classifications only, no narrative interpretation
+☐ ε values reflect source structure, not dramatic optimization
 ☐ Story name NOT included (air gap for Stage 4)
 ```
 
 ---
-

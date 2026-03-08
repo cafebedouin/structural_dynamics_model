@@ -1,0 +1,187 @@
+{
+  "header": {
+    "constraint_id": "indexical_extraction_asymmetry",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "idx_asym"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.45,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Indexical Extraction Asymmetry in Social Constraint Theory",
+    "topic_domain": "social_theory/power_asymmetry/agency_depletion",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "powerful_agents_with_exit_options"
+    ],
+    "victims": [
+      "powerless_agents_without_exit_options"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped Agent",
+      "comment": "PERSPECTIVE 1: POWERLESS/TRAPPED AGENT (SNARE) \u2014 Experiences the constraint as pure extraction. Same enforcement mechanism that coordinates powerful agents' behavior extracts from this agent with no coordination benefit. Cannot exit, cannot organize, bears full cost of compliance. The constraint depletes agency resources (time, attention, cognitive capacity) without providing reciprocal coordination value."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Constrained Middle",
+      "comment": "PERSPECTIVE 2: MODERATE/CONSTRAINED AGENT (TANGLED ROPE) \u2014 Experiences mixed coordination and extraction. The constraint provides some coordination benefit (predictable rules, shared expectations) but also extracts significantly through compliance costs and limited exit options. Can perceive the asymmetry but cannot easily escape it. Agency depletion is real but not total."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Arbitrage Beneficiary",
+      "comment": "PERSPECTIVE 3: POWERFUL/ARBITRAGE AGENT (ROPE) \u2014 Experiences the constraint as coordination. Same enforcement mechanism that extracts from powerless agents provides this agent with predictable structure, reduced transaction costs, and strategic advantage. Can exit if the constraint becomes unfavorable. The coordination benefit exceeds any extraction cost."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Institutional Designer",
+      "comment": "PERSPECTIVE 4: INSTITUTIONAL/ARBITRAGE AGENT (ROPE) \u2014 Designed or maintains the constraint. Experiences it as pure coordination mechanism solving collective action problems. The asymmetric extraction is invisible from this position because the institution measures coordination success by aggregate compliance, not by distribution of costs. Can modify or exit the constraint at will."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Organized Coalition",
+      "comment": "PERSPECTIVE 5: ORGANIZED/MOBILE AGENT (TANGLED ROPE) \u2014 Collective organization reveals the asymmetry. Sees both the genuine coordination function (which justifies the constraint's existence) and the extractive mechanism (which concentrates costs on powerless members). Has enough power to negotiate modifications but not enough to eliminate the extraction entirely. Agency depletion is visible and contestable."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees the constraint as structurally hybrid. The same enforcement mechanism genuinely coordinates (solves collective action problems, reduces transaction costs) AND asymmetrically extracts (depletes agency resources from powerless agents while subsidizing powerful agents). The asymmetry is not a bug but a structural feature: \u03c7 variance across power positions is the mechanism by which coordination costs are distributed. This is the canonical tangled rope \u2014 irreducible coordination-extraction coupling."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "coordination_necessity_threshold",
+      "question": "What proportion of the constraint's enforcement mechanism is necessary for coordination vs extractive overhead?",
+      "resolution_mechanism": "Comparative analysis of alternative coordination mechanisms with different power distributions; measurement of coordination success vs agency depletion across constraint variants",
+      "impact": "If coordination necessity is high (>0.70): constraint is closer to rope with unfortunate but necessary asymmetry. If low (<0.40): constraint is closer to snare with coordination theater masking extraction.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of enforcement mechanism necessary for coordination"
+    },
+    {
+      "id": "exit_option_accessibility",
+      "question": "Are exit options structurally determined by the constraint or by pre-existing power asymmetries?",
+      "resolution_mechanism": "Longitudinal tracking of agents who change power positions; analysis of whether exit options change with power or remain fixed by external factors (wealth, social capital, legal status)",
+      "impact": "If exit options are constraint-determined: the constraint creates its own power asymmetry (snare mechanism). If pre-existing: the constraint exploits but does not create the asymmetry (tangled rope leveraging external structure).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit options are endogenous or exogenous to constraint"
+    },
+    {
+      "id": "agency_depletion_reversibility",
+      "question": "Is agency depletion from constraint compliance reversible when the constraint is removed or exit is achieved?",
+      "resolution_mechanism": "Post-exit longitudinal studies measuring cognitive capacity, decision-making quality, and resource availability after agents escape the constraint; comparison with matched controls who never experienced the constraint",
+      "impact": "If reversible: extraction is temporary and bounded (lower effective \u03b5). If irreversible or slow-reversing: extraction includes permanent agency damage (higher effective \u03b5, potential reclassification toward snare for trapped agents).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of agency depletion after constraint removal"
+    },
+    {
+      "id": "coordination_benefit_distribution",
+      "question": "Do powerless agents receive ANY coordination benefit, or is the benefit entirely concentrated on powerful agents?",
+      "resolution_mechanism": "Measurement of transaction cost reduction, predictability gains, and collective action success rates stratified by power position; identification of coordination benefits that accrue to all participants vs those captured by powerful agents only",
+      "impact": "If powerless agents receive measurable coordination benefit: tangled rope classification confirmed (asymmetric but not zero-sum). If zero coordination benefit to powerless: reclassify toward snare (coordination is theater for extraction).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Distribution of coordination benefits across power positions"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.3
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.55
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Indexical extraction asymmetry describes the structural phenomenon where identical enforcement mechanisms produce radically different experiences based solely on the observer's index position (power, time horizon, exit options, scope). This is not a claim about specific constraints but a meta-constraint about how constraint classification itself varies with structural position. The constraint is the ASYMMETRY \u2014 the fact that \u03c7 (effective extraction) varies systematically with power position even when \u03b5 (base extraction) and the enforcement mechanism are held constant. A workplace attendance policy, a legal compliance requirement, a social norm, or a platform terms-of-service can simultaneously coordinate for powerful agents (who experience low \u03c7 due to exit options and resources) and extract from powerless agents (who experience high \u03c7 due to trapped exit and resource scarcity). The constraint story models this structural delta as a tangled rope because the coordination function is genuine (the enforcement mechanism does solve collective action problems) AND the extraction is genuine (agency depletion is asymmetrically distributed). The asymmetry is not a bug \u2014 it is the mechanism by which coordination costs are allocated.",
+    "key_agents": [
+      "Powerless Agents Without Exit Options: Primary victim (powerless/trapped) \u2014 experience pure extraction; agency depletion with no coordination benefit; cannot exit or organize",
+      "Powerful Agents With Exit Options: Primary beneficiary (powerful/arbitrage) \u2014 experience coordination; reduced transaction costs and strategic advantage; can exit if unfavorable",
+      "Moderate Agents With Constrained Exit: Mixed position (moderate/constrained) \u2014 experience both coordination benefit and extraction cost; can perceive asymmetry but cannot easily escape",
+      "Institutional Designers: Beneficiary (institutional/arbitrage) \u2014 designed or maintain the constraint; measure success by aggregate compliance, not cost distribution; asymmetry is invisible from this position",
+      "Organized Coalitions: Secondary victim with agency (organized/mobile) \u2014 collective organization reveals asymmetry; can contest but not eliminate extraction",
+      "Analytical Observer: Meta-position (analytical/analytical) \u2014 sees the structural coupling of coordination and extraction; recognizes \u03c7 variance as the mechanism, not a measurement error"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The base extraction reflects the average agency depletion across all power positions, but this average masks extreme variance. Powerless agents experience \u03b5_effective \u2248 0.85+ (snare-level extraction), while powerful agents experience \u03b5_effective \u2248 0.15 (rope-level coordination). The base \u03b5 of 0.58 is the structural average, but the ASYMMETRY is the constraint being modeled. Suppression (0.68): High. Powerless agents face significant barriers to exit (economic dependency, legal constraints, social penalties, lack of alternatives). Powerful agents face low suppression (can exit, can negotiate exceptions, can afford non-compliance). The suppression metric reflects the structural barriers faced by the victim class. Theater ratio (0.45): Moderate and rising. Some of the enforcement mechanism is genuinely functional (solves coordination problems), but an increasing proportion is performative (compliance rituals that signal submission rather than achieve coordination). The rise over time reflects Goodhart drift \u2014 as powerful agents learn to game the system, enforcement shifts from functional to theatrical.",
+    "directionality_logic": "The directionality values are derived from the structural relationship each agent has to the constraint. Powerless/trapped agents are victims with no exit \u2014 high d (\u22480.95) produces high f(d) (\u22481.42), yielding high \u03c7 (snare-level extraction). Powerful/arbitrage agents are beneficiaries with exit options \u2014 low d (\u22480.05) produces negative f(d) (\u2248-0.12), yielding negative \u03c7 (they are subsidized by the constraint). Moderate/constrained agents are mixed \u2014 moderate d (\u22480.55) produces moderate f(d) (\u22480.75), yielding moderate \u03c7 (tangled rope experience). The institutional designer is a beneficiary with arbitrage exit \u2014 very low d (\u22480.00) produces maximum negative f(d) (\u2248-0.12). The organized coalition is a victim with mobile exit \u2014 moderate-high d (\u22480.60) produces moderate-high f(d) (\u22480.85), but organization reduces experienced extraction. The analytical observer uses canonical d for analytical power (\u22480.72), producing f(d) \u2248 1.15, but this is a measurement position, not an experienced position. The key insight: identical \u03b5, identical enforcement mechanism, but \u03c7 varies by a factor of 10+ across power positions. This variance IS the constraint.",
+    "perspectival_gap": "The perspectival gap is maximal and diagnostic. Powerless agents see snare (pure extraction, no coordination benefit, no exit). Powerful agents see rope (pure coordination, minimal cost, exit available). Moderate agents see tangled rope (mixed). Institutional designers see rope (coordination success by their metrics). Organized coalitions see tangled rope (asymmetry is visible and contestable). The analytical observer sees tangled rope (irreducible coupling). The gap reveals that 'coordination vs extraction' is not an objective property of the constraint but an indexical property of the observer's structural position. The constraint coordinates AND extracts, and the ratio depends on where you stand. This is the core insight of indexical classification: the presheaf over observation sites IS the constraint, not any single perspective.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that the coordination-extraction distinction is indexical, not objective. The powerful agent's rope classification is not false \u2014 they genuinely experience coordination. The powerless agent's snare classification is not false \u2014 they genuinely experience extraction. The analytical observer's tangled rope classification is not a compromise \u2014 it is the recognition that the constraint has irreducible dual character. The mandatrophy question 'Is this coordination or extraction?' presupposes a single objective answer. The indexical framework rejects the presupposition: the constraint is BOTH, and which aspect dominates depends on the observer's power position, exit options, and time horizon. The asymmetry is not a measurement error or a framing choice \u2014 it is the structural mechanism by which coordination costs are distributed. Calling it 'just coordination' erases the powerless agent's experience. Calling it 'just extraction' erases the genuine collective action problem being solved. Tangled rope is the only classification that preserves both truths."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is a meta-constraint about indexical classification itself. It does not decompose into separate stories because the asymmetry (\u03c7 variance across power positions) is the single structural phenomenon being modeled. Alternative formulations (e.g., 'workplace attendance policy', 'platform terms of service', 'legal compliance requirement') are instantiations of this pattern, not separate constraints. Each instantiation would be its own constraint story with its own \u03b5, but they would all exhibit this indexical extraction asymmetry structure."
+  },
+  "directionality_overrides": []
+}

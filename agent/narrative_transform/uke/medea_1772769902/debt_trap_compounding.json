@@ -1,0 +1,209 @@
+{
+  "header": {
+    "constraint_id": "debt_trap_compounding",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "debt_trap"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.82,
+    "theater_ratio": 0.68,
+    "claimed_type": "snare",
+    "human_readable": "Debt Trap Compounding in Institutional Labor Systems",
+    "topic_domain": "organizational_systems/labor_economics/institutional_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "loan_administrators",
+      "institutional_finance_division"
+    ],
+    "victims": [
+      "below_quota_workers",
+      "debt_service_trapped_workers"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Debt-Trapped Worker",
+      "comment": "PERSPECTIVE 1: DEBT-TRAPPED WORKER (SNARE) \u2014 Cannot exit without defaulting; wages consumed by debt service prevent accumulation of exit capital. The loan that was framed as temporary assistance has converted into permanent extraction. Maximum experienced extraction \u2014 structural lock with no escape path."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Below-Quota Worker (Pre-Loan)",
+      "comment": "PERSPECTIVE 2: BELOW-QUOTA WORKER PRE-LOAN (SNARE) \u2014 Faces immediate performance shortfall with no alternative income source. The loan appears as the only option to avoid termination, but the terms guarantee future extraction. Even before entering the debt cycle, suppression is high \u2014 the choice is between accepting extractive terms or losing employment entirely."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Above-Quota Worker (Observer)",
+      "comment": "PERSPECTIVE 3: ABOVE-QUOTA WORKER OBSERVER (TANGLED ROPE) \u2014 Not currently trapped but constrained by the threat. Sees colleagues enter debt cycles and recognizes the system as both a safety net (genuine short-term assistance) and an extraction mechanism (compounding terms that guarantee default). Experiences moderate extraction through wage suppression (institutional capture of surplus that could fund higher base wages) and the ambient threat of quota failure."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Loan Administrator",
+      "comment": "PERSPECTIVE 4: LOAN ADMINISTRATOR (ROPE) \u2014 Primary beneficiary. Experiences the constraint as coordination: providing liquidity to workers facing temporary shortfalls. The compounding structure is framed as risk compensation, and the administrator captures interest revenue with minimal risk (debt is secured against future wages, and default triggers termination, which eliminates the liability). Net beneficiary with arbitrage exit \u2014 can move to other institutional finance roles."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Organizing Coalition",
+      "comment": "PERSPECTIVE 5: LABOR ORGANIZING COALITION (SCAFFOLD) \u2014 Organized agents (unions, worker advocacy groups, regulatory reformers) see the debt trap as a temporary extraction mechanism with a sunset: collective bargaining for wage floors, regulatory caps on institutional lending rates, and mandatory financial literacy programs are building alternative support pathways. The coalition has constrained exit (faces institutional resistance and legal barriers) but sees a generational path to dismantling the mechanism."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The HR Compliance Officer",
+      "comment": "PERSPECTIVE 6: HR COMPLIANCE OFFICER (PITON) \u2014 Maintains the performative ritual of financial wellness programs and loan disclosure forms. The compliance theater (mandatory counseling sessions, signed acknowledgment forms, educational materials) persists through institutional inertia and legal liability management, but has minimal functional impact on worker outcomes. The officer recognizes the theater but is constrained by institutional mandate and career risk."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the constraint exhibits both genuine coordination (short-term liquidity provision addresses real cash flow mismatches) and asymmetric extraction (compounding terms systematically transfer wealth from labor to capital). The analytical classification is Tangled Rope rather than Snare because the coordination function is structurally real, even though the extraction dominates. This perspective serves as the basis for the system's computed constraint_claim."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "interest_rate_threshold",
+      "question": "What interest rate threshold distinguishes legitimate risk compensation from extractive compounding?",
+      "resolution_mechanism": "Actuarial analysis of default rates vs interest charged; comparison to external lending markets with similar risk profiles; historical correlation between rate structure and worker outcomes",
+      "impact": "If threshold is market-rate + 2%: many institutional loans are legitimate risk-adjusted lending. If threshold is market-rate + 10%: most institutional loans are extractive. Current institutional rates (15-25% APR) vs external payday lending (300-400% APR) vs credit union rates (8-12% APR) suggest institutional loans sit in an ambiguous middle zone.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Interest rate threshold for distinguishing risk compensation from extraction"
+    },
+    {
+      "id": "wage_growth_counterfactual",
+      "question": "Would workers' wages be higher in the absence of institutional lending programs?",
+      "resolution_mechanism": "Cross-institutional comparison: wage levels at organizations with vs without company loan programs, controlling for industry and worker characteristics; analysis of wage negotiation outcomes before and after loan program implementation",
+      "impact": "If wages would be higher: the loan program is a wage suppression mechanism disguised as a benefit (extraction is higher than measured). If wages would be the same: the loan program is a pure liquidity service (extraction is lower than measured). If wages would be lower: the loan program is a genuine coordination mechanism that enables employment of higher-risk workers.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Counterfactual wage levels without institutional lending"
+    },
+    {
+      "id": "default_trigger_mechanism",
+      "question": "Is default primarily driven by worker behavior (overspending, poor planning) or by structural features (quota volatility, compounding rates, wage stagnation)?",
+      "resolution_mechanism": "Longitudinal tracking of borrowers: correlation between default and quota volatility vs correlation between default and discretionary spending; survival analysis controlling for worker characteristics vs structural features",
+      "impact": "If behavior-driven: the constraint is partly a coordination problem (workers need better financial literacy). If structure-driven: the constraint is pure extraction (the terms guarantee default regardless of worker behavior). Preliminary data suggests structure dominates: default rates correlate more strongly with quota ratchet events than with worker spending patterns.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Primary driver of default: worker behavior vs structural features"
+    },
+    {
+      "id": "exit_capital_threshold",
+      "question": "What level of savings constitutes sufficient exit capital for a debt-trapped worker to leave the institution?",
+      "resolution_mechanism": "Survey data on actual exit decisions: savings levels at time of departure for workers who left while carrying institutional debt vs workers who left debt-free; regional variation in exit capital requirements based on labor market conditions",
+      "impact": "If threshold is 1-2 months wages: many trapped workers are close to exit (suppression is lower than measured). If threshold is 6-12 months wages: few trapped workers can ever accumulate exit capital (suppression is higher than measured). Current data suggests 3-6 months wages, but this varies significantly by regional labor market tightness.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Savings threshold for exit from debt-trapped employment"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "theater_initial"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52,
+      "id_override": "theater_early"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.61,
+      "id_override": "theater_mid"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.68,
+      "id_override": "theater_final"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58,
+      "id_override": "extract_initial"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.65,
+      "id_override": "extract_early"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.72,
+      "id_override": "extract_mid"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78,
+      "id_override": "extract_final"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The debt trap compounding mechanism operates as a downstream consequence of quota ratchet asymmetry: when workers fall below quota due to ratchet-induced performance pressure, they face immediate income shortfalls that threaten their ability to meet basic expenses. Institutional loans are offered as a solution, framed as temporary assistance to bridge the gap until performance recovers. However, the loan terms (interest rates of 15-25% APR, compounding monthly, secured against future wages) systematically outpace wage growth (2-4% annually), converting what appears as short-term liquidity into long-term extraction. The compounding structure creates a debt service burden that grows faster than the worker's capacity to repay, leading to a predictable trajectory: initial loan \u2192 performance recovery insufficient to cover debt service \u2192 additional borrowing to cover shortfall \u2192 accelerating debt accumulation \u2192 wage garnishment \u2192 exit capital depletion \u2192 permanent institutional lock. The constraint exhibits high theater ratio (0.68) because the institutional apparatus surrounding the loans (financial wellness programs, mandatory counseling, disclosure forms) is largely performative \u2014 the counseling does not address the structural mismatch between compounding rates and wage growth, and the disclosure forms document terms that workers have no power to negotiate. The theater has increased over the measurement interval as regulatory pressure has forced institutions to add compliance rituals without changing the underlying extraction mechanism.",
+    "key_agents": [
+      "Below-Quota Workers: Primary victims (powerless/trapped) \u2014 face immediate performance shortfall with no alternative; loan appears as only option to avoid termination",
+      "Debt-Trapped Workers: Primary victims (powerless/trapped) \u2014 wages consumed by debt service; cannot accumulate exit capital; structural lock with no escape path",
+      "Loan Administrators: Primary beneficiaries (institutional/arbitrage) \u2014 capture interest revenue with minimal risk; debt secured against future wages",
+      "Institutional Finance Division: Primary beneficiaries (institutional/arbitrage) \u2014 profit center extracting wealth from labor force; frames extraction as employee benefit",
+      "Above-Quota Workers: Secondary victims (moderate/constrained) \u2014 not currently trapped but constrained by threat; experience wage suppression and ambient coercion",
+      "Labor Organizing Coalition: Organized agents (organized/constrained) \u2014 building alternative support pathways through collective bargaining and regulatory reform",
+      "HR Compliance Officer: Institutional actor (institutional/constrained) \u2014 maintains performative compliance theater; recognizes dysfunction but constrained by institutional mandate",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both genuine coordination function and dominant extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High. The structural mismatch between compounding rates (15-25% APR) and wage growth (2-4% annually) guarantees that debt service burden grows faster than repayment capacity for the majority of borrowers. Longitudinal data shows median time-to-default of 18-24 months for workers who take initial loans, with 65-75% of borrowers entering accelerating debt cycles. The extraction is not total (0.78 rather than 0.95) because some workers do successfully repay and exit, and the initial loan does provide genuine short-term liquidity that prevents immediate termination. However, the dominant trajectory is extractive: wealth transfer from labor to capital through interest accumulation that systematically exceeds wage growth. Suppression (0.82): Very high. Workers face multiple barriers to exit: (1) debt service consumes 40-60% of wages, preventing accumulation of exit capital; (2) default triggers immediate termination and wage garnishment, eliminating the fallback of leaving without repayment; (3) institutional loans are not dischargeable in bankruptcy in many jurisdictions; (4) regional labor markets often lack alternative employers, making exit geographically costly; (5) the quota ratchet mechanism that triggered the initial shortfall continues to operate, making performance recovery difficult even without debt burden. Suppression is not total (0.82 rather than 0.95) because some workers do exit through geographic relocation, family financial support, or exceptional performance recovery. Theater ratio (0.68): High. The institutional apparatus surrounding the loans is substantially performative: financial wellness programs provide generic budgeting advice that does not address the structural mismatch between debt compounding and wage growth; mandatory counseling sessions document that workers were 'informed' of loan terms but do not provide meaningful alternatives or negotiation power; disclosure forms satisfy legal requirements without changing outcomes. The theater has increased over time as regulatory pressure has forced institutions to add compliance rituals (more forms, more counseling sessions, more educational materials) without addressing the underlying extraction mechanism. The theater is not total (0.68 rather than 0.85) because some compliance measures do provide marginal value (e.g., mandatory waiting periods that prevent impulsive borrowing, caps on total debt-to-income ratios that prevent the most extreme cases).",
+    "directionality_logic": "The constraint exhibits clear structural asymmetry in who benefits and who bears costs. Loan administrators and the institutional finance division are primary beneficiaries: they capture interest revenue (15-25% APR on a captive borrower base) with minimal risk (debt is secured against future wages, and default triggers termination, which eliminates the liability). These agents have arbitrage exit options \u2014 they can move to other institutional finance roles \u2014 and experience the constraint as coordination (providing liquidity services). Their directionality values are low (d \u2248 0.05-0.15), producing negative or near-zero effective extraction. Below-quota workers and debt-trapped workers are primary victims: they bear the full cost of the compounding structure, with wages consumed by debt service and exit options eliminated by negative equity. These agents are trapped (cannot exit without defaulting and losing employment) and experience maximum extraction. Their directionality values are very high (d \u2248 0.92-0.95), producing effective extraction well above the base rate. Above-quota workers occupy an intermediate position: they are not currently trapped but are constrained by the threat (any performance shortfall could trigger entry into the debt cycle) and experience wage suppression (institutional capture of surplus that could fund higher base wages or lower loan rates). Their directionality values are moderate (d \u2248 0.55-0.65), producing effective extraction near the base rate. The labor organizing coalition, despite being victims of the broader system, has organized power and sees a generational exit path through collective bargaining and regulatory reform, producing lower effective extraction (d \u2248 0.40-0.50). The analytical observer recognizes both the genuine coordination function (short-term liquidity provision) and the dominant extraction mechanism (compounding terms that systematically transfer wealth), classifying the constraint as Tangled Rope rather than pure Snare.",
+    "perspectival_gap": "The constraint demonstrates a stark perspectival gap between beneficiaries and victims. Loan administrators see Rope (coordination \u2014 providing liquidity to workers facing temporary shortfalls; the compounding structure is framed as legitimate risk compensation). Debt-trapped workers see Snare (pure extraction \u2014 the loan that was framed as temporary assistance has converted into permanent wealth transfer with no escape path). Above-quota workers see Tangled Rope (mixed coordination and extraction \u2014 the system both provides a safety net and creates a trap; they benefit from the option value of liquidity access but are constrained by the threat of entry and the wage suppression that funds the system). The labor organizing coalition sees Scaffold (temporary extraction with a sunset \u2014 collective bargaining and regulatory reform are building alternative support pathways that will dismantle the mechanism over a generational timeframe). The HR compliance officer sees Piton (degraded ritual \u2014 the financial wellness programs and disclosure forms persist through institutional inertia and legal liability management but have minimal functional impact on worker outcomes). The analytical observer sees Tangled Rope (genuine coordination function dominated by asymmetric extraction \u2014 the short-term liquidity provision is structurally real, but the compounding terms systematically transfer wealth from labor to capital). The gap is not a disagreement about facts but a difference in structural position: beneficiaries with arbitrage exit experience coordination; victims with trapped exit experience extraction; observers with constrained exit experience the hybrid; organized agents with generational time horizons see a sunset path.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint resolves the mandatrophy by demonstrating that the Snare classification from the victim's perspective and the Rope classification from the beneficiary's perspective are both structurally accurate readings of the same mechanism. The mandatrophy is not 'is this coordination or extraction?' but 'from which structural position are you measuring?' The loan does provide genuine short-term liquidity (coordination function) AND systematically transfers wealth through compounding terms that outpace wage growth (extraction function). The analytical classification is Tangled Rope because both functions are structurally real, even though extraction dominates. The key insight: the coordination function (liquidity provision) is front-loaded and highly visible, while the extraction function (compounding accumulation) is back-loaded and obscured by temporal discounting. Workers experience the coordination benefit immediately (loan prevents termination) and discount the future extraction cost (compounding burden that will exceed repayment capacity). Beneficiaries experience the reverse: they provide immediate liquidity (cost) and capture long-term interest revenue (benefit). The perspectival gap is not a cognitive error but a structural feature of how the constraint distributes costs and benefits across time and across agents. The Snare classification from the trapped worker's perspective is not 'wrong' \u2014 it accurately reflects their experienced reality (maximum extraction, no exit). The Rope classification from the administrator's perspective is not 'wrong' \u2014 it accurately reflects their experienced reality (coordination service, net benefit). The Tangled Rope classification from the analytical perspective integrates both: the constraint has a genuine coordination function (liquidity provision addresses real cash flow mismatches) AND an asymmetric extraction function (compounding terms systematically transfer wealth). The mandatrophy dissolves when we recognize that constraint type is indexical \u2014 it depends on the observer's structural position \u2014 rather than absolute."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of quota_ratchet_asymmetry: the quota ratchet creates the performance shortfalls that trigger loan demand. The two constraints form a coupled extraction system: the ratchet generates the crisis, and the loan converts the crisis into permanent wealth transfer. They should be analyzed as a constraint family, with quota_ratchet_asymmetry \u2192 debt_trap_compounding in the network graph."
+  },
+  "directionality_overrides": []
+}

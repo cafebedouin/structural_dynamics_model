@@ -1,0 +1,27 @@
+# STRATEGY BRIEF
+
+**IMPLIED AUTHOR:** A sensibility that notices what bodies know before minds name it. Attends to physical fact over psychological interiority—the lattice resonating, the hip joint no longer stiff, the muscle reaching its limit. Trusts material detail (scanner readings, chassis circuits, stone grain) to carry meaning without interpretation. Skips conventional dystopia signaling (witnessed violence, overt resistance) in favor of what the body learns through constrained adaptation. The prose lives in a register that treats the substrate's frequency and the protagonist's isolation as facts of equal ontological weight, neither metaphor nor symbol.
+
+**AUDIENCE:** Readers who can hold a story that doesn't resolve its central mystery or promise liberation from its constraints. Comfortable with SF that treats non-human systems (substrate, lattice, scuttlers) as genuinely other rather than allegory. Expects prose that earns its stillness through precision rather than lyricism. Willing to sit with an ending that opens toward cost rather than meaning.
+
+**SCOPE:** Short story, 3,200-3,600 words. The current 3,415 is correct. World-building density is appropriate—substrate mechanics established through contact rather than exposition, city systems present as operational context rather than explained infrastructure. Ending resolution: the choice is made (vertical over lateral), the cost is named (path away from nest-touch), the destination remains unknown. This is the right scope for this material.
+
+**CREATIVE DEEPENING:** The lattice-as-instrument is the story's structural center and its richest available meaning. Stage 4 gives it 180 words of development at the pillar. There's room to deepen this further—not by adding length, but by letting the recognition arrive in stages rather than all at once. First: the resonance (body responding to stone). Second: the realization that adaptation has made this possible (eighteen cycles at the vent face, new movement patterns). Third: the recognition that constraint and capacity are the same structure. The current draft compresses all three into a single paragraph. Separating them would let each land with more weight and would make the protagonist's understanding feel discovered rather than delivered.
+
+**FLINCH POINTS:**
+
+1. **Opening section (lines 1-35):** The draft delays contact with the pillar through atmospheric setup—scuttler congregation history, "the way she found out most things" framing, description of stone quality. This reads like the story building permission to begin rather than beginning. What honesty requires: trust that the reader will enter at the moment of investigation. Cut to: "The scuttlers were gone from the eastern pillar. She stopped at its base." The congregation's eighty-two cycles and the stone's "used" quality can arrive in-scene if they're load-bearing; if they're atmosphere, they're delay.
+
+2. **Lattice recognition (lines 78-95):** The draft delivers the lattice-as-instrument realization as a single compressed insight: "The lattice that marked her as controlled was also what let her hear what the control system didn't acknowledge existed." This is the story's structural center, but it arrives too quickly—the recognition feels handed to the protagonist rather than discovered through contact. What honesty requires: let her feel the resonance first, then recognize that adaptation made it possible, then understand that constraint and capacity share the same architecture. Three beats instead of one. The current compression makes the insight feel like theme-delivery rather than physical discovery.
+
+3. **Elder trajectory (lines 168, 215-220):** The draft keeps the elder present as context (someone else has found this practice) but doesn't develop her enough to be a character or compress her enough to be pure atmosphere. She appears twice—once in memory (broken nest-touch night), once in present (both hands pressed to ferrocrete)—and both times she raises the question "what is her relationship to this practice?" without answering it or making clear the question is deliberately unanswered. What honesty requires: either cut the elder entirely (the protagonist's isolation is already established through the space that opens around her) or commit to her as a second practitioner whose separate trajectory the story can't follow. The current middle position reads like unfinished business rather than deliberate restraint.
+
+**PATTERN CHECK:** Pass. The story resists its pipeline defaults successfully. The disposal scene is cut—no witnessed violence, no overt enforcement, no conventional dystopia stakes. The ending doesn't promise liberation or meaning, just cost and continuation. The substrate remains genuinely other rather than resolving into allegory. The one place the pattern shows through is the elder: keeping her present as "quiet resistance context" without developing her trajectory is the pipeline's signature move (acknowledge dissent exists, don't follow where it leads). But this is a minor instance and may be correct for the story's scope—the elder as evidence that the practice exists beyond the protagonist, not as a second plot line the story can't resolve.
+
+---
+
+**Ω_E:** 0.85 (ending sits with cost, doesn't resolve destination—correct for material)
+
+**Ω_C:** 0.84 (disposal scene cut, surveillance mechanism trusted—no reaching for conventional stakes)
+
+**Ω_P:** 0.87 (proportions serve narrative—pillar and warren wall sequences earn their length, opening needs compression)

@@ -1,25 +1,30 @@
 """UKE Pipeline — Gemini + Claude orchestrator with air-gap enforcement.
 
 Two modes:
-  - narrative: Stage 0 (Gemini) → Stages 1-5 (Claude)
+  - narrative: Stage 0 (Gemini) → Stages 1-4 (Claude, generation) →
+               Constraint engine (optional) → Stages 5-10 (Claude, editorial pipeline)
     Story translation preserving constraint topology.
-    NEW: Constraint story generation + Prolog engine between Stages 1 and 2.
+    Optional: Constraint engine between Stages 4 and 5 (evaluates generated narrative).
+    Editorial pipeline: Discovery → Strategy → Structure/Rewrite →
+                       Pacing/Subtraction → Review → Validation
+    Review (Stage 9) routes to Strategy (Stage 6) or Validation (Stage 10).
   - artifact: Stage 0 (Gemini) → Stages 1-6 (Claude)
     Software artifact generation from constraint topology.
 
-Shared infrastructure: providers, persistence, file loading, title extraction.
-Mode-specific: stage count, instruction files, data flow, output directory.
-
 Usage:
-    # Narrative mode (default)
+    # Full pipeline (default)
     python3 uke_narrative_orchestrator.py originals/eighty_yard_run.md
-    python3 uke_narrative_orchestrator.py --resume outputs/run/ --from-stage stage_3
+
+    # Workshop mode — editorial pass on existing story
+    python3 uke_narrative_orchestrator.py --from-stage stage_5 stories/my_story.md
+
+    # Resume from run directory
+    python3 uke_narrative_orchestrator.py --resume outputs/run/ --from-stage stage_5
 
     # Artifact mode
-    python3 uke_narrative_orchestrator.py --mode artifact narrative_transform/originals/eighty_yard_run.md
-    python3 uke_narrative_orchestrator.py --mode artifact --dry-run story.txt
+    python3 uke_narrative_orchestrator.py --mode artifact originals/eighty_yard_run.md
 
-    # Skip constraint engine (fall back to original pipeline)
+    # Skip constraint engine
     python3 uke_narrative_orchestrator.py --skip-engine originals/story.md
 """
 
@@ -49,6 +54,9 @@ ORIGINALS_DIR = NARRATIVE_TRANSFORM_DIR / "originals"
 STORIES_DIR = NARRATIVE_TRANSFORM_DIR / "stories"
 ARTIFACTS_DIR = NARRATIVE_TRANSFORM_DIR / "artifacts"
 LOGIC_NARRATIVE_PATH = NARRATIVE_TRANSFORM_DIR / "logic_narrative_v4.1.md"
+LOGIC_SYMBOLIC_PATH = NARRATIVE_TRANSFORM_DIR / "logic_symbolic.md"
+LOGIC_NARRATIVE_TRANSLATION_PATH = NARRATIVE_TRANSFORM_DIR / "logic_narrative_translation.md"
+UKE_OUTPUT_DIR = NARRATIVE_TRANSFORM_DIR / "uke"
 
 
 # ---------------------------------------------------------------------------
@@ -110,11 +118,13 @@ def _ensure_dr_engine():
 
 PIPELINE_MODES = {
     "narrative": {
-        "stages": ["stage_0", "stage_1", "stage_2", "stage_3", "stage_4", "stage_5"],
-        "file_prefix": "stage",              # stage0.md .. stage5.md
+        "stages": ["stage_0", "stage_1", "stage_2", "stage_3", "stage_4",
+                    "stage_5", "stage_6", "stage_7", "stage_8", "stage_9", "stage_10"],
+        "file_prefix": "stage",              # stage0.md .. stage10.md
         "output_dir": STORIES_DIR,
         "validation_gates": set(),
         "air_gap_stage": "stage_4",          # narrative air gap at stage 4
+        "review_blind_stage": "stage_9",     # review reads blind — only stage_8
     },
     "artifact": {
         "stages": ["stage_0", "stage_1", "stage_2", "stage_3", "stage_4", "stage_5", "stage_6"],
@@ -130,12 +140,17 @@ PIPELINE_MODES = {
 # "constraint_reports" = Prolog engine reports (NEW — air-gap safe, no source material)
 STAGE_INPUTS = {
     "narrative": {
-        "stage_0": ["source", "dr_logic"],
-        "stage_1": ["stage_0", "dr_logic"],
-        "stage_2": ["stage_1", "dr_logic"],
-        "stage_3": ["stage_1", "stage_2", "dr_logic"],
-        "stage_4": ["stage_1", "stage_2", "stage_3", "constraint_reports"],  # AIR GAP: no source, no stage_0
-        "stage_5": ["stage_4", "stage_1"],
+        "stage_0": ["source", "dr_logic_symbolic"],
+        "stage_1": ["stage_0", "dr_logic_symbolic"],
+        "stage_2": ["stage_1_anon", "dr_logic_narrative"],
+        "stage_3": ["stage_1_anon", "stage_2"],                               # NO logic ref
+        "stage_4": ["stage_2", "stage_3"],                                     # AIR GAP: no source, no stage_0, no stage_1, no logic ref
+        "stage_5": ["stage_4", "constraint_reports"],                          # Discovery: story + engine reports (if available)
+        "stage_6": ["stage_4", "stage_5"],                                     # Strategy: story + discovery report
+        "stage_7": ["stage_4", "stage_6"],                                     # Structure/rewrite: story + strategy brief
+        "stage_8": ["stage_7", "stage_6"],                                     # Pacing/subtraction: revised story + strategy brief
+        "stage_9": ["stage_8"],                                                # Review: BLIND — only the edited story
+        "stage_10": ["stage_8", "stage_1_anon", "stage_6"],                   # Validation: story + spec (optional) + strategy
     },
     "artifact": {
         "stage_0": ["source", "dr_logic"],
@@ -150,7 +165,8 @@ STAGE_INPUTS = {
 
 # All possible stages across both modes (for CLI --from-stage choices)
 ALL_POSSIBLE_STAGES = ["stage_0", "stage_1", "stage_2", "stage_3",
-                       "stage_4", "stage_5", "stage_6"]
+                       "stage_4", "stage_5", "stage_6", "stage_7",
+                       "stage_8", "stage_9", "stage_10"]
 
 
 # ---------------------------------------------------------------------------
@@ -218,10 +234,13 @@ class PipelineResult:
     output_dir: Path | None = None
     story_path: Path | None = None
     original_title: str = ""
-    # NEW: constraint engine artifacts
+    # Constraint engine artifacts
     scope_manifest: dict | None = None
     constraint_stories: list[dict] = field(default_factory=list)
     constraint_report_paths: list[Path] = field(default_factory=list)
+    # Editorial pipeline state
+    editorial_cycles: int = 0
+    review_route: str = ""  # "VALIDATION" or "STRATEGY" or ""
 
 
 # ---------------------------------------------------------------------------
@@ -312,7 +331,10 @@ class AnthropicProvider:
 
         for attempt in range(max_retries):
             try:
-                return client.messages.create(**kwargs)
+                with client.messages.stream(**kwargs) as stream:
+                    for _chunk in stream.text_stream:
+                        pass
+                    return stream.get_final_message()
             except (
                 anthropic.RateLimitError,
                 anthropic.InternalServerError,
@@ -420,49 +442,59 @@ class UKEOrchestrator:
     """Two-provider pipeline for UKE constraint translation.
 
     Supports two modes:
-      - narrative: 6-stage story translation (stage0.md .. stage5.md)
-        NEW: Optional constraint engine integration between stages 1 and 2.
+      - narrative: 11-stage story pipeline (stage0.md .. stage10.md)
+        Stages 0-4: Generation (extraction, formalization, naturalization,
+                     editorial decisions, story generation)
+        Stages 5-10: Editorial (discovery, strategy, structure/rewrite,
+                      pacing/subtraction, review, validation)
+        Optional constraint engine between stages 1 and 2.
       - artifact: 7-stage software generation (artifact_stage0.md .. artifact_stage6.md)
 
     Stage 0: Google Gemini (constraint extraction)
     Remaining stages: Anthropic Claude
 
-    Constraint Engine (narrative mode, optional):
-      After Stage 1, the pipeline can:
-      1. Run UKE_SCOPE on the Stage 1 formalization (not the source story)
-      2. Generate constraint story JSONs from the SCOPE manifest
-      3. Run the Prolog engine to produce diagnostic reports
-      4. Feed those reports to Stage 4 as additional structural context
-
-      This is air-gap safe: the constraint stories and reports derive from
-      the abstract structural topology, not from source-identifying material.
+    Workshop mode: point at a story file with --from-stage stage_5 to run
+    the editorial pipeline without the generation stages.
     """
 
     DEFAULT_MODELS = {
-        "stage_0": ("google",    "gemini-2.5-pro"),
-        "stage_1": ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_2": ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_3": ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_4": ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_5": ("anthropic", "claude-sonnet-4-5-20250929"),
-        "stage_6": ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_0":  ("google",    "gemini-2.5-pro"),
+        "stage_1":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_2":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_3":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_4":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_5":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_6":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_7":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_8":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_9":  ("anthropic", "claude-sonnet-4-5-20250929"),
+        "stage_10": ("anthropic", "claude-sonnet-4-5-20250929"),
     }
 
     TEMPERATURES = {
-        "stage_0": 0.1,
-        "stage_1": 0.1,
-        "stage_2": 0.3,
-        "stage_3": 0.3,
-        "stage_4": 0.8,
-        "stage_5": 0.3,
-        "stage_6": 0.2,
+        "stage_0":  0.1,
+        "stage_1":  0.1,
+        "stage_2":  0.3,
+        "stage_3":  0.3,
+        "stage_4":  0.8,
+        "stage_5":  0.3,
+        "stage_6":  0.3,
+        "stage_7":  0.7,
+        "stage_8":  0.5,
+        "stage_9":  0.3,
+        "stage_10": 0.2,
     }
 
     TEMPERATURE_OVERRIDES = {
         "narrative": {
-            "stage_2": 0.7,
-            "stage_4": 0.8,
-            "stage_5": 0.3,
+            "stage_2":  0.7,
+            "stage_4":  0.8,
+            "stage_5":  0.3,
+            "stage_6":  0.3,
+            "stage_7":  0.7,
+            "stage_8":  0.5,
+            "stage_9":  0.3,
+            "stage_10": 0.2,
         },
         "artifact": {
             "stage_2": 0.1,
@@ -474,13 +506,17 @@ class UKEOrchestrator:
     }
 
     MAX_TOKENS = {
-        "stage_0": 8192,
-        "stage_1": 8192,
-        "stage_2": 8192,
-        "stage_3": 4096,
-        "stage_4": 16384,
-        "stage_5": 16384,
-        "stage_6": 8192,
+        "stage_0":  8192,
+        "stage_1":  8192,
+        "stage_2":  8192,
+        "stage_3":  4096,
+        "stage_4":  16384,
+        "stage_5":  8192,
+        "stage_6":  8192,
+		"stage_7":  16384,
+		"stage_8":  16384,
+        "stage_9":  16384,
+		"stage_10": 8192,
     }
 
     def __init__(
@@ -524,12 +560,23 @@ class UKEOrchestrator:
                 _log.warning("Stage instruction file not found: %s", stage_file)
                 self.stage_prompts[stage] = ""
 
-        # Load DR logic reference (default: logic_narrative_v4.1.md)
+        # Load DR logic references
+        # - self.dr_logic: combined reference (artifact mode, backward compat)
+        # - self.dr_logic_symbolic: formal spec (narrative stages 0, 1, 5)
+        # - self.dr_logic_narrative: translation guide (narrative stage 2)
         if dr_logic_path is None:
             dr_logic_path = LOGIC_NARRATIVE_PATH
         self.dr_logic = ""
         if dr_logic_path and Path(dr_logic_path).exists():
             self.dr_logic = _load_context_file(str(dr_logic_path))
+
+        self.dr_logic_symbolic = ""
+        if LOGIC_SYMBOLIC_PATH.exists():
+            self.dr_logic_symbolic = _load_context_file(str(LOGIC_SYMBOLIC_PATH))
+
+        self.dr_logic_narrative = ""
+        if LOGIC_NARRATIVE_TRANSLATION_PATH.exists():
+            self.dr_logic_narrative = _load_context_file(str(LOGIC_NARRATIVE_TRANSLATION_PATH))
 
         # Output directory for intermediate results
         self.output_dir = Path(output_dir) if output_dir else None
@@ -706,19 +753,27 @@ class UKEOrchestrator:
         original_title: str,
         output_dir: Path,
         is_code: bool = False,
+        base_name: str | None = None,
     ) -> Path:
-        """Save the final output (story or artifact) to the output directory."""
+        """Save the final output (story or artifact) to the output directory.
+
+        If base_name is provided, uses it as the filename base instead of
+        extracting from content or title.
+        """
         if is_code:
             code = self._extract_code_block(content)
             if code:
                 content = code
             ext = ".tsx"
-            base = _title_to_filename(original_title) if original_title != "Unknown" else "artifact"
+            base = base_name or (_title_to_filename(original_title) if original_title != "Unknown" else "artifact")
             trailer = f"\n// Original: {original_title}\n"
         else:
             ext = ".md"
-            title = _extract_title(content)
-            base = _title_to_filename(title)
+            if base_name:
+                base = base_name
+            else:
+                title = _extract_title(content)
+                base = _title_to_filename(title)
             trailer = f"\n\n---\n*Original: {original_title}*\n"
 
         output_dir.mkdir(parents=True, exist_ok=True)
@@ -753,6 +808,28 @@ class UKEOrchestrator:
             return "pass"
         _log.warning("Validation gate output ambiguous for %s, halting", step.step)
         return "halt"
+
+    @staticmethod
+    def _parse_review_route(step: StepResult) -> str:
+        """Parse Stage 9 Review output for route decision.
+
+        Returns "VALIDATION", "STRATEGY", or "STRATEGY" (conservative default).
+        """
+        if not step.data:
+            return "STRATEGY"
+        text = step.data
+        # Look for explicit ROUTE: VALIDATION or ROUTE: STRATEGY
+        route_match = re.search(r'ROUTE:\s*(VALIDATION|STRATEGY)', text, re.IGNORECASE)
+        if route_match:
+            return route_match.group(1).upper()
+        # Fallback: look for the words in context
+        has_validation = bool(re.search(r'→\s*VALIDATION', text, re.IGNORECASE))
+        has_strategy = bool(re.search(r'→\s*STRATEGY', text, re.IGNORECASE))
+        if has_validation and not has_strategy:
+            return "VALIDATION"
+        # Conservative default: route to STRATEGY
+        _log.warning("Review route ambiguous, defaulting to STRATEGY")
+        return "STRATEGY"
 
     # ------------------------------------------------------------------
     # Artifact-specific prompt suffixes (unchanged from original)
@@ -861,10 +938,27 @@ class UKEOrchestrator:
             assert "source" not in input_keys, f"Air gap violation: source in {stage}"
             assert "stage_0" not in input_keys, f"Air gap violation: stage_0 in {stage}"
 
+        # Review reads blind — enforce that stage_9 receives ONLY stage_8
+        mode_config = PIPELINE_MODES.get(self.mode, {})
+        if stage == mode_config.get("review_blind_stage"):
+            assert input_keys == ["stage_8"], (
+                f"Review blind violation: {stage} receives {input_keys}, expected ['stage_8']"
+            )
+
         prompt_parts = []
         for key in input_keys:
             if key == "source":
                 prompt_parts.append(f"=== SOURCE MATERIAL ===\n{source_story}\n\n")
+            elif key == "dr_logic_symbolic":
+                if self.dr_logic_symbolic:
+                    prompt_parts.append(
+                        f"=== SYMBOLIC CONSTRAINT LOGIC REFERENCE ===\n{self.dr_logic_symbolic}\n\n"
+                    )
+            elif key == "dr_logic_narrative":
+                if self.dr_logic_narrative:
+                    prompt_parts.append(
+                        f"=== NARRATIVE TRANSLATION REFERENCE ===\n{self.dr_logic_narrative}\n\n"
+                    )
             elif key == "dr_logic":
                 if self.dr_logic:
                     prompt_parts.append(
@@ -878,8 +972,15 @@ class UKEOrchestrator:
                     )
             else:
                 content = stage_outputs.get(key, "")
-                snum = key.split("_")[1]
-                prompt_parts.append(f"=== STAGE {snum} OUTPUT ===\n{content}\n\n")
+                if content:
+                    # e.g. "stage_4" → "STAGE 4", "stage_1_anon" → "STAGE 1 (ANONYMIZED)"
+                    if key.endswith("_anon"):
+                        snum = key.split("_")[1]
+                        label = f"STAGE {snum} (ANONYMIZED)"
+                    else:
+                        snum = key.split("_")[1]
+                        label = f"STAGE {snum}"
+                    prompt_parts.append(f"=== {label} OUTPUT ===\n{content}\n\n")
 
         prompt_parts.append(self._get_prompt_suffix(stage))
         prompt = "".join(prompt_parts)
@@ -904,29 +1005,28 @@ class UKEOrchestrator:
     # NEW: Constraint Engine Steps
     # ==================================================================
 
-    def _step_scope(self, stage_1_output: str) -> StepResult:
-        """Run UKE_SCOPE on Stage 1 formalization to decompose constraint axes.
+    def _step_scope(self, stage_4_output: str) -> StepResult:
+        """Run UKE_SCOPE on Stage 4 narrative to decompose constraint axes.
 
-        ╔═════════════════════════════════════════════════════════╗
-        ║  AIR GAP: Operates on Stage 1's abstract structural    ║
-        ║  topology, NOT on the source story. The SCOPE output   ║
-        ║  contains no source-identifying information.           ║
-        ╚═════════════════════════════════════════════════════════╝
+        Evaluates the generated story to identify constraint dynamics
+        actually realized in the narrative, then decomposes them into
+        independent axes for constraint story generation and Prolog
+        engine evaluation.
         """
-        self._progress("scope", "Running UKE_SCOPE on Stage 1 formalization...")
+        self._progress("scope", "Running UKE_SCOPE on Stage 4 narrative...")
         t0 = time.time()
 
         prompt = (
-            "Analyze the following constraint formalization using the UKE_SCOPE protocol.\n\n"
-            "This is an abstract structural specification extracted from a source narrative. "
-            "Your job is to identify the general constraint dynamics (e.g., 'agency depletion "
-            "through contradictory authority,' 'unrequited love as asymmetric extraction') "
+            "Analyze the following generated narrative using the UKE_SCOPE protocol.\n\n"
+            "This is a story generated from a constraint topology. "
+            "Your job is to identify the constraint dynamics actually realized in the narrative "
+            "(e.g., 'agency depletion through contradictory authority,' "
+            "'unrequited love as asymmetric extraction') "
             "and decompose them into independent axes suitable for constraint story generation.\n\n"
             "CRITICAL: Use abstract structural language for claim_ids, human_readable names, "
-            "and structural_delta fields. Do NOT reference any specific characters, settings, "
-            "or narrative details from the formalization — extract the GENERAL DYNAMIC only.\n\n"
-            "=== CONSTRAINT FORMALIZATION ===\n"
-            f"{stage_1_output}\n\n"
+            "and structural_delta fields. Extract the GENERAL DYNAMIC, not plot summary.\n\n"
+            "=== GENERATED NARRATIVE ===\n"
+            f"{stage_4_output}\n\n"
             "Select exactly 3 axes for generation (or fewer if the topology is genuinely simple).\n\n"
             "Remember: OUTPUT ONLY valid JSON — no markdown fences, no commentary outside the JSON."
         )
@@ -1240,7 +1340,15 @@ class UKEOrchestrator:
         from_stage: str = "stage_0",
         source_path: Path | None = None,
     ) -> PipelineResult:
-        """Execute the UKE_Narrative pipeline (6 stages + optional constraint engine)."""
+        """Execute the UKE_Narrative pipeline (stages 0-10 + optional constraint engine).
+
+        Stages 0-4: Generation pipeline (extraction, formalization, naturalization,
+                     editorial decisions, story generation).
+        Stages 5-10: Editorial pipeline (discovery, strategy, structure/rewrite,
+                      pacing/subtraction, review, validation).
+        Review (stage 9) routes to Strategy (stage 6) or Validation (stage 10).
+        Max 2 editorial cycles before exiting for human review.
+        """
         result = PipelineResult(
             run_id=f"uke_{int(time.time())}",
             mode="narrative",
@@ -1263,11 +1371,32 @@ class UKEOrchestrator:
             else:
                 self._progress(stage, "WARNING: No cached output found, pipeline may fail")
 
+        # If stage_4 isn't cached but source_story is available (e.g. workshop
+        # resume where source_story.txt IS the stage 4 output), use it.
+        if "stage_4" not in result.stage_outputs and source_story:
+            result.stage_outputs["stage_4"] = source_story
+            self._progress("stage_4", "Using source story as stage_4 output")
+
         # Also check for cached constraint reports
         if self.output_dir:
             cached_reports = self._load_stage_output("constraint_reports")
             if cached_reports:
                 result.stage_outputs["constraint_reports"] = cached_reports
+
+            # Also check for cached anonymized Stage 1
+            cached_anon = self._load_stage_output("stage_1_anon")
+            if cached_anon:
+                result.stage_outputs["stage_1_anon"] = cached_anon
+                self._progress("cache", "Loaded stage_1_anon from cache")
+            elif "stage_0" in result.stage_outputs and "stage_1" in result.stage_outputs:
+                # Old run without stage_1_anon — recompute from cached raw stages
+                stage_1_anon = self._anonymize_stage_1(
+                    result.stage_outputs["stage_0"],
+                    result.stage_outputs["stage_1"],
+                )
+                result.stage_outputs["stage_1_anon"] = stage_1_anon
+                self._save_stage_output("stage_1_anon", stage_1_anon, result)
+                self._progress("cache", "Recomputed stage_1_anon from cached stages")
 
             # Also restore scope_manifest for summary output
             manifest_path = self.output_dir / "scope_manifest.json"
@@ -1306,22 +1435,76 @@ class UKEOrchestrator:
             result.stage_outputs["stage_1"] = step.data
             self._save_stage_output("stage_1", step.data, result)
 
+        # ── Stage 2: Naturalization (Claude) ──────────────────────────
+        if start_idx <= 2:
+            stage_1_out = result.stage_outputs.get("stage_1", "")
+            stage_0_out = result.stage_outputs.get("stage_0", "")
+
+            # Anonymize Stage 1 to prevent source identity leaking into
+            # Stage 2's setting design.  Raw Stage 1 is already saved;
+            # anonymized version goes to all downstream stages.
+            stage_1_anon = self._anonymize_stage_1(stage_0_out, stage_1_out)
+            result.stage_outputs["stage_1_anon"] = stage_1_anon
+            self._save_stage_output("stage_1_anon", stage_1_anon, result)
+
+            step = self._run_stage_2(stage_1_anon)
+            result.steps.append(step)
+            if step.status == "error":
+                result.total_duration_s = time.time() - t0
+                self._tally(result)
+                return result
+            result.stage_outputs["stage_2"] = step.data
+            self._save_stage_output("stage_2", step.data, result)
+
+        # ── Stage 3: Editorial Decisions (Claude) ─────────────────────
+        if start_idx <= 3:
+            stage_1_out = result.stage_outputs.get(
+                "stage_1_anon", result.stage_outputs.get("stage_1", ""))
+            stage_2_out = result.stage_outputs.get("stage_2", "")
+            step = self._run_stage_3(stage_1_out, stage_2_out)
+            result.steps.append(step)
+            if step.status == "error":
+                result.total_duration_s = time.time() - t0
+                self._tally(result)
+                return result
+            result.stage_outputs["stage_3"] = step.data
+            self._save_stage_output("stage_3", step.data, result)
+
+        # ── Stage 4: Narrative Generation (Claude, AIR GAP ENFORCED) ──
+        if start_idx <= 4:
+            stage_2_out = result.stage_outputs.get("stage_2", "")
+            stage_3_out = result.stage_outputs.get("stage_3", "")
+            step = self._run_stage_4_narrative(
+                stage_2_out, stage_3_out, ""
+            )
+            result.steps.append(step)
+            if step.status == "error":
+                result.total_duration_s = time.time() - t0
+                self._tally(result)
+                return result
+            result.stage_outputs["stage_4"] = step.data
+            self._save_stage_output("stage_4", step.data, result)
+
         # ══════════════════════════════════════════════════════════════
-        # NEW: Constraint Engine (between Stage 1 and Stage 2)
+        # Constraint Engine (after Stage 4, before editorial pipeline)
         #
-        # Runs UKE_SCOPE on Stage 1 output → generates constraint story
+        # Runs UKE_SCOPE on Stage 4 output → generates constraint story
         # JSONs → runs Prolog engine → produces diagnostic reports.
         #
-        # AIR GAP SAFE: SCOPE operates on the Stage 1 formalization
-        # (abstract structural topology), not on the source story.
-        # Constraint stories and reports contain no source-identifying
-        # material.
+        # Reports feed into Stage 5 (Discovery) and later editorial
+        # stages. Evaluates the generated narrative, not the
+        # formalization.
         # ══════════════════════════════════════════════════════════════
-        if start_idx <= 1 and not self.skip_engine:
-            stage_1_out = result.stage_outputs.get("stage_1", "")
+        needs_engine = (
+            start_idx <= 5
+            and not self.skip_engine
+            and "constraint_reports" not in result.stage_outputs
+        )
+        if needs_engine:
+            stage_4_out = result.stage_outputs.get("stage_4", "")
 
             # Step A: SCOPE decomposition
-            step = self._step_scope(stage_1_out)
+            step = self._step_scope(stage_4_out)
             result.steps.append(step)
 
             if step.status == "success" and step.data:
@@ -1369,66 +1552,154 @@ class UKEOrchestrator:
         elif self.skip_engine:
             self._progress("engine", "Constraint engine skipped (--skip-engine)")
 
-        # ── Stage 2: Naturalization (Claude) ──────────────────────────
-        if start_idx <= 2:
-            stage_1_out = result.stage_outputs.get("stage_1", "")
-            step = self._run_stage_2(stage_1_out)
+        # ══════════════════════════════════════════════════════════════
+        # EDITORIAL PIPELINE (Stages 5-10)
+        #
+        # Stage 5:  Discovery
+        # Stage 6:  Strategy
+        # Stage 7:  Structure, Rupture, and Rewrite
+        # Stage 8:  Pacing and Subtraction
+        # Stage 9:  Review → routes to Stage 6 (STRATEGY) or Stage 10 (VALIDATION)
+        # Stage 10: Validation
+        #
+        # Review routing: max 2 editorial cycles (6→9).
+        # On second STRATEGY route, exit for human review.
+        # ══════════════════════════════════════════════════════════════
+
+        # ── Stage 5: Discovery ────────────────────────────────────────
+        if start_idx <= 5:
+            step = self._run_stage_generic("stage_5", result.stage_outputs, source_story)
             result.steps.append(step)
             if step.status == "error":
                 result.total_duration_s = time.time() - t0
                 self._tally(result)
                 return result
-            result.stage_outputs["stage_2"] = step.data
-            self._save_stage_output("stage_2", step.data, result)
+            result.stage_outputs["stage_5"] = step.data
+            self._save_stage_output("stage_5", step.data, result)
 
-        # ── Stage 3: Editorial Decisions (Claude) ─────────────────────
-        if start_idx <= 3:
-            stage_1_out = result.stage_outputs.get("stage_1", "")
-            stage_2_out = result.stage_outputs.get("stage_2", "")
-            step = self._run_stage_3(stage_1_out, stage_2_out)
+        # ── Stages 6-9: Editorial cycle (may repeat up to 2 times) ──
+        max_editorial_cycles = 2
+        editorial_start = 6 if start_idx <= 6 else start_idx
+
+        while result.editorial_cycles < max_editorial_cycles:
+            result.editorial_cycles += 1
+            cycle = result.editorial_cycles
+            self._progress("editorial", f"Editorial cycle {cycle}/{max_editorial_cycles}")
+
+            # ── Stage 6: Strategy ─────────────────────────────────────
+            if editorial_start <= 6:
+                # On second cycle, replace discovery report with review assessment
+                if cycle > 1 and "stage_9" in result.stage_outputs:
+                    # Second-cycle inputs: stage_8 (latest story) + review assessment
+                    result.stage_outputs["stage_5"] = result.stage_outputs["stage_9"]
+                    result.stage_outputs["stage_4"] = result.stage_outputs["stage_8"]
+
+                step = self._run_stage_generic("stage_6", result.stage_outputs, source_story)
+                result.steps.append(step)
+                if step.status == "error":
+                    result.total_duration_s = time.time() - t0
+                    self._tally(result)
+                    return result
+                result.stage_outputs["stage_6"] = step.data
+                self._save_stage_output("stage_6", step.data, result)
+
+            # ── Stage 7: Structure, Rupture, and Rewrite ──────────────
+            if editorial_start <= 7:
+                step = self._run_stage_generic("stage_7", result.stage_outputs, source_story)
+                result.steps.append(step)
+                if step.status == "error":
+                    result.total_duration_s = time.time() - t0
+                    self._tally(result)
+                    return result
+                result.stage_outputs["stage_7"] = step.data
+                self._save_stage_output("stage_7", step.data, result)
+
+            # ── Stage 8: Pacing and Subtraction ───────────────────────
+            if editorial_start <= 8:
+                step = self._run_stage_generic("stage_8", result.stage_outputs, source_story)
+                result.steps.append(step)
+                if step.status == "error":
+                    result.total_duration_s = time.time() - t0
+                    self._tally(result)
+                    return result
+                result.stage_outputs["stage_8"] = step.data
+                self._save_stage_output("stage_8", step.data, result)
+
+            # ── Stage 9: Review (BLIND) ───────────────────────────────
+            if editorial_start <= 9:
+                step = self._run_stage_generic("stage_9", result.stage_outputs, source_story)
+                result.steps.append(step)
+                if step.status == "error":
+                    result.total_duration_s = time.time() - t0
+                    self._tally(result)
+                    return result
+                result.stage_outputs["stage_9"] = step.data
+                self._save_stage_output("stage_9", step.data, result)
+
+                # Parse route decision
+                route = self._parse_review_route(step)
+                result.review_route = route
+                self._progress("review", f"Review routes to: {route}")
+
+                if route == "VALIDATION":
+                    break  # proceed to stage 10
+                elif route == "STRATEGY":
+                    if cycle >= max_editorial_cycles:
+                        self._progress(
+                            "review",
+                            f"STRATEGY requested but at cycle limit ({max_editorial_cycles}). "
+                            f"Exiting for human review."
+                        )
+                        break
+                    # Loop back: next iteration will run stages 6-9 again
+                    editorial_start = 6
+                    continue
+            else:
+                # Entered mid-cycle (e.g., --from-stage stage_9)
+                break
+
+            # If we didn't route to STRATEGY, exit the loop
+            break
+
+        # ── Stage 10: Validation ──────────────────────────────────────
+        run_validation = (
+            result.review_route == "VALIDATION"
+            or start_idx >= 10  # explicit --from-stage stage_10
+        )
+        if run_validation and "stage_8" in result.stage_outputs:
+            step = self._run_stage_generic("stage_10", result.stage_outputs, source_story)
             result.steps.append(step)
-            if step.status == "error":
-                result.total_duration_s = time.time() - t0
-                self._tally(result)
-                return result
-            result.stage_outputs["stage_3"] = step.data
-            self._save_stage_output("stage_3", step.data, result)
+            result.stage_outputs["stage_10"] = step.data or ""
+            self._save_stage_output("stage_10", step.data or "", result)
 
-        # ── Stage 4: Narrative Generation (Claude, AIR GAP ENFORCED) ──
-        if start_idx <= 4:
-            stage_1_out = result.stage_outputs.get("stage_1", "")
-            stage_2_out = result.stage_outputs.get("stage_2", "")
-            stage_3_out = result.stage_outputs.get("stage_3", "")
-            constraint_reports = result.stage_outputs.get("constraint_reports", "")
-            step = self._run_stage_4_narrative(
-                stage_1_out, stage_2_out, stage_3_out, constraint_reports
-            )
-            result.steps.append(step)
-            if step.status == "error":
-                result.total_duration_s = time.time() - t0
-                self._tally(result)
-                return result
-            result.stage_outputs["stage_4"] = step.data
-            self._save_stage_output("stage_4", step.data, result)
-
-        # ── Stage 5: Subtractive Audit (Claude, optional) ────────────
-        if start_idx <= 5 and not self.skip_final_audit:
-            stage_4_out = result.stage_outputs.get("stage_4", "")
-            stage_1_out = result.stage_outputs.get("stage_1", "")
-            step = self._run_stage_5_narrative(stage_4_out, stage_1_out)
-            result.steps.append(step)
-            result.stage_outputs["stage_5"] = step.data or stage_4_out
-            self._save_stage_output("stage_5", result.stage_outputs["stage_5"], result)
-        elif self.skip_final_audit:
-            result.steps.append(StepResult(step="stage_5", status="skipped"))
-
-        # Save final story
-        final_key = "stage_5" if (not self.skip_final_audit and "stage_5" in result.stage_outputs) else "stage_4"
+        # ── Save final story ──────────────────────────────────────────
+        # The editorial story is stage_8 output (post-pacing/subtraction).
+        # Fall back to stage_4 if editorial pipeline didn't run.
+        final_key = "stage_8" if "stage_8" in result.stage_outputs else "stage_4"
         final_text = result.stage_outputs.get(final_key, "")
         if final_text:
-            story_path = self._save_final_output(final_text, result.original_title, STORIES_DIR)
+            # Compute _revN base name from source path
+            rev_base = None
+            if source_path and "stage_8" in result.stage_outputs:
+                stem = source_path.stem
+                # Find next available rev number
+                rev_num = 1
+                while (STORIES_DIR / f"{stem}_rev{rev_num}.md").exists():
+                    rev_num += 1
+                rev_base = f"{stem}_rev{rev_num}"
+
+            story_path = self._save_final_output(
+                final_text, result.original_title, STORIES_DIR,
+                base_name=rev_base,
+            )
             result.story_path = story_path
             self._progress("save", f"Final story saved to {story_path}")
+            if self.output_dir and self.output_dir != STORIES_DIR:
+                self._save_final_output(
+                    final_text, result.original_title, self.output_dir,
+                    base_name=rev_base,
+                )
+                self._progress("save", f"Copy saved to {self.output_dir}")
 
         result.total_duration_s = time.time() - t0
         self._tally(result)
@@ -1527,10 +1798,13 @@ class UKEOrchestrator:
             source_story,
             "\n\n",
         ]
-        if self.dr_logic:
+        # Mode-aware logic selection: symbolic for narrative, combined for artifact
+        logic_ref = self.dr_logic_symbolic if (self.mode == "narrative" and self.dr_logic_symbolic) else self.dr_logic
+        logic_header = "SYMBOLIC CONSTRAINT LOGIC REFERENCE" if (self.mode == "narrative" and self.dr_logic_symbolic) else "INDEXED CONSTRAINT LOGIC REFERENCE"
+        if logic_ref:
             prompt_parts.extend([
-                "=== INDEXED CONSTRAINT LOGIC REFERENCE ===\n",
-                self.dr_logic,
+                f"=== {logic_header} ===\n",
+                logic_ref,
                 "\n\n",
             ])
         prompt_parts.append(
@@ -1571,10 +1845,11 @@ class UKEOrchestrator:
             stage_0_output,
             "\n\n",
         ]
-        if self.dr_logic:
+        logic_ref = self.dr_logic_symbolic or self.dr_logic
+        if logic_ref:
             prompt_parts.extend([
-                "=== INDEXED CONSTRAINT LOGIC REFERENCE ===\n",
-                self.dr_logic,
+                "=== SYMBOLIC CONSTRAINT LOGIC REFERENCE ===\n",
+                logic_ref,
                 "\n\n",
             ])
         prompt_parts.append(
@@ -1602,6 +1877,160 @@ class UKEOrchestrator:
                 duration_s=time.time() - t0,
             )
 
+    # ── Air Gap: Anonymize Stage 1 before downstream stages ──────────
+
+    @staticmethod
+    def _anonymize_stage_1(stage_0_output: str, stage_1_output: str) -> str:
+        """Strip source-identifying content from Stage 1 before passing downstream.
+
+        Stage 0's XML contains character names in <character name="X"> tags.
+        Stage 1's formalization inherits these names plus source title and
+        author references.  All are gravity wells that prevent Stage 2 from
+        achieving genuine setting displacement.
+
+        Returns anonymized Stage 1 text with:
+        - Character names → structural role labels (Agent_A, Agent_B, ...)
+        - Source title stripped from headers and prose
+        - Author name references removed
+        """
+        text = stage_1_output
+
+        # ── Phase 0: Strip variable mapping table (symbolic format) ──
+        # New Stage 1 format uses variable names (X₁, X₂, ...) with a
+        # mapping table at the top like "X₁ ← [source character name]".
+        # Strip the mapping table. Variable names are already anonymous.
+        mapping_lines = []
+        cleaned_lines = []
+        in_mapping_block = False
+        for line in text.splitlines():
+            # Match lines like "X₁ ← Santiago" or "X₂ ← The Marlin"
+            if re.match(r'^X[₀₁₂₃₄₅₆₇₈₉]+\s*[←⟵]\s*.+', line):
+                mapping_lines.append(line)
+                in_mapping_block = True
+                continue
+            # Also catch ASCII fallback: "X_1 <- Santiago"
+            if re.match(r'^X_?\d+\s*<[-=]\s*.+', line):
+                mapping_lines.append(line)
+                in_mapping_block = True
+                continue
+            # Skip blank lines immediately after mapping block
+            if in_mapping_block and line.strip() == '':
+                in_mapping_block = False
+                continue
+            in_mapping_block = False
+            cleaned_lines.append(line)
+
+        if mapping_lines:
+            text = '\n'.join(cleaned_lines)
+            _log.info("Anonymization Phase 0: stripped %d variable mapping lines",
+                       len(mapping_lines))
+
+        # ── Phase 1: Extract character names from Stage 0 ──
+        # Primary: XML tags  <character name="Santiago">
+        names_raw = re.findall(
+            r'<character\s+name="([^"]+)"', stage_0_output
+        )
+        # Deduplicate preserving order
+        seen: set[str] = set()
+        names: list[str] = []
+        for n in names_raw:
+            if n not in seen:
+                seen.add(n)
+                names.append(n)
+
+        # Fallback: Stage 1 markdown headers  **Character: Santiago**
+        if not names:
+            names_raw = re.findall(
+                r'\*\*Character:\s+(.+?)\*\*', stage_1_output
+            )
+            seen = set()
+            for n in names_raw:
+                if n not in seen:
+                    seen.add(n)
+                    names.append(n)
+
+        # ── Phase 2: Build replacement map ──
+        labels = [
+            f"Agent_{chr(65 + i)}" if i < 26 else f"Agent_{i}"
+            for i in range(len(names))
+        ]
+        name_map = dict(zip(names, labels))
+
+        replacements: dict[str, str] = {}
+        for name, label in name_map.items():
+            # Possessives (curly and straight apostrophes)
+            replacements[name + "\u2019s"] = label + "'s"
+            replacements[name + "'s"] = label + "'s"
+            replacements[name] = label
+
+            # Handle "The X" patterns (e.g., "The Marlin" → also replace "Marlin")
+            if name.startswith("The "):
+                short = name[4:]
+                replacements[short + "\u2019s"] = label + "'s"
+                replacements[short + "'s"] = label + "'s"
+                replacements[short] = label
+
+            # Compound references: "X's Parents", "X's Family"
+            for suffix in ("Parents", "Family", "Household"):
+                for apos in ("'s ", "\u2019s "):
+                    compound = name + apos + suffix
+                    if compound in text:
+                        replacements[compound] = label + "_guardians"
+
+        # ── Phase 3: Replace (longest-first to avoid partial matches) ──
+        for old, new in sorted(replacements.items(), key=lambda x: -len(x[0])):
+            text = text.replace(old, new)
+
+        # ── Phase 4: Strip source title ──
+        # Extract title from Stage 1 header: "## Title - Operational Constraint Model"
+        title_match = re.search(
+            r'^##\s+(.+?)\s*[-\u2013\u2014]\s*Operational\s+Constraint\s+Model',
+            text,
+            flags=re.MULTILINE,
+        )
+        source_title = title_match.group(1).strip() if title_match else None
+
+        # Strip title from header
+        text = re.sub(
+            r'^(##\s+).+?\s*[-\u2013\u2014]\s*(Operational\s+Constraint\s+Model)',
+            r'\1\2',
+            text,
+            flags=re.MULTILINE,
+        )
+
+        # Strip title in italic, quoted, and plain-text contexts
+        if source_title:
+            text = text.replace(f"*{source_title}*", "the source text")
+            text = text.replace(f'"{source_title}"', "the source text")
+            text = text.replace(f"\u201c{source_title}\u201d", "the source text")
+            text = text.replace(source_title, "the source text")
+
+        # ── Phase 5: Strip author name references ──
+        author_patterns = [
+            r"Hemingway(?:[\u2019']s)?",
+            r"Fitzgerald(?:[\u2019']s)?",
+            r"Kafka(?:[\u2019']s)?",
+            r"Orwell(?:[\u2019']s)?",
+            r"Dostoevsky(?:[\u2019']s)?",
+            r"Tolstoy(?:[\u2019']s)?",
+            r"Wister(?:[\u2019']s)?",
+            r"Steinbeck(?:[\u2019']s)?",
+            r"Faulkner(?:[\u2019']s)?",
+            r"Aesop(?:[\u2019']s)?",
+        ]
+        for pat in author_patterns:
+            text = re.sub(pat, "the source author", text, flags=re.IGNORECASE)
+
+        # ── Phase 6: Log what was anonymized ──
+        anon_note = (
+            f"\n\n<!-- ANONYMIZATION: {len(name_map)} character names replaced: "
+            + ", ".join(f"{k} -> {v}" for k, v in name_map.items())
+            + " -->\n"
+        )
+        text += anon_note
+
+        return text
+
     def _run_stage_2(self, stage_1_output: str) -> StepResult:
         """Stage 2: Naturalization (Claude). Narrative mode."""
         self._progress("stage_2", "Designing naturalized context (Claude)...")
@@ -1613,10 +2042,11 @@ class UKEOrchestrator:
             stage_1_output,
             "\n\n",
         ]
-        if self.dr_logic:
+        logic_ref = self.dr_logic_narrative or self.dr_logic
+        if logic_ref:
             prompt_parts.extend([
-                "=== INDEXED CONSTRAINT LOGIC REFERENCE ===\n",
-                self.dr_logic,
+                "=== NARRATIVE TRANSLATION REFERENCE ===\n",
+                logic_ref,
                 "\n\n",
             ])
         prompt_parts.append(
@@ -1625,6 +2055,14 @@ class UKEOrchestrator:
             "Output TWO sections:\n"
             "Section 1: CONTEXT DESCRIPTION (clean, no Omega markers, no framework terms)\n"
             "Section 2: OMEGA LOG (tracking & resolution record)\n\n"
+            "DISPLACEMENT REQUIREMENT: The setting must differ from any likely "
+            "source material in at least TWO of the following: occupation/profession, "
+            "century/era, culture/region, governing institution. If the constraint "
+            "specification describes agents in a fishing community, the setting "
+            "CANNOT be a fishing community. If the agents operate in a 20th-century "
+            "village, the setting CANNOT be a 20th-century village. The structural "
+            "topology must be preserved; the surface must be unrecognizable. "
+            "Think: same bones, completely different body.\n\n"
             "The setting must be temporally/culturally displaced from any likely source. "
             "Framework must be INVISIBLE. Power differentials must be "
             "naturalized through setting structure."
@@ -1661,12 +2099,6 @@ class UKEOrchestrator:
             stage_2_output,
             "\n\n",
         ]
-        if self.dr_logic:
-            prompt_parts.extend([
-                "=== INDEXED CONSTRAINT LOGIC REFERENCE ===\n",
-                self.dr_logic,
-                "\n\n",
-            ])
         prompt_parts.append(
             "Follow the operational specification protocol in your system instructions. "
             "Provide decisions on:\n"
@@ -1699,22 +2131,19 @@ class UKEOrchestrator:
 
     def _run_stage_4_narrative(
         self,
-        stage_1_output: str,
         stage_2_output: str,
         stage_3_output: str,
-        constraint_reports: str = "",       # NEW parameter
+        constraint_reports: str = "",
     ) -> StepResult:
         """Stage 4: Narrative Generation (Claude).
 
         ╔══════════════════════════════════════════════════════╗
         ║  AIR GAP ENFORCED: This stage receives ONLY         ║
-        ║  Stages 1-3 output + constraint engine reports.     ║
-        ║  The original story and Stage 0 output are NEVER    ║
-        ║  included in this call.                             ║
+        ║  Stages 2-3 output. The original story and Stage 0  ║
+        ║  output are NEVER included in this call.            ║
         ║                                                     ║
-        ║  Constraint reports are AIR GAP SAFE: they derive   ║
-        ║  from abstract structural topology via UKE_SCOPE,   ║
-        ║  not from the source narrative.                     ║
+        ║  Constraint engine now runs AFTER Stage 4, so no    ║
+        ║  reports are available at generation time.           ║
         ╚══════════════════════════════════════════════════════╝
         """
         self._progress("stage_4", "Generating narrative (Claude, air gap active)...")
@@ -1722,9 +2151,6 @@ class UKEOrchestrator:
 
         prompt_parts = [
             "Write a complete story based on the following specifications.\n\n",
-            "=== CONSTRAINT MECHANICS (Stage 1) ===\n",
-            stage_1_output,
-            "\n\n",
             "=== CONTEXT & WORLD (Stage 2) ===\n",
             stage_2_output,
             "\n\n",
@@ -1732,33 +2158,6 @@ class UKEOrchestrator:
             stage_3_output,
             "\n\n",
         ]
-
-        # NEW: Include constraint engine reports if available
-        if constraint_reports:
-            prompt_parts.extend([
-                "=== STRUCTURAL ANALYSIS (Constraint Engine) ===\n",
-                "The following diagnostic reports were produced by the Prolog constraint "
-                "engine analyzing the structural topology of this story's constraints. "
-                "Use them to inform structural depth:\n"
-                "- DRIFT ANALYSIS shows how constraints tighten or loosen over time — "
-                "use for pacing and character arc intensity\n"
-                "- COUPLING SCORES show how constraints interact — strongly coupled "
-                "constraints should feel entangled in the narrative\n"
-                "- PERSPECTIVAL GAPS (H^1 band, mandatrophy gap) show the distance "
-                "between how different characters experience the same constraint — "
-                "this IS the story's central dramatic tension\n"
-                "- SIGNATURES (false_natural_law, coordination_washing) reveal what "
-                "the constraint PRETENDS to be vs what it IS — characters inside may "
-                "believe the cover story\n"
-                "- THEOREM INSTANTIATIONS describe the structural physics — T4 (oracle gap) "
-                "means confident observers are wrong; T2 (discrete blocs) means "
-                "perspectives can't be reconciled by talking\n\n"
-                "Do NOT reference any of this terminology in the story. These are "
-                "structural instructions for you, the author. The story must be "
-                "COMPLETELY INVISIBLE to framework analysis.\n\n",
-                constraint_reports,
-                "\n\n",
-            ])
 
         prompt_parts.append(
             "Follow the generation protocol in your system instructions. "
@@ -1790,18 +2189,39 @@ class UKEOrchestrator:
         self._progress("stage_5", "Running subtractive audit (Claude)...")
         t0 = time.time()
 
-        prompt = (
+        prompt_parts = [
             "Audit the following story. Apply the subtractive audit protocol "
             "from your system instructions.\n\n"
-            "=== CONSTRAINT SPECIFICATION (for validation) ===\n"
-            f"{stage_1_output}\n\n"
-            "=== STORY (Stage 4) ===\n"
-            f"{stage_4_output}\n\n"
+            "CRITICAL: The origin obfuscation check must be rigorous. "
+            "Ask: would a reader familiar with the Western literary canon "
+            "recognize the source? Check: character names, occupation, setting, "
+            "plot beats, relationship structures, and iconic imagery. "
+            "If ANY of these are recognizably derived from a known work, "
+            "the story FAILS origin obfuscation regardless of other qualities. "
+            "A fishing story about an old man and a boy with a marlin and sharks "
+            "is recognizable. Do not pass it.\n\n",
+        ]
+
+        # Add symbolic logic for formal validation reference
+        logic_ref = self.dr_logic_symbolic or self.dr_logic
+        if logic_ref:
+            prompt_parts.append(
+                f"=== SYMBOLIC CONSTRAINT LOGIC REFERENCE ===\n{logic_ref}\n\n"
+            )
+
+        prompt_parts.extend([
+            "=== CONSTRAINT SPECIFICATION (for validation) ===\n",
+            stage_1_output,
+            "\n\n",
+            "=== STORY (Stage 4) ===\n",
+            stage_4_output,
+            "\n\n",
             "Perform: EARNED/FORCED scan, INHABITED/DEPLOYED scan, "
             "anti-pattern removal, compression audit. "
             "Output the revised story (should be tighter than input) "
-            "followed by the validation report."
-        )
+            "followed by the validation report.",
+        ])
+        prompt = "".join(prompt_parts)
 
         try:
             text, tin, tout, model, provider = self._call("stage_5", prompt)
@@ -1854,44 +2274,160 @@ def _parse_model_overrides(args, parser) -> dict[str, tuple[str, str]] | None:
 
 def _run_single(args, parser):
     """Run the pipeline on a single story."""
-    # Resolve story source
     story_path = None
     source_story = None
+    workshop_mode = False
 
-    if args.resume:
-        output_dir = Path(args.resume)
-        source_file = output_dir / "source_story.txt"
+    # ------------------------------------------------------------------
+    # --edit mode: clean editorial entry point
+    # ------------------------------------------------------------------
+    if args.edit:
+        edit_path = Path(args.edit)
+        if not edit_path.exists():
+            parser.error(f"File not found: {edit_path}")
+
+        source_story = edit_path.read_text(encoding="utf-8")
+        story_path = edit_path
+
+        # Default to stage_5 unless user specifies a later stage
+        from_stage = args.from_stage if args.from_stage != "stage_0" else "stage_5"
+        stage_idx = ALL_POSSIBLE_STAGES.index(from_stage)
+
+        model_overrides = _parse_model_overrides(args, parser)
+
+        # Output directory: --resume > auto-detect > create new
+        if args.resume:
+            output_dir = Path(args.resume)
+        elif stage_idx > 5:
+            # Resuming a broken editorial — look for existing dir
+            slug = _title_to_filename(edit_path.stem)
+            base_dir = UKE_OUTPUT_DIR
+            existing = sorted(
+                [p for p in base_dir.glob(f"{slug}_*") if p.is_dir()],
+                key=lambda p: p.stat().st_mtime,
+            )
+            if existing:
+                output_dir = existing[-1]
+                _log.info("Resuming broken editorial in: %s", output_dir)
+            else:
+                parser.error(
+                    f"--from-stage {from_stage} but no existing run "
+                    f"directory found for '{slug}' in {base_dir}. "
+                    f"Use --resume <dir> to specify one."
+                )
+        else:
+            slug = _title_to_filename(edit_path.stem)
+            output_dir = UKE_OUTPUT_DIR / f"{slug}_{int(time.time())}"
+
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        # Pre-cache the file as stage_4 output + source_story
+        (output_dir / "stage_4_output.md").write_text(source_story, encoding="utf-8")
+        (output_dir / "source_story.txt").write_text(source_story, encoding="utf-8")
+
+        workshop_mode = True
+        _log.info("Editorial mode: treating %s as stage_4 output", edit_path.name)
+
+        orch = UKEOrchestrator(
+            mode="narrative",
+            models=model_overrides if model_overrides else None,
+            dr_logic_path=args.dr_logic,
+            output_dir=output_dir,
+            skip_final_audit=args.skip_final_audit,
+            skip_engine=args.skip_engine,
+            dry_run=args.dry_run,
+            force_gate=args.force_gate,
+        )
+
+        result = orch.run(
+            source_story,
+            from_stage=from_stage,
+            source_path=story_path,
+        )
+
+        _print_summary(result, args.mode, workshop_mode)
+        return
+
+    # ------------------------------------------------------------------
+    # Standard mode (existing --from-stage / --resume / positional logic)
+    # ------------------------------------------------------------------
+
+    # Resolve story: explicit file arg takes priority over resume dir's source_story.txt
+    path = args.story or getattr(args, "story_file", None)
+    if path:
+        story_path = Path(path)
+        if not story_path.exists():
+            parser.error(f"File not found: {story_path}")
+        source_story = story_path.read_text(encoding="utf-8")
+    elif args.resume:
+        source_file = Path(args.resume) / "source_story.txt"
         if source_file.exists():
             source_story = source_file.read_text(encoding="utf-8")
         else:
-            parser.error(f"No source_story.txt in {output_dir}")
+            parser.error(f"No source_story.txt in {args.resume} and no story file provided")
     else:
-        path = args.story or getattr(args, "story_file", None)
-        if path:
-            story_path = Path(path)
-            if not story_path.exists():
-                parser.error(f"File not found: {story_path}")
-            source_story = story_path.read_text(encoding="utf-8")
-        else:
-            parser.error("Provide a story file or --resume directory")
+        parser.error("Provide a story file or --resume directory")
 
     model_overrides = _parse_model_overrides(args, parser)
+    stage_idx = ALL_POSSIBLE_STAGES.index(args.from_stage) if args.from_stage in ALL_POSSIBLE_STAGES else 0
 
     # Output directory
+    resuming_existing = False
     if args.resume:
         output_dir = Path(args.resume)
+        resuming_existing = True
     elif args.output_dir:
         output_dir = Path(args.output_dir)
     else:
-        prefix = "uke_artifact" if args.mode == "artifact" else "uke_output"
         slug = _title_to_filename(story_path.stem) if story_path else "input"
-        output_dir = Path(f"{prefix}_{slug}_{int(time.time())}")
+        if args.mode == "narrative":
+            base_dir = UKE_OUTPUT_DIR
+        else:
+            base_dir = Path(".")
+
+        # When resuming from a later stage, find the most recent existing
+        # output directory for this story instead of creating a new one.
+        if args.from_stage != "stage_0":
+            existing = sorted(
+                [p for p in base_dir.glob(f"{slug}_*") if p.is_dir()],
+                key=lambda p: p.stat().st_mtime,
+            )
+            if existing:
+                output_dir = existing[-1]
+                resuming_existing = True
+                _log.info("Resuming in existing directory: %s", output_dir)
+            else:
+                parser.error(
+                    f"--from-stage {args.from_stage} but no existing run "
+                    f"directory found for '{slug}' in {base_dir}. "
+                    f"Use --resume <dir> to specify one, or run from stage_0."
+                )
+        else:
+            if args.mode == "narrative":
+                output_dir = base_dir / f"{slug}_{int(time.time())}"
+            else:
+                output_dir = base_dir / f"uke_artifact_{slug}_{int(time.time())}"
 
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # Save source for resume
-    if not args.resume and source_story:
+    # Workshop mode: story file + --from-stage stage_5+ without an existing run.
+    # Treats the story as stage_4 output and runs the editorial pipeline.
+    # NOT activated when resuming into an existing directory (which already
+    # has real stage outputs).
+    if not resuming_existing and story_path and stage_idx >= 5:
+        workshop_mode = True
+        _log.info("Workshop mode: treating %s as stage_4 output for editorial pipeline", story_path.name)
+
+    if not resuming_existing and source_story:
         (output_dir / "source_story.txt").write_text(source_story, encoding="utf-8")
+
+    # In workshop mode, pre-cache the story as stage_4 output so
+    # the editorial pipeline can find it.
+    if workshop_mode:
+        stage_4_path = output_dir / "stage_4_output.md"
+        stage_4_path.write_text(source_story, encoding="utf-8")
+
+    skip_engine = args.skip_engine
 
     orch = UKEOrchestrator(
         mode=args.mode,
@@ -1899,7 +2435,7 @@ def _run_single(args, parser):
         dr_logic_path=args.dr_logic,
         output_dir=output_dir,
         skip_final_audit=args.skip_final_audit,
-        skip_engine=args.skip_engine,           # NEW flag
+        skip_engine=skip_engine,
         dry_run=args.dry_run,
         force_gate=args.force_gate,
     )
@@ -1910,9 +2446,16 @@ def _run_single(args, parser):
         source_path=story_path,
     )
 
-    # Print summary
+    _print_summary(result, args.mode, workshop_mode)
+
+
+def _print_summary(result, mode: str, workshop_mode: bool = False):
+    """Print pipeline run summary."""
+    mode_label = f"{mode.upper()} MODE"
+    if workshop_mode:
+        mode_label += " (editorial)"
     print(f"\n{'=' * 70}")
-    print(f"PIPELINE SUMMARY — {args.mode.upper()} MODE")
+    print(f"PIPELINE SUMMARY — {mode_label}")
     print(f"{'=' * 70}")
 
     for s in result.steps:
@@ -1926,17 +2469,20 @@ def _run_single(args, parser):
     print(f"\n  Total tokens: {result.total_tokens_in:,} → {result.total_tokens_out:,}")
     print(f"  Total time:   {result.total_duration_s:.1f}s")
 
-    # NEW: constraint engine summary
     if result.scope_manifest:
         seq = result.scope_manifest.get("generation_sequence", [])
         print(f"\n  Constraint engine: {len(seq)} axes decomposed, "
               f"{len(result.constraint_stories)} stories generated, "
               f"{len(result.constraint_report_paths)} reports produced")
 
+    if result.editorial_cycles > 0:
+        print(f"\n  Editorial cycles: {result.editorial_cycles}")
+        if result.review_route:
+            print(f"  Review route: {result.review_route}")
+
     if result.story_path:
         print(f"\n  Output: {result.story_path}")
 
-    # Cost estimate
     cost_in = result.total_tokens_in / 1_000_000 * 3.0
     cost_out = result.total_tokens_out / 1_000_000 * 15.0
     print(f"  Est cost: ~${cost_in + cost_out:.2f}")
@@ -2011,9 +2557,11 @@ def _run_batch(args, parser):
         print(f"  Title: {title}")
         print(f"{'─' * 70}")
 
-        prefix = "uke_artifact" if args.mode == "artifact" else "uke_output"
         slug = _title_to_filename(story_path.stem)
-        output_dir = Path(f"{prefix}_{slug}_{int(time.time())}")
+        if args.mode == "narrative":
+            output_dir = UKE_OUTPUT_DIR / f"{slug}_{int(time.time())}"
+        else:
+            output_dir = Path(f"uke_artifact_{slug}_{int(time.time())}")
         output_dir.mkdir(parents=True, exist_ok=True)
 
         story_save = output_dir / "source_story.txt"
@@ -2110,8 +2658,14 @@ def main():
     parser.add_argument(
         "--dr-logic",
         default=str(LOGIC_NARRATIVE_PATH),
-        help=f"Path to constraint logic reference (default: {LOGIC_NARRATIVE_PATH.name})"
+        help=(
+            f"Path to constraint logic reference. Artifact mode default: {LOGIC_NARRATIVE_PATH.name}. "
+            f"Narrative mode uses split logic by default: {LOGIC_SYMBOLIC_PATH.name} (stages 0,1,5) "
+            f"+ {LOGIC_NARRATIVE_TRANSLATION_PATH.name} (stage 2)."
+        ),
     )
+    parser.add_argument("--edit", "-e", metavar="FILE",
+                        help="Editorial mode: treat FILE as stage_4 output, run constraint engine + stages 5-10")
     parser.add_argument("--output-dir", "-o", help="Directory for intermediate outputs")
     parser.add_argument("--resume", help="Resume from output directory")
     parser.add_argument(

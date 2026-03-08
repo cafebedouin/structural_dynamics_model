@@ -1,7 +1,7 @@
 ## STAGE 3: OPERATIONAL SPECIFICATION
 
 **Model:** ChatGPT or equivalent planning model  
-**Input:** Stage 2 setting design + Stage 1 specifications  
+**Input:** Stage 1 specifications (anon) + Stage 2 setting design + Symbolic Logic Reference (logic_symbolic.md)
 **Output:** Story structure blueprint with voice and revelation strategy
 
 ### Instructions
@@ -181,6 +181,28 @@ Before committing to a voice, ask:
 
 If the answer is no, the voice has collapsed into either Witness (sees everything) or essay (explains everything). If the answer is yes, identify *what* the reader sees that the character doesn't — that specific blindness is the story's engine, and it determines whether the tone is tragic (blindness costs the narrator), comic (blindness benefits them), or horrifying (blindness enables them to harm others).
 
+> **Does this voice archetype combined with attractor likely improve or break the narrative in a predictable way?**
+
+Examples:
+
+**Positive:** 
+
+- The Condemned + Seeded Possibility + third-person limited pairing reliably produces stories where the seed is visible but unstated because the voice has no future tense and no analytical register.
+-  Beneficiary + Deterministic Tragedy + close-third. The Beneficiary's structural blindness means the tragedy unfolds through procedural action the character experiences as rational. Reliably produces dramatic irony without the narrator pointing at it. Friedrich writing the denial then opening the school report — the reader sees the cost he can't.
+- Multiple archetypes (split POV) + any attractor where the constraint has indexical variance. Different blindnesses on the same constraint produce collision without anyone being wrong. Reliably prevents hero/villain framing because each POV is internally coherent.  
+
+**Negative:** 
+
+- Any voice archetype with analytical register (Builder, Witness, Guide, Negotiator) + Revolutionary Rupture attractor + first person POV. This combination produces characters who narrate their own liberation, which is theme-naming by structural necessity.
+- Condemned + Negotiated Equilibrium. The Condemned can't see the system's shape, so they can't negotiate within it.
+- Beneficiary + Revolutionary Rupture. The Beneficiary can't see what needs rupturing. Either the story forces an implausible awakening or the revolution happens offstage.
+- Witness + Deterministic Tragedy + close-third. The Witness sees everything, so tragedy becomes reportage. No gap, no engine.
+
+**Edge:**
+- Witness + Deterministic Tragedy + omniscient or retrospective framing. The Witness's foreknowledge becomes the constraint — they saw it coming and couldn't intervene. Produces Cassandra-type tragedy but requires the Witness's helplessness to be dramatized, not stated. High difficulty; collapses into reportage if the Witness narrates rather than experiences their own impotence.
+
+> **Would you want to execute Stage 4 given these constraints?** If the answer is "only with exceptional skill," the specification is too brittle. Reselect toward combinations where competent execution produces good results.
+
 ### Common Voice Selection Errors
 
 - **Hopeful Condemned:** Condemned voice + Equilibrium attractor → character gains agency voice can't support
@@ -222,28 +244,44 @@ If the answer is no, the voice has collapsed into either Witness (sees everythin
                      □ Equilibrium established □ System persists, agent removed
    ```
 
-5. **Identify the story's primary physical marker:**
-   ```
-   Not "design recurring motifs" — identify the ONE physical thing
-   that reveals the constraint experience from inside.
-   
-   This is not a motif to deploy. It is the thing the character's body
-   does or notices that the reader will understand before the character does.
-   
-   Examples:
-   - Rotation Seven: Anna's breathing rate, observed by Rina.
-     Not because it was chosen from a motif palette. Because when
-     someone you love is dying in a system that measures life by
-     numbers, you count their breaths.
-   - Ship of Theseus (kids): "Inside, the ship grows quieter."
-     Not a designed sensory marker. What it feels like when the
-     original parts are leaving one by one.
-   
-   The marker should emerge from the inhabitation sentence.
-   If it doesn't emerge naturally, the inhabitation sentence is wrong.
+5. **Inhabitation spec:**
+
+   What does this constraint feel like in the body?
+   Not what it measures. Not what it counts.
+   What does the character physically experience
+   that the system's metrics cannot capture?
+
+   Specify:
+   - What sensation accompanies the constraint tightening?
+   - What has the body learned to do that the mind hasn't named?
+   - What does the character notice about the physical world
+     that reveals their position without explaining it?
+
+   ANTI-PATTERN: If the inhabitation spec can be expressed
+   as a number that changes over time, it is a metric,
+   not an experience. Metrics are the system's language.
+   The character lives underneath the metrics.
+
+   The inhabitation spec gives Stage 4 a sensory world
+   to write from, not a device to repeat. Stage 4 should
+   discover the specific physical details. Stage 3 provides
+   the phenomenological register — what kind of attention
+   does this character pay to their body and environment?
+
+   Examples of register, not device:
+   - Hypervigilance: notices exits, flinches at sounds,
+     tracks authority figures' positions in a room
+   - Numbness: stops noticing things that used to hurt,
+     surprised when others react to what's become normal
+   - Displacement: feels the constraint in the wrong place —
+     hands ache when it's the lungs that are compressed,
+     tastes metal when it's dignity that's corroded
+   - Flattened affect: the character's emotional responses
+     don't match the situation's intensity, and neither
+     the character nor the prose comments on the mismatch
    ```
 
-6. **(Optional) Plan structural physics beats:**
+6. **Plan structural physics beats:**
    ```
    False Mountain reveal: Setup → Evidence → Reveal
    Purity drift arc: Surface stability → Subtle degradation → Crisis
@@ -262,9 +300,12 @@ If the answer is no, the voice has collapsed into either Witness (sees everythin
     [length, POV, tense, character count, naming, linguistic implementation]
   </editorial_decisions>
   
-  <physical_marker>
-    [the one thing the body does or notices]
-  </physical_marker>
+<inhabitation_spec>
+    [phenomenological register for each POV character —
+     mode of attention, not device. What kind of noticing
+     does this character do? What does the constraint
+     feel like in their body?]
+  </inhabitation_spec>
   
   <act_structure>
     <act_1>[constraint activation, character experiences]</act_1>
@@ -273,7 +314,7 @@ If the answer is no, the voice has collapsed into either Witness (sees everythin
   </act_structure>
   
   <character_arcs>
-    [index transitions with χ calculations]
+           [How each character's experience of their situation changes over the course of the narrative]
   </character_arcs>
   
   <error_manifestations>
@@ -289,15 +330,56 @@ If the answer is no, the voice has collapsed into either Witness (sees everythin
 
 ### Validation Checklist
 
-```
+BLUEPRINT CONSISTENCY:
 ☐ Voice archetype compatible with attractor
 ☐ Attractor compatible with rationality model (PIR/BIR)
 ☐ Revelation strategy serves genre
-☐ Physical marker emerges from inhabitation sentence
-☐ All constraints have activation moments
+☐ All constraints have activation moments in act structure
 ☐ Character arcs map to index transitions
-☐ Error manifestations are concrete scenes
-☐ Framework terminology banned
-```
+☐ Error manifestations are concrete scenes, not abstractions
 
----
+INHABITATION SPEC:
+☐ Does the spec describe sensation or measurement?
+  If it can be expressed as a single number changing
+  over time, it is a metric. Rewrite until it can't.
+☐ Does the spec give Stage 4 a mode of attention
+  or a device to deploy? Modes generate variety.
+  Devices generate repetition.
+☐ Does the spec describe what the character physically
+  experiences that the system's metrics cannot capture?
+
+STRUCTURAL PREVENTION (catches problems Stage 4 can't fix):
+☐ Blurb test (predictive): For each POV character, identify
+  the single most important thing they understand about their
+  situation. Does their voice archetype permit them to say
+  it aloud?
+
+  If yes → the story will contain theme-naming dialogue.
+  Either constrain the voice (lower the archetype's awareness
+  ceiling) or restructure so that understanding is distributed
+  across characters such that no single character holds the
+  thesis.
+
+  If no → verify that the constraint comes from the archetype
+  itself, not from a Stage 4 instruction to "avoid theme-naming."
+  Structural prevention is robust. Instructional prevention fails
+  under pressure.
+
+☐ Irresolvable tension test: Identify at least one point where
+  the constraint topology produces a situation the reader cannot
+  comfortably resolve. Typical sources:
+  - A character whose rational, sympathetic behavior enacts harm
+  - A transformation rule where the cost of reform is borne by
+    someone other than the beneficiary of reform
+  - An attractor where the "right" outcome for one index is the
+    wrong outcome for another
+  If no irresolvable tension exists, the story will feel resolved
+  at resolution. Competent, not haunting.
+
+  Mark the irresolvable tension in the blueprint. Stage 4 must
+  write toward it, not around it.
+
+☐ Framework terminology banned from blueprint prose
+  (structural terms in XML tags are fine; natural-language
+  descriptions of setting, characters, and scenes must be
+  clean)

@@ -920,6 +920,40 @@ Write the story that lives at the intersection of all three.
 - Trust the constraint structure to generate conflict. If the specifications say two characters route to different types from the same constraint, the collision is already there. You don't need to manufacture drama.
 - Trust the voice to carry meaning. If you've committed to The Condemned, the voice limits what the narrator can know and articulate. Those limits are the story's texture, not its weakness.
 
+**Voice discipline:**
+
+Stage 3 selected a voice archetype with specific structural
+properties — what the voice can see, what it cannot, and what
+happens when it tries to see beyond its position.
+
+Enforce these limits throughout:
+
+- If the voice is Condemned, the narrator does not ask analytical
+  questions about the system. "What if the statistics are measuring
+  the wrong thing?" is a Builder's question. The Condemned says:
+  "The numbers say what they say." The Condemned's tragedy is that
+  they cannot formulate the critique the reader can.
+
+- If the voice is Beneficiary, the narrator does not feel sorry for
+  those harmed. The Beneficiary's comedy is that they genuinely
+  cannot see the cost.
+
+- If the voice is Fool, the narrator does not have epiphanies.
+  The Fool's comedy is that they never understand what they've done.
+
+- If the voice is Zealot, the narrator does not waver.
+  The Zealot's horror is that they are completely sincere.
+
+When a character in dialogue pushes against the voice's limits —
+asking a Builder question from a Condemned position, for instance —
+that character is growing beyond their archetype. This is permitted
+ONLY if Stage 3 planned it (Capture Arc, Misrecognition Arc) and
+it happens at most once, at the story's structural turn. It is not
+permitted as a recurring pattern across multiple scenes.
+
+The voice's limits are not weaknesses to overcome. They are the
+story's texture. Protect them.
+
 **What to avoid:**
 - Installing vocabulary from a list rather than speaking in the world's language
 - Adding sensory detail because a protocol says to rather than because the character would notice it
@@ -937,6 +971,31 @@ DO NOT:
 - Reference the original source material
 - Use abstract nouns like "the system" or "the mechanism"
 - Break genre to explain constraint logic
+- Put the story's thesis in a character's mouth. If a character
+  articulates what the constraint structure means — names the theme,
+  explains the dynamic, states the moral — that is the model essaying
+  through dialogue. Characters experience constraints. They do not
+  explain them to each other or to the reader.
+
+  TEST: Cover the dialogue. Does it state something the story's
+  events have already shown? Then it's redundant. Cut it or replace
+  it with something the character would actually say from inside
+  their constraint position.
+
+  BAD:  "That's not transformation. That's just— transmission."
+        "Yes. That's exactly what it is."
+  WHY:  Characters have named the story's structural thesis.
+        The reader already sees transmission happening through
+        action (checking welds by hand, teaching by example).
+        Naming it destroys the reader's discovery.
+
+  BAD:  "Maybe the system recalibrates again."
+  WHY:  Character is narrating the attractor. The attractor should
+        be felt through events, not stated as prediction.
+
+  GOOD: "I'll come tomorrow."
+  WHY:  Action that embodies the theme without naming it.
+        The reader does the work.
 
 INSTEAD:
 - Show constraints through specific details
@@ -953,6 +1012,32 @@ INSTEAD:
 [No framework terminology]
 [This is the final story — not a draft awaiting deepening]
 ```
+
+**Ending discipline:**
+
+When the attractor has been reached, stop.
+
+- Seeded Possibility: The surface tragedy is visible. The seed is
+  visible to the reader but not stated by the narrator or characters.
+  ONE beat after the attractor — a gesture, an image, a silence.
+  Then stop.
+
+- Tragedy: The constraint has run to completion. No coda explaining
+  what was lost.
+
+- Equilibrium: The new balance is felt. No scene showing characters
+  reflecting on what changed.
+
+- Rupture: The break has happened. No scene surveying the aftermath
+  unless that IS the story (Survivor voice).
+
+If you have written past the attractor and find yourself showing
+consequences, reflections, or future implications — you are writing
+an epilogue the story doesn't need. Cut back to the last scene that
+embodies the attractor rather than explaining it.
+
+The model's instinct to keep writing after the ending is the single
+most common quality failure. Trust the reader. Stop.
 
 ---
 
@@ -1014,6 +1099,11 @@ Check for and remove:
 - Explaining feeling (naming instead of showing)
 - Counting tics (exact numbers repeated mechanically across scenes)
 - Framework residue (constructed vocabulary that smells like terminology)
+- Theme-naming dialogue (characters articulating the story's thesis
+  in conversation — "That's exactly what it is," "Maybe the system
+  recalibrates." If a line of dialogue could serve as the story's
+  blurb or moral, it must be cut. Characters act within constraints;
+  they do not narrate them.)
 - Voice drift (passages where the voice breaks archetype)
 ```
 
@@ -1021,6 +1111,24 @@ Check for and remove:
 ```
 The Iceberg Rule: If a sentence can lose 20% of its words without
 losing meaning, cut them.
+
+Target compression: If Stage 3 specified a length range and the
+Stage 4 output exceeds the upper bound, compression is mandatory
+until the output falls within range. If Stage 3 specified
+Short (2000-5000) and Stage 4 produced 7000 words, the audit
+must cut to at most 5000 — likely closer to 3500.
+
+If Stage 3 did not specify length, use these heuristics:
+- Flash: 500-1000 words. Every sentence load-bearing.
+- Short: 2000-4000 words. No scene exists for atmosphere alone.
+- Novelette: 7500-12000 words. Scenes earn their space through
+  constraint activation, not through elaboration.
+
+The 20% minimum compression remains, but it is a FLOOR, not a
+TARGET. Many Stage 4 outputs need 30-40% reduction. The model's
+instinct is to preserve its own output. Override that instinct.
+The question is not "can I justify keeping this?" but "does the
+story require this to function?"
 
 The Compression Floor: Do not compress below the point where nuance
 or necessary uncertainty is lost.
@@ -1030,6 +1138,61 @@ still feel like it comes from inside the constraint experience?
 If a sentence now feels like it comes from outside — from the
 protocol, from the framework, from the author — cut it entirely.
 ```
+
+**5. Voice audit:**
+```
+For each major character, check dialogue and interiority against
+the selected archetype from Stage 3:
+
+- Does the Condemned ask analytical questions about the system?
+  → Voice has drifted to Builder. Cut or rewrite from inside
+    the Condemned's limited perspective.
+
+- Does the Beneficiary express sympathy for the harmed?
+  → Structural blindness has broken. Cut.
+
+- Does the Fool explain the joke?
+  → Fool has become Trickster. Cut the explanation.
+
+- Does the Zealot waver?
+  → Zealot has become Condemned. Restore certainty or cut.
+
+- Does ANY character state the story's theme in dialogue?
+  → Cut the line. If the scene depends on it, the scene is
+    doing the reader's work for them. Restructure.
+
+Voice drift is cumulative. A single Builder question from a
+Condemned character is a minor issue. Three across different
+scenes means Stage 4 lost the voice. Flag for regeneration
+if drift is pervasive.
+
+**6. Ending audit:**
+```
+Identify the scene where the attractor is reached — the moment
+the constraint dynamics resolve into their terminal state.
+
+Everything after that scene is suspect. Apply this test:
+
+- Does the post-attractor material SHOW something the reader
+  hasn't seen? (Keep)
+- Does it EXPLAIN something the reader has already seen? (Cut)
+- Does it STATE what the reader should feel or conclude? (Cut)
+- Does it project into the future? (Almost always cut.
+  "Someone will remember" is the author, not the character.)
+
+If more than one scene follows the attractor, the ending is
+almost certainly too long. The default action is to cut
+everything after the first post-attractor beat and check
+whether the story is stronger.
+
+Seeded Possibility endings require special attention: the seed
+must be visible but never stated. If a character says "maybe
+someday things will change" or narrates future possibility,
+the underground transformation has been forced aboveground.
+Cut it. The reader sees the seed in the character's actions,
+not in their predictions.
+
+
 
 ### Validation
 
@@ -1095,6 +1258,60 @@ Framework terminology leaked → Return to Stage 4
 Origin recognizable → Return to Stage 2
 Voice inconsistent → Return to Stage 4 with stricter voice constraint
 Prose quality weak → Run subtractive operations again (cut more, not add)
+```
+
+---
+
+## QUICK REFERENCE
+
+### Constraint Types
+
+**Consult logic_thresholds.md §3 for current threshold values.**
+
+```
+Mountain (■):    Minimal ε, no enforcement, immutable from index
+Rope (⊞):       Low χ, low ε, genuine coordination, changeable
+Snare (⊠):      High χ, high ε, high suppression, no coordination
+Tangled (⊞⊠):   Mid-range χ, coordination + asymmetric extraction
+Scaffold (⊡):   Low χ, coordination, sunset clause
+Piton (⊟):      Minimal χ, maintenance cost, high theater
+```
+
+### Power/Scope Modifiers
+
+```
+π(powerless) = 1.5    π(moderate) = 1.0      π(powerful) = 0.6
+π(organized) = 0.4    π(institutional) = -0.2 π(analytical) = 1.15
+
+σ(local) = 0.8        σ(regional) = 0.9      σ(national) = 1.0
+σ(continental) = 1.1  σ(global) = 1.2        σ(universal) = 1.0
+```
+
+### Attractor Decision Matrix
+
+| Constraint Profile | PIR Model | BIR Model | Recommended Attractors |
+|-------------------|-----------|-----------|----------------------|
+| Mountain-dominated | Yes | Yes | Tragedy, Seeded Possibility |
+| Mountain + Snares | Yes | N/A | Deterministic Tragedy |
+| Tangled Ropes dominant | Yes | N/A | Tragedy (crushed by hybrid) |
+| Tangled Ropes dominant | N/A | Yes | **Negotiated Equilibrium** |
+| Pure Snares, no Mountains | Yes | N/A | Tragedy or Revolutionary Rupture |
+| Pure Snares, no Mountains | N/A | Yes | Equilibrium or Rupture |
+| Piton present | Either | Either | Seeded Possibility |
+
+### Common Failure Patterns
+
+```
+All characters see same type → Adjust ε or add power differential
+Only Ropes/Snares, no Tangled → ~36% should be Tangled, re-examine
+Framework leaks → Regenerate Stage 4 with invisibility constraint
+Personality conflict not structural → Make all rational from index
+Allegory feel → Cut what's forced, not add more detail
+Metrics treated as truth → Reframe as routing
+Topology violated → Check routing preservation, not ε precision
+Flat prose, competent structure → Inhabitation sentence was wrong (return to Stage 2)
+Language uniformity → Linguistic strategy not inhabitated (return to Stage 2)
+Voice drift → Regenerate Stage 4 with stricter archetype adherence
 ```
 
 ---

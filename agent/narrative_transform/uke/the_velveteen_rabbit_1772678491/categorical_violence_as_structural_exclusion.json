@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "categorical_violence_as_structural_exclusion",
+    "version": "1.0",
+    "generated_date": "2025-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "catviolence"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.62,
+    "theater_ratio": 0.58,
+    "claimed_type": "rope",
+    "human_readable": "Categorical Violence as Structural Exclusion in Medical Authority Systems",
+    "topic_domain": "institutional_violence/medical_authority/labor_extraction",
+    "requires_active_enforcement": true,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "institutional_administrators",
+      "protocol_designers",
+      "insured_patient_class"
+    ],
+    "victims": [
+      "categorically_excluded_subjects",
+      "frontline_medical_workers",
+      "uninsured_patient_class"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Categorically Excluded Subject",
+      "comment": "PERSPECTIVE 1: CATEGORICALLY EXCLUDED SUBJECT (SNARE) \u2014 Trapped by administrative classification that renders them ineligible for standard protections. Cannot exit the category without institutional reclassification. Bears full extraction: denied care, excluded from protocols, rendered legally invisible. The category itself is the cage."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Frontline Medical Worker",
+      "comment": "PERSPECTIVE 2: FRONTLINE MEDICAL WORKER (TANGLED ROPE) \u2014 Constrained by protocol requirements that force differential treatment. Benefits from clear decision rules that reduce liability and cognitive load, but also bears moral injury from enforcing exclusions. Mixed experience: the categories coordinate triage decisions while extracting emotional labor and ethical compromise."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Protocol Designer",
+      "comment": "PERSPECTIVE 3: PROTOCOL DESIGNER (ROPE) \u2014 Institutional actor with arbitrage exit. Experiences categorical systems as pure coordination: administrative categories enable resource allocation, liability management, and operational efficiency. Net beneficiary \u2014 the categories solve genuine coordination problems (who gets scarce resources, who is responsible for outcomes) with minimal perceived extraction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Patient Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: PATIENT ADVOCACY COALITION (TANGLED ROPE) \u2014 Organized agents working to expand category definitions and challenge exclusions. Mobile exit (can shift advocacy focus to other issues) but constrained by institutional resistance. See both coordination function (categories enable systematic care delivery) and extraction (arbitrary boundaries exclude vulnerable populations). Moderate effective extraction because coalition has agency and some success in category expansion."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Insurance Bureaucracy",
+      "comment": "PERSPECTIVE 5: INSURANCE BUREAUCRACY (PITON) \u2014 Institutional actor that maintains categorical systems through inertia rather than function. High theater ratio: much administrative labor goes to category maintenance, appeals processing, and exception documentation rather than actual care coordination. The bureaucracy recognizes its own performative nature but cannot exit due to path dependence and sunk institutional investment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational analytical perspective, administrative categories in medical systems serve genuine coordination functions: they enable resource allocation, standardize treatment protocols, and manage institutional liability. The constraint is classified as rope because the coordination function is real and the base extractiveness (0.38) falls within rope range when scaled by analytical context parameters. However, the perspectival gap reveals that this coordination comes at significant cost to those excluded by the categories."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "category_boundary_arbitrariness",
+      "question": "Are the boundaries of exclusionary categories determined by medical necessity or by administrative convenience and cost containment?",
+      "resolution_mechanism": "Comparative analysis of category definitions across jurisdictions with different cost structures; correlation between category boundaries and institutional budget constraints vs clinical outcomes",
+      "impact": "If medically necessary: classification shifts toward rope (genuine coordination). If administratively convenient: classification shifts toward snare (extraction disguised as coordination).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether category boundaries reflect medical necessity or administrative cost containment"
+    },
+    {
+      "id": "exception_clause_accessibility",
+      "question": "Do exception clauses and appeals processes provide genuine recourse or performative bureaucratic theater?",
+      "resolution_mechanism": "Success rate analysis of appeals by category; time-to-resolution vs time-to-medical-necessity; correlation between appeal success and patient resources (legal representation, documentation capacity)",
+      "impact": "If accessible: suppression is lower than measured, classification shifts toward rope. If performative: suppression is higher, classification shifts toward snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exception processes provide genuine recourse or theater"
+    },
+    {
+      "id": "frontline_worker_moral_injury",
+      "question": "What proportion of frontline medical worker burnout and attrition is attributable to enforcing categorical exclusions vs other job stressors?",
+      "resolution_mechanism": "Longitudinal studies of worker retention and mental health outcomes; qualitative analysis of exit interviews; comparison of burnout rates in systems with vs without categorical exclusions",
+      "impact": "If significant: extraction from frontline workers is higher than base metric suggests, strengthening tangled_rope classification. If minimal: extraction is primarily on excluded subjects, not workers.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Proportion of worker burnout attributable to categorical enforcement"
+    },
+    {
+      "id": "category_expansion_trajectory",
+      "question": "Are categorical boundaries expanding to include previously excluded populations, or contracting under cost pressure?",
+      "resolution_mechanism": "Historical analysis of category definition changes over time; correlation with institutional budget cycles and political pressure; tracking of advocacy coalition success rates",
+      "impact": "If expanding: constraint has scaffold properties (sunset logic). If contracting: extraction is increasing, strengthening snare classification from excluded subjects' perspective.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Trajectory of category boundary evolution over time"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.53
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.28
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.32
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.38
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Administrative categories in medical authority systems create structural exclusions that render certain subjects ineligible for standard protections and care protocols. These categories \u2014 immigration status, insurance coverage tier, diagnostic code eligibility, facility admission criteria \u2014 serve genuine coordination functions (resource allocation, liability management, treatment standardization) while simultaneously creating zones of exception where institutional violence becomes permissible. The constraint exhibits a perspectival gap between institutional actors who experience the categories as pure coordination (rope) and excluded subjects who experience them as extraction mechanisms (snare). Frontline medical workers occupy an intermediate position, benefiting from decision-rule clarity while bearing the moral injury of enforcing exclusions. The theater_ratio (0.58) reflects that much administrative labor goes to category maintenance, exception processing, and appeals documentation rather than direct care coordination. The constraint's extractiveness has increased over the interval (0.28 \u2192 0.38) as cost pressures have tightened category boundaries and reduced exception accessibility.",
+    "key_agents": [
+      "Categorically Excluded Subjects: Primary victims (powerless/trapped) \u2014 rendered ineligible for standard protections by administrative classification; cannot exit category without institutional reclassification",
+      "Frontline Medical Workers: Secondary victims (moderate/constrained) \u2014 forced to enforce exclusions; bear moral injury and emotional labor; benefit from decision-rule clarity",
+      "Protocol Designers: Primary beneficiaries (institutional/arbitrage) \u2014 institutional actors who design categorical systems; experience categories as pure coordination solving resource allocation problems",
+      "Patient Advocacy Coalitions: Organized agents (organized/mobile) \u2014 work to expand category definitions; see both coordination function and extraction; moderate effective extraction due to agency",
+      "Insurance Bureaucracy: Institutional actor (institutional/constrained) \u2014 maintains categorical systems through inertia; high theater ratio; recognizes own performative nature but cannot exit",
+      "Insured Patient Class: Indirect beneficiaries (moderate/mobile) \u2014 benefit from categorical exclusions that concentrate resources on insured populations",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees genuine coordination function but risks naturalizing the violence of categorical exclusion"
+    ],
+    "logic_rationale": "Extractiveness (0.38): Moderate. Administrative categories extract from excluded subjects through denial of care and legal invisibility, and from frontline workers through moral injury and emotional labor. However, the categories also serve genuine coordination functions \u2014 they enable systematic resource allocation and standardize treatment protocols. The value reflects that the extraction is real but not total; some coordination benefit exists. Suppression (0.62): Moderate-high. Excluded subjects face significant barriers to reclassification: bureaucratic complexity, documentation requirements, legal status constraints, and institutional resistance to exception-making. Frontline workers face professional and legal constraints on deviating from categorical protocols. But suppression is not total \u2014 advocacy coalitions achieve some category expansions, and exception processes (though often performative) do occasionally succeed. Theater ratio (0.58): Moderate-high. Much administrative labor in categorical systems is performative: appeals processing that rarely succeeds, exception documentation that serves liability management rather than care access, category maintenance rituals that persist through inertia. The theater has increased over the interval as cost pressures have added layers of bureaucratic justification without expanding actual care access.",
+    "directionality_logic": "Directionality is derived from structural position and beneficiary/victim declarations. Categorically excluded subjects are victims with trapped exit options, yielding high d and high experienced extraction (snare classification). Protocol designers are beneficiaries with arbitrage exit, yielding low d and low/negative experienced extraction (rope classification). Frontline medical workers are victims (bear moral injury) but with constrained rather than trapped exit and some benefit from decision-rule clarity, yielding moderate d and moderate experienced extraction (tangled_rope classification). Patient advocacy coalitions are organized agents with mobile exit working to expand categories, yielding moderate d despite their advocacy role. The insurance bureaucracy is an institutional actor with constrained exit (path dependence) rather than arbitrage, yielding moderate d and piton classification driven by theater gate rather than high chi. The analytical observer uses canonical analytical d, yielding rope classification that reflects the genuine coordination function while the perspectival gap reveals the cost to excluded subjects.",
+    "perspectival_gap": "The constraint demonstrates a diagnostic perspectival gap between institutional actors and excluded subjects. Protocol designers and insured patients experience categorical systems as pure coordination (rope) \u2014 the categories solve genuine problems of resource allocation and treatment standardization. Frontline medical workers experience mixed coordination and extraction (tangled_rope) \u2014 the categories provide decision-rule clarity while forcing them to enforce exclusions that cause moral injury. Categorically excluded subjects experience pure extraction (snare) \u2014 the categories render them legally invisible and ineligible for care, with no exit option except institutional reclassification they cannot control. The analytical observer's rope classification reflects the genuine coordination function but risks naturalizing the violence of categorical exclusion as an inevitable feature of medical systems. The gap reveals that 'coordination' and 'extraction' are not mutually exclusive \u2014 the same categorical system coordinates care for included populations while extracting from excluded populations.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that categorical systems in medical authority are simultaneously coordination mechanisms and extraction mechanisms, depending on structural position. The rope classification from institutional and analytical perspectives is not false \u2014 the categories do solve genuine coordination problems. The snare classification from excluded subjects' perspective is also not false \u2014 the categories do create zones of exception where institutional violence becomes permissible. The tangled_rope classification from frontline workers' perspective captures the mixed experience of benefiting from decision-rule clarity while bearing the cost of enforcing exclusions. The mandatrophy resolution is that all three classifications are legitimate perspectival readings of the same structural data. The presheaf over observation sites IS the answer: the constraint is rope from positions of inclusion, snare from positions of exclusion, and tangled_rope from positions of enforcement. The analytical challenge is not to choose one classification but to map the perspectival structure that produces different classifications from different positions."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is part of a broader family of institutional violence mechanisms. Related constraints include: (1) diagnostic_code_gatekeeping (categorical exclusion via medical classification systems), (2) immigration_status_care_denial (categorical exclusion via legal status), (3) insurance_tier_treatment_differential (categorical exclusion via payment classification). Each has distinct \u03b5 values reflecting different extraction mechanisms, but all share the structural pattern of administrative categories creating zones of exception."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "institutional",
+      "d_value": 0.48
+    }
+  ]
+}

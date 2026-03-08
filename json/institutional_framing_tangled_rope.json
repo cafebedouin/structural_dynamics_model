@@ -1,0 +1,192 @@
+{
+  "header": {
+    "constraint_id": "institutional_framing_tangled_rope",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "inst_frame"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.68,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Institutional Framing of Epistemic Limits as Optimization Problems",
+    "topic_domain": "philosophy_of_science/computational_learning_theory/science_studies",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "benchmark_organizations",
+      "model_developers",
+      "leaderboard_maintainers"
+    ],
+    "victims": [
+      "deployed_system_users",
+      "epistemic_reliability",
+      "safety_critical_domains"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "global",
+      "label": "Deployed System Users in Safety-Critical Domains",
+      "comment": "PERSPECTIVE 1: DEPLOYED SYSTEM USERS (SNARE) \u2014 Users in medical diagnosis, legal decision support, or autonomous systems cannot exit the constraint. They face models trained to maximize benchmark scores rather than calibrate uncertainty appropriately. Binary grading schemes reward confident guessing, and users bear the full cost when models fail to abstain on irreducibly uncertain inputs. Maximum extraction with no alternative."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "Model Developers Under Competitive Pressure",
+      "comment": "PERSPECTIVE 2: MODEL DEVELOPERS (TANGLED ROPE) \u2014 Developers face genuine coordination benefits from standardized benchmarks (comparability, reproducibility, progress tracking) but also bear extraction through competitive pressure to optimize for flawed metrics. They could advocate for better evaluation schemes but face career costs and funding disadvantages if they unilaterally adopt confidence-threshold grading while competitors game binary metrics. Mixed experience: real coordination value alongside structural coercion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "Benchmark Organizations and Leaderboard Maintainers",
+      "comment": "PERSPECTIVE 3: BENCHMARK ORGANIZATIONS (ROPE) \u2014 Primary beneficiaries who experience the constraint as pure coordination. Binary grading schemes are computationally simple, produce clear rankings, and drive engagement. These organizations capture citation advantage, conference visibility, and funding priority. They can arbitrage between evaluation schemes and face minimal cost from the epistemic misalignment their metrics create downstream."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "Epistemic Reliability Advocacy Coalition",
+      "comment": "PERSPECTIVE 4: EPISTEMIC RELIABILITY COALITION (TANGLED ROPE) \u2014 Organized researchers advocating for confidence-threshold evaluation, selective prediction, and abstention-aware metrics. They benefit from the benchmark infrastructure (enables empirical study of calibration) but also experience extraction (their proposed fixes face adoption barriers due to leaderboard inertia and competitive dynamics). Mobile exit: can build alternative evaluation frameworks, but face network effects and institutional resistance."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "continental",
+      "label": "Academic Review Systems for ML Papers",
+      "comment": "PERSPECTIVE 5: ACADEMIC REVIEW SYSTEMS (PITON) \u2014 Peer review for ML papers increasingly treats benchmark performance as the primary validity signal, despite widespread recognition that leaderboard rankings are gameable and epistemically misleading. The review ritual persists through institutional inertia: reviewers demand benchmark comparisons even when inappropriate, and papers without leaderboard results face rejection regardless of conceptual contribution. High theater ratio: the evaluation process is performative rather than epistemically functional."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, benchmark infrastructure provides genuine coordination value (standardized evaluation enables cumulative progress) but embeds extractive institutional choices (binary grading, leaderboard ranking, competitive framing) that systematically misalign model behavior with epistemic reliability. The constraint is not a natural law \u2014 confidence-threshold evaluation and abstention-aware metrics are technically feasible \u2014 but institutional path dependence and competitive dynamics suppress alternatives. Tangled rope: real coordination function with embedded asymmetric extraction that requires active enforcement to maintain."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "calibration_vs_accuracy_tradeoff",
+      "question": "Is the tension between maximizing accuracy and maintaining calibration an inherent tradeoff in model training, or an artifact of binary evaluation schemes?",
+      "resolution_mechanism": "Empirical comparison of models trained under confidence-threshold evaluation vs binary grading, controlling for architecture and data. Measure whether calibration-accuracy tradeoff persists when evaluation scheme changes.",
+      "impact": "If inherent tradeoff: some extraction is unavoidable coordination cost (lower \u03b5). If artifact of evaluation: current \u03b5 underestimates institutional extractiveness.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether calibration-accuracy tension is inherent or institutional"
+    },
+    {
+      "id": "leaderboard_adoption_barrier",
+      "question": "What proportion of leaderboard resistance to confidence-threshold metrics is due to technical complexity vs competitive advantage preservation?",
+      "resolution_mechanism": "Survey of benchmark maintainers and model developers; analysis of stated reasons for not adopting proposed fixes; comparison with adoption rates of other technical changes of similar complexity.",
+      "impact": "If primarily technical: lower suppression, coordination problem. If primarily competitive: higher suppression, extractive mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Primary barrier to adopting confidence-threshold evaluation"
+    },
+    {
+      "id": "post_training_amplification_mechanism",
+      "question": "Does post-training (RLHF, DPO) amplify pretraining miscalibration through reward hacking, or does it inherit miscalibration passively from base model limitations?",
+      "resolution_mechanism": "Controlled experiments comparing calibration degradation across post-training methods; analysis of reward model behavior on abstention vs confident guessing; measurement of calibration before and after alignment training.",
+      "impact": "If active amplification: post-training is an extractive mechanism requiring separate constraint story. If passive inheritance: post-training is downstream effect, not independent constraint.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether post-training actively amplifies or passively inherits miscalibration"
+    },
+    {
+      "id": "safety_critical_threshold",
+      "question": "At what deployment risk level does the cost of confident guessing on irreducibly uncertain inputs exceed the coordination benefit of standardized benchmarks?",
+      "resolution_mechanism": "Cost-benefit analysis across deployment domains; measurement of harm from overconfident predictions in medical, legal, and autonomous systems; comparison with coordination value of benchmark infrastructure.",
+      "impact": "If threshold is low: most current deployments exceed it, higher victim count. If threshold is high: extraction is concentrated in narrow safety-critical domains, lower victim count.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Risk threshold where benchmark coordination value is outweighed by miscalibration cost"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45,
+      "id_override": "theater_2015"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.58,
+      "id_override": "theater_2018"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.68,
+      "id_override": "theater_2021"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38,
+      "id_override": "extract_2015"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48,
+      "id_override": "extract_2018"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.58,
+      "id_override": "extract_2021"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The institutional framing of epistemic limits as optimization problems creates a structural misalignment between benchmark performance and epistemic reliability. Binary grading schemes reward models for confident guessing on irreducibly uncertain inputs rather than appropriate abstention. This constraint sits downstream of two distinct upstream constraints: (1) epistemic_irreducibility_mountain \u2014 the genuine computational learning theory limits on what can be known from finite data, and (2) formalization_translation_rope \u2014 the coordination problem of translating informal epistemic concepts into formal evaluation metrics. The institutional framing constraint is neither of these: it is the specific institutional choice to treat epistemic uncertainty as an optimization target rather than a boundary condition. Benchmark organizations benefit from simple, rankable metrics that drive engagement. Model developers face competitive pressure to maximize scores even when doing so produces miscalibrated systems. Deployed system users in safety-critical domains bear the cost when models trained on binary benchmarks fail to abstain appropriately. The constraint exhibits genuine coordination value (standardized evaluation enables progress tracking and reproducibility) alongside asymmetric extraction (the evaluation scheme systematically misaligns incentives). Theater ratio has increased over the interval as the gap between benchmark performance and real-world reliability has widened, with leaderboard rankings becoming increasingly detached from epistemic quality.",
+    "key_agents": [
+      "Deployed System Users: Primary victims (powerless/trapped) \u2014 bear full cost of overconfident predictions in safety-critical domains with no exit option",
+      "Benchmark Organizations: Primary beneficiaries (institutional/arbitrage) \u2014 capture citation advantage and visibility from simple rankable metrics",
+      "Model Developers: Mixed position (moderate/constrained) \u2014 benefit from coordination infrastructure but face extraction through competitive pressure to optimize flawed metrics",
+      "Epistemic Reliability Coalition: Organized advocates (organized/mobile) \u2014 can build alternative frameworks but face adoption barriers from network effects",
+      "Academic Review Systems: Institutional degradation (institutional/constrained) \u2014 maintain performative benchmark requirements despite recognized epistemic problems",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees genuine coordination value embedded with extractive institutional choices"
+    ],
+    "logic_rationale": "Extractiveness (0.58): High-moderate. The constraint extracts from deployed system users who face overconfident models in safety-critical domains, and from model developers who must optimize for flawed metrics to remain competitive. However, there is genuine coordination value in standardized benchmarks \u2014 the extraction is not total. The value reflects that roughly 40% of the constraint's function is legitimate coordination (enabling comparability and progress tracking) while 60% is extractive institutional framing (binary grading that rewards confident guessing over calibration). Suppression (0.62): High-moderate. Significant barriers to alternative evaluation schemes include network effects (leaderboard visibility drives adoption), competitive dynamics (unilateral adoption of confidence-threshold grading creates disadvantage), institutional inertia (review systems demand benchmark comparisons), and technical lock-in (existing infrastructure optimized for binary metrics). However, suppression is not total \u2014 alternative frameworks like selective prediction and abstention-aware metrics exist and are gaining traction in safety-critical subfields. Theater ratio (0.68): High. Benchmark performance has become increasingly detached from epistemic reliability. Models achieve state-of-the-art scores through confident guessing on uncertain inputs, and leaderboard rankings correlate poorly with real-world calibration. Academic review treats benchmark numbers as validity signals despite widespread recognition of their limitations. The theater has increased over the interval as model scale has grown faster than evaluation sophistication.",
+    "directionality_logic": "Benchmark organizations are primary beneficiaries with arbitrage exit options \u2014 they experience low effective extraction and see the constraint as pure coordination. Model developers have constrained exit (can advocate for better metrics but face competitive disadvantage) and mixed beneficiary/victim status \u2014 they benefit from coordination infrastructure but bear extraction through metric gaming pressure. Deployed system users are pure victims with trapped exit \u2014 they cannot avoid models trained on flawed benchmarks and bear maximum extraction when overconfident predictions cause harm. The epistemic reliability coalition has mobile exit (can build alternatives) and organized power, experiencing moderate extraction despite being nominally victims. Academic review systems show piton dynamics \u2014 high theater ratio drives their classification regardless of directionality. The analytical observer sees the full structure: genuine coordination embedded with extractive institutional choices that require active enforcement to maintain.",
+    "perspectival_gap": "The constraint demonstrates classic tangled rope perspectival structure. Benchmark organizations see pure coordination (Rope) \u2014 they are solving the legitimate problem of standardized evaluation. Model developers see mixed coordination and extraction (Tangled Rope) \u2014 the infrastructure enables progress but coerces metric gaming. Deployed system users see pure extraction (Snare) \u2014 they bear the cost of miscalibrated systems with no exit. The epistemic reliability coalition sees a solvable coordination problem with embedded extraction (Tangled Rope from organized position). Academic review systems see their own degraded ritual (Piton) \u2014 benchmark requirements persist through inertia despite recognized epistemic problems. The analytical observer confirms tangled rope at civilizational scope \u2014 genuine coordination value with asymmetric extraction that is not a natural law but a contingent institutional arrangement. The perspectival gap reveals that 'benchmark performance' means different things to different agents: a coordination tool for organizations, a competitive weapon for developers, and a source of harm for users.",
+    "mandatrophy_analysis": "This constraint resolves mandatrophy by demonstrating that the institutional framing is neither pure coordination (Rope) nor pure extraction (Snare) but a hybrid requiring both coordination and extraction components for classification. The coordination function is real: standardized benchmarks enable reproducibility, comparability, and cumulative progress. The extraction is also real: binary grading schemes systematically reward confident guessing over appropriate abstention, creating asymmetric costs borne by deployed system users. The constraint cannot be classified as Rope because it has identifiable victims (users facing overconfident models) and requires active enforcement (competitive pressure and institutional inertia suppress alternatives). It cannot be classified as Snare because it has genuine coordination value and identifiable beneficiaries who experience it as coordination rather than extraction. The tangled rope classification captures both structural features: the constraint coordinates evaluation while extracting from users through epistemic misalignment. The mandatrophy resolution is structural: both the coordination function and the extraction mechanism are necessary to explain the constraint's persistence and its differential impact across agent positions."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of two structurally distinct upstream constraints: epistemic_irreducibility_mountain (the genuine computational learning theory limits) and formalization_translation_rope (the coordination problem of translating informal concepts into formal metrics). The institutional framing constraint is neither of these \u2014 it is the specific institutional choice to treat epistemic uncertainty as an optimization target rather than a boundary condition. The three constraints form a family with different \u03b5 values: epistemic_irreducibility (\u03b5 \u2248 0.08, mountain), formalization_translation (\u03b5 \u2248 0.25, rope), institutional_framing (\u03b5 = 0.58, tangled rope). The institutional constraint inherits some coordination value from the formalization constraint but adds extractive institutional choices (binary grading, leaderboard ranking) that the formalization constraint does not contain."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.55
+    }
+  ]
+}

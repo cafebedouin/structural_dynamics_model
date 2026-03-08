@@ -212,11 +212,11 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ### 3e. Scaffold (âŠ¡C[I])
 
-**Formal:** `âŠ¡C[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.30 âˆ§ Coord(C) âˆ§ Sunset(C) âˆ§ Theater(C) â‰¤ 0.70`
+**Formal:** `âŠ¡C[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.45 âˆ§ Coord(C) âˆ§ Sunset(C) âˆ§ Theater(C) â‰¤ 0.70`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `scaffold_extraction_ceil` | **0.30** | 1-6 | Max extraction for temporary support |
+| `scaffold_extraction_ceil` | **0.45** | 1-6 | Max extraction for temporary support |
 
 **Implementation:** `classify_from_metrics/6` line 2962 (drl_core.pl)
 
@@ -229,11 +229,11 @@ Mountain_valid(C) ↔ ε(C) ≤ 0.25 ∧ TR(C) ≤ 0.10 ∧ ¬requires_active_en
 
 ### 3f. Piton (âŠŸC[I])
 
-**Formal:** `âŠŸC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.25 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70`
+**Formal:** `âŠŸC[I] â†” Ï‡(C, I.P, I.S) â‰¤ 0.45 âˆ§ Îµ(C) > 0.10 âˆ§ Theater(C) â‰¥ 0.70`
 
 | Parameter | Value | Stage | Logic/Significance |
 |-----------|-------|-------|-------------------|
-| `piton_extraction_ceiling` | **0.25** | 1-6 | Minimal effective extraction for anyone |
+| `piton_extraction_ceiling` | **0.45** | 1-6 | Minimal effective extraction for anyone |
 | `piton_epsilon_floor` | **0.10** | 1-6 | Still costs energy to maintain (distinguishes from Îµ=0) |
 | `piton_theater_floor` | **0.70** | 1-6 | High theater ratio distinguishes from low-extraction ropes |
 

@@ -682,7 +682,7 @@ The comments for `rope_epsilon_ceiling` and `tangled_rope_epsilon_floor` reflect
 
 ## Divergence Resolution (February 15, 2026)
 
-All 10 critical divergences resolved by updating documentation to match calibrated code values. The code is authoritative; the docs now reflect the implemented system.
+All 10 critical divergences resolved by updating documentation to match calibrated code values. The code is authoritative; the docs now reflect the implemented system. (Note: 2 additional divergences discovered March 2026 — see Post-Audit Divergences below.)
 
 **C1–C6: Threshold values updated in logic_thresholds.md and logic.md**
 - C1: `mountain_extractiveness_max` docs updated from 0.15 → 0.25
@@ -711,3 +711,28 @@ All 10 critical divergences resolved by updating documentation to match calibrat
 - `prolog/config.pl` — Comments on lines 177 and 185 corrected (no predicate logic changes)
 
 **Verification:** No Prolog predicate logic, config.pl param/2 values, or test expectations were modified.
+
+---
+
+## Post-Audit Divergences (March 7, 2026)
+
+Two additional threshold divergences discovered during systematic doc-vs-source audit. Code values changed after the February 15 audit without corresponding doc updates.
+
+### C11. `scaffold_extraction_ceil`: Doc 0.30, Code 0.45
+
+- **logic_thresholds.md §3e** documented 0.30
+- **config.pl:203** has `param(scaffold_extraction_ceil, 0.45)`
+- **drl_core.pl:334** reads from config via `param(scaffold_extraction_ceil, MaxX)`
+- **Impact:** Scaffold gate 50% wider than documented. Constraints with χ ∈ (0.30, 0.45] classified as scaffold by code but would be excluded by documented threshold.
+- **Resolution:** Docs updated from 0.30 → 0.45 (code is authoritative).
+
+### C12. `piton_extraction_ceiling`: Doc 0.25, Code 0.45
+
+- **logic_thresholds.md §3f** documented 0.25 (itself an update from the Feb audit's resolution of 0.10 → 0.25)
+- **config.pl:209** has `param(piton_extraction_ceiling, 0.45)`
+- **drl_core.pl** reads from config
+- **Impact:** Piton gate 80% wider than documented. Constraints with χ ∈ (0.25, 0.45] classified as piton by code but would be excluded by documented threshold.
+- **Resolution:** Docs updated from 0.25 → 0.45 (code is authoritative).
+
+**Files modified:**
+- `docs/logic_thresholds.md` — §3e scaffold formal + table, §3f piton formal + table

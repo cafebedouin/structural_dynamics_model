@@ -1,0 +1,292 @@
+% ============================================================================
+% CONSTRAINT STORY: asymmetric_coordination_extraction
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_asymmetric_coordination_extraction, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: asymmetric_coordination_extraction
+ *   human_readable: Asymmetric Coordination-Extraction Hybrid Structures
+ *   domain: structural_constraint_dynamics/indexical_power_theory/institutional_rationality
+ *
+ * SUMMARY:
+ *   Asymmetric coordination-extraction hybrid structures represent a
+ *   fundamental structural pattern in institutional rationality: mechanisms
+ *   that provide genuine coordination value to organized agents while
+ *   simultaneously extracting from powerless agents. This constraint is not a
+ *   transitional state between rope and snare, nor a misclassification due to
+ *   limited perspective — it is an irreducible hybrid where both coordination
+ *   and extraction are structurally real. The constraint emerges when
+ *   collective action problems require enforcement mechanisms that
+ *   concentrate coordination benefits among organized actors while
+ *   distributing compliance costs asymmetrically. Examples span multiple
+ *   domains: regulatory frameworks that standardize industry practices
+ *   (coordination) while imposing disproportionate compliance burdens on
+ *   small actors (extraction); platform governance rules that solve spam and
+ *   fraud problems (coordination) while extracting behavioral data and
+ *   limiting user autonomy (extraction); professional licensing systems that
+ *   ensure quality standards (coordination) while creating barriers to entry
+ *   that benefit incumbents (extraction). The constraint's extractiveness
+ *   (0.58) sits in the mid-chi range diagnostic of tangled rope — high enough
+ *   to create genuine asymmetric burden but not so high as to eliminate
+ *   coordination function entirely. The theater ratio (0.48) reflects that
+ *   enforcement mechanisms have substantial functional content (not purely
+ *   performative) but also include theatrical elements (compliance rituals,
+ *   credentialing displays) that serve legitimation rather than coordination.
+ *   The measurements show gradual drift: both extractiveness and theater
+ *   increase over the interval as organized beneficiaries layer additional
+ *   requirements onto the coordination infrastructure and as enforcement
+ *   rituals accumulate without corresponding functional gains.
+ *
+ * KEY AGENTS:
+ *   - Powerless Enforcement Targets: Primary victims (powerless/trapped) — bear full compliance costs with no exit options and no access to coordination benefits; experience constraint as pure extraction
+ *   - Trapped Compliance Agents: Secondary victims (powerless/trapped) — locked into enforcement regime by economic dependency, legal obligation, or identity fusion; cannot exit even when extraction is visible
+ *   - Constrained Participants: Mixed position (moderate/constrained) — access some coordination benefits but also bear significant costs; can exit at high price; directly perceive hybrid structure
+ *   - Organized Enforcement Collectives: Primary beneficiaries (organized/mobile) — capture coordination gains while externalizing extraction costs; design and maintain enforcement infrastructure
+ *   - Coordination Architect Institutions: Institutional beneficiaries (institutional/constrained) — create and maintain hybrid structures; benefit from legitimacy and coordination function but constrained by path dependencies
+ *   - Regulatory Arbitrage Institutions: Institutional actors with exit (institutional/arbitrage) — can selectively engage across jurisdictions; experience hybrid as both opportunity and risk
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — sees irreducible hybrid structure; confirms that tangled rope is the constraint's true form, not perspectival artifact
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(asymmetric_coordination_extraction, 0.58).
+domain_priors:suppression_score(asymmetric_coordination_extraction, 0.62).
+domain_priors:theater_ratio(asymmetric_coordination_extraction, 0.48).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(asymmetric_coordination_extraction, extractiveness, 0.58).
+narrative_ontology:constraint_metric(asymmetric_coordination_extraction, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(asymmetric_coordination_extraction, theater_ratio, 0.48).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(asymmetric_coordination_extraction, tangled_rope).
+narrative_ontology:human_readable(asymmetric_coordination_extraction, "Asymmetric Coordination-Extraction Hybrid Structures").
+narrative_ontology:topic_domain(asymmetric_coordination_extraction, "structural_constraint_dynamics/indexical_power_theory/institutional_rationality").
+
+domain_priors:requires_active_enforcement(asymmetric_coordination_extraction).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(asymmetric_coordination_extraction, organized_enforcement_collectives).
+narrative_ontology:constraint_beneficiary(asymmetric_coordination_extraction, institutional_coordination_architects).
+narrative_ontology:constraint_victim(asymmetric_coordination_extraction, powerless_enforcement_targets).
+narrative_ontology:constraint_victim(asymmetric_coordination_extraction, trapped_compliance_agents).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: TRAPPED COMPLIANCE AGENT (SNARE) — Experiences the constraint as pure extraction with no coordination benefit. Cannot exit the enforcement regime; bears full compliance costs while organized beneficiaries capture coordination gains. The hybrid structure's coordination function is invisible from this position — only coercion and asymmetric burden are perceptible.
+constraint_indexing:constraint_classification(asymmetric_coordination_extraction, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(trapped),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: CONSTRAINED PARTICIPANT (TANGLED ROPE) — Sees both coordination value and extraction. Can access some benefits of the coordination mechanism (predictability, standardization, collective action solutions) but also bears significant compliance costs and faces barriers to exit. The hybrid nature is directly perceptible: genuine coordination exists alongside asymmetric burden distribution.
+constraint_indexing:constraint_classification(asymmetric_coordination_extraction, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: ORGANIZED ENFORCEMENT COLLECTIVE (ROPE) — Primary beneficiary experiencing the constraint as coordination. Captures the coordination gains (standardization, collective action solutions, enforcement infrastructure) while externalizing extraction costs onto powerless targets. From this position, the mechanism appears as legitimate governance solving genuine coordination problems.
+constraint_indexing:constraint_classification(asymmetric_coordination_extraction, rope,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: COORDINATION ARCHITECT INSTITUTION (TANGLED ROPE) — Institutional actor that designs and maintains the hybrid structure. Benefits from coordination function and institutional legitimacy but also constrained by path dependencies and accountability to multiple stakeholders. Sees the asymmetry as a necessary trade-off rather than pure extraction, but cannot fully exit the structure it created.
+constraint_indexing:constraint_classification(asymmetric_coordination_extraction, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 5: REGULATORY ARBITRAGE INSTITUTION (TANGLED ROPE) — Institutional actor with exit options across jurisdictions. Experiences hybrid structure as both coordination opportunity (can leverage standardization across regions) and extraction risk (compliance costs in high-enforcement zones). Arbitrage capacity allows selective engagement but does not eliminate the structural asymmetry.
+constraint_indexing:constraint_classification(asymmetric_coordination_extraction, tangled_rope,
+    context(agent_power(institutional),
+            time_horizon(biographical),
+            exit_options(arbitrage),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) — From the analytical position, the constraint's hybrid nature is structurally irreducible. The coordination function is genuine (solves real collective action problems) AND the extraction is genuine (asymmetrically burdens powerless agents). This is not a misclassification or a transitional state — it is a stable structural configuration where both properties coexist. The tangled rope classification at the analytical level confirms that the hybrid is the constraint's true form, not an artifact of limited perspective.
+constraint_indexing:constraint_classification(asymmetric_coordination_extraction, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(asymmetric_coordination_extraction_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(asymmetric_coordination_extraction, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(asymmetric_coordination_extraction, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(asymmetric_coordination_extraction, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+:- end_tests(asymmetric_coordination_extraction_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.58): Moderate-high. The constraint extracts asymmetrically from powerless agents while providing coordination benefits to organized agents. The value sits in the mid-chi range (0.46-0.70) diagnostic of tangled rope — high enough to create genuine burden asymmetry but not so high as to eliminate coordination function. The extraction is not purely rent-seeking layered onto coordination; it is structurally coupled to the enforcement mechanism that enables coordination. Organized beneficiaries cannot capture coordination gains without the enforcement infrastructure that also extracts from powerless targets. Suppression (0.62): Moderate-high. Significant barriers to exit include legal obligations, economic dependencies, network effects, and identity lock-in. Powerless agents face near-total suppression (trapped exit options); moderate agents face high but surmountable costs (constrained exit options); organized agents face low suppression (mobile exit options). The suppression gradient maps directly to the power gradient, creating the structural asymmetry. Theater ratio (0.48): Moderate. Enforcement mechanisms have substantial functional content — they solve real coordination problems (standardization, quality assurance, collective action). But they also include theatrical elements: compliance rituals that serve legitimation rather than coordination, credentialing displays that signal membership rather than competence, enforcement performances that demonstrate authority rather than solve problems. The theater ratio is rising over the interval as enforcement rituals accumulate without corresponding functional gains (Goodhart drift).
+ *
+ * PERSPECTIVAL GAP:
+ *   The constraint demonstrates the full perspectival range of hybrid structures. Powerless trapped agents see pure extraction (snare) — the coordination function is invisible from below because they bear costs without accessing benefits. Moderate constrained agents see the hybrid directly (tangled rope) — they experience both coordination value and extraction burden. Organized mobile agents see coordination (rope) — they capture benefits while externalizing costs, so the extraction is invisible from above. Institutional actors split: coordination architects see tangled rope (constrained by path dependencies, aware of trade-offs); arbitrage institutions see tangled rope (can exit but still experience structural asymmetry). The analytical observer sees tangled rope at the civilizational level, confirming that the hybrid is structurally irreducible — not a perspectival artifact, not a transitional state, but a stable configuration where coordination and extraction coexist. The perspectival gap is diagnostic: if all perspectives produced the same classification, the hybrid structure would not be genuine. The gap from snare (powerless) through tangled rope (moderate, institutional, analytical) to rope (organized) maps the power-exit gradient and confirms the asymmetry.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   Directionality values are derived from beneficiary-victim declarations and exit options. Powerless trapped agents (victims with no exit) receive high d values (0.90-0.95), producing high effective extraction through the sigmoid function. Organized mobile agents (beneficiaries with exit options) receive low d values (0.15-0.25), producing low or negative effective extraction. Moderate constrained agents (mixed position with high-cost exit) receive mid-range d values (0.50-0.60), producing moderate effective extraction. Institutional actors split based on exit options: constrained institutional actors (coordination architects locked into path dependencies) receive mid-range d values (0.40-0.50); arbitrage institutional actors (can exit across jurisdictions) receive low d values (0.20-0.30). The directionality gradient maps the power-exit gradient, creating the structural asymmetry that defines the hybrid. The analytical observer receives the canonical analytical d value (0.72), producing moderate-high effective extraction that reflects the constraint's true mid-chi position.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   This constraint resolves the mandatrophy by demonstrating that tangled rope is a legitimate structural category, not a classification error or a transitional state. The mandatrophy risk for hybrid structures is twofold: (1) over-classification as tangled rope when the constraint is actually rope with minor extraction or snare with minor coordination (false hybrid detection), and (2) under-classification as tangled rope when the constraint is actually transitioning from rope to snare or vice versa (mistaking dynamic for stable hybrid). This constraint addresses both risks. The coordination function is genuine and measurable: organized agents solve real collective action problems through the enforcement infrastructure. The extraction is genuine and measurable: powerless agents bear asymmetric compliance costs with no access to coordination benefits. The hybrid is stable: measurements show gradual drift (increasing extractiveness and theater) but no phase transition toward pure extraction or pure coordination. The analytical perspective confirms tangled rope at the civilizational level, indicating that the hybrid is structurally irreducible rather than perspectival. The omega variables identify the key empirical uncertainties (coordination floor, hybrid stability, exit thresholds, beneficiary-victim boundary fuzziness) that would change the classification if resolved, but current evidence supports stable hybrid structure. The constraint's position in the mid-chi range (0.58) is diagnostic: low enough to retain coordination function, high enough to create genuine extraction asymmetry.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    coordination_floor_ambiguity,
+    'What proportion of the measured extractiveness represents inherent coordination cost vs asymmetric extraction?',
+    'Comparative analysis of coordination mechanisms with similar complexity but different power distributions; identification of minimum viable coordination overhead',
+    'If coordination floor > 0.35: constraint reclassifies toward rope (extraction is mostly coordination cost). If coordination floor < 0.20: constraint reclassifies toward snare (coordination claim is cover story for extraction).',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(coordination_floor_ambiguity, empirical, 'Ambiguity in separating coordination cost from asymmetric extraction').
+
+omega_variable(
+    hybrid_stability_threshold,
+    'Is the hybrid structure stable or does it degrade toward pure extraction over time?',
+    'Longitudinal tracking of coordination function vs extraction ratio; identification of institutional drift patterns; measurement of whether organized beneficiaries maintain coordination investment or shift to rent extraction',
+    'If stable: tangled rope is permanent structural form. If degrading: constraint is transitioning from tangled rope to snare, and current classification is time-dependent.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(hybrid_stability_threshold, empirical, 'Whether hybrid coordination-extraction structure is stable or degrading').
+
+omega_variable(
+    exit_threshold_sensitivity,
+    'At what exit cost threshold does the constraint transition from tangled rope to snare for moderate-power agents?',
+    'Empirical mapping of exit costs vs classification outcomes; identification of critical threshold where coordination benefits no longer offset extraction costs',
+    'If threshold is low (exit costs < 0.30): many moderate agents reclassify to snare, revealing that coordination benefits are insufficient. If threshold is high (exit costs > 0.60): tangled rope classification is robust across wide range of agent positions.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(exit_threshold_sensitivity, empirical, 'Exit cost threshold where tangled rope transitions to snare').
+
+omega_variable(
+    beneficiary_victim_boundary_fuzziness,
+    'Are beneficiary and victim categories discrete or do agents occupy hybrid positions (simultaneous beneficiary and victim)?',
+    'Fine-grained analysis of agent positions; identification of agents who benefit from one dimension of the constraint while being extracted from on another dimension; measurement of within-agent coordination-extraction correlation',
+    'If categories are discrete: beneficiary-victim pair identification is straightforward and asymmetry is clear. If categories are fuzzy: many agents are simultaneously beneficiaries and victims, complicating directionality derivation and potentially inflating tangled rope frequency.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(beneficiary_victim_boundary_fuzziness, conceptual, 'Whether beneficiary-victim categories are discrete or agents occupy hybrid positions').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(asymmetric_coordination_extraction, 0, 9).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(ace_tr_t0, asymmetric_coordination_extraction, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(ace_tr_t3, asymmetric_coordination_extraction, theater_ratio, 3, 0.4).
+narrative_ontology:measurement(ace_tr_t6, asymmetric_coordination_extraction, theater_ratio, 6, 0.44).
+narrative_ontology:measurement(ace_tr_t9, asymmetric_coordination_extraction, theater_ratio, 9, 0.48).
+
+% Extraction over time
+narrative_ontology:measurement(ace_be_t0, asymmetric_coordination_extraction, base_extractiveness, 0, 0.48).
+narrative_ontology:measurement(ace_be_t3, asymmetric_coordination_extraction, base_extractiveness, 3, 0.52).
+narrative_ontology:measurement(ace_be_t6, asymmetric_coordination_extraction, base_extractiveness, 6, 0.55).
+narrative_ontology:measurement(ace_be_t9, asymmetric_coordination_extraction, base_extractiveness, 9, 0.58).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(asymmetric_coordination_extraction, enforcement_mechanism).
+narrative_ontology:affects_constraint(asymmetric_coordination_extraction, regulatory_capture_dynamics).
+narrative_ontology:affects_constraint(asymmetric_coordination_extraction, platform_governance_asymmetry).
+narrative_ontology:affects_constraint(asymmetric_coordination_extraction, professional_licensing_barriers).
+
+% DUAL FORMULATION NOTE:
+% This constraint is downstream of indexical_power_variance (the mountain-level claim that power position determines constraint perception). The upstream constraint establishes that different agents perceive the same structural phenomenon differently based on their power-exit position. This constraint instantiates that principle in the specific case of hybrid coordination-extraction structures: the same mechanism appears as rope (organized beneficiaries), tangled rope (moderate participants and analytical observers), or snare (powerless targets) depending on the observer's structural position. The epsilon values differ because they measure different structural properties: indexical_power_variance measures the invariance of perspectival classification (epsilon near zero — the indexical principle is a structural law), while asymmetric_coordination_extraction measures the extractiveness of the hybrid mechanism itself (epsilon 0.58 — moderate-high extraction with genuine coordination).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

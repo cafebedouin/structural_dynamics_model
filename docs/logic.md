@@ -16,7 +16,7 @@
 **For Stages 7-9 (Boltzmann, Purity, Network):** See [logic_extensions.md](logic_extensions.md)
 
 **Implementation:** Prolog modules (drl_core.pl, signature_detection.pl, drl_lifecycle.pl)  
-**Corpus:** 691 constraints across 35+ domains
+**Corpus:** ~999 constraints across 35+ domains (expanded from original 691-constraint calibration corpus)
 
 ---
 
@@ -1849,7 +1849,7 @@ classify_from_metrics(C, _BaseEps, Chi, _Supp, _Context, scaffold) :-
 ```
 
 **Canonical Thresholds** (logic_thresholds.md Â§3e):
-- `scaffold_extraction_ceil` = **0.30**
+- `scaffold_extraction_ceil` = **0.45**
 
 **Priority:** Scaffold > Rope (checked after Mountain, Snare, before Rope)
 
@@ -1922,7 +1922,7 @@ When Performance >> Substance, constraint is "coordination in name only."
 
 The theater floor (â‰¥ 0.70) distinguishes Pitons from low-extraction Ropes:
 - **Rope**: Ï‡ â‰¤ 0.35, Îµ â‰¤ 0.45, Theater < 0.70 (real coordination)
-- **Piton**: Ï‡ â‰¤ 0.25, Îµ > 0.10, Theater â‰¥ 0.70 (theater dominates)
+- **Piton**: Ï‡ â‰¤ 0.45, Îµ > 0.10, Theater â‰¥ 0.70 (theater dominates)
 
 ##### Formal Definition
 
@@ -1951,7 +1951,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
 ```
 
 **Canonical Thresholds** (logic_thresholds.md Â§3f):
-- `piton_extraction_ceiling` = **0.25**
+- `piton_extraction_ceiling` = **0.45**
 - `piton_epsilon_floor` = **0.10**
 - `piton_theater_floor` = **0.70**
 
@@ -1968,7 +1968,7 @@ classify_from_metrics(C, BaseEps, Chi, _Supp, _Context, piton) :-
 
 The energy-accounting logic differs:
 - **Snare**: High extraction (Îµ â‰¥ 0.46), high suppression (Supp â‰¥ 0.60) â†’ **active harm** â†’ justify energy cost of cutting
-- **Piton**: Low extraction (Ï‡ â‰¤ 0.25), mostly theater (â‰¥ 0.70) â†' **inert decay** â†' energy better spent building alternatives
+- **Piton**: Low extraction (Ï‡ â‰¤ 0.45), mostly theater (â‰¥ 0.70) â†' **inert decay** â†' energy better spent building alternatives
 
 Don't waste energy maintaining or fighting Pitons:
 - Ignore where possible
@@ -2283,18 +2283,26 @@ Four detection patterns defined:
 
 ### D. Power-Scaling Function
 
-The power modifier Ï€(P) adjusts base extractiveness Îµ(C) based on structural power position.
+The power-scaling function adjusts base extractiveness ε(C) based on structural power position via sigmoid directionality.
 
-**Formula:**
+**Formula (implementation):**
 ```
-Ï‡(C, P, S) = Îµ(C) Ã— Ï€(P) Ã— Ïƒ(S)
+χ(C, P, S) = ε(C) × f(d(P)) × σ(S)
+```
+
+Where f is a sigmoid function and d(P) is the derived directionality value for power position P (see constraint_indexing.pl:extractiveness_for_agent/3). The directionality d is resolved via: explicit override > beneficiary/victim structural derivation > canonical fallback.
+
+**Simplified (for intuition):**
+```
+χ(C, P, S) ≈ ε(C) × π(P) × σ(S)
 ```
 
 Where:
-- **Ï‡** = effective extractiveness (what you experience)
-- **Îµ** = base extractiveness (structural property of constraint)
-- **Ï€(P)** = power position modifier
-- **Ïƒ(S)** = scope modifier (verification difficulty)
+- **χ** = effective extractiveness (what you experience)
+- **ε** = base extractiveness (structural property of constraint)
+- **f(d(P))** = sigmoid-scaled directionality (actual implementation)
+- **π(P)** ≈ f(d_canonical(P)) = power modifier at canonical directionality (approximation)
+- **σ(S)** = scope modifier (verification difficulty)
 
 ---
 

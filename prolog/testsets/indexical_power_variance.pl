@@ -1,0 +1,237 @@
+% ============================================================================
+% CONSTRAINT STORY: indexical_power_variance
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2025-01-15
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_indexical_power_variance, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:coordination_type/2,
+    constraint_indexing:constraint_classification/3,
+    domain_priors:emerges_naturally/1,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: indexical_power_variance
+ *   human_readable: Indexical Power Variance as Structural Invariant
+ *   domain: structural_constraint_dynamics/indexical_power_theory
+ *
+ * SUMMARY:
+ *   The indexical power variance is not a constraint in the conventional
+ *   sense — it is a meta-constraint, a structural property of how the
+ *   Deferential Realism classification system itself operates. It describes
+ *   the mathematical fact that identical base properties (epsilon,
+ *   suppression, theater_ratio) produce categorically different experienced
+ *   extraction (chi) and thus different classifications depending on the
+ *   observer's power position, exit options, and structural relationship to
+ *   the constraint. A powerless trapped victim experiences chi >> epsilon due
+ *   to high d → high f(d), while an institutional beneficiary with arbitrage
+ *   options experiences chi << epsilon due to low d → negative f(d). This
+ *   variance is not contingent on policy, culture, or institutional design —
+ *   it follows necessarily from the chi formula and the sigmoid
+ *   directionality function. The constraint is a mountain from all
+ *   perspectives because it is a theorem of the system's axioms, not an
+ *   empirical regularity that could be otherwise.
+ *
+ * KEY AGENTS:
+ *   - Powerless Agent: Experiences maximum chi for any given epsilon; structural position at d ≈ 0.95 → f(d) ≈ 1.42
+ *   - Moderate Power Agent: Experiences chi ≈ epsilon for symmetric constraints; structural position at d ≈ 0.65 → f(d) ≈ 1.00
+ *   - Institutional Beneficiary: Experiences minimum or negative chi; structural position at d ≈ 0.00 → f(d) ≈ -0.12
+ *   - Organized Coalition: Experiences reduced chi through collective power; structural position at d ≈ 0.40 → f(d) ≈ 0.40
+ *   - Analytical Observer: Observes the variance as a structural invariant; canonical d ≈ 0.73 → f(d) ≈ 1.15
+ *   - Powerful Individual: Experiences chi < epsilon; structural position at d ≈ 0.48 → f(d) ≈ 0.60
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(indexical_power_variance, 0.08).
+domain_priors:suppression_score(indexical_power_variance, 0.02).
+domain_priors:theater_ratio(indexical_power_variance, 0.05).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(indexical_power_variance, extractiveness, 0.08).
+narrative_ontology:constraint_metric(indexical_power_variance, suppression_requirement, 0.02).
+narrative_ontology:constraint_metric(indexical_power_variance, theater_ratio, 0.05).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(indexical_power_variance, accessibility_collapse, 0.95).
+narrative_ontology:constraint_metric(indexical_power_variance, resistance, 0.08).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(indexical_power_variance, mountain).
+narrative_ontology:human_readable(indexical_power_variance, "Indexical Power Variance as Structural Invariant").
+narrative_ontology:topic_domain(indexical_power_variance, "structural_constraint_dynamics/indexical_power_theory").
+
+domain_priors:emerges_naturally(indexical_power_variance).
+
+% --- Structural relationships ---
+% No enrichment needed. As a Mountain (physical limit), this constraint does
+% not have beneficiaries or victims in the structural sense.
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: POWERLESS AGENT (MOUNTAIN) — The fact that power position transforms experienced constraint severity is an unchangeable structural property. A powerless agent cannot alter the mathematical relationship between their position and chi computation. The variance itself is immutable.
+constraint_indexing:constraint_classification(indexical_power_variance, mountain,
+    context(agent_power(powerless),
+            time_horizon(immediate),
+            exit_options(trapped),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 2: MODERATE POWER AGENT (MOUNTAIN) — Even with moderate power and biographical time horizon, the structural law that power position determines experienced extraction remains fixed. The agent can change their own position but cannot change the indexical variance principle itself.
+constraint_indexing:constraint_classification(indexical_power_variance, mountain,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(global))).
+
+% PERSPECTIVE 3: INSTITUTIONAL BENEFICIARY (MOUNTAIN) — From the beneficiary position with arbitrage options, the indexical power variance is still a structural invariant. The institution benefits from low chi but cannot alter the mathematical principle that generates the variance across indices.
+constraint_indexing:constraint_classification(indexical_power_variance, mountain,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(global))).
+
+% PERSPECTIVE 4: ORGANIZED COALITION (MOUNTAIN) — Organized agents can coordinate to change specific constraints or shift their own power positions, but the meta-constraint that power position determines chi variance is a mathematical invariant. Coalition formation changes the agent's index, not the indexical variance principle.
+constraint_indexing:constraint_classification(indexical_power_variance, mountain,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(mobile),
+            spatial_scope(continental))).
+
+% PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) — The indexical power variance is a structural theorem of the classification system. Given fixed base properties (epsilon, suppression) and the chi formula chi = epsilon × f(d) × sigma(S), the variance in chi across power positions follows necessarily from the sigmoid directionality function. This is a mathematical mountain — it emerges from the axioms of the system and cannot be altered without changing the foundational definitions.
+constraint_indexing:constraint_classification(indexical_power_variance, mountain,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(universal))).
+
+% PERSPECTIVE 6: POWERFUL INDIVIDUAL (MOUNTAIN) — A powerful agent with mobile exit options experiences lower chi than a powerless trapped agent facing the same constraint, but this differential is not a choice or policy — it is a structural consequence of the directionality derivation. The variance is immutable from this perspective as well.
+constraint_indexing:constraint_classification(indexical_power_variance, mountain,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(national))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(indexical_power_variance_tests).
+
+test(invariance_check) :-
+    % Verify that as a Mountain, the classification is uniform across perspectives.
+    constraint_indexing:constraint_classification(indexical_power_variance, TypeTarget, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(indexical_power_variance, TypeBeneficiary, context(agent_power(institutional), _, _, _)),
+    TypeTarget == TypeBeneficiary,
+    TypeTarget == mountain.
+
+test(mountain_threshold_validation) :-
+    config:param(extractiveness_metric_name, ExtMetricName),
+    narrative_ontology:constraint_metric(indexical_power_variance, ExtMetricName, E),
+    domain_priors:suppression_score(indexical_power_variance, S),
+    E =< 0.25,
+    S =< 0.05.
+
+test(nl_profile_validation) :-
+    domain_priors:emerges_naturally(indexical_power_variance),
+    narrative_ontology:constraint_metric(indexical_power_variance, accessibility_collapse, AC),
+    narrative_ontology:constraint_metric(indexical_power_variance, resistance, R),
+    AC >= 0.85,
+    R =< 0.15.
+
+:- end_tests(indexical_power_variance_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.08): Very low. The indexical power variance itself does not extract — it is a mathematical property of the classification system. The minimal extractiveness reflects the cognitive cost of understanding that classification is observer-relative, which creates a small barrier to naive realist interpretations. Suppression (0.02): Negligible. There is no mechanism suppressing alternatives to indexical power variance — it is a logical consequence of the system's definitions. The minimal value reflects only that the variance is not immediately obvious without working through the chi formula. Theater ratio (0.05): Negligible. The indexical power variance is not performative — it is a structural theorem with direct functional content (it determines classification outcomes). Accessibility collapse (0.95): Very high. Once the chi formula and directionality derivation are understood, the variance follows necessarily. No alternative formulation of the system could eliminate it without abandoning the core insight that power position affects experienced extraction. Resistance (0.08): Very low. The variance cannot be resisted or altered — it is built into the mathematics of the classification system.
+ *
+ * PERSPECTIVAL GAP:
+ *   There is no perspectival gap for this constraint — all perspectives classify it as mountain. This is the defining characteristic of a mathematical or logical mountain: it is invariant across all observation indices. The powerless agent cannot change the variance principle. The institutional beneficiary cannot change it. The analytical observer recognizes it as a theorem. The uniformity of classification across all perspectives is itself diagnostic evidence that this is a genuine mountain rather than a naturalized contingent arrangement. The constraint passes the mountain invariance test: NL(indexical_power_variance) → Mountain for all indices I.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The indexical power variance is itself the principle that generates directionality values. Each agent's d value is derived from their structural relationship to a specific constraint (beneficiary vs victim) combined with their power level and exit options. The variance in chi across agents is the direct consequence of variance in d values feeding through the sigmoid f(d). For this meta-constraint, all agents are 'observers' of the variance principle rather than targets or beneficiaries of it. The analytical perspective uses the canonical d for analytical observers (0.73), but the classification is mountain regardless because the variance is a structural invariant, not an extractive mechanism.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   The indexical power variance resolves a potential mandatrophy in the classification system itself: without indexical classification, the system would face an impossible choice between 'objective' classification (which perspective is correct?) and relativism (all perspectives are equally valid). The indexical power variance shows that both horns are false — classification is observer-relative but not arbitrary. The variance is a structural fact that explains why different agents legitimately experience the same constraint differently. This is not extraction (the variance does not benefit some agents at others' expense) but a mathematical property of how burden distribution works in any system with power differentials. The mountain classification prevents misinterpreting this structural invariant as a policy choice or institutional failure that could be 'fixed.'
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(indexical_power_variance, 0, 0).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(indexical_power_variance, information_standard).
+
+% DUAL FORMULATION NOTE:
+% The indexical power variance is a meta-constraint that affects the classification of all other constraints in the system. It is not downstream of any specific constraint but rather describes a structural property of the classification framework itself. Every constraint story implicitly depends on this principle when computing chi values across different perspectives.
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

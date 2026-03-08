@@ -1,0 +1,205 @@
+{
+  "header": {
+    "constraint_id": "reputation_as_distributed_enforcement",
+    "version": "1.0",
+    "generated_date": "2025-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "rep_enf"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.62,
+    "theater_ratio": 0.48,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Reputation as Distributed Enforcement Mechanism",
+    "topic_domain": "social_systems/institutional_dynamics/power_asymmetry",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "mobile_actors_with_exit_options",
+      "platform_operators",
+      "high_reputation_incumbents"
+    ],
+    "victims": [
+      "trapped_actors_without_negotiation_leverage",
+      "new_entrants_without_history",
+      "marginalized_groups_with_structural_disadvantage"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped Worker",
+      "comment": "PERSPECTIVE 1: TRAPPED WORKER (SNARE) \u2014 Cannot exit local labor market or geographic region. Single negative review or reputation mark creates cascading exclusion from employment, housing, credit. No alternative verification pathway. Reputation system functions as pure extraction mechanism with no coordination benefit \u2014 the worker needs the opportunities more than the opportunities need any particular worker. Maximum experienced extraction from identical institutional rules that appear neutral."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Constrained Freelancer",
+      "comment": "PERSPECTIVE 2: CONSTRAINED FREELANCER (TANGLED ROPE) \u2014 Has some geographic and market mobility but faces significant switching costs. Reputation system provides genuine coordination value (clients can assess quality, reducing search costs) but also extracts through lock-in effects, rating manipulation, and platform dependency. Can exit at cost. Mixed experience: benefits from positive reputation accumulation while bearing extraction from negative review persistence and platform rent-seeking."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Mobile Professional",
+      "comment": "PERSPECTIVE 3: MOBILE PROFESSIONAL (ROPE) \u2014 High mobility across markets, platforms, and geographic regions. Can arbitrage between reputation systems, exit platforms that extract excessively, build reputation across multiple venues. Experiences reputation system primarily as coordination mechanism: signals quality to potential partners, reduces transaction costs, enables premium pricing. Negative reviews are manageable noise. Net beneficiary of the system."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Platform Operator",
+      "comment": "PERSPECTIVE 4: PLATFORM OPERATOR (ROPE) \u2014 Designs and controls the reputation system. Captures value through network effects, data aggregation, and algorithmic curation. Experiences the constraint as pure coordination: the reputation system solves the trust problem that enables the platform's existence. Can modify rules, adjust algorithms, and extract rents through design choices. Maximum beneficiary position with full exit options to alternative business models."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Worker Cooperative",
+      "comment": "PERSPECTIVE 5: WORKER COOPERATIVE (TANGLED ROPE) \u2014 Organized labor with collective bargaining power and alternative reputation verification pathways (union membership, apprenticeship systems, peer networks). Experiences reputation systems as mixed: benefits from collective reputation building and mutual aid, but also faces platform power asymmetries and algorithmic bias. Can partially exit through alternative coordination mechanisms but cannot fully escape platform-mediated markets. Moderate extraction with genuine coordination function."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Decentralized Identity Coalition",
+      "comment": "PERSPECTIVE 6: DECENTRALIZED IDENTITY COALITION (SCAFFOLD) \u2014 Organized actors building portable reputation systems (blockchain credentials, federated identity, open reputation protocols) that reduce platform lock-in. Sees current centralized reputation systems as temporary coordination mechanism with sunset logic: as portable reputation infrastructure matures, platform-specific reputation loses extractive power. Extraction is tolerated because it is declining over the time horizon as interoperability standards emerge."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From civilizational perspective, reputation systems solve genuine coordination problems (adverse selection, moral hazard, trust in anonymous markets) while simultaneously creating extractive lock-in and power asymmetries. The same mechanism that enables distributed trust enforcement also enables distributed punishment that falls disproportionately on those without exit options. Structural ambiguity is irreducible: the coordination function and extraction mechanism are inseparable at the architectural level."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "portability_threshold",
+      "question": "At what level of reputation portability across platforms does the lock-in extraction mechanism break down?",
+      "resolution_mechanism": "Empirical measurement of switching costs and reputation transfer rates across platforms with varying interoperability standards; longitudinal tracking of worker mobility as portable identity systems mature",
+      "impact": "If portability threshold is low (< 30% reputation transfer): current extraction persists even with interoperability standards. If high (> 70% transfer): scaffold sunset is real and extraction declines as portability increases.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reputation portability threshold for breaking lock-in extraction"
+    },
+    {
+      "id": "algorithmic_bias_magnitude",
+      "question": "How much of the differential extraction across power positions is due to algorithmic bias versus structural power asymmetries?",
+      "resolution_mechanism": "Controlled experiments comparing reputation outcomes for identical behavior across demographic groups; audit studies of platform algorithms; decomposition of variance in reputation scores by structural vs. behavioral factors",
+      "impact": "If bias is primary driver: technical fixes (algorithmic fairness) can reduce extraction. If structural asymmetries dominate: extraction persists regardless of algorithmic neutrality because powerless actors face different choice sets.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Relative contribution of algorithmic bias vs. structural power asymmetries"
+    },
+    {
+      "id": "coordination_floor_estimate",
+      "question": "What is the minimum extractiveness inherent to any reputation-based coordination mechanism, below which the system cannot function?",
+      "resolution_mechanism": "Theoretical analysis of information asymmetry and adverse selection in trust games; empirical comparison of reputation system overhead across different institutional designs (centralized platforms, federated networks, peer-to-peer systems)",
+      "impact": "If floor is high (> 0.40): much of observed extraction is necessary coordination cost, shifting classification toward Rope from more perspectives. If floor is low (< 0.20): most extraction is rent-seeking, confirming Snare/Tangled Rope classifications.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Minimum extractiveness inherent to reputation coordination"
+    },
+    {
+      "id": "negative_review_persistence",
+      "question": "Does the asymmetric persistence of negative vs. positive reputation information serve a coordination function or primarily an extraction function?",
+      "resolution_mechanism": "Comparison of prediction accuracy for future behavior using symmetric vs. asymmetric weighting of reputation history; analysis of false positive/negative rates in reputation-based exclusion decisions",
+      "impact": "If asymmetric persistence improves prediction: it serves coordination (protecting against bad actors). If symmetric weighting performs equally well: asymmetric persistence is extractive (creates excessive punishment and lock-in).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether negative review persistence serves coordination or extraction"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.44
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.48
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.54
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 9
+  },
+  "commentary": {
+    "narrative_context": "Reputation systems in platform economies, labor markets, and social networks create a structural paradox: the same distributed enforcement mechanism that enables trust and coordination for mobile actors functions as an inescapable trap for powerless actors. A gig worker with no alternative income sources experiences a single negative review as catastrophic \u2014 it cascades through algorithmic ranking, reduces job offers, and creates a downward spiral with no appeal mechanism. A mobile professional with multiple income streams and geographic flexibility experiences the same review as manageable noise \u2014 they can exit to alternative platforms, leverage positive reputation from other venues, or simply absorb the reputational cost. The institutional rules are identical; the experienced constraint is radically different. This constraint demonstrates how power asymmetries transform coordination mechanisms into extraction mechanisms without any change in the formal structure. The theater_ratio (0.48) reflects moderate performativity: reputation systems do provide genuine information about past behavior, but much of the verification ritual (review solicitation, rating displays, algorithmic curation) serves platform engagement and rent extraction rather than pure coordination. The extractiveness has increased over the interval (0.42 \u2192 0.58) as platforms have layered additional rent-seeking mechanisms (premium visibility, review manipulation services, algorithmic opacity) onto the base coordination function.",
+    "key_agents": [
+      "Trapped Worker: Primary victim (powerless/trapped) \u2014 single negative review creates cascading exclusion; no exit options; experiences pure extraction",
+      "Constrained Freelancer: Secondary victim (moderate/constrained) \u2014 benefits from positive reputation but bears extraction from lock-in and platform rent-seeking; mixed experience",
+      "Mobile Professional: Primary beneficiary (powerful/arbitrage) \u2014 can arbitrage across platforms and markets; experiences coordination with minimal extraction",
+      "Platform Operator: Primary beneficiary (institutional/arbitrage) \u2014 designs system, captures network effects, extracts rents through algorithmic curation",
+      "Worker Cooperative: Organized actor (organized/mobile) \u2014 collective bargaining power and alternative verification pathways reduce extraction but cannot fully exit platform-mediated markets",
+      "Decentralized Identity Coalition: Organized actor (organized/constrained) \u2014 building portable reputation infrastructure with sunset logic; sees current extraction as temporary",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees irreducible structural ambiguity between coordination function and extraction mechanism"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The base coordination function (signaling quality, reducing search costs) has genuine value, but platforms layer significant rent extraction on top: algorithmic opacity, lock-in effects, premium visibility fees, review manipulation markets, and asymmetric negative review persistence. The extraction has increased over the interval as platforms have matured from pure coordination to rent-seeking. Suppression (0.62): Moderate-high. Powerless actors face severe barriers to exit: geographic immobility, lack of alternative income sources, absence of appeal mechanisms, algorithmic amplification of negative signals, and network effects that concentrate opportunity on high-reputation platforms. Moderate-power actors face lower but still significant suppression through switching costs and reputation non-portability. Theater ratio (0.48): Moderate. Reputation systems do provide genuine information about past behavior (lower theater than pure performative compliance), but significant performative elements exist: review solicitation rituals, rating display psychology, algorithmic curation that prioritizes engagement over accuracy, and platform-sponsored verification badges that signal compliance rather than quality.",
+    "directionality_logic": "The constraint demonstrates power-dependent directionality from identical institutional rules. Trapped actors are victims with no exit options \u2014 the derivation chain assigns high d (\u2248 0.95), producing high f(d) and high experienced extraction (\u03c7 > 0.66, Snare classification). Constrained actors are mixed victims/beneficiaries with exit costs \u2014 moderate d (\u2248 0.65), moderate f(d), moderate \u03c7 (0.46 < \u03c7 < 0.66, Tangled Rope classification). Mobile actors are beneficiaries with arbitrage options \u2014 low d (\u2248 0.15), low f(d), low or negative \u03c7 (Rope classification). Platform operators are pure beneficiaries with full control \u2014 very low d (\u2248 0.05), negative f(d), negative \u03c7 (Rope classification). The perspectival gap is structural: the same reputation system that coordinates trust for those with exit options extracts from those without exit options. No directionality overrides are needed \u2014 the beneficiary/victim declarations plus exit options produce the correct d values through the standard derivation chain.",
+    "perspectival_gap": "This constraint exhibits the canonical power-dependent perspectival gap. Powerless actors see Snare \u2014 pure extraction with no coordination benefit because they need the opportunities more than the opportunities need them. Moderate-power actors see Tangled Rope \u2014 genuine coordination value mixed with significant extraction through lock-in and rent-seeking. Powerful actors see Rope \u2014 primarily coordination with minimal extraction because they can exit and arbitrage. Platform operators see Rope \u2014 pure coordination from their perspective because they capture the value. Organized actors see either Tangled Rope (worker cooperatives with partial exit) or Scaffold (decentralized identity coalitions building sunset infrastructure). The analytical observer sees Tangled Rope at the civilizational level \u2014 the coordination function and extraction mechanism are architecturally inseparable. The gap reveals that 'reputation as coordination' vs 'reputation as extraction' is not a property of the system but a property of the observer's structural position within it.",
+    "mandatrophy_analysis": "RESOLVED: The constraint is legitimately Tangled Rope from the analytical perspective because it exhibits both genuine coordination function (solving adverse selection and moral hazard in anonymous markets) AND asymmetric extraction (lock-in effects, algorithmic rent-seeking, disproportionate punishment of powerless actors). The coordination function is real \u2014 without reputation systems, anonymous market exchange would face severe trust problems. The extraction is also real \u2014 platforms layer rent-seeking mechanisms on top of the base coordination, and power asymmetries transform the same institutional rules into radically different experienced constraints. The mandatrophy is resolved by recognizing that the coordination and extraction are inseparable at the architectural level: the distributed enforcement mechanism that enables trust also enables distributed punishment that falls disproportionately on those without exit options. This is not mislabeling coordination as extraction or vice versa \u2014 it is recognizing that the same mechanism performs both functions simultaneously, with the balance depending on the observer's power position."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_curation",
+      "gig_economy_labor_precarity",
+      "social_credit_systems"
+    ],
+    "dual_formulation_note": "Reputation systems are a constraint family with multiple structurally distinct stories: (1) reputation as distributed enforcement (this story, \u03b5=0.58), (2) algorithmic curation and ranking (downstream, higher \u03b5 due to opacity and manipulation), (3) social credit as state surveillance (downstream, much higher \u03b5 due to coercive enforcement). Each has different extractiveness reflecting different institutional implementations of the same base coordination mechanism."
+  },
+  "directionality_overrides": []
+}

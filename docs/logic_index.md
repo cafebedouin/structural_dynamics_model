@@ -242,7 +242,7 @@ You're testing the system, running corpus analysis, tuning parameters.
 The same constraint can have different types from different structural positions. Carbon credits are simultaneously Rope (institutional), Tangled Rope (moderate), and Snare (powerless) from different power positions. All three classifications are objectively true.
 
 ### **Power-Scope Scaling** (logic.md + logic_thresholds.md)
-Effective extractiveness χ = ε × π(P) × σ(S). Power position amplifies or dampens extraction. Scope increases verification difficulty.
+Effective extractiveness χ = ε × f(d(P)) × σ(S), where f is a sigmoid and d(P) is the derived directionality for power position P. Power position amplifies or dampens extraction via sigmoid scaling. Scope increases verification difficulty. (Simplified as χ ≈ ε × π(P) × σ(S) where π(P) approximates the sigmoid output at canonical directionality.)
 
 ### **Boltzmann Axiom** (logic_extensions.md)
 Natural laws must factorize across index dimensions. If classification couples independent variables (Power, Scope), the constraint is constructed, not natural. This is the mathematical test for "physics-washing."
@@ -276,7 +276,7 @@ Low-purity constraints contaminate neighbors. Contamination flows downward only 
 Stages 7-9 run alongside core logic without modifying classify_from_metrics/6. Ensures stability while enabling extensions.
 
 ### **Priority Ordering**
-Mountain > Snare > Scaffold > Rope > Tangled Rope > Piton > unknown
+Mountain > Piton(dead-coord) > Snare > Scaffold > Rope > Tangled Rope > Piton(fallback) > Naturalized > unknown
 
 ---
 

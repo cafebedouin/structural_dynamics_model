@@ -1,0 +1,195 @@
+{
+  "header": {
+    "constraint_id": "collective_action_threshold",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "cat"
+  },
+  "base_properties": {
+    "extractiveness": 0.38,
+    "suppression": 0.48,
+    "theater_ratio": 0.35,
+    "claimed_type": "scaffold",
+    "human_readable": "Collective Action Threshold for Transforming Distributed Enforcement",
+    "topic_domain": "social_systems/institutional_dynamics/power_asymmetry",
+    "requires_active_enforcement": false,
+    "has_sunset_clause": true,
+    "beneficiaries": [
+      "organizing_workers",
+      "coalition_members",
+      "solidarity_networks"
+    ],
+    "victims": [
+      "isolated_individuals",
+      "pre_organization_targets"
+    ],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "immediate",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Isolated Individual",
+      "comment": "PERSPECTIVE 1: ISOLATED INDIVIDUAL (SNARE) \u2014 Before collective organization, the individual faces distributed enforcement mechanisms (reputation systems, social sanctions, economic retaliation) with no exit. Suppression is maximal because the enforcement is distributed across the entire social network. The individual cannot escape the constraint through individual action \u2014 any attempt to resist triggers coordinated retaliation from multiple enforcement nodes. High experienced extraction because the individual bears full cost of the enforcement mechanism with no countervailing power."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Early Organizer",
+      "comment": "PERSPECTIVE 2: EARLY ORGANIZER (TANGLED ROPE) \u2014 Agents who begin organizing face mixed dynamics: the constraint still extracts (organizers face retaliation risk, resource costs, coordination overhead) but also provides genuine coordination benefits (shared information, mutual aid, collective bargaining leverage). Exit is constrained rather than trapped \u2014 organizers can leave the organizing effort but at significant personal cost (loss of solidarity network, continued exposure to original enforcement mechanism, reputation damage within the organizing community). The coordination function is real but embedded within ongoing extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Established Coalition",
+      "comment": "PERSPECTIVE 3: ESTABLISHED COALITION (ROPE) \u2014 Once the collective action threshold is crossed and the coalition is established, members experience the constraint as coordination: the same distributed enforcement mechanisms that trapped isolated individuals now serve as collective bargaining leverage, mutual protection networks, and solidarity infrastructure. Exit is mobile \u2014 members can leave the coalition without catastrophic cost because the coalition's existence has transformed the underlying enforcement landscape. Low experienced extraction because the coalition is a net beneficiary of the transformed constraint."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Organizing Campaign",
+      "comment": "PERSPECTIVE 4: ORGANIZING CAMPAIGN (SCAFFOLD) \u2014 The organizing process itself is a temporary coordination mechanism with a sunset clause: the campaign exists to build the coalition, and once the coalition is established (threshold crossed), the campaign structure dissolves or transforms into maintenance infrastructure. The constraint has moderate extraction during the organizing phase (resource costs, coordination overhead, retaliation risk) but this extraction is tolerated because it declines over the time horizon as the coalition matures. The sunset is structural: successful organizing eliminates the need for the organizing campaign by transforming the power relationship."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Enforcement Institution",
+      "comment": "PERSPECTIVE 5: ENFORCEMENT INSTITUTION (MOUNTAIN) \u2014 Institutions that benefit from distributed enforcement (employers, platform operators, regulatory bodies) perceive the collective action threshold as an immutable feature of social coordination: 'organizing is hard' becomes naturalized as a law of human behavior rather than a contingent outcome of suppression mechanisms. This perspective sees the threshold as unchangeable at immediate time horizons because the institution has arbitrage exit \u2014 it can shift enforcement strategies, relocate operations, or restructure to avoid organized resistance. However, this is a false summit: the threshold is not a natural law but a product of institutional design choices (communication barriers, retaliation mechanisms, legal restrictions on organizing)."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the collective action threshold exhibits both genuine coordination function (solving the free-rider problem, enabling collective bargaining, building solidarity infrastructure) and asymmetric extraction (the threshold itself is artificially elevated by institutional suppression mechanisms that make organizing harder than it needs to be). The analytical observer sees that some coordination cost is inherent to collective action (information aggregation, preference alignment, commitment mechanisms) but much of the observed threshold height is extractive overhead (legal barriers to organizing, employer retaliation, platform design that fragments communication, surveillance that raises organizing costs)."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "threshold_height_decomposition",
+      "question": "What proportion of the observed collective action threshold is inherent coordination cost versus artificially imposed suppression?",
+      "resolution_mechanism": "Cross-cultural and cross-institutional comparison of organizing success rates; natural experiments where legal barriers to organizing are removed or imposed; measurement of organizing timeline and resource requirements in high-suppression vs low-suppression environments",
+      "impact": "If threshold is primarily inherent coordination cost: constraint classifies as Rope from more perspectives (legitimate coordination problem). If threshold is primarily imposed suppression: constraint classifies as Snare from more perspectives (extractive barrier maintained by beneficiaries).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Decomposition of threshold into inherent vs imposed components"
+    },
+    {
+      "id": "critical_mass_stability",
+      "question": "Is the critical mass threshold for successful organizing stable across contexts or does it vary with institutional suppression intensity?",
+      "resolution_mechanism": "Longitudinal analysis of organizing campaigns across different suppression regimes; identification of threshold size as a function of employer retaliation intensity, legal restrictions, and communication infrastructure; measurement of coalition stability post-threshold",
+      "impact": "If threshold is stable: suggests inherent coordination dynamics (Rope/Scaffold). If threshold varies with suppression: suggests extractive mechanism (Snare/Tangled Rope) where institutions actively manipulate the threshold to prevent organizing.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Stability of critical mass threshold across suppression regimes"
+    },
+    {
+      "id": "sunset_mechanism_reliability",
+      "question": "Does crossing the collective action threshold reliably produce a sunset (declining extraction over time) or do established coalitions face persistent extraction that prevents the scaffold classification?",
+      "resolution_mechanism": "Tracking of extractiveness and suppression metrics for established coalitions over biographical time horizons; measurement of whether coalition maintenance costs decline, stabilize, or increase post-threshold; identification of institutional counter-organizing strategies that sustain extraction",
+      "impact": "If extraction reliably declines post-threshold: scaffold classification confirmed. If extraction persists or increases: reclassify as Tangled Rope (ongoing hybrid) or identify institutional counter-mechanisms that prevent the sunset.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reliability of sunset mechanism post-threshold"
+    },
+    {
+      "id": "index_transformation_reversibility",
+      "question": "Is the power position transformation (powerless \u2192 organized) reversible, and if so, what mechanisms enable or prevent reversal?",
+      "resolution_mechanism": "Case studies of coalition collapse or institutional counter-organizing; measurement of whether individuals who participated in failed organizing attempts return to powerless/trapped status or retain some organizational capacity; identification of institutional strategies for fragmenting established coalitions",
+      "impact": "If transformation is irreversible: supports scaffold classification (one-way transition with sunset). If transformation is reversible: suggests Tangled Rope or Snare (extraction persists through institutional counter-mechanisms that can reset the power relationship).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Reversibility of power position transformation"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "cat_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.3,
+      "id_override": "cat_theater_t3"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.35,
+      "id_override": "cat_theater_t6"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.52,
+      "id_override": "cat_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45,
+      "id_override": "cat_extract_t3"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.38,
+      "id_override": "cat_extract_t6"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "The collective action threshold represents the minimum coordination required for trapped actors to transform distributed enforcement mechanisms from inescapable (Snare) to navigable (Rope). This constraint is structurally distinct from the upstream reputation_as_distributed_enforcement constraint: the upstream constraint models the enforcement mechanism itself (how reputation systems extract from targets), while this constraint models the threshold dynamics that determine whether collective organization can transform that enforcement mechanism. The key structural feature is index transformation: isolated individuals experience the constraint as powerless/trapped (high \u03c0, no exit), but once the collective action threshold is crossed, the same individuals experience the constraint as organized/mobile (low \u03c0, exit options available). This transformation is not merely perceptual \u2014 it reflects a real change in the power relationship and the enforcement mechanism's effectiveness. The constraint exhibits scaffold dynamics because successful organizing produces a sunset: as the coalition matures, the extraction (organizing costs, retaliation risk, coordination overhead) declines while the coordination benefits (collective bargaining leverage, mutual aid, solidarity infrastructure) persist and strengthen. The theater_ratio is moderate (0.35) because some organizing activity is performative (symbolic actions, ritual solidarity displays) but much is functional (actual coordination, resource pooling, strategic planning). The constraint's extractiveness declines over the interval (0.52 \u2192 0.38) as organizing success transforms the power relationship.",
+    "key_agents": [
+      "Isolated Individuals: Primary victims (powerless/trapped) \u2014 face distributed enforcement with no exit before collective organization; bear maximum extraction",
+      "Early Organizers: Secondary victims (moderate/constrained) \u2014 face retaliation risk and coordination costs but gain access to solidarity networks and collective leverage; mixed extraction and coordination",
+      "Organizing Campaign: Temporary coordination mechanism (organized/constrained) \u2014 exists to build the coalition; dissolves or transforms once threshold is crossed; scaffold dynamics with sunset",
+      "Established Coalition: Primary beneficiaries (organized/mobile) \u2014 experience transformed constraint as coordination; low extraction because collective power enables exit and bargaining leverage",
+      "Enforcement Institutions: Institutional actors (institutional/arbitrage) \u2014 benefit from high collective action threshold; perceive threshold as natural law (false summit); have exit options that isolated individuals lack",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both inherent coordination cost and artificially imposed suppression; identifies threshold height as partly extractive"
+    ],
+    "logic_rationale": "Extractiveness (0.38 at T=6): Moderate. The constraint extracts during the organizing phase (resource costs, retaliation risk, coordination overhead) but extraction declines as the coalition matures. The final value reflects that some coordination cost persists (maintaining the coalition, managing internal conflicts, adapting to institutional counter-strategies) but the extraction is significantly lower than the pre-organization baseline (0.52 at T=0). The declining trajectory is the scaffold signature: temporary extraction tolerated because it produces a sunset. Suppression (0.48): Moderate-high. Significant barriers to collective organization include legal restrictions on organizing (anti-union laws, right-to-work regimes), employer retaliation (firing organizers, surveillance, captive-audience meetings), platform design that fragments communication (algorithmic feed curation, terms-of-service restrictions on organizing), and free-rider dynamics (individuals benefit from collective action without bearing organizing costs). However, suppression is not total \u2014 some organizing succeeds, and the threshold can be crossed with sufficient coordination. Theater ratio (0.35): Moderate. Some organizing activity is performative (symbolic strikes, ritual solidarity displays, public demonstrations with limited strategic impact) but much is functional (actual coordination of work stoppages, resource pooling for strike funds, strategic planning for bargaining leverage, mutual aid networks). The theater ratio is lower than many institutional constraints because organizing is resource-constrained \u2014 performative activity that doesn't contribute to crossing the threshold is quickly abandoned.",
+    "directionality_logic": "The constraint demonstrates index transformation mechanics: the same structural enforcement mechanism produces different experienced extraction depending on the agent's power position and exit options. Isolated individuals (powerless/trapped) are full targets of the enforcement mechanism \u2014 directionality d \u2248 0.95, producing high effective extraction \u03c7 via the sigmoid f(d). Early organizers (moderate/constrained) have intermediate directionality d \u2248 0.65 because they face ongoing extraction (retaliation risk, coordination costs) but also gain coordination benefits (solidarity networks, collective leverage). Established coalition members (organized/mobile) are net beneficiaries \u2014 directionality d \u2248 0.45 because the transformed enforcement mechanism now serves collective interests rather than extracting from individuals. Enforcement institutions (institutional/arbitrage) are primary beneficiaries of the high threshold \u2014 directionality d \u2248 0.15 because they benefit from fragmented opposition and can exit (relocate, restructure) when organizing succeeds. The analytical observer (analytical/analytical) has directionality d \u2248 0.72, reflecting that the observer sees both the coordination function and the extractive overhead but is not directly subject to either. The key insight: crossing the collective action threshold changes the directionality value for the same individuals \u2014 the power position transformation is not merely perceptual but reflects a real structural change in who benefits and who bears costs.",
+    "perspectival_gap": "This constraint demonstrates how index transformation produces perspectival gaps that are not merely differences in perception but reflect real structural changes in power relationships. The isolated individual sees Snare (inescapable extraction) because they genuinely have no exit \u2014 the enforcement mechanism is distributed across the entire social network and individual resistance triggers coordinated retaliation. The early organizer sees Tangled Rope (mixed coordination and extraction) because organizing provides real benefits (solidarity, collective leverage) but also imposes real costs (retaliation risk, resource expenditure). The established coalition sees Rope (coordination) because the threshold crossing has transformed the enforcement mechanism from a tool of extraction into collective infrastructure. The organizing campaign sees Scaffold (temporary coordination with sunset) because the campaign exists to build the coalition and dissolves once the threshold is crossed. The enforcement institution sees Mountain (immutable natural law) because it has arbitrage exit and perceives the threshold as an unchangeable feature of human behavior \u2014 but this is a false summit, naturalizing institutional design choices (legal barriers, retaliation mechanisms) as laws of nature. The analytical observer sees Tangled Rope because the threshold exhibits both genuine coordination function (solving free-rider problems, enabling collective bargaining) and extractive overhead (artificially elevated by institutional suppression). The perspectival gaps are not reconcilable to a single 'true' classification \u2014 the presheaf over observation sites IS the structural reality.",
+    "mandatrophy_analysis": "The constraint resolves mandatrophy by demonstrating that the classification depends on the observer's structural position and time horizon. The isolated individual's Snare classification is not a misperception \u2014 it accurately reflects their structural reality (powerless/trapped with no exit). The established coalition's Rope classification is also not a misperception \u2014 it accurately reflects the transformed power relationship (organized/mobile with exit options). The scaffold classification from the organizing campaign perspective captures the temporal dynamics: the constraint is extractive during the organizing phase but produces a sunset as the coalition matures. The analytical observer's Tangled Rope classification identifies that some threshold height is inherent coordination cost (legitimate) while some is artificially imposed suppression (extractive). The enforcement institution's Mountain classification is a false summit \u2014 it naturalizes contingent institutional arrangements (legal barriers to organizing, employer retaliation mechanisms) as immutable features of social coordination. The mandatrophy is resolved by recognizing that all these classifications are simultaneously valid from their respective observation sites, and the structural reality is the presheaf that relates them."
+  },
+  "boltzmann": {
+    "coordination_type": "identity_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of reputation_as_distributed_enforcement. The upstream constraint models the enforcement mechanism itself (how reputation systems extract from targets). This constraint models the threshold dynamics that determine whether collective organization can transform that enforcement mechanism. The two constraints have different \u03b5 values because they measure different structural phenomena: the upstream constraint measures the extractiveness of the reputation system; this constraint measures the extractiveness of the organizing process required to transform that system. The constraints are linked because the upstream enforcement mechanism creates the suppression that elevates the collective action threshold, but they are structurally distinct and require separate stories per the \u03b5-invariance principle."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "mod",
+    "hypothesis": "scaffold",
+    "downstream_of": [
+      "reputation_as_distributed_enforcement"
+    ]
+  }
+}

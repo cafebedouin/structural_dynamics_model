@@ -1,0 +1,224 @@
+{
+  "header": {
+    "constraint_id": "retroactive_criminalization_of_coerced_acts",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "retro_crim"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.88,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Retroactive Criminalization of Institutionally Coerced Acts",
+    "topic_domain": "labor_relations/institutional_control/debt_bondage",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "contract_enforcement_division",
+      "institutional_authority_structure"
+    ],
+    "victims": [
+      "coerced_informants",
+      "debt_bonded_workers",
+      "authority_directed_actors"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "national",
+      "label": "The Coerced Informant",
+      "comment": "PERSPECTIVE 1: COERCED INFORMANT (SNARE) \u2014 Trapped by debt leverage and authority directives. Induced to violate contract terms through institutional encouragement, then prosecuted for voluntary breach when the operation concludes or the informant becomes inconvenient. No exit: debt bondage prevents walking away, and the institutional record erases evidence of coercion. Maximum extraction: bears criminal liability for acts the institution directed."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Debt-Bonded Worker",
+      "comment": "PERSPECTIVE 2: DEBT-BONDED WORKER (SNARE) \u2014 Constrained by economic dependency but not fully trapped. Can theoretically exit through debt repayment or alternative employment, but the constraint's design ensures exit costs exceed capacity. Induced to perform prohibited acts (unauthorized disclosures, contract violations, regulatory breaches) through supervisor directives framed as operational necessity, then held individually liable when the institutional benefit is captured. High extraction despite moderate power: the constraint converts constrained exit into functional entrapment through retroactive liability."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Contract Enforcement Division",
+      "comment": "PERSPECTIVE 3: CONTRACT ENFORCEMENT DIVISION (ROPE) \u2014 Primary beneficiary. Experiences the constraint as coordination: enforcing contract terms maintains institutional discipline and operational security. The division captures the benefit (deterrence, control, liability externalization) while bearing none of the cost. Arbitrage exit: can selectively enforce or waive liability based on institutional convenience. Negative effective extraction: the constraint subsidizes this agent's authority."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Operational Handler",
+      "comment": "PERSPECTIVE 4: OPERATIONAL HANDLER (TANGLED ROPE) \u2014 Institutional actor with constrained exit. Benefits from the constraint's control mechanism (can direct informants to violate contracts for operational gain) but also bears risk if the retroactive criminalization pattern becomes publicly legible and damages institutional legitimacy. Mixed extraction: coordination function (operational flexibility) coexists with extraction (liability externalization onto informants). Constrained exit: cannot unilaterally change enforcement policy but can advocate internally."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Rights Coalition",
+      "comment": "PERSPECTIVE 5: LABOR RIGHTS COALITION (SNARE) \u2014 Organized agents (legal aid groups, worker advocacy organizations, investigative journalists) attempting to document the pattern. Constrained by evidentiary barriers: institutional records of encouragement are classified, destroyed, or framed as misinterpretation. The coalition has organizational capacity but faces suppression through legal barriers (state secrets privilege, sealed tribunal proceedings, NDAs). High extraction: the constraint's theater (framing coerced acts as voluntary breaches) actively obstructs the coalition's documentation efforts."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Independent Tribunal Adjudicator",
+      "comment": "PERSPECTIVE 6: INDEPENDENT TRIBUNAL ADJUDICATOR (TANGLED ROPE) \u2014 Powerful agent with mobile exit (can resign, transfer to private practice, or refuse cases). Benefits from the constraint's coordination function (clear liability rules enable efficient adjudication) but also recognizes the extraction mechanism when case files reveal institutional encouragement patterns. Mixed experience: the constraint enables their role (adjudicating contract disputes) while creating moral hazard (punishing coerced actors for institutional directives). Mobile exit means they could refuse to enforce, but institutional pressure and career incentives suppress that option."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 Sees both the genuine coordination function (contract enforcement maintains institutional discipline and operational security) and the asymmetric extraction (liability is externalized onto coerced actors while institutional authority captures the benefit). The constraint is not pure extraction: there is a real coordination problem (how to maintain operational security when informants have access to sensitive information). But the solution embeds severe extraction: the institution induces prohibited behavior, then prosecutes it as voluntary breach. Tangled Rope classification reflects this duality."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "institutional_encouragement_legibility",
+      "question": "What evidentiary standard would make institutional encouragement legible in tribunal proceedings?",
+      "resolution_mechanism": "Comparative analysis of case files with institutional encouragement documentation vs tribunal acknowledgment rates; identification of evidentiary thresholds that shift liability attribution from individual to institutional",
+      "impact": "If standard is achievable: constraint shifts toward tangled_rope (coordination with extractive overhead). If standard is systematically unattainable: constraint remains snare (extraction mechanism disguised as voluntary breach).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Evidentiary threshold for proving institutional coercion in tribunal proceedings"
+    },
+    {
+      "id": "operational_necessity_vs_liability_externalization",
+      "question": "Does the constraint serve a genuine operational security function, or is operational necessity a post-hoc rationalization for liability externalization?",
+      "resolution_mechanism": "Longitudinal analysis of enforcement patterns: do prosecutions correlate with operational security breaches or with institutional convenience (informant becomes inconvenient, operation concludes, budget pressures)? Comparison with alternative security mechanisms (compartmentalization, technical controls, institutional liability acceptance).",
+      "impact": "If operational necessity is genuine: coordination function is real, and the constraint is tangled_rope with high but not pure extraction. If operational necessity is post-hoc: coordination function is theater, and the constraint is pure snare.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether operational security justification is genuine or post-hoc rationalization"
+    },
+    {
+      "id": "debt_leverage_necessity",
+      "question": "Is debt leverage a necessary precondition for the retroactive criminalization mechanism, or does the mechanism operate independently?",
+      "resolution_mechanism": "Case analysis: prosecution rate for debt-bonded informants vs non-debt-bonded informants who received institutional directives. If debt leverage is necessary, the constraint is downstream of debt_leverage_as_consent_manufacturing. If the mechanism operates independently, the constraints are parallel.",
+      "impact": "If debt leverage is necessary: the constraint's extraction is amplified by upstream debt bondage, and the network relationship is causal dependency. If independent: the constraint operates through authority directives alone, and debt leverage is one of multiple recruitment mechanisms.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether debt leverage is necessary for the retroactive criminalization mechanism"
+    },
+    {
+      "id": "selective_enforcement_pattern",
+      "question": "Is enforcement selective based on institutional convenience, or does it follow consistent criteria?",
+      "resolution_mechanism": "Statistical analysis of enforcement decisions: correlation between prosecution and (a) operational outcome (success/failure), (b) informant compliance with subsequent directives, (c) institutional budget cycles, (d) public visibility of the case. Consistent criteria would show low correlation with convenience factors; selective enforcement would show high correlation.",
+      "impact": "If selective: the constraint is a control mechanism (snare classification confirmed). If consistent: the constraint is a liability rule with high but predictable costs (shifts toward tangled_rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether enforcement is selective or follows consistent criteria"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.45
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.58
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 9,
+      "value": 0.62
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 12,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.62
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.68
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.72
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 9,
+      "value": 0.75
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 12,
+      "value": 0.78
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 15,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 15
+  },
+  "commentary": {
+    "narrative_context": "Retroactive criminalization of institutionally coerced acts is a control mechanism in which institutional agents induce prohibited behavior through authority directives, then prosecute the induced behavior as voluntary contract violation. The constraint operates through a three-stage process: (1) recruitment via debt leverage or false solidarity, (2) operational directives that require contract violations (unauthorized disclosures, regulatory breaches, prohibited associations), and (3) retroactive enforcement that frames the coerced acts as voluntary breaches when the informant becomes inconvenient or the operation concludes. The primary observable is the gap between institutional encouragement documented in case files and acknowledgment of that encouragement in tribunal proceedings. Contract liability enforcement rates differ systematically: intelligence-operation participants face prosecution at rates 4-6x higher than organic violators with equivalent breach severity, but tribunal records attribute liability to voluntary choice rather than institutional coercion. The constraint's theater ratio (0.65) reflects that tribunal proceedings perform voluntary-breach adjudication while systematically excluding evidence of institutional directives. The extractiveness trajectory shows accumulation over the 15-year interval: initial recruitment focused on genuine operational necessity (\u03b5=0.62), but as the mechanism became institutionalized, enforcement shifted toward liability externalization and control (\u03b5=0.78 plateau).",
+    "key_agents": [
+      "Coerced Informants: Primary victims (powerless/trapped) \u2014 induced to violate contracts through institutional directives, then prosecuted for voluntary breach; debt bondage prevents exit and institutional records erase coercion evidence",
+      "Debt-Bonded Workers: Secondary victims (moderate/constrained) \u2014 economic dependency creates functional entrapment; induced to perform prohibited acts through supervisor directives, then held individually liable",
+      "Contract Enforcement Division: Primary beneficiary (institutional/arbitrage) \u2014 captures deterrence and control benefits while externalizing liability; selective enforcement based on institutional convenience",
+      "Operational Handlers: Mixed position (institutional/constrained) \u2014 benefit from operational flexibility but bear reputational risk if the pattern becomes publicly legible",
+      "Labor Rights Coalition: Organized victims (organized/constrained) \u2014 attempting to document the pattern but suppressed by evidentiary barriers and sealed proceedings",
+      "Independent Tribunal Adjudicators: Mixed position (powerful/mobile) \u2014 benefit from clear liability rules but recognize extraction mechanism when case files reveal encouragement patterns; institutional pressure suppresses refusal to enforce",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees genuine coordination function (operational security) coexisting with severe extraction (liability externalization onto coerced actors)"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High. The constraint extracts from coerced informants and debt-bonded workers by converting institutional directives into individual criminal liability. The institution captures the operational benefit (intelligence gathering, labor compliance, operational flexibility) while externalizing the legal and reputational cost onto the coerced actor. The extractiveness is not maximal (not 0.85+) because some informants do receive compensation, protection, or debt forgiveness \u2014 the extraction is severe but not total. The trajectory shows accumulation: initial recruitment (T=0, \u03b5=0.62) focused on operational necessity, but as the mechanism became institutionalized, enforcement shifted toward control and liability externalization (T=9-15, \u03b5=0.78 plateau). Suppression (0.88): Very high. Multiple suppression mechanisms operate simultaneously: (1) debt bondage prevents exit, (2) institutional records of encouragement are classified or destroyed, (3) tribunal proceedings exclude coercion evidence through evidentiary rules (state secrets privilege, hearsay exclusions, sealed proceedings), (4) NDAs and retaliation threats suppress whistleblowing, (5) the framing of coerced acts as voluntary breaches isolates victims from legal aid and public sympathy. Suppression is not maximal (not 0.95+) because some cases do surface through investigative journalism or legal aid organizations, and some adjudicators do recognize the pattern even if they cannot formally acknowledge it. Theater ratio (0.65): High. Tribunal proceedings perform voluntary-breach adjudication (evaluating intent, contract interpretation, liability allocation) while systematically excluding the evidence that would reveal institutional coercion. The theater is not maximal because some functional adjudication occurs (distinguishing breach severity, assessing damages, applying contract law), but the core function (determining whether the breach was voluntary or coerced) is performative. The theater ratio increased over the interval as the evidentiary exclusions became more systematic and the framing of voluntary breach became more entrenched.",
+    "directionality_logic": "The constraint's directionality structure reflects a clear beneficiary-victim divide with institutional arbitrage. Coerced informants (powerless/trapped) are full victims: they bear the legal liability for acts the institution directed, with no exit option and no compensation. The engine derives d \u2248 0.95 (full target) from victim status + trapped exit, producing maximum effective extraction. Debt-bonded workers (moderate/constrained) are also victims but with slightly lower d \u2248 0.85 due to constrained rather than trapped exit \u2014 they could theoretically exit through debt repayment, though the constraint's design makes this functionally impossible. The contract enforcement division (institutional/arbitrage) is the primary beneficiary: captures control and deterrence benefits while bearing no cost. The engine derives d \u2248 0.05 (full beneficiary) from beneficiary status + arbitrage exit, producing negative effective extraction (the constraint subsidizes this agent). Operational handlers (institutional/constrained) occupy a mixed position: they benefit from operational flexibility but bear reputational risk. The engine derives d \u2248 0.35 from beneficiary status + constrained exit, producing low but positive extraction. The labor rights coalition (organized/constrained) is a victim of the constraint's suppression mechanism: their documentation efforts are actively obstructed. The engine derives d \u2248 0.60 from victim status + organized power + constrained exit. Independent adjudicators (powerful/mobile) occupy a mixed position: they benefit from clear liability rules but recognize the extraction mechanism. The engine derives d \u2248 0.45 from mixed beneficiary-victim status + mobile exit, producing moderate extraction. The analytical observer sees the full structure: genuine coordination function (operational security) coexisting with severe extraction (liability externalization). No directionality override is needed \u2014 the structural derivation from beneficiary/victim declarations + exit options produces accurate d values for all agents.",
+    "perspectival_gap": "The constraint demonstrates a characteristic snare pattern: victims see pure extraction (snare), beneficiaries see coordination (rope), and mixed-position agents see tangled rope. The coerced informant sees a snare: induced to violate contracts through institutional directives, then prosecuted for voluntary breach with no exit and no acknowledgment of coercion. The contract enforcement division sees a rope: enforcing contract terms maintains institutional discipline and operational security, with no experienced cost. The operational handler sees a tangled rope: operational flexibility (coordination) coexists with liability externalization (extraction). The independent adjudicator sees a tangled rope: clear liability rules (coordination) coexist with moral hazard (punishing coerced actors for institutional directives). The labor rights coalition sees a snare: their documentation efforts are actively suppressed by evidentiary barriers and sealed proceedings. The analytical observer sees a tangled rope: genuine coordination function (operational security) coexists with severe extraction (retroactive criminalization of coerced acts). The perspectival gap is not a disagreement about facts \u2014 all agents have access to the same structural data (institutional directives exist, prosecutions occur, tribunal proceedings exclude coercion evidence). The gap reflects different structural positions: who benefits, who bears costs, and what exit options exist. The constraint's theater (framing coerced acts as voluntary breaches) actively maintains the perspectival gap by preventing victims from making their coercion legible in formal proceedings.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The constraint is classified as snare rather than tangled_rope because the coordination function (operational security) does not justify the extraction mechanism (retroactive criminalization of coerced acts). The mandatrophy question is: does the operational security benefit require prosecuting coerced informants for acts the institution directed, or could the security benefit be achieved through alternative mechanisms (compartmentalization, technical controls, institutional liability acceptance)? The analytical perspective acknowledges the genuine coordination function but classifies as tangled_rope rather than rope because the extraction is severe and asymmetric. The primary victims (coerced informants, debt-bonded workers) classify as snare because they experience pure extraction with no coordination benefit. The beneficiary (contract enforcement division) classifies as rope because they experience pure coordination with no cost. The perspectival gap is resolved by recognizing that the coordination function is real but does not require the extraction mechanism \u2014 the constraint is a snare with a coordination cover story. The omega variable 'operational_necessity_vs_liability_externalization' directly addresses the mandatrophy: if operational necessity is genuine, the constraint is tangled_rope with high extraction; if operational necessity is post-hoc rationalization, the constraint is pure snare. The empirical resolution mechanism is enforcement pattern analysis: do prosecutions correlate with operational security breaches or with institutional convenience? Preliminary data suggests the latter, supporting the snare classification."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of two recruitment mechanisms: debt_leverage_as_consent_manufacturing (which creates the trapped exit condition) and informant_recruitment_through_false_solidarity (which creates the initial trust relationship that enables institutional directives). The retroactive criminalization mechanism operates on top of these recruitment constraints, converting the coerced relationship into individual criminal liability. The three constraints form a pipeline: recruitment \u2192 operational directives \u2192 retroactive enforcement. Each has its own extractiveness value reflecting its distinct structural mechanism, but they are causally linked in the institutional control architecture."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "debt_leverage_as_consent_manufacturing",
+      "informant_recruitment_through_false_solidarity"
+    ]
+  }
+}

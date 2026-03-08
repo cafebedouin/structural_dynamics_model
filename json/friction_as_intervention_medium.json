@@ -1,0 +1,180 @@
+{
+  "header": {
+    "constraint_id": "friction_as_intervention_medium",
+    "version": "1.0",
+    "generated_date": "2025-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "friction"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.15,
+    "claimed_type": "rope",
+    "human_readable": "Friction as Intervention Medium in Digital Habit Modification",
+    "topic_domain": "technology_governance/behavioral_psychology/social_infrastructure",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "has_sunset_clause": false,
+    "beneficiaries": [
+      "users_seeking_self_regulation",
+      "educational_institutions",
+      "parents_and_guardians"
+    ],
+    "victims": [],
+    "mandatrophy_resolved": false
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Self-Regulating User",
+      "comment": "PERSPECTIVE 1: SELF-REGULATING USER (ROPE) \u2014 User voluntarily adopts friction tools (Brick, Yondr pouch, app timers) to interrupt automatic habit loops. Experiences the constraint as pure coordination: the tool solves the collective action problem between present self (wants to check phone) and future self (wants sustained attention). Low extraction \u2014 the friction serves the user's own goals. Mobile exit options \u2014 can remove friction at any time."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Educational Institution",
+      "comment": "PERSPECTIVE 2: EDUCATIONAL INSTITUTION (ROPE) \u2014 School adopts Yondr pouches or device-free policies to restore classroom attention commons. Experiences the constraint as coordination mechanism: solves the multi-agent problem where individual students defecting (checking phones) degrades learning environment for all. Yondr data shows 15% grade improvement and 44% behavioral referral decrease \u2014 genuine coordination benefit. Arbitrage exit \u2014 institution can discontinue policy if ineffective."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Adolescent Under School Policy",
+      "comment": "PERSPECTIVE 3: ADOLESCENT UNDER SCHOOL POLICY (SCAFFOLD) \u2014 Student subject to mandatory Yondr pouch policy experiences friction as temporary external support. Constrained exit during school hours but mobile outside. Sees the constraint as scaffold: external structure compensating for underdeveloped prefrontal self-regulation, with implicit sunset as executive function matures. Low extraction because the friction genuinely improves outcomes (grades, peer interaction) that the student values, even if compliance is involuntary in the moment."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Parent Implementing Household Friction",
+      "comment": "PERSPECTIVE 4: PARENT IMPLEMENTING HOUSEHOLD FRICTION (ROPE) \u2014 Parent uses charging station in common area, NFC tap requirements, or physical device separation to manage child's screen time. Experiences as coordination: the friction tool mediates the parent-child negotiation over device access, converting a willpower contest into a structural constraint both parties can reference. Low extraction \u2014 the friction reduces household conflict while preserving parental authority. Mobile exit \u2014 can adjust friction level as needed."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Habit Loop Architecture)",
+      "comment": "PERSPECTIVE 5: ANALYTICAL OBSERVER (MOUNTAIN) \u2014 From the analytical perspective, friction's effectiveness derives from an immutable property of habit formation: the cue-routine-reward loop requires low activation energy to execute automatically. Introducing physical or temporal distance between cue and routine breaks automaticity by forcing deliberate action. This is not a policy choice but a structural feature of how procedural memory works. The constraint is a mountain because it reflects the underlying neuroscience of habit architecture \u2014 any intervention that increases activation energy will disrupt automatic execution, regardless of cultural context or institutional arrangement."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Digital Wellbeing Advocacy Coalition",
+      "comment": "PERSPECTIVE 6: DIGITAL WELLBEING ADVOCACY COALITION (ROPE) \u2014 Organized groups (Center for Humane Technology, Common Sense Media, Wait Until 8th) promote friction-based interventions as alternative to willpower-dependent abstinence or platform regulation. Experience the constraint as coordination mechanism: friction tools enable collective action (school-wide policies, community norms) that individual willpower cannot sustain. Low extraction \u2014 the coalition's goals align with user wellbeing. Mobile exit \u2014 advocacy groups can shift strategy if friction proves ineffective or if platform design changes reduce need for external friction."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "displacement_vs_reduction",
+      "question": "Does friction reduce total device usage or merely displace it to other platforms/times?",
+      "resolution_mechanism": "Longitudinal tracking of total screen time across all devices and platforms before/after friction intervention; control for substitution effects",
+      "impact": "If displacement dominates: friction is coordination theater (users route around friction without reducing total usage). If genuine reduction: friction is effective coordination tool.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether friction reduces usage or displaces it"
+    },
+    {
+      "id": "friction_habituation_timeline",
+      "question": "How quickly do users habituate to friction interventions, rendering them ineffective?",
+      "resolution_mechanism": "Time-series analysis of intervention effectiveness; identification of decay curves for different friction types (physical barriers vs temporal delays vs cognitive load)",
+      "impact": "If habituation is rapid (<3 months): friction is temporary scaffold requiring escalation. If habituation is slow (>12 months): friction is durable coordination mechanism.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Timeline for friction habituation and effectiveness decay"
+    },
+    {
+      "id": "voluntary_vs_imposed_effectiveness",
+      "question": "Does friction effectiveness differ between voluntary adoption (self-imposed) and institutional mandate (school policy, parental control)?",
+      "resolution_mechanism": "Comparison of outcome metrics (usage reduction, academic performance, wellbeing indicators) between voluntary friction adopters and those subject to institutional mandates; control for selection effects",
+      "impact": "If voluntary adoption is more effective: friction is coordination tool requiring buy-in. If imposed friction is equally effective: friction works through structural mechanism independent of user motivation.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether friction effectiveness depends on voluntary adoption"
+    },
+    {
+      "id": "socioeconomic_access_asymmetry",
+      "question": "Do friction interventions require resources (devices, pouches, institutional support) that create access asymmetries?",
+      "resolution_mechanism": "Analysis of friction tool adoption rates and effectiveness across socioeconomic strata; identification of cost barriers to implementation",
+      "impact": "If significant access barriers exist: friction interventions may increase digital wellbeing inequality, with low-SES users unable to access coordination tools available to high-SES users. If barriers are minimal: friction is broadly accessible coordination mechanism.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Whether friction tools create socioeconomic access barriers"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.1
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.12
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.17
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.18
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 6
+  },
+  "commentary": {
+    "narrative_context": "Friction-based interventions in digital habit modification introduce physical, temporal, or cognitive barriers between user and device to interrupt automatic habit loops. The structural delta is that friction works through architectural constraint rather than willpower: a Yondr pouch physically prevents phone access; an NFC tap requirement (Brick) forces deliberate action; moving a charging station to a common area increases activation energy for nighttime scrolling. Empirical evidence shows genuine coordination benefits: Yondr deployments in schools correlate with 15% grade improvements and 44% reductions in behavioral referrals; Brick users report sustained usage reduction without the willpower depletion of app-based timers. The constraint is downstream of attention_as_capturable_resource (mountain) \u2014 friction interventions exist because attention capture is a structural feature of digital platforms. Friction does not change the underlying attention economics; it changes the user's interface to those economics. The constraint exhibits low extraction (0.18) because friction primarily serves user goals (self-regulation, academic performance, family harmony) rather than extracting value from users. The modest extraction reflects coordination overhead (cost of friction tools, inconvenience of reduced spontaneous access) and potential displacement effects (users routing around friction by switching platforms). Theater ratio is low (0.15) because friction interventions have measurable behavioral outcomes \u2014 they are not performative. The slight increase over the interval reflects early adopters (high motivation, good tool-goal fit) being joined by later adopters (lower motivation, poorer fit), increasing the proportion of friction deployments that are theater rather than function.",
+    "key_agents": [
+      "Self-Regulating User: Primary beneficiary (moderate/mobile) \u2014 voluntarily adopts friction to solve intertemporal coordination problem between present and future self",
+      "Educational Institution: Primary beneficiary (institutional/arbitrage) \u2014 uses friction to restore classroom attention commons; Yondr data shows genuine coordination benefit",
+      "Adolescent Under School Policy: Mixed position (moderate/constrained) \u2014 experiences friction as temporary scaffold; constrained exit during school but benefits from improved outcomes",
+      "Parent Implementing Household Friction: Beneficiary (moderate/mobile) \u2014 uses friction to mediate parent-child device negotiation; reduces household conflict",
+      "Digital Wellbeing Advocacy Coalition: Beneficiary (organized/mobile) \u2014 promotes friction as coordination alternative to willpower or regulation",
+      "Analytical Observer: Sees friction effectiveness as mountain (universal property of habit loop architecture)"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. Friction interventions primarily serve user goals (self-regulation, academic performance, reduced family conflict) rather than extracting value from users. The modest extraction reflects genuine coordination overhead: friction tools have monetary cost (Yondr pouches, Brick devices), impose inconvenience (reduced spontaneous access, need to plan device usage), and may create displacement effects (users switching to less-restricted platforms rather than reducing total usage). The extraction is not zero because friction is not frictionless \u2014 the intervention imposes real costs even when it works as intended. Suppression (0.22): Low. Exit options are generally mobile for voluntary adopters and constrained (but not trapped) for those subject to institutional mandates. Students can exit Yondr policies by changing schools or graduating; children can exit parental friction by aging out or negotiating. The suppression is non-zero because institutional friction (school policies, parental controls) does constrain choice in the moment, and because effective friction must be somewhat difficult to circumvent (otherwise it would not interrupt habit loops). Theater ratio (0.15): Low. Friction interventions have measurable behavioral outcomes (Yondr grade improvements, Brick usage reduction) and work through a clear structural mechanism (increasing activation energy for automatic behaviors). The theater component reflects friction deployments that are performative rather than functional: app-based screen time limits that users immediately override, charging stations placed in accessible locations that do not actually increase friction, or institutional policies adopted for signaling purposes without enforcement. The slight increase over the interval (0.10 \u2192 0.15) reflects diffusion from early adopters (high motivation, good tool-goal fit) to later adopters (lower motivation, poorer fit), increasing the proportion of deployments that are theater.",
+    "directionality_logic": "All primary agents are beneficiaries of the friction constraint \u2014 it solves coordination problems they face (intertemporal self-coordination, classroom attention commons, parent-child device negotiation). The constraint has no clear victim group because friction is generally voluntary or applied by agents with legitimate authority (schools, parents) to agents who benefit from the intervention (students' grades improve, family conflict decreases). The modest extraction (0.18) reflects coordination overhead and potential displacement effects, not asymmetric extraction from a victim group. The analytical observer sees friction effectiveness as a mountain \u2014 a universal property of habit loop architecture \u2014 because the mechanism (increasing activation energy disrupts automaticity) is invariant across cultural and institutional contexts. This is not naturalization of a contingent arrangement; it is recognition of an actual structural feature of procedural memory. The constraint is downstream of attention_as_capturable_resource (mountain) but is itself a rope (coordination mechanism) rather than a mountain, because the decision to deploy friction is a policy choice even though friction's effectiveness derives from immutable neuroscience.",
+    "perspectival_gap": "The constraint exhibits minimal perspectival gap because all agents experience it as coordination (rope) or temporary support (scaffold), with the analytical observer seeing the underlying mechanism as mountain. There is no snare or tangled_rope perspective because friction interventions do not extract asymmetrically \u2014 they impose costs (inconvenience, reduced spontaneous access) but those costs are borne by the same agents who receive the benefits (improved self-regulation, better academic outcomes, reduced family conflict). The gap between the user perspectives (rope/scaffold) and the analytical perspective (mountain) reflects the distinction between the intervention (policy choice, rope) and the mechanism (habit loop architecture, mountain). Users experience friction as a coordination tool they can adopt or reject; the analytical observer sees that friction works because of an immutable property of how habits form. Both perspectives are correct \u2014 the intervention is contingent (rope) even though its effectiveness derives from necessity (mountain).",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by demonstrating that low-extraction coordination mechanisms (rope) can be built on top of immutable structural features (mountain). Friction interventions are ropes \u2014 policy choices that solve coordination problems \u2014 but their effectiveness derives from a mountain (the neuroscience of habit formation). The mandatrophy risk is naturalizing the intervention: claiming that friction is the only way to address digital habit formation because it is grounded in neuroscience. This would be a false summit \u2014 the underlying mechanism is a mountain, but the intervention is one of many possible ropes. Alternative coordination mechanisms (platform design changes, social norm shifts, economic incentives) could address the same problem through different structural pathways. The constraint is a rope because agents can choose whether to deploy friction, even though friction's effectiveness (when deployed) is determined by immutable properties of procedural memory."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of attention_as_capturable_resource (mountain). The upstream constraint establishes that attention capture is a structural feature of digital platforms; this constraint addresses how users can coordinate to protect their attention against capture. The two constraints have different extractiveness values because they represent different structural layers: attention_as_capturable_resource has near-zero extraction (it is a natural law of information economics), while friction_as_intervention_medium has modest extraction (it is a coordination mechanism with overhead costs)."
+  },
+  "directionality_overrides": []
+}

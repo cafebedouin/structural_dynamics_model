@@ -1,0 +1,202 @@
+{
+  "header": {
+    "constraint_id": "quota_ratchet_asymmetry",
+    "version": "1.0",
+    "generated_date": "2025-01-02",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "quota_ratchet"
+  },
+  "base_properties": {
+    "extractiveness": 0.58,
+    "suppression": 0.68,
+    "theater_ratio": 0.52,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Quota Ratchet Asymmetry in Performance Management Systems",
+    "topic_domain": "organizational_systems/labor_economics/institutional_extraction",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_budget_managers",
+      "efficiency_consultants",
+      "senior_management"
+    ],
+    "victims": [
+      "front_line_workers",
+      "middle_management",
+      "worker_health_outcomes"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Front-Line Worker",
+      "comment": "PERSPECTIVE 1: FRONT-LINE WORKER (SNARE) \u2014 Trapped by economic necessity and skill specificity. Experiences pure extraction: every efficiency gain becomes a permanent baseline, every capacity decline is ignored. Cannot exit without losing specialized skills, seniority, or health insurance. The ratchet only turns one direction."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Middle Manager",
+      "comment": "PERSPECTIVE 2: MIDDLE MANAGER (TANGLED ROPE) \u2014 Constrained by career path and organizational loyalty. Benefits from meeting aggregate targets (bonus eligibility, promotion prospects) but also bears extraction through stress, turnover management costs, and moral injury from enforcing unsustainable quotas. Genuine coordination function exists (translating organizational goals into operational targets) alongside asymmetric extraction."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Budget Manager",
+      "comment": "PERSPECTIVE 3: BUDGET MANAGER (ROPE) \u2014 Primary beneficiary with arbitrage exit options. Experiences the ratchet as legitimate coordination: efficiency gains should translate to higher output expectations, and the system 'works' by continuously improving productivity metrics. Can exit to similar roles across industries. Extraction flows toward this position."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Labor Union Coalition",
+      "comment": "PERSPECTIVE 4: LABOR UNION COALITION (SCAFFOLD) \u2014 Organized agents building alternative performance management frameworks with bidirectional adjustment clauses, health-indexed quotas, and worker voice in target-setting. Sees the asymmetry as a temporary coordination failure with a sunset: collective bargaining and regulatory intervention (OSHA ergonomic standards, right-to-refuse-unsafe-work protections) are creating pathways to symmetric adjustment mechanisms. Estimated sunset: 15-25 years as labor law reform and organizing density increase."
+    },
+    {
+      "classification_type": "piton",
+      "agent_power": "institutional",
+      "time_horizon": "civilizational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Efficiency Consultant",
+      "comment": "PERSPECTIVE 5: EFFICIENCY CONSULTANT (PITON) \u2014 Sees the performance management ritual as degraded. The original function (aligning worker capacity with organizational needs) has atrophied into theater: consultants run time-motion studies and recommend quota increases knowing the targets are already unsustainable, but the ritual persists because it generates billable hours and satisfies institutional demand for 'data-driven management.' The system is maintained through inertia and professional incentives, not because it optimizes productivity."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "global",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (TANGLED ROPE) \u2014 From a civilizational perspective, the ratchet exhibits both genuine coordination (organizations do need mechanisms to translate capacity improvements into output expectations) and asymmetric extraction (the unidirectional adjustment creates a structural transfer from worker health to institutional efficiency metrics). The asymmetry is not inherent to performance management but is a contingent design choice that could be corrected through bidirectional adjustment protocols."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "capacity_measurement_ambiguity",
+      "question": "What constitutes 'capacity decline' sufficient to trigger quota reduction? Is it individual hand failure rates, aggregate team performance, or systemic factors like equipment degradation?",
+      "resolution_mechanism": "Longitudinal tracking of quota adjustments correlated with worker injury reports, equipment maintenance logs, and aggregate output variance. Establish whether organizations recognize any decline signal as legitimate input to quota-setting.",
+      "impact": "If organizations recognize decline signals but ignore them: pure extraction (Snare from more perspectives). If organizations genuinely cannot measure decline: coordination failure (Rope from more perspectives). If decline measurement exists but is suppressed: confirms asymmetric extraction mechanism.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "What decline signals organizations recognize as legitimate quota adjustment triggers"
+    },
+    {
+      "id": "efficiency_attribution_problem",
+      "question": "When productivity increases, how much is attributable to worker effort intensification vs. genuine efficiency improvements (better tools, process optimization)?",
+      "resolution_mechanism": "Decomposition analysis: control for tool/process changes vs. output increases. Compare quota adjustments in periods with documented tool improvements vs. periods with no process changes. If quotas increase equally in both cases, the ratchet extracts effort intensification regardless of efficiency source.",
+      "impact": "If increases are effort-driven: the ratchet is extracting unsustainable labor intensification (higher extractiveness). If increases are tool-driven: the ratchet is capturing legitimate efficiency gains (lower extractiveness, more coordination).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether quota increases capture efficiency gains or extract effort intensification"
+    },
+    {
+      "id": "exit_option_variance",
+      "question": "How much does worker exit capacity vary by industry, skill level, geographic region, and labor market tightness?",
+      "resolution_mechanism": "Cross-industry comparison of turnover rates, wage premiums for job-switching, and geographic mobility patterns among workers subject to quota systems. Measure correlation between labor market tightness and quota adjustment asymmetry.",
+      "impact": "If exit options are uniformly low: trapped classification is accurate across contexts. If exit options vary significantly: the constraint's extractiveness is modulated by labor market conditions, and the classification should reflect regional/sectoral variation.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "How worker exit capacity varies across contexts"
+    },
+    {
+      "id": "bidirectional_adjustment_feasibility",
+      "question": "Are there organizational contexts where bidirectional quota adjustment (increases AND decreases) is structurally feasible without catastrophic coordination failure?",
+      "resolution_mechanism": "Case studies of organizations that have implemented symmetric adjustment protocols. Measure whether bidirectional systems maintain coordination function (output predictability, resource allocation) while reducing extraction (injury rates, turnover, worker health outcomes).",
+      "impact": "If bidirectional systems exist and function: the asymmetry is a design choice, not a structural necessity (confirms Tangled Rope, refutes Mountain). If bidirectional systems fail coordination tests: the asymmetry may be inherent to performance management under uncertainty (supports Mountain from some perspectives).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether symmetric adjustment protocols can maintain coordination function"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.42
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.48
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.45
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.52
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.58
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "The quota ratchet asymmetry is a structural feature of performance management systems across manufacturing, logistics, customer service, and gig economy platforms. When workers or teams exceed targets\u2014whether through genuine efficiency improvements (better tools, optimized processes) or unsustainable effort intensification\u2014the system interprets the higher output as new baseline capacity and adjusts quotas upward. When capacity declines\u2014through worker injury, equipment degradation, or external shocks\u2014the system does not adjust quotas downward, treating the decline as temporary underperformance rather than a signal requiring recalibration. This asymmetry creates a structural transfer: efficiency gains are captured by the institution as permanent productivity increases, while capacity losses are borne by workers as increased strain to meet now-unsustainable targets. The constraint exhibits genuine coordination function (organizations do need mechanisms to translate capacity into output expectations and to respond to efficiency improvements) alongside asymmetric extraction (the unidirectional adjustment systematically transfers risk and health costs from institution to worker). The theater_ratio (0.52) reflects that much of the 'data-driven' performance management apparatus is performative: time-motion studies, efficiency consulting, and quota calibration rituals generate institutional legitimacy but often ignore worker health data, injury rates, and capacity decline signals that would require downward adjustments.",
+    "key_agents": [
+      "Front-Line Workers: Primary victims (powerless/trapped) \u2014 bear full health and economic costs of unsustainable quotas; cannot exit without losing specialized skills, seniority, or benefits",
+      "Middle Management: Secondary victims and minor beneficiaries (moderate/constrained) \u2014 face career pressure to meet targets and moral injury from enforcing unsustainable quotas, but also receive bonuses and promotion prospects from aggregate performance",
+      "Institutional Budget Managers: Primary beneficiaries (institutional/arbitrage) \u2014 capture efficiency gains as permanent productivity increases; can exit to similar roles across industries",
+      "Senior Management: Secondary beneficiaries (powerful/mobile) \u2014 benefit from improved efficiency metrics and shareholder value; insulated from operational consequences",
+      "Efficiency Consultants: Institutional actors maintaining performative ritual (institutional/mobile) \u2014 generate billable hours through quota calibration studies that ignore capacity decline signals",
+      "Labor Union Coalition: Organized agents building alternative frameworks (organized/constrained) \u2014 negotiating bidirectional adjustment clauses and health-indexed quotas",
+      "Worker Health Outcomes: Abstract collective victim (powerless/trapped) \u2014 long-term health costs (repetitive strain injuries, burnout, disability) that cannot be priced into the quota system",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees both coordination function and asymmetric extraction; recognizes the asymmetry as a design choice rather than structural necessity"
+    ],
+    "logic_rationale": "Extractiveness (0.58): Moderate-high. The ratchet captures efficiency gains as permanent institutional property while externalizing capacity decline costs to workers. The extraction is substantial but not maximal\u2014some workers do benefit from efficiency improvements (less physical strain per unit output when tools improve), and the coordination function is genuine (organizations need output predictability). The value reflects that the asymmetry creates a structural transfer but not total extraction. Suppression (0.68): High. Workers face significant barriers to resisting quota increases: economic dependency (need income and benefits), skill specificity (specialized training not transferable), seniority loss (starting over elsewhere means losing accumulated advantages), and collective action problems (individual resistance is punished; coordinated resistance requires union density). Exit options exist but are costly. Theater ratio (0.52): Moderate. Performance management systems generate substantial performative content\u2014time-motion studies that ignore ergonomic limits, efficiency consulting that recommends increases regardless of worker health data, data dashboards that track output but not injury rates\u2014but the core function (translating capacity into targets) is not purely theatrical. The theater has increased over the interval as the gap between measured metrics (output) and ignored metrics (health costs) has widened.",
+    "directionality_logic": "The beneficiary/victim declarations drive the directionality computation. Institutional budget managers are primary beneficiaries with arbitrage exit options\u2014they experience low or negative effective extraction because the ratchet transfers value toward their position. Front-line workers are primary victims with trapped exit options\u2014they experience maximum extraction because the ratchet transfers health and economic costs to their position and they cannot escape without severe penalty. Middle managers occupy a hybrid position: they are both minor beneficiaries (career advancement from meeting targets) and secondary victims (stress and moral injury from enforcing unsustainable quotas), with constrained exit options (can leave but at significant career cost). The analytical observer sees the structural asymmetry clearly: the coordination function is real (organizations need performance management), but the unidirectional adjustment is a design choice that creates extraction, not an inherent feature of coordination systems. The labor union coalition sees a sunset: bidirectional adjustment protocols and health-indexed quotas are being built through collective bargaining, creating an exit path from the asymmetry.",
+    "perspectival_gap": "The front-line worker experiences pure extraction (Snare)\u2014every efficiency gain becomes a trap, every capacity decline is ignored, and exit is prohibitively costly. The budget manager experiences coordination (Rope)\u2014the system 'works' by translating improvements into higher expectations, and the manager benefits from the resulting efficiency metrics. The middle manager experiences mixed coordination and extraction (Tangled Rope)\u2014the system enables their role (translating goals into operations) but also extracts through stress and moral injury. The labor union coalition sees a temporary problem with a sunset (Scaffold)\u2014collective bargaining is building alternative frameworks with symmetric adjustment. The efficiency consultant sees a degraded ritual (Piton)\u2014the performance management apparatus persists through professional incentives and institutional inertia, not because it optimizes outcomes. The analytical observer sees the full structure (Tangled Rope)\u2014genuine coordination function with asymmetric extraction that is a contingent design choice, not a natural law. The perspectival gap is diagnostic: the same structural phenomenon appears as natural and efficient from the beneficiary position, as a solvable coordination problem from the organized position, and as inescapable extraction from the trapped position.",
+    "mandatrophy_analysis": "The quota ratchet asymmetry resolves the mandatrophy by demonstrating that the classification depends on the observer's structural position. The constraint is NOT purely extractive (it has genuine coordination function\u2014organizations need mechanisms to set and adjust performance targets), and it is NOT purely coordinative (the asymmetry creates systematic transfer of health and economic costs from institution to worker). The tangled_rope classification at the analytical level captures this hybrid structure: the system coordinates (translates capacity into expectations) AND extracts (unidirectional adjustment externalizes decline costs). The snare classification from the trapped worker perspective is their lived reality\u2014they experience the ratchet as pure extraction because they bear all costs and capture none of the efficiency gains. The rope classification from the institutional beneficiary perspective is also accurate\u2014they experience the system as working coordination because extraction flows toward them. The scaffold classification from the organized labor perspective reflects a real structural feature\u2014alternative frameworks with bidirectional adjustment are being built and have a plausible sunset timeline. No single type is 'the' answer; the presheaf over observation sites IS the answer. The mandatrophy is resolved by recognizing that 'Is this extraction or coordination?' is an indexical question, not an absolute one."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [
+      "platform_algorithmic_management",
+      "warehouse_productivity_tracking",
+      "gig_economy_rating_systems"
+    ],
+    "dual_formulation_note": "The quota ratchet asymmetry is a structural pattern that appears across multiple organizational contexts. Each instantiation (manufacturing quotas, warehouse pick rates, gig platform acceptance rates, customer service handle times) is a distinct constraint with its own extractiveness value reflecting the specific industry's labor market conditions, regulatory environment, and worker organization density. This story models the general pattern; specific instantiations should be written as separate stories linked via network.affects_constraints."
+  },
+  "directionality_overrides": [
+    {
+      "power_atom": "moderate",
+      "d_value": 0.58
+    }
+  ]
+}

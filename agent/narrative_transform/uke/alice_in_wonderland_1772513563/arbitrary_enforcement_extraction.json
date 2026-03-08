@@ -1,0 +1,199 @@
+{
+  "header": {
+    "constraint_id": "arbitrary_enforcement_extraction",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "arb_enf"
+  },
+  "base_properties": {
+    "extractiveness": 0.78,
+    "suppression": 0.88,
+    "theater_ratio": 0.65,
+    "claimed_type": "snare",
+    "human_readable": "Arbitrary Enforcement Extraction",
+    "topic_domain": "authority_dynamics/enforcement_systems",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "institutional_enforcers",
+      "enforcement_apparatus"
+    ],
+    "victims": [
+      "trapped_subjects",
+      "targeted_populations",
+      "compliance_bearing_agents"
+    ],
+    "mandatrophy_resolved": true
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Trapped Subject",
+      "comment": "PERSPECTIVE 1: TRAPPED SUBJECT (SNARE) \u2014 Faces maximum extraction with no exit. Arbitrary enforcement means compliance offers no protection while non-compliance guarantees punishment. The unpredictability itself is the extraction mechanism: subjects must over-comply (satisficing behavior) to create safety margins against arbitrary application, bearing costs far exceeding what consistent enforcement would require. Suppression is near-total \u2014 geographic, economic, or legal barriers prevent exit, and the enforcement apparatus actively suppresses alternatives."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "regional",
+      "label": "The Institutional Enforcer",
+      "comment": "PERSPECTIVE 2: INSTITUTIONAL ENFORCER (ROPE) \u2014 Experiences negative effective extraction. The enforcement system provides institutional power, resource access, and discretionary authority. Arbitrariness is not a bug but a feature: selective enforcement allows the institution to reward allies, punish enemies, and extract compliance without bearing the cost of universal application. The enforcer sees coordination: the system 'works' by giving them the tools to manage their domain. Chi sign inversion \u2014 what the subject experiences as maximum extraction, the enforcer experiences as subsidy."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Constrained Intermediary",
+      "comment": "PERSPECTIVE 3: CONSTRAINED INTERMEDIARY (TANGLED ROPE) \u2014 Agents with partial power (local officials, community leaders, small business owners) experience both extraction and coordination. They benefit from the system when they can invoke enforcement selectively to manage competitors or secure compliance, but they also bear extraction when they become targets. Exit is costly but possible \u2014 relocation, career change, or shifting to informal economy. The arbitrariness creates genuine coordination problems (unpredictable costs) layered with extraction (selective targeting based on political alignment or bribe payment)."
+    },
+    {
+      "classification_type": "snare",
+      "agent_power": "moderate",
+      "time_horizon": "immediate",
+      "exit_options": "constrained",
+      "spatial_scope": "local",
+      "label": "The Targeted Population Member",
+      "comment": "PERSPECTIVE 4: TARGETED POPULATION (SNARE) \u2014 Moderate power agents who are systematically targeted by selective enforcement experience snare classification even with constrained rather than trapped exit. The selectivity concentrates extraction: enforcement is applied disproportionately to this group while others face minimal scrutiny. Exit is structurally possible but costly (relocation, identity concealment, economic loss). The immediate time horizon reflects that each enforcement interaction is a crisis \u2014 the biographical view might show tangled rope as some coordination exists, but moment-to-moment the experience is pure extraction."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Reform Coalition",
+      "comment": "PERSPECTIVE 5: REFORM COALITION (SCAFFOLD) \u2014 Organized agents working toward rule-of-law reforms see the arbitrary enforcement system as a temporary problem with a sunset. Civil society organizations, legal reform movements, and accountability mechanisms are building alternative structures: transparent enforcement criteria, judicial review, complaint mechanisms, and documentation systems. The coalition has mobility (can operate across jurisdictions, build international pressure, shift resources) and sees a generational path to replacing arbitrary enforcement with rule-bound systems. Effective extraction is low because the coalition has agency and a theory of change."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (False Summit)",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (MOUNTAIN / FALSE SUMMIT) \u2014 From a civilizational perspective, some observers naturalize arbitrary enforcement as an inherent feature of authority systems: 'power is always discretionary,' 'enforcement is always selective,' 'law is politics by other means.' This perspective treats the constraint as immutable \u2014 a law of political physics. However, the structural data contradicts this: the high suppression (0.88) and extractiveness (0.78) are not inherent to enforcement systems but to THIS configuration. Rule-of-law systems with transparent criteria, judicial review, and accountability mechanisms have dramatically lower extraction. The mountain classification is a false summit \u2014 naturalizing a contingent institutional arrangement as a universal law."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "enforcement_selectivity_threshold",
+      "question": "At what level of enforcement selectivity does the system transition from 'discretion within rules' to 'arbitrary extraction'?",
+      "resolution_mechanism": "Quantitative analysis of enforcement patterns: variance in application rates across demographically similar populations; correlation between enforcement targeting and political/economic factors unrelated to rule violation; comparison of stated criteria vs actual application",
+      "impact": "If threshold is low (selectivity > 20% variance): many discretionary systems misclassified as arbitrary. If threshold is high (selectivity > 80% variance): extractive systems evade detection by maintaining minimal formal compliance.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Selectivity threshold distinguishing discretion from arbitrary extraction"
+    },
+    {
+      "id": "satisficing_cost_measurement",
+      "question": "How do we measure the excess compliance cost imposed by unpredictability vs the cost of compliance under consistent enforcement?",
+      "resolution_mechanism": "Behavioral economics analysis: comparison of compliance expenditure in arbitrary vs rule-bound systems controlling for rule stringency; measurement of safety-margin over-compliance; time-series analysis of compliance costs before and after enforcement regime changes",
+      "impact": "If satisficing costs are low: extractiveness estimate is too high. If satisficing costs are high: subjects bear hidden extraction not captured in direct enforcement interactions.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Measurement of excess compliance costs from unpredictability"
+    },
+    {
+      "id": "reform_sunset_credibility",
+      "question": "Is the reform coalition's sunset hypothesis structurally credible, or is it aspirational framing that masks a stable equilibrium?",
+      "resolution_mechanism": "Historical analysis of enforcement reform trajectories: success rates of rule-of-law transitions; identification of structural preconditions (independent judiciary, free press, civil society capacity); assessment of whether those preconditions exist in this case",
+      "impact": "If sunset is credible: scaffold classification confirmed, and the constraint is genuinely temporary. If sunset is aspirational: the organized perspective should reclassify as tangled_rope (coordination around reform activity that itself becomes institutionalized without changing the underlying enforcement system).",
+      "confidence": "medium",
+      "type_class": "conceptual",
+      "description": "Credibility of rule-of-law reform sunset hypothesis"
+    },
+    {
+      "id": "chi_sign_inversion_mechanism",
+      "question": "Is the chi sign inversion (enforcer experiences negative extraction, subject experiences chi > 1.0) a stable structural feature or an artifact of incomplete accounting?",
+      "resolution_mechanism": "Full cost accounting for enforcers: institutional maintenance costs, corruption overhead, legitimacy erosion, long-term career risk from regime change. If these costs are included, does enforcer chi remain negative?",
+      "impact": "If inversion is stable: the structural asymmetry is real and the system is a pure transfer mechanism. If inversion is artifact: enforcers bear hidden costs (reputational, long-term risk) that reduce their net benefit, and the system may be less extractive than it appears from immediate transactions.",
+      "confidence": "low",
+      "type_class": "empirical",
+      "description": "Stability of chi sign inversion between enforcer and subject"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.4
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 3,
+      "value": 0.52
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 6,
+      "value": 0.6
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.65
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.58
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 3,
+      "value": 0.66
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 6,
+      "value": 0.73
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.78
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Arbitrary enforcement extraction occurs when enforcement systems combine high suppression (limited exit options for subjects) with selective or unpredictable application of rules. The structural signature is chi sign inversion: enforcers experience negative effective extraction (the system subsidizes them) while subjects experience chi > 1.0 (extraction exceeds the base rate due to unpredictability costs). This constraint demonstrates maximum indexical divergence \u2014 the same institutional arrangement appears as coordination (rope) from the enforcer position and pure extraction (snare) from the subject position. The arbitrariness is not incidental but structural: selective enforcement allows the institution to extract compliance, resources, and deference without bearing the cost of universal application. Subjects respond with satisficing behavior \u2014 over-compliance to create safety margins \u2014 which imposes costs far exceeding what consistent enforcement would require. The constraint has degraded over the interval: theater_ratio has increased from 0.40 to 0.65 as enforcement has become more performative (ritualized compliance checks, documentation theater) while actual rule-of-law has eroded. Base extractiveness has increased from 0.58 to 0.78 as selective targeting has intensified and exit options have been suppressed.",
+    "key_agents": [
+      "Trapped Subjects: Primary victims (powerless/trapped) \u2014 face maximum extraction with no exit; arbitrary enforcement forces satisficing over-compliance",
+      "Institutional Enforcers: Primary beneficiaries (institutional/arbitrage) \u2014 experience negative chi; selective enforcement provides discretionary power and resource access",
+      "Constrained Intermediaries: Mixed position (moderate/constrained) \u2014 benefit when they can invoke enforcement, bear extraction when targeted; exit costly but possible",
+      "Targeted Populations: Secondary victims (moderate/constrained at local scope) \u2014 systematically selected for disproportionate enforcement; exit possible but costly",
+      "Reform Coalition: Organized agents (organized/mobile) \u2014 building alternative rule-of-law structures with generational sunset hypothesis",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing arbitrary enforcement as inherent to authority systems (false summit)"
+    ],
+    "logic_rationale": "Extractiveness (0.78): High. The base extraction rate reflects direct costs (fines, bribes, compliance expenditure) plus the satisficing premium \u2014 subjects over-comply to create safety margins against unpredictable enforcement. The unpredictability itself is an extraction mechanism: it forces subjects to bear costs that consistent enforcement would not impose. Suppression (0.88): Very high. Exit options are severely limited by geographic barriers (enforcement is territorial), economic dependency (subjects cannot afford relocation), legal barriers (enforcement apparatus controls movement or licensing), and active suppression of alternatives (informal economy is criminalized, mutual aid is disrupted). Theater ratio (0.65): Moderate-high and increasing. Enforcement has become increasingly performative: ritualized compliance checks that do not improve actual rule adherence, documentation requirements that serve no functional purpose, and visible enforcement actions that signal power rather than address violations. The theater serves the extraction: it makes the enforcement apparatus appear rule-bound while maintaining arbitrary discretion. Measurements show degradation: theater has increased from 0.40 to 0.65 as the system has shifted from functional enforcement to performative control. Extractiveness has increased from 0.58 to 0.78 as selective targeting has intensified.",
+    "directionality_logic": "The chi sign inversion is the diagnostic signature of this constraint. Institutional enforcers are beneficiaries with arbitrage exit options \u2014 they derive d \u2248 0.05, producing f(d) \u2248 -0.12, yielding negative chi (the system subsidizes them). Trapped subjects are victims with no exit \u2014 they derive d \u2248 0.95, producing f(d) \u2248 1.42, yielding chi > 1.0 when combined with scope modifier and satisficing premium. The structural asymmetry is extreme: what flows toward the enforcer (discretionary power, resource access, immunity from rules) flows away from the subject (compliance costs, unpredictability burden, suppressed alternatives). Constrained intermediaries occupy the middle: they are sometimes beneficiaries (when they invoke enforcement) and sometimes victims (when they are targeted), producing d \u2248 0.55 and moderate chi. The reform coalition, despite being organized, experiences low chi because they have exit options (mobile) and operate at generational time horizons where the constraint appears temporary. The analytical observer's mountain classification derives from naturalizing the constraint, not from low experienced extraction \u2014 it is a false summit.",
+    "perspectival_gap": "This constraint exhibits maximum indexical divergence. The institutional enforcer sees rope \u2014 the system coordinates their domain management and provides tools for control. The trapped subject sees snare \u2014 pure extraction with no exit and no benefit. The constrained intermediary sees tangled_rope \u2014 mixed coordination and extraction depending on whether they are invoking or targeted by enforcement. The reform coalition sees scaffold \u2014 a temporary problem being solved by rule-of-law reforms. The analytical observer risks seeing mountain \u2014 naturalizing arbitrary enforcement as inherent to authority. The gap is not a measurement error but the structural reality: the same institutional arrangement produces radically different experiences depending on the agent's position in the power geometry. The chi sign inversion (enforcer negative, subject > 1.0) is the quantitative signature of this divergence.",
+    "mandatrophy_analysis": "MANDATROPHY RESOLUTION: The high extractiveness (0.78) and extreme perspectival gap require explicit mandatrophy analysis to prevent mislabeling. The constraint is NOT pure extraction from all perspectives \u2014 it is a snare from the subject position and rope from the enforcer position. The classification 'snare' reflects the claimed_type (the subject's structural reality) but the full presheaf includes the enforcer's rope and the intermediary's tangled_rope. The mandatrophy is resolved by recognizing that the chi sign inversion is the constraint's defining feature: extraction is not evenly distributed but concentrated on trapped agents while benefiting institutional agents. The system is extractive in aggregate (high base \u03b5) but the extraction flow is directional, not universal. The reform coalition's scaffold perspective is structurally real if the sunset hypothesis is credible (omega variable: reform_sunset_credibility). The analytical observer's mountain is a false summit \u2014 the constraint is not immutable but contingent on institutional arrangements that suppress exit and enable selective enforcement. Rule-of-law systems with transparent criteria and judicial review have dramatically lower extraction, proving the constraint is not a natural law."
+  },
+  "boltzmann": {
+    "coordination_type": "enforcement_mechanism"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of environmental_instability_as_constraint (which creates the conditions where arbitrary enforcement can persist \u2014 subjects cannot coordinate resistance when environmental instability fragments collective action) and exclusionary_coordination_asymmetry (which establishes the institutional power differential that enables selective enforcement). The arbitrary enforcement constraint has its own extractiveness (0.78) reflecting the satisficing premium and suppression costs, distinct from the upstream constraints' values."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "high",
+    "hypothesis": "snare",
+    "downstream_of": [
+      "environmental_instability_as_constraint",
+      "exclusionary_coordination_asymmetry"
+    ]
+  }
+}
