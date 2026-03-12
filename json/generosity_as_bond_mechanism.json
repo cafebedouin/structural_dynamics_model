@@ -1,0 +1,165 @@
+{
+  "header": {
+    "constraint_id": "generosity_as_bond_mechanism",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "gen_bond"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.12,
+    "theater_ratio": 0.25,
+    "claimed_type": "rope",
+    "human_readable": "Generosity as Bond Formation Mechanism",
+    "topic_domain": "moral_philosophy/social_psychology/economic_anthropology",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "giver_agent",
+      "recipient_agent",
+      "social_network"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Giver",
+      "comment": "PERSPECTIVE 1: THE GIVER (ROPE) \u2014 Experiences acts of giving as attachment-forming. The constraint coordinates bond formation through voluntary action. Mobile exit (can choose not to give) with low extraction \u2014 the neurochemical reward and social bond are genuine benefits, not costs disguised as benefits."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "local",
+      "label": "The Recipient",
+      "comment": "PERSPECTIVE 2: THE RECIPIENT (ROPE) \u2014 Receives both material benefit and relational bond. The constraint coordinates mutual attachment formation. Mobile exit (can decline gifts or reciprocate) with low extraction \u2014 the bond formed is a coordination benefit, not an obligation trap."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "regional",
+      "label": "The Social Network",
+      "comment": "PERSPECTIVE 3: THE SOCIAL NETWORK (ROPE) \u2014 Observes generosity norms as coordination mechanisms that build social capital and trust networks. The constraint solves the collective action problem of relationship formation. Organized agents (communities, kinship networks) see low extraction \u2014 the mechanism produces genuine social cohesion."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Cultural Institution",
+      "comment": "PERSPECTIVE 4: THE CULTURAL INSTITUTION (ROPE) \u2014 Cultural and religious institutions that codify generosity norms (gift-giving rituals, charitable obligations, hospitality codes) experience the constraint as coordination infrastructure. Arbitrage exit (can adopt or modify norms) with minimal extraction \u2014 the institutions benefit from the social cohesion the mechanism produces."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 5: THE ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational perspective, the constraint represents a low-extraction coordination mechanism that solves the fundamental problem of trust formation in social species. The neurochemical architecture (oxytocin release during giving) and the temporal structure (attachment follows action rather than preceding it) are coordination adaptations, not extraction mechanisms."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "oxytocin_causality_direction",
+      "question": "Does oxytocin release during acts of giving cause attachment formation, or does pre-existing attachment cause both oxytocin release and giving behavior?",
+      "resolution_mechanism": "Experimental manipulation: oxytocin administration in novel dyads before vs after giving acts; longitudinal neurochemical tracking in caregiver attachment formation; comparison of attachment strength in natural giving vs oxytocin-blocked giving",
+      "impact": "If oxytocin is causal: the mechanism is a genuine coordination adaptation (rope confirmed). If oxytocin is epiphenomenal: the constraint may be downstream of other attachment mechanisms, and the 'generosity causes bonds' framing is reversed causality.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Causal direction of oxytocin in attachment formation"
+    },
+    {
+      "id": "cultural_variance_in_mechanism",
+      "question": "Is the generosity-attachment link universal across cultures, or does it depend on specific cultural framing of gift-giving?",
+      "resolution_mechanism": "Cross-cultural comparison of attachment formation rates in gift-giving vs non-gift-giving relationship contexts; ethnographic analysis of cultures with different gift norms (e.g., cultures where gifts create obligation vs cultures where gifts signal existing bonds)",
+      "impact": "If universal: the mechanism is a biological coordination adaptation (rope at universal scope). If culturally variable: the mechanism may be a learned norm with higher extraction in some cultural contexts (tangled_rope in obligation-heavy cultures).",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Cultural universality of generosity-attachment mechanism"
+    },
+    {
+      "id": "asymmetric_attachment_formation",
+      "question": "Does the giver form stronger attachment than the recipient, and if so, does this asymmetry create extraction potential?",
+      "resolution_mechanism": "Longitudinal measurement of attachment strength in giver vs recipient; comparison of relationship dissolution rates initiated by giver vs recipient; neurochemical response magnitude comparison",
+      "impact": "If symmetric: pure coordination (rope confirmed). If asymmetric with giver more attached: potential for extraction if recipient exploits giver's attachment (would shift some perspectives toward tangled_rope).",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Symmetry of attachment formation between giver and recipient"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.2,
+      "id_override": "gen_bond_theater_t0"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 50,
+      "value": 0.22,
+      "id_override": "gen_bond_theater_t50"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 100,
+      "value": 0.25,
+      "id_override": "gen_bond_theater_t100"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.15,
+      "id_override": "gen_bond_extract_t0"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 50,
+      "value": 0.17,
+      "id_override": "gen_bond_extract_t50"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 100,
+      "value": 0.18,
+      "id_override": "gen_bond_extract_t100"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 100
+  },
+  "commentary": {
+    "narrative_context": "The generosity-as-bond-mechanism constraint captures the empirical finding that attachment formation often follows acts of giving rather than preceding them as motivation. Longitudinal studies of caregiver attachment (particularly adoptive parents and alloparents) show that emotional bonds strengthen through caregiving actions, not just through pre-existing affection. Neurochemical studies reveal oxytocin release during giving acts, suggesting a biological coordination mechanism. This constraint is downstream of temporal_asymmetry_of_obligation (the finding that obligations created by gifts are temporally asymmetric \u2014 the giver feels obligation to continue giving before the recipient feels obligation to reciprocate). The generosity mechanism solves a fundamental coordination problem: how do social species form trust bonds with non-kin? The answer appears to be through voluntary acts of giving that trigger neurochemical attachment responses. This is a low-extraction coordination mechanism \u2014 the giver benefits from the bond formed, the recipient benefits from both the gift and the bond, and the social network benefits from increased trust density.",
+    "key_agents": [
+      "Giver Agent: Primary beneficiary (moderate/mobile) \u2014 forms attachment through giving; experiences neurochemical reward and social bond as genuine benefits",
+      "Recipient Agent: Primary beneficiary (moderate/mobile) \u2014 receives material benefit and relational bond; can decline or reciprocate",
+      "Social Network: Beneficiary (organized/mobile) \u2014 communities and kinship networks benefit from trust formation and social cohesion",
+      "Cultural Institution: Beneficiary (institutional/arbitrage) \u2014 religious and cultural institutions that codify generosity norms benefit from the social cohesion the mechanism produces",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees the mechanism as a coordination adaptation solving trust formation in social species"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The constraint involves minimal extraction \u2014 the giver's costs (time, resources given) are offset by neurochemical reward and bond formation. The recipient receives net benefit. The slight extraction (0.18 rather than 0.05) reflects that giving does involve real resource transfer and opportunity cost, but the coordination benefit dominates. Suppression (0.12): Very low. Agents have high mobility \u2014 giving is voluntary, receiving can be declined, and cultural norms around generosity vary widely. The low suppression reflects that this is a coordination mechanism, not a coercive obligation. Theater ratio (0.25): Low. Most giving behavior is functional \u2014 it genuinely forms bonds and coordinates relationships. Some theater exists (performative charity, virtue signaling) but is a minority of the phenomenon. The slight increase over the interval (0.20 \u2192 0.25) reflects increasing social media performativity around giving, but the core mechanism remains functional.",
+    "directionality_logic": "All perspectives classify as rope because all agents are beneficiaries of the coordination mechanism. The giver benefits from attachment formation and neurochemical reward. The recipient benefits from the gift and the bond. The social network benefits from trust density. Cultural institutions benefit from social cohesion. No agent is a victim \u2014 the constraint solves a collective action problem (trust formation) with minimal extraction. The directionality values are low for all agents (all are beneficiaries with mobile or arbitrage exit options), producing low or negative effective extraction across all perspectives. This is a uniform-type constraint (rope-only) because the structural data shows genuine coordination with minimal extraction from all observation positions.",
+    "perspectival_gap": "This constraint exhibits minimal perspectival gap \u2014 all agents see rope. The uniformity is diagnostic: when a constraint classifies as rope from all perspectives, it indicates a genuine low-extraction coordination mechanism. The analytical observer's rope classification is NOT a false summit (unlike the verification bottleneck example) because the structural data supports it \u2014 low extractiveness, low suppression, voluntary participation, mutual benefit. The constraint does not naturalize a contingent institutional arrangement; it describes a biological coordination adaptation. The omega variables address empirical uncertainties (oxytocin causality, cultural variance, attachment asymmetry) that could shift the classification if resolved differently, but current evidence supports rope across all perspectives.",
+    "mandatrophy_analysis": "This constraint demonstrates the opposite pole from the verification bottleneck: where that constraint showed all six types from different perspectives, this constraint shows rope from all perspectives. Both are legitimate structural patterns. The mandatrophy resolution here is that uniform classification is not a failure of the framework \u2014 it is a diagnostic signal. When all perspectives agree, the constraint is either a genuine low-extraction coordination mechanism (rope-only) or a genuine immutable limit (mountain-only). The structural data distinguishes these: mountains have extractiveness \u2264 0.25, suppression \u2264 0.05, accessibility_collapse \u2265 0.85, and emerge naturally. This constraint has slightly higher extractiveness (0.18) and does not emerge naturally in the physical sense (it is a biological adaptation, not a law of nature), so it classifies as rope-only rather than mountain-only. The framework correctly identifies this as coordination, not naturalized extraction."
+  },
+  "boltzmann": {
+    "coordination_type": "attachment_coordination"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "This constraint is downstream of temporal_asymmetry_of_obligation. The upstream constraint (temporal asymmetry) has higher extractiveness (tangled_rope) because it captures the obligation dynamics that can emerge from gift-giving. This constraint (generosity as bond mechanism) isolates the pure coordination function \u2014 the neurochemical and social process by which giving forms attachment. The two constraints are structurally distinct: temporal_asymmetry focuses on obligation creation (extraction potential), while generosity_as_bond_mechanism focuses on attachment formation (coordination function). They are linked because the same acts of giving trigger both processes, but they have different epsilon values and different classification profiles."
+  },
+  "directionality_overrides": []
+}

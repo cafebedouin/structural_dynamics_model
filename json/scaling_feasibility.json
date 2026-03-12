@@ -1,0 +1,175 @@
+{
+  "header": {
+    "constraint_id": "scaling_feasibility",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "scale"
+  },
+  "base_properties": {
+    "extractiveness": 0.18,
+    "suppression": 0.22,
+    "theater_ratio": 0.35,
+    "claimed_type": "rope",
+    "human_readable": "Scaling Feasibility in Whole-Brain Emulation",
+    "topic_domain": "computational_neuroscience/whole_brain_emulation/philosophy_of_mind",
+    "requires_active_enforcement": false,
+    "emerges_naturally": false,
+    "beneficiaries": [
+      "connectome_mapping_consortia",
+      "neuroscience_research_community",
+      "computational_infrastructure_providers"
+    ],
+    "victims": []
+  },
+  "perspectives": [
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "global",
+      "label": "The Connectome Mapping Consortia",
+      "comment": "PERSPECTIVE 1: CONNECTOME MAPPING CONSORTIA (ROPE) \u2014 Institutional actors coordinating incremental scaling from C. elegans (302 neurons) through Drosophila (~100K neurons) to mouse (~75M neurons). Experience the constraint as a coordination problem: standardizing protocols, sharing data, allocating resources across scales. Low extraction \u2014 the scaling curve creates genuine coordination value through methodological refinement at each scale."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "organized",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Neuroscience Research Community",
+      "comment": "PERSPECTIVE 2: NEUROSCIENCE RESEARCH COMMUNITY (ROPE) \u2014 Organized researchers benefit from incremental scaling: each organism scale provides validation targets, methodological lessons, and publishable milestones. The scaling constraint coordinates research effort across tractable intermediate targets rather than forcing premature attempts at human-scale emulation. Low extraction \u2014 the constraint channels effort productively."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "biographical",
+      "exit_options": "mobile",
+      "spatial_scope": "continental",
+      "label": "The Computational Infrastructure Providers",
+      "comment": "PERSPECTIVE 3: COMPUTATIONAL INFRASTRUCTURE PROVIDERS (ROPE) \u2014 Hardware and software providers benefit from predictable scaling milestones: each organism scale defines concrete computational requirements, enabling targeted infrastructure development. The scaling curve coordinates investment timing and capacity planning. Low extraction \u2014 infrastructure development tracks genuine capability growth."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "constrained",
+      "spatial_scope": "global",
+      "label": "The Validation Methodology Developers",
+      "comment": "PERSPECTIVE 4: VALIDATION METHODOLOGY DEVELOPERS (SCAFFOLD) \u2014 Organized methodologists see the scaling constraint as temporary: current validation bottlenecks (behavioral comparison, functional verification, ground-truth establishment) are being solved through multi-scale validation frameworks. As validation methods mature across organism scales, the constraint's coordination function will sunset \u2014 validation will become routine rather than rate-limiting. Estimated sunset: 15-25 years as cross-scale validation protocols standardize."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "national",
+      "label": "The Whole-Brain Emulation Advocates",
+      "comment": "PERSPECTIVE 5: WHOLE-BRAIN EMULATION ADVOCATES (TANGLED ROPE) \u2014 Moderate-power actors (transhumanist researchers, longevity-focused funders) experience mixed coordination and extraction. The scaling constraint coordinates incremental progress but also delays human-scale emulation indefinitely \u2014 each organism scale reveals new complexity barriers (glial cell function, neuromodulator dynamics, developmental plasticity) that weren't visible at smaller scales. The constraint both enables methodological progress and extracts opportunity cost from those focused on human-scale outcomes."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer",
+      "comment": "PERSPECTIVE 6: ANALYTICAL OBSERVER (ROPE) \u2014 From a civilizational perspective, the scaling constraint coordinates research effort across tractable milestones while avoiding premature resource commitment to intractable problems. The exponential barriers (synaptic diversity, neuromodulation, developmental history dependence) are real structural features that make incremental scaling the only viable path. Low extraction \u2014 the constraint reflects genuine complexity rather than artificial barriers."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "validation_sufficiency_threshold",
+      "question": "At what organism scale does validation methodology become the primary bottleneck rather than mapping throughput?",
+      "resolution_mechanism": "Comparative analysis of mapping completion timelines vs validation protocol development across C. elegans, Drosophila, zebrafish, and mouse scales; identification of validation gaps that persist despite complete connectome data",
+      "impact": "If threshold < Drosophila scale: current rope classification understates extraction from validation-focused researchers. If threshold > mouse scale: mapping throughput remains the primary coordination challenge and rope classification is robust.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Organism scale at which validation becomes rate-limiting"
+    },
+    {
+      "id": "complexity_barrier_predictability",
+      "question": "Are the exponential complexity barriers (glial function, neuromodulation, plasticity) discoverable from smaller-scale studies or do they emerge only at larger scales?",
+      "resolution_mechanism": "Historical analysis of complexity surprises at each organism scale transition; assessment of whether mouse-scale studies predict primate-scale barriers or whether each scale reveals fundamentally new phenomena",
+      "impact": "If predictable: scaling constraint remains pure coordination (rope). If emergent: each scale transition carries hidden extraction risk for researchers who assumed smaller-scale lessons would transfer, potentially shifting toward tangled_rope from more perspectives.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether complexity barriers are predictable from smaller scales"
+    },
+    {
+      "id": "ethical_constraint_trajectory",
+      "question": "Do ethical constraints on primate and human-scale research tighten or relax as validation methodology matures?",
+      "resolution_mechanism": "Longitudinal tracking of institutional review board standards, international regulatory frameworks, and public acceptance as non-invasive imaging and post-mortem mapping techniques improve; correlation between methodological capability and ethical permission",
+      "impact": "If tightening: ethical barriers may become the dominant constraint at primate scale, adding suppression and potentially shifting classification toward tangled_rope or scaffold with ethical sunset. If relaxing: technological scaling remains the primary constraint and rope classification is stable.",
+      "confidence": "low",
+      "type_class": "preference",
+      "description": "Trajectory of ethical constraints as technology matures"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25,
+      "id_override": "scale_theater_2000"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.3,
+      "id_override": "scale_theater_2010"
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 20,
+      "value": 0.35,
+      "id_override": "scale_theater_2020"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.12,
+      "id_override": "scale_extract_2000"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.15,
+      "id_override": "scale_extract_2010"
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 20,
+      "value": 0.18,
+      "id_override": "scale_extract_2020"
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 20
+  },
+  "commentary": {
+    "narrative_context": "The scaling feasibility constraint in whole-brain emulation coordinates research effort across organism scales (C. elegans \u2192 Drosophila \u2192 zebrafish \u2192 mouse \u2192 primate \u2192 human) while managing exponential growth in complexity, validation requirements, and ethical constraints. This constraint exhibits primarily rope characteristics from most perspectives: it solves a genuine coordination problem (how to approach an intractable problem through tractable milestones) with minimal extractive overhead. The linear scaling of mapping technology (electron microscopy throughput, automated segmentation, synapse detection) encounters exponential barriers in biological complexity (synaptic diversity increases, neuromodulator systems proliferate, developmental history dependence deepens) and validation methodology (behavioral repertoires expand, functional verification becomes multidimensional, ground-truth establishment requires cross-scale integration). The constraint channels research effort productively rather than extracting rents, but does impose opportunity costs on actors focused on human-scale outcomes. Theater ratio (0.35) reflects moderate performative content: some scaling milestones are celebrated as progress toward whole-brain emulation when they primarily advance basic neuroscience; the emulation framing attracts funding but the actual research output serves broader scientific goals.",
+    "key_agents": [
+      "Connectome Mapping Consortia: Primary beneficiary (institutional/mobile) \u2014 coordinate incremental scaling, standardize protocols, allocate resources across organism scales",
+      "Neuroscience Research Community: Primary beneficiary (organized/mobile) \u2014 gain validation targets, methodological lessons, and publishable milestones at each scale",
+      "Computational Infrastructure Providers: Beneficiary (powerful/mobile) \u2014 benefit from predictable scaling milestones that coordinate investment timing and capacity planning",
+      "Validation Methodology Developers: Organized agents (organized/constrained) \u2014 see constraint as temporary; building multi-scale validation frameworks with sunset logic",
+      "Whole-Brain Emulation Advocates: Mixed position (moderate/constrained) \u2014 experience both coordination value (incremental progress) and extraction (indefinite delay of human-scale emulation)",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 sees constraint as coordinating research effort across tractable milestones while avoiding premature resource commitment"
+    ],
+    "logic_rationale": "Extractiveness (0.18): Low. The scaling constraint coordinates research effort productively with minimal rent extraction. The primary 'extraction' is opportunity cost for whole-brain emulation advocates who must wait for incremental scaling rather than attempting human-scale emulation directly, but this reflects genuine technical barriers rather than artificial constraints. The slight increase over time (0.12 \u2192 0.18) reflects growing gap between mapping capability and validation methodology \u2014 as connectome data accumulates faster than validation protocols mature, some extraction emerges from researchers who have data but cannot validate it. Suppression (0.22): Low. Exit options are relatively open: researchers can work at any organism scale, pursue alternative approaches (theory, simulation, hybrid models), or exit to adjacent fields. The barriers are primarily technical (complexity, validation, computation) rather than institutional or coercive. Theater ratio (0.35): Moderate-low. Some performative content exists: scaling milestones are framed as progress toward whole-brain emulation to attract funding, but much of the actual research output serves basic neuroscience goals independent of emulation. The theater has increased modestly over time as the emulation framing has become more prominent in grant applications and public communication, but the underlying research remains substantive.",
+    "directionality_logic": "All primary agents are beneficiaries with mobile or constrained exit options, producing low directionality values and low effective extraction. The connectome mapping consortia (institutional/mobile/beneficiary) experience the constraint as pure coordination \u2014 they are solving the legitimate problem of how to approach human-scale emulation through tractable intermediate steps. The neuroscience research community (organized/mobile/beneficiary) benefits from the scaling structure: each organism scale provides concrete research targets and methodological advances. Computational infrastructure providers (powerful/mobile/beneficiary) benefit from predictable scaling milestones that coordinate investment. The validation methodology developers (organized/constrained/beneficiary) see a sunset: current validation bottlenecks are temporary and being actively solved. Only the whole-brain emulation advocates (moderate/constrained/mixed) experience significant extraction: the constraint delays their primary goal indefinitely while coordinating incremental progress. Their mixed beneficiary-victim status produces moderate directionality and moderate effective extraction, yielding the tangled_rope classification from their perspective. No agent is fully trapped or powerless \u2014 all have exit options and agency, consistent with the low suppression score.",
+    "perspectival_gap": "The constraint exhibits primarily rope characteristics from most perspectives, with one tangled_rope perspective (whole-brain emulation advocates) and one scaffold perspective (validation methodology developers). The gap between rope and tangled_rope reflects the difference between actors who value incremental neuroscience progress (rope \u2014 the constraint coordinates their work productively) and actors focused specifically on human-scale emulation (tangled_rope \u2014 the constraint both enables and delays their goal). The scaffold perspective reflects genuine structural change: validation methodology is maturing across scales, and the constraint's coordination function will sunset as validation becomes routine rather than rate-limiting. The analytical observer sees rope at civilizational scale: the exponential complexity barriers are real structural features, not artificial constraints, and incremental scaling is the only viable path. No perspective sees snare or mountain \u2014 the constraint is neither purely extractive nor immutable.",
+    "mandatrophy_analysis": "This constraint demonstrates rope classification with minimal mandatrophy risk. The low extractiveness (0.18) and low suppression (0.22) place it firmly in coordination territory. The beneficiary declarations are clear: mapping consortia, research community, and infrastructure providers all gain coordination value. The absence of victims (no agent is structurally trapped or bearing asymmetric costs) confirms the rope classification. The one tangled_rope perspective (whole-brain emulation advocates) reflects genuine mixed experience: they benefit from methodological progress but bear opportunity cost from delayed human-scale emulation. This is not mislabeled extraction \u2014 it is legitimate coordination with differential value to different actors. The scaffold perspective (validation methodology developers) adds temporal nuance: the constraint's coordination function has a sunset as validation methods mature. The theater ratio (0.35) is moderate but not high enough to trigger piton classification \u2014 some performative framing exists but the underlying research is substantive. The constraint coordinates research effort across tractable milestones while managing exponential complexity barriers, with minimal extractive overhead."
+  },
+  "boltzmann": {
+    "coordination_type": "resource_allocation"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "The scaling_feasibility constraint is downstream of connectome_sufficiency (whether connectome data alone suffices for emulation). The upstream constraint addresses the fundamental question of what data is necessary; the scaling constraint addresses the practical question of how to acquire that data across organism scales. The two constraints have different extractiveness values: connectome_sufficiency (tangled_rope, higher extraction) reflects contested theoretical claims about sufficiency, while scaling_feasibility (rope, lower extraction) reflects practical coordination of incremental research effort."
+  },
+  "directionality_overrides": []
+}

@@ -1,0 +1,297 @@
+% ============================================================================
+% CONSTRAINT STORY: translation_labor_exhaustion
+% ============================================================================
+% Version: 1.0 (Deferential Realism Core + Directionality + Boltzmann + Network)
+% Logic: 6.0 (Indexed Tuple P,T,E,S + Sigmoid f(d) + Coupling + Purity + Network)
+% Generated: 2026-02-26
+% Status: [ACTIVE]
+% ============================================================================
+
+:- module(constraint_translation_labor_exhaustion, []).
+
+:- use_module(constraint_indexing).
+:- use_module(domain_priors).
+:- use_module(narrative_ontology).
+
+% --- Constraint Identity Rule (DP-001: ε-Invariance) ---
+% Each constraint story must have a single, stable base extractiveness (ε).
+% If changing the observable used to evaluate this constraint would change ε,
+% you are looking at two distinct constraints. Write separate .pl files for
+% each, link them with affects_constraint/2, and document the relationship
+% in both files' narrative context sections.
+%
+% The context tuple is CLOSED at arity 4: (P, T, E, S).
+% Do not add measurement_basis, beneficiary/victim, or any other arguments.
+% Linter Rule 23 enforces context/4.
+%
+% See: epsilon_invariance_principle.md
+
+% --- Namespace Hooks (Required for loading) ---
+:- multifile
+    domain_priors:base_extractiveness/2,
+    domain_priors:suppression_score/2,
+    domain_priors:theater_ratio/2,
+    domain_priors:requires_active_enforcement/1,
+    narrative_ontology:has_sunset_clause/1,
+    narrative_ontology:interval/3,
+    narrative_ontology:measurement/5,
+    narrative_ontology:constraint_metric/3,
+    narrative_ontology:constraint_beneficiary/2,
+    narrative_ontology:constraint_victim/2,
+    narrative_ontology:constraint_claim/2,
+    narrative_ontology:affects_constraint/2,
+    narrative_ontology:coordination_type/2,
+    narrative_ontology:boltzmann_floor_override/2,
+    constraint_indexing:constraint_classification/3,
+    narrative_ontology:omega_variable/3,
+    narrative_ontology:human_readable/2,
+    narrative_ontology:topic_domain/2.
+
+/* ==========================================================================
+   1. NARRATIVE CONTEXT
+   ========================================================================== */
+
+/**
+ * CONSTRAINT IDENTIFICATION
+ *   constraint_id: translation_labor_exhaustion
+ *   human_readable: Translation Labor Exhaustion in Diverging Organizational Vocabularies
+ *   domain: sociolinguistics/organizational_communication/coordination_systems
+ *
+ * SUMMARY:
+ *   Translation labor exhaustion emerges when organizational vocabulary
+ *   divergence (driven by domain specialization) outpaces the cognitive
+ *   capacity of individual bridge coordinators to maintain semantic
+ *   coherence. The constraint is downstream of semantic_drift_velocity (a
+ *   mountain — vocabularies naturally diverge as subunits optimize
+ *   terminology for local efficiency) but is itself a tangled_rope: the
+ *   bridge coordinator role provides genuine coordination function (enabling
+ *   cross-unit collaboration) while simultaneously extracting unsustainable
+ *   cognitive labor from the individuals who occupy it. The identity_locked
+ *   exit option for the primary victim reveals a critical binding mechanism:
+ *   the coordinator's professional identity is constituted through being the
+ *   person who can speak both languages, making exit psychologically
+ *   unthinkable even when the role becomes structurally unsustainable. This
+ *   constraint demonstrates interpersonal-scale dynamics (identity fusion,
+ *   cognitive load, burnout) operating within an organizational structure,
+ *   and shows how the same extraction mechanism appears differently depending
+ *   on whether the observer is identity-locked (snare), constrained
+ *   (tangled_rope), or has arbitrage options (rope).
+ *
+ * KEY AGENTS:
+ *   - Bridge Coordinators: Primary victims (powerless/identity_locked for incumbent; moderate/constrained for replacement) — bear disproportionate cognitive burden; identity fused with mediator role for incumbent
+ *   - Institutional Authority: Primary beneficiary (institutional/arbitrage) — captures efficiency gains from vocabulary specialization without experiencing coordinator cognitive load
+ *   - Specialized Subunits: Secondary beneficiaries (powerful/mobile) — benefit from domain-optimized terminology; also bear coordination costs through bottleneck dependency
+ *   - Organizational Coherence: Abstract victim (powerless/trapped) — collective good that degrades as translation quality declines under cognitive overload
+ *   - Organizational Development Coalition: Organized agents (organized/constrained) — building alternative pathways (glossaries, cross-training, machine-assisted tools) with scaffold logic
+ *   - Analytical Observer: Civilizational view (analytical/analytical) — sees both genuine coordination function and asymmetric extraction; confirms tangled_rope classification
+ */
+
+/* ==========================================================================
+   2. BASE PROPERTIES (DOMAIN PRIORS)
+   ========================================================================== */
+
+% --- Numerical metrics ---
+domain_priors:base_extractiveness(translation_labor_exhaustion, 0.48).
+domain_priors:suppression_score(translation_labor_exhaustion, 0.62).
+domain_priors:theater_ratio(translation_labor_exhaustion, 0.58).
+
+% --- Constraint metric facts (engine primary keys, must mirror domain_priors) ---
+narrative_ontology:constraint_metric(translation_labor_exhaustion, extractiveness, 0.48).
+narrative_ontology:constraint_metric(translation_labor_exhaustion, suppression_requirement, 0.62).
+narrative_ontology:constraint_metric(translation_labor_exhaustion, theater_ratio, 0.58).
+
+% --- NL Profile Metrics (required for mountain constraints) ---
+narrative_ontology:constraint_metric(translation_labor_exhaustion, accessibility_collapse, 0.35).
+narrative_ontology:constraint_metric(translation_labor_exhaustion, resistance, 0.68).
+
+% --- Constraint claim ---
+narrative_ontology:constraint_claim(translation_labor_exhaustion, tangled_rope).
+narrative_ontology:human_readable(translation_labor_exhaustion, "Translation Labor Exhaustion in Diverging Organizational Vocabularies").
+narrative_ontology:topic_domain(translation_labor_exhaustion, "sociolinguistics/organizational_communication/coordination_systems").
+
+domain_priors:requires_active_enforcement(translation_labor_exhaustion).
+
+% --- Structural relationships ---
+narrative_ontology:constraint_beneficiary(translation_labor_exhaustion, institutional_authority).
+narrative_ontology:constraint_beneficiary(translation_labor_exhaustion, specialized_subunits).
+narrative_ontology:constraint_victim(translation_labor_exhaustion, bridge_coordinators).
+narrative_ontology:constraint_victim(translation_labor_exhaustion, organizational_coherence).
+
+/* ==========================================================================
+   3. INDEXED CLASSIFICATIONS (P, T, E, S)
+   ========================================================================== */
+
+% PERSPECTIVE 1: BRIDGE COORDINATOR (SNARE) — Identity-locked rather than structurally trapped: the coordinator's professional identity is constituted through being the person who can speak both languages. Exit would require abandoning the mediator role that defines their organizational value and self-concept. Experiences maximum extraction: cognitive load increases as vocabularies drift, but the identity fusion prevents recognizing the unsustainability. The coordinator internalizes the bridge function as personal responsibility rather than structural design flaw.
+constraint_indexing:constraint_classification(translation_labor_exhaustion, snare,
+    context(agent_power(powerless),
+            time_horizon(biographical),
+            exit_options(identity_locked),
+            spatial_scope(local))).
+
+% PERSPECTIVE 2: REPLACEMENT COORDINATOR (TANGLED ROPE) — Constrained by career investment in coordination skills and organizational knowledge, but not identity-locked: can see the extraction mechanism and considers exit. Experiences the constraint as mixed: genuine coordination function (enabling cross-unit collaboration) alongside asymmetric extraction (disproportionate cognitive burden). The perspectival gap between identity_locked and constrained reveals that the binding mechanism for the primary victim is cognitive rather than structural.
+constraint_indexing:constraint_classification(translation_labor_exhaustion, tangled_rope,
+    context(agent_power(moderate),
+            time_horizon(biographical),
+            exit_options(constrained),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 3: INSTITUTIONAL AUTHORITY (ROPE) — Benefits from vocabulary divergence: specialized subunits develop domain-optimized terminology that increases local efficiency. The bridge coordinator role appears as pure coordination: someone must translate between units, and the organization provides that function. Extraction runs toward this agent (efficiency gains from specialization) rather than away. Does not experience the coordinator's cognitive load as extraction because the cost is externalized to the bridge role.
+constraint_indexing:constraint_classification(translation_labor_exhaustion, rope,
+    context(agent_power(institutional),
+            time_horizon(immediate),
+            exit_options(arbitrage),
+            spatial_scope(national))).
+
+% PERSPECTIVE 4: SPECIALIZED SUBUNIT (TANGLED ROPE) — Benefits from vocabulary drift (domain-optimized terminology increases internal efficiency) but also bears coordination costs (must interface through bridge coordinator, creating bottleneck). Mixed experience: genuine coordination function (semantic bridge enables cross-unit projects) alongside extraction (subunit autonomy constrained by central translation chokepoint). Mobile exit: subunit could adopt shared vocabulary or develop direct peer-to-peer translation, but organizational structure suppresses these alternatives.
+constraint_indexing:constraint_classification(translation_labor_exhaustion, tangled_rope,
+    context(agent_power(powerful),
+            time_horizon(biographical),
+            exit_options(mobile),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 5: ORGANIZATIONAL DEVELOPMENT COALITION (SCAFFOLD) — Organized agents (HR, process improvement, knowledge management) see the bridge coordinator bottleneck as a temporary coordination failure with a sunset: distributed translation tools (glossaries, cross-training, rotation programs, machine-assisted terminology mapping) are building alternative pathways that reduce dependence on individual cognitive labor. Sunset mechanism: as vocabulary drift is documented and translation is systematized, the heroic individual coordinator role becomes obsolete. Estimated timeline: 3-7 years for tooling and norms to mature.
+constraint_indexing:constraint_classification(translation_labor_exhaustion, scaffold,
+    context(agent_power(organized),
+            time_horizon(generational),
+            exit_options(constrained),
+            spatial_scope(national))).
+
+% PERSPECTIVE 6: BRIDGE COORDINATOR ROLE AS INSTITUTIONAL ARTIFACT (PITON) — From a generational institutional perspective, the bridge coordinator role is a degraded coordination mechanism: originally designed for occasional translation between stable vocabularies, now maintained through inertia despite being structurally inadequate for accelerating semantic drift. High theater ratio: much of the coordinator's labor is performative reassurance (demonstrating that cross-unit communication is happening) rather than functional translation (actually resolving semantic ambiguities). The role persists because no alternative has fully replaced it, not because it works.
+constraint_indexing:constraint_classification(translation_labor_exhaustion, piton,
+    context(agent_power(institutional),
+            time_horizon(generational),
+            exit_options(arbitrage),
+            spatial_scope(regional))).
+
+% PERSPECTIVE 7: ANALYTICAL OBSERVER (TANGLED ROPE) — From a civilizational/global perspective, the constraint exhibits both genuine coordination function (semantic bridges enable organizational coherence across specialized domains) and asymmetric extraction (cognitive burden concentrated on bridge coordinators scales unsustainably with drift velocity). The analytical classification as tangled_rope confirms the claimed_type: this is not pure extraction (snare) because the coordination function is real, and not pure coordination (rope) because the extraction is structural rather than incidental.
+constraint_indexing:constraint_classification(translation_labor_exhaustion, tangled_rope,
+    context(agent_power(analytical),
+            time_horizon(civilizational),
+            exit_options(analytical),
+            spatial_scope(global))).
+
+/* ==========================================================================
+   4. VALIDATION TESTS
+   ========================================================================== */
+
+:- begin_tests(translation_labor_exhaustion_tests).
+
+test(perspectival_gap) :-
+    constraint_indexing:constraint_classification(translation_labor_exhaustion, TypePowerless, context(agent_power(powerless), _, _, _)),
+    constraint_indexing:constraint_classification(translation_labor_exhaustion, TypeOther, context(agent_power(moderate), _, _, _)),
+    TypePowerless \= TypeOther.
+
+test(extraction_signature) :-
+    domain_priors:base_extractiveness(translation_labor_exhaustion, E),
+    E >= 0.46. % Ensures high-extraction Snare/Tangled territory.
+
+test(piton_threshold) :-
+    domain_priors:theater_ratio(translation_labor_exhaustion, TR),
+    TR >= 0.70.
+
+:- end_tests(translation_labor_exhaustion_tests).
+
+/* ==========================================================================
+   5. GENERATIVE COMMENTARY
+   ========================================================================== */
+
+/**
+ * LOGIC RATIONALE:
+ *   Extractiveness (0.48): Moderate-high. The bridge coordinator role extracts cognitive labor that scales with drift velocity: as vocabularies diverge, translation time per interaction increases, error rates rise, and cognitive load becomes unsustainable. The extraction is structural rather than incidental — the role design concentrates semantic bridge maintenance on individual cognitive capacity rather than distributing it through documentation, tooling, or rotation. However, extraction is not maximal (not a pure snare) because the coordination function is genuine: the bridge coordinator enables cross-unit collaboration that would otherwise fail. The value reflects that roughly half the coordinator's labor is functional translation and half is unsustainable cognitive burden. Suppression (0.62): Moderate-high. Barriers to exit include: (1) specialized knowledge is non-transferable (coordinator's bilingual fluency has no market outside this organization), (2) replacement coordinators are scarce (role requires deep domain knowledge in multiple specialized vocabularies), (3) organizational dependence creates guilt/obligation (coordinator knows their exit will cause immediate coordination failures), and (4) identity fusion (for identity_locked coordinators, exit requires abandoning the mediator self-concept). Suppression is not total — some coordinators do exit, and the constrained replacement coordinator perspective shows that exit is structurally possible at a cost. The omega variable on suppression mechanism addresses whether the measured value is primarily structural or internalized. Theater ratio (0.58): Moderate-high. Much of the bridge coordinator's labor is performative rather than functional: attending meetings to demonstrate cross-unit communication is happening, producing translation documents that are rarely consulted, maintaining glossaries that lag behind actual usage, and providing reassurance that semantic coherence exists even when translation quality has degraded. The theater has increased over the interval as drift velocity has outpaced coordinator capacity: early in the interval, most translation was functional; late in the interval, much is performative coverage of coordination failures. The piton perspective (institutional view of the role itself) sees the theater most clearly.
+ *
+ * PERSPECTIVAL GAP:
+ *   This constraint demonstrates how the same structural phenomenon — individual cognitive labor maintaining semantic bridges between diverging vocabularies — appears as snare (identity_locked coordinator), tangled_rope (constrained replacement coordinator, specialized subunits, analytical observer), rope (institutional authority), scaffold (organizational development coalition), or piton (institutional view of the degraded role). The gap between the identity_locked coordinator's snare and the constrained replacement's tangled_rope is diagnostically critical: it reveals that the primary binding mechanism is identity fusion rather than structural barriers. The coordinator who has fused their professional identity with the mediator role cannot see exit as an option, even when the role becomes unsustainable; the replacement coordinator who has not yet fused their identity can see the extraction mechanism and considers exit. The institutional authority's rope classification reflects genuine asymmetry: they capture efficiency gains from vocabulary specialization without experiencing the coordinator's cognitive load. The scaffold perspective is real but contested: organizational development tools are building alternative pathways, but the omega variable on machine translation sufficiency questions whether these tools can actually reduce cognitive load to sustainable levels or whether human judgment remains the binding constraint.
+ *
+ * DIRECTIONALITY LOGIC:
+ *   The bridge coordinator (powerless/identity_locked) is the primary victim: directionality derivation assigns high d (victim status + identity_locked exit) → high f(d) → high experienced extraction (snare classification). The replacement coordinator (moderate/constrained) is also a victim but with lower d (victim status + constrained exit rather than identity_locked) → moderate f(d) → moderate experienced extraction (tangled_rope classification). The perspectival gap between identity_locked and constrained reveals that the binding mechanism for the primary victim is cognitive (identity fusion) rather than purely structural (material barriers). Institutional authority (institutional/arbitrage) is the primary beneficiary: low d (beneficiary status + arbitrage exit) → negative f(d) → negative experienced extraction (rope classification). Specialized subunits (powerful/mobile) are secondary beneficiaries with mixed experience: moderate d (both beneficiary and victim + mobile exit) → moderate f(d) → moderate experienced extraction (tangled_rope classification). The organizational development coalition (organized/constrained) sees a sunset mechanism (scaffold classification) because they have agency to build alternative pathways. The analytical observer confirms tangled_rope as the structural classification: genuine coordination function + asymmetric extraction.
+ *
+ * MANDATROPHY ANALYSIS:
+ *   MANDATROPHY RESOLUTION: The tangled_rope classification prevents two failure modes: (1) misclassifying as pure extraction (snare from all perspectives) would erase the genuine coordination function — the bridge coordinator does enable cross-unit collaboration that would otherwise fail, and (2) misclassifying as pure coordination (rope from all perspectives) would erase the asymmetric extraction — the cognitive burden on bridge coordinators is structural and unsustainable, not an incidental cost of coordination. The constraint is a tangled_rope because BOTH are true: the coordination function is real (semantic bridges enable organizational coherence) AND the extraction is real (cognitive labor scales unsustainably with drift velocity). The perspectival gap is the resolution: the identity_locked coordinator experiences snare (maximum extraction, no exit), the institutional authority experiences rope (pure coordination benefit), and the analytical observer sees the structural truth (tangled_rope: genuine coordination + asymmetric extraction). The mandatrophy is resolved by recognizing that all three classifications are legitimate perspectival readings of the same structural data, and the presheaf over the observation site (the full set of indexed classifications) IS the answer rather than any single type.
+ */
+
+/* ==========================================================================
+   6. OMEGA VARIABLES (Ω) - IRREDUCIBLE UNCERTAINTIES
+   ========================================================================== */
+
+omega_variable(
+    drift_velocity_threshold,
+    'At what semantic drift velocity does individual cognitive translation become structurally unsustainable regardless of coordinator capacity?',
+    'Longitudinal measurement of translation time per term, error rates, and coordinator burnout across organizations with varying drift rates; identification of inflection point where linear effort becomes exponential',
+    'If threshold is low (e.g., 5-10 new terms per quarter per subunit): constraint is near-universal snare in specialized organizations. If threshold is high (e.g., 50+ terms per quarter): constraint affects only extreme cases, and most bridge coordinator exhaustion is attributable to inadequate organizational support rather than structural impossibility.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(drift_velocity_threshold, empirical, 'Drift velocity threshold for sustainable individual translation').
+
+omega_variable(
+    identity_lock_mechanism,
+    'Is the bridge coordinator''s identity lock primarily relational (organizational dependence on their unique knowledge) or intrinsic (self-concept as mediator)?',
+    'Post-exit interviews with former bridge coordinators; analysis of whether identity lock persists after role change or dissolves; comparison of coordinators who left vs those who stayed despite burnout',
+    'If relational: organizational interventions (cross-training, documentation) can break the lock. If intrinsic: the coordinator carries the identity frame to new roles, and the lock is a psychological rather than structural feature.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(identity_lock_mechanism, empirical, 'Whether identity lock is relational or intrinsic').
+
+omega_variable(
+    machine_translation_sufficiency,
+    'Can machine-assisted terminology mapping (glossaries, NLP-based suggestion systems, automated context detection) reduce bridge coordinator cognitive load to sustainable levels, or does semantic drift in specialized domains require human judgment that cannot be automated?',
+    'Controlled trials of machine-assisted vs unassisted translation in organizations with comparable drift rates; measurement of error rates, cognitive load, and coordinator retention',
+    'If sufficient: scaffold perspective confirmed — tooling sunset is real and the constraint is temporary. If insufficient: human cognitive limits are the binding constraint, and the scaffold perspective is aspirational rather than structural.',
+    confidence_without_resolution(high)
+).
+
+narrative_ontology:omega_variable(machine_translation_sufficiency, empirical, 'Whether machine translation can reduce cognitive load to sustainable levels').
+
+omega_variable(
+    suppression_mechanism_ambiguity,
+    'Is the measured suppression (0.62) structural (organizational barriers to exit: specialized knowledge non-transferable, replacement coordinators scarce) or internalized (coordinator believes they are uniquely capable, has fused identity with bridge role)?',
+    'Post-exit suppression trajectory: if suppression persists after the coordinator leaves the role (e.g., guilt, sense of organizational abandonment, difficulty establishing new professional identity), reclassify as partially internalized. If suppression drops immediately upon exit, classify as structural.',
+    'If internalized, the constraint''s effective suppression is higher than the structural measure suggests — the coordinator carries the suppression with them after exit, making the identity lock more severe than organizational barriers alone would predict.',
+    confidence_without_resolution(medium)
+).
+
+narrative_ontology:omega_variable(suppression_mechanism_ambiguity, empirical, 'Structural vs internalized suppression mechanism').
+
+
+/* ==========================================================================
+   7. INTEGRATION HOOKS
+   ========================================================================== */
+
+narrative_ontology:interval(translation_labor_exhaustion, 0, 6).
+
+/* ==========================================================================
+   8. TEMPORAL MEASUREMENTS (LIFECYCLE DRIFT DATA)
+   ========================================================================== */
+
+% Theater ratio over time
+narrative_ontology:measurement(theater_initial, translation_labor_exhaustion, theater_ratio, 0, 0.35).
+narrative_ontology:measurement(theater_early, translation_labor_exhaustion, theater_ratio, 2, 0.42).
+narrative_ontology:measurement(theater_mid, translation_labor_exhaustion, theater_ratio, 4, 0.5).
+narrative_ontology:measurement(theater_late, translation_labor_exhaustion, theater_ratio, 6, 0.58).
+
+% Extraction over time
+narrative_ontology:measurement(extract_initial, translation_labor_exhaustion, base_extractiveness, 0, 0.32).
+narrative_ontology:measurement(extract_early, translation_labor_exhaustion, base_extractiveness, 2, 0.38).
+narrative_ontology:measurement(extract_mid, translation_labor_exhaustion, base_extractiveness, 4, 0.43).
+narrative_ontology:measurement(extract_late, translation_labor_exhaustion, base_extractiveness, 6, 0.48).
+
+
+/* ==========================================================================
+   9. BOLTZMANN & NETWORK DATA
+   ========================================================================== */
+
+narrative_ontology:coordination_type(translation_labor_exhaustion, identity_coordination).
+narrative_ontology:boltzmann_floor_override(translation_labor_exhaustion, 0.08).
+narrative_ontology:affects_constraint(translation_labor_exhaustion, semantic_drift_velocity).
+
+% DUAL FORMULATION NOTE:
+% Translation labor exhaustion is downstream of semantic_drift_velocity (mountain: vocabularies naturally diverge as subunits optimize for local efficiency). The upstream constraint has low extractiveness (ε ≈ 0.08) reflecting that vocabulary drift itself is a natural coordination response to domain specialization. The downstream constraint (this story) has moderate extractiveness (ε = 0.48) reflecting that the bridge coordinator role design extracts unsustainable cognitive labor. The two constraints are structurally distinct: semantic drift is a mountain (immutable given organizational specialization), but translation labor exhaustion is a tangled_rope (contingent on role design, amenable to organizational intervention).
+
+/* ==========================================================================
+   10. DIRECTIONALITY OVERRIDES (v6.0, OPTIONAL)
+   ========================================================================== */
+
+/* ==========================================================================
+   END OF CONSTRAINT STORY
+   ========================================================================== */

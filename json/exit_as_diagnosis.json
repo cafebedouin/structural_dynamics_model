@@ -1,0 +1,197 @@
+{
+  "header": {
+    "constraint_id": "exit_as_diagnosis",
+    "version": "1.0",
+    "generated_date": "2026-02-26",
+    "status": "ACTIVE",
+    "measurement_id_prefix": "exit_diag"
+  },
+  "base_properties": {
+    "extractiveness": 0.48,
+    "suppression": 0.52,
+    "theater_ratio": 0.38,
+    "claimed_type": "tangled_rope",
+    "human_readable": "Exit as Diagnostic Signal in Organizational Legitimacy",
+    "topic_domain": "political_philosophy/organizational_theory/ethics_of_agency",
+    "requires_active_enforcement": true,
+    "beneficiaries": [
+      "exit_capable_actors",
+      "receiving_organizations"
+    ],
+    "victims": [
+      "exit_constrained_actors",
+      "source_organization_legitimacy"
+    ]
+  },
+  "perspectives": [
+    {
+      "classification_type": "snare",
+      "agent_power": "powerless",
+      "time_horizon": "biographical",
+      "exit_options": "trapped",
+      "spatial_scope": "local",
+      "label": "The Exit-Constrained Actor",
+      "comment": "PERSPECTIVE 1: EXIT-CONSTRAINED ACTOR (SNARE) \u2014 Trapped by economic dependency, visa status, caregiving obligations, or geographic isolation. Sees exit as diagnosis but cannot exercise it. The constraint extracts by making their continued presence legible as consent when it is actually structural captivity. Maximum experienced extraction \u2014 the diagnostic signal is unavailable to those who need it most."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "moderate",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Voice-Exhausted Employee",
+      "comment": "PERSPECTIVE 2: VOICE-EXHAUSTED EMPLOYEE (TANGLED ROPE) \u2014 Has filed grievances, participated in feedback mechanisms, attempted internal reform. Exit becomes diagnostic only after voice fails \u2014 the timing reveals that voice was theater. Experiences both coordination (exit provides information about organizational dysfunction) and extraction (the cost of exit is high, and staying signals false consent). The constraint coordinates legitimate information flow but extracts through the asymmetry between exit cost and voice efficacy."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "powerful",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "national",
+      "label": "The Exit-Capable Professional",
+      "comment": "PERSPECTIVE 3: EXIT-CAPABLE PROFESSIONAL (ROPE) \u2014 High-skill worker with portable credentials and competitive offers. Exit is a low-cost diagnostic signal that efficiently communicates irreconcilable disagreement. The constraint coordinates: exit provides clean information to both parties (the organization learns the problem is unfixable; the professional avoids prolonged conflict). Net beneficiary \u2014 extraction runs toward this agent through their ability to withdraw legitimacy costlessly."
+    },
+    {
+      "classification_type": "scaffold",
+      "agent_power": "organized",
+      "time_horizon": "generational",
+      "exit_options": "mobile",
+      "spatial_scope": "national",
+      "label": "The Labor Organizing Coalition",
+      "comment": "PERSPECTIVE 4: LABOR ORGANIZING COALITION (SCAFFOLD) \u2014 Organized labor sees exit-as-diagnosis as a temporary coordination problem with a sunset: collective bargaining, just-cause termination protections, and portable benefits reduce exit cost asymmetry. When exit costs equalize, the diagnostic signal becomes symmetric \u2014 both parties can exit at similar cost, which restores voice credibility. The coalition is building the infrastructure (union contracts, sectoral bargaining, benefits portability) that makes exit a genuine coordination mechanism rather than an extraction vector. Estimated sunset: 15-25 years for labor law reform to restore exit symmetry in key sectors."
+    },
+    {
+      "classification_type": "rope",
+      "agent_power": "institutional",
+      "time_horizon": "immediate",
+      "exit_options": "arbitrage",
+      "spatial_scope": "global",
+      "label": "The Receiving Organization",
+      "comment": "PERSPECTIVE 5: RECEIVING ORGANIZATION (ROPE) \u2014 Benefits from exit-as-diagnosis by receiving talent that has already performed costly signaling. An employee who exits rather than staying and complaining has revealed high conviction and low tolerance for dysfunction. The receiving organization gets pre-filtered candidates. Experiences the constraint as coordination \u2014 exit provides valuable information at low cost to the receiver."
+    },
+    {
+      "classification_type": "tangled_rope",
+      "agent_power": "institutional",
+      "time_horizon": "biographical",
+      "exit_options": "constrained",
+      "spatial_scope": "regional",
+      "label": "The Source Organization",
+      "comment": "PERSPECTIVE 6: SOURCE ORGANIZATION (TANGLED ROPE) \u2014 Loses talent and receives diagnostic information simultaneously. Exit reveals problems that voice did not surface (either because voice was ignored or because the problem is unfixable within current constraints). The organization benefits from the information (coordination function) but bears the cost of talent loss and legitimacy damage (extraction). The constraint is tangled: exit provides genuine diagnostic value but also punishes the organization asymmetrically when exit-capable actors leave and exit-constrained actors stay, creating adverse selection."
+    },
+    {
+      "classification_type": "mountain",
+      "agent_power": "analytical",
+      "time_horizon": "civilizational",
+      "exit_options": "analytical",
+      "spatial_scope": "universal",
+      "label": "The Analytical Observer (Hirschman Naturalization)",
+      "comment": "PERSPECTIVE 7: ANALYTICAL OBSERVER / HIRSCHMAN NATURALIZATION (MOUNTAIN) \u2014 From a civilizational perspective, the exit-voice-loyalty tradeoff appears as an immutable feature of organizational life: exit and voice are substitute mechanisms for expressing dissent, and the choice between them is determined by cost structure and preference. This perspective naturalizes the constraint as a law of organizational behavior. However, the structural data contradicts the mountain classification \u2014 exit cost asymmetry is a contingent institutional arrangement (at-will employment, non-portable benefits, non-compete clauses), not a natural law. The engine will flag this as a false summit."
+    }
+  ],
+  "omegas": [
+    {
+      "id": "exit_timing_threshold",
+      "question": "How long must voice fail before exit becomes diagnostic rather than premature?",
+      "resolution_mechanism": "Longitudinal analysis of exit timing relative to grievance filing; correlation between voice duration and post-exit organizational reform",
+      "impact": "If threshold is short (< 6 months): exit may precede good-faith voice, reducing diagnostic value. If threshold is long (> 3 years): exit-constrained actors are trapped in prolonged voice theater.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Voice duration threshold before exit becomes diagnostic"
+    },
+    {
+      "id": "adverse_selection_severity",
+      "question": "Does exit-as-diagnosis create adverse selection where only exit-capable actors leave, concentrating exit-constrained actors in dysfunctional organizations?",
+      "resolution_mechanism": "Comparison of exit rates by skill portability and economic dependency; measurement of organizational dysfunction metrics post-exit wave",
+      "impact": "If severe: the diagnostic signal accelerates organizational decline by removing the actors most capable of reform. If mild: exit provides clean information without destabilizing the organization.",
+      "confidence": "high",
+      "type_class": "empirical",
+      "description": "Whether exit creates adverse selection in source organizations"
+    },
+    {
+      "id": "legitimacy_withdrawal_mechanism",
+      "question": "Does exit withdraw legitimacy from the source organization, or does it merely remove one dissenting voice?",
+      "resolution_mechanism": "Network analysis of post-exit reputation effects; measurement of recruiting difficulty and external perception changes following high-profile exits",
+      "impact": "If exit withdraws legitimacy: the diagnostic signal has external enforcement power. If exit is invisible: the constraint is purely internal coordination with no legitimacy effect.",
+      "confidence": "medium",
+      "type_class": "empirical",
+      "description": "Whether exit has external legitimacy effects beyond internal information"
+    },
+    {
+      "id": "voice_theater_detection",
+      "question": "Can organizations distinguish genuine voice mechanisms from voice theater (feedback systems that exist to absorb dissent without enabling change)?",
+      "resolution_mechanism": "Comparison of grievance resolution rates, policy change rates following feedback, and exit rates among employees who used voice mechanisms vs those who did not",
+      "impact": "If organizations cannot distinguish: voice theater persists and exit remains the only credible diagnostic. If organizations can distinguish: voice mechanisms can be reformed to restore credibility.",
+      "confidence": "low",
+      "type_class": "conceptual",
+      "description": "Whether voice theater is detectable and correctable"
+    }
+  ],
+  "measurements": [
+    {
+      "metric": "theater_ratio",
+      "time_point": 0,
+      "value": 0.25
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 5,
+      "value": 0.32
+    },
+    {
+      "metric": "theater_ratio",
+      "time_point": 10,
+      "value": 0.38
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 0,
+      "value": 0.35
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 5,
+      "value": 0.42
+    },
+    {
+      "metric": "base_extractiveness",
+      "time_point": 10,
+      "value": 0.48
+    }
+  ],
+  "interval": {
+    "start": 0,
+    "end": 10
+  },
+  "commentary": {
+    "narrative_context": "Exit-as-diagnosis is the structural constraint that makes departure a more complete form of refusal than argument, because exit withdraws legitimacy rather than contesting terms. This constraint sits downstream of two others: exit_cost_asymmetry (the mountain-level structural fact that exit costs differ by power and mobility) and voice_without_exit (the tangled rope where voice mechanisms exist but lack enforcement power). The diagnostic value of exit depends on the asymmetry: if exit were costless for all actors, it would provide no information (everyone would exit at the first disagreement). If exit were impossible for all actors, voice would be the only mechanism. The constraint extracts by making exit costly for some actors while preserving it as a low-cost option for others, which creates adverse selection \u2014 the actors most capable of reform leave, while the actors most harmed by dysfunction stay. The theater_ratio (0.38) reflects that voice mechanisms (grievance procedures, feedback surveys, town halls) are partly performative: they exist to absorb dissent and create the appearance of responsiveness, but they rarely enable structural change. Exit bypasses this theater by withdrawing participation entirely, which makes it diagnostic \u2014 but only for those who can afford it.",
+    "key_agents": [
+      "Exit-Constrained Actors: Primary victims (powerless/trapped) \u2014 economic dependency, visa status, caregiving obligations, or geographic isolation make exit prohibitively costly; continued presence is legible as consent when it is actually captivity",
+      "Exit-Capable Actors: Primary beneficiaries (powerful/arbitrage) \u2014 high-skill professionals with portable credentials and competitive offers; exit is a low-cost diagnostic signal that efficiently communicates irreconcilable disagreement",
+      "Voice-Exhausted Employees: Secondary victims (moderate/constrained) \u2014 have attempted internal reform through voice mechanisms; exit becomes diagnostic only after voice fails, revealing that voice was theater",
+      "Source Organization: Mixed position (institutional/constrained) \u2014 receives diagnostic information from exit but bears cost of talent loss and legitimacy damage; adverse selection concentrates exit-constrained actors",
+      "Receiving Organization: Secondary beneficiary (institutional/arbitrage) \u2014 receives pre-filtered talent that has performed costly signaling through exit",
+      "Labor Organizing Coalition: Organized agents (organized/mobile) \u2014 building infrastructure (union contracts, sectoral bargaining, benefits portability) to reduce exit cost asymmetry and restore voice credibility",
+      "Analytical Observer: Civilizational view (analytical/analytical) \u2014 risks naturalizing the exit-voice tradeoff as an immutable organizational law when it is actually a contingent institutional arrangement"
+    ],
+    "logic_rationale": "Extractiveness (0.48): Moderate-high. The constraint extracts by making exit costly for some actors while preserving it as a low-cost option for others. Exit-capable actors experience exit as coordination (clean information flow), while exit-constrained actors experience it as extraction (their continued presence is misread as consent). The asymmetry creates adverse selection: the actors most capable of reform leave, while the actors most harmed by dysfunction stay. This is not pure extraction (the diagnostic signal does provide genuine information), but the extraction is significant and structural. Suppression (0.52): Moderate-high. Exit-constrained actors face economic dependency, visa status requirements, caregiving obligations, non-compete clauses, and non-portable benefits. Voice mechanisms exist but are partly theatrical \u2014 they absorb dissent without enabling change. The suppression is not total (some actors can exit, and some voice mechanisms do work), but it is substantial. Theater ratio (0.38): Moderate. Voice mechanisms (grievance procedures, feedback surveys, town halls) are partly performative. They exist to create the appearance of responsiveness and to absorb dissent, but they rarely enable structural change. Exit bypasses this theater by withdrawing participation entirely, which makes it diagnostic. The theater has increased over the interval as organizations have professionalized feedback mechanisms without increasing their responsiveness.",
+    "perspectival_gap": "This constraint demonstrates how the same structural phenomenon \u2014 exit as a diagnostic signal \u2014 appears as coordination, extraction, or a temporary problem depending on the observer's position. Exit-capable actors see coordination (Rope) \u2014 exit provides clean information at low cost. Exit-constrained actors see extraction (Snare) \u2014 their inability to exit makes their continued presence legible as consent when it is actually captivity. Voice-exhausted employees see mixed coordination and extraction (Tangled Rope) \u2014 exit provides information but only after costly voice failure. The source organization sees Tangled Rope from a different angle \u2014 it receives diagnostic information but bears talent loss and adverse selection. The labor organizing coalition sees a temporary problem with a sunset (Scaffold) \u2014 collective bargaining and benefits portability will reduce exit cost asymmetry. The analytical observer risks seeing an immutable law (Mountain) \u2014 the exit-voice tradeoff is naturalized as organizational physics \u2014 but the structural data reveals this as a false summit: exit cost asymmetry is a contingent institutional arrangement (at-will employment, non-portable benefits, non-compete clauses), not a natural law.",
+    "directionality_logic": "Exit-capable actors are beneficiaries: they experience low exit costs and can withdraw legitimacy costlessly, which gives them structural power. The engine derives low d (beneficiary + arbitrage exit) \u2192 low/negative chi. Exit-constrained actors are victims: they bear high exit costs and cannot exercise the diagnostic signal, which makes their continued presence legible as consent. The engine derives high d (victim + trapped exit) \u2192 high chi. Voice-exhausted employees are victims with constrained exit: they have attempted voice and failed, which reveals that voice was theater. The engine derives moderate-high d (victim + constrained exit) \u2192 moderate-high chi. The source organization is a victim with constrained exit: it loses talent and receives diagnostic information simultaneously, experiencing both coordination and extraction. The receiving organization is a beneficiary with arbitrage exit: it receives pre-filtered talent at low cost. The labor organizing coalition has mobile exit and sees a sunset: it is building infrastructure to reduce exit cost asymmetry. The analytical observer risks naturalizing the constraint as a mountain, but the structural data (contingent institutional arrangements) contradicts this.",
+    "mandatrophy_analysis": "This constraint resolves the mandatrophy by showing that exit-as-diagnosis is simultaneously a coordination mechanism (it provides genuine information about irreconcilable disagreement) and an extraction mechanism (it operates asymmetrically, concentrating costs on exit-constrained actors and benefits on exit-capable actors). The coordination function is real: exit bypasses voice theater and provides clean information. The extraction function is also real: the asymmetry creates adverse selection and makes continued presence legible as consent when it is actually captivity. The tangled rope classification captures both: exit coordinates information flow AND extracts through cost asymmetry. The perspectival gap is diagnostic: exit-capable actors see coordination (their experience is genuine), exit-constrained actors see extraction (their experience is also genuine), and the analytical observer risks naturalizing the asymmetry as an immutable organizational law when it is actually a contingent institutional arrangement that labor organizing is actively working to dismantle."
+  },
+  "boltzmann": {
+    "coordination_type": "information_standard"
+  },
+  "network": {
+    "affects_constraints": [],
+    "dual_formulation_note": "Exit-as-diagnosis sits downstream of exit_cost_asymmetry (the mountain-level structural fact that exit costs differ by power and mobility) and voice_without_exit (the tangled rope where voice mechanisms exist but lack enforcement power). The diagnostic value of exit depends on the asymmetry created by the upstream constraints. This constraint has its own extractiveness (0.48) reflecting the adverse selection and legitimacy withdrawal mechanisms, distinct from the upstream constraints' extractiveness values."
+  },
+  "directionality_overrides": [],
+  "uke_scope": {
+    "epsilon_bin": "mod",
+    "hypothesis": "tangled_rope",
+    "downstream_of": [
+      "exit_cost_asymmetry",
+      "voice_without_exit"
+    ]
+  }
+}

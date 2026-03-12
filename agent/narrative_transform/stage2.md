@@ -62,6 +62,19 @@ No occupation. No setting. No character descriptions. No source vocabulary. Stag
    4. Code-Switching:
       Languages, social contexts for each, what switching signals
       about power and intimacy.
+      
+   5. Naming:
+      Names are part of the linguistic fabric. For each character, identify the naming tradition they would actually carry.
+
+         - If in an indigenous settings, use indigenous given name traditions.
+         - If it is colonial surname patterns, then think about which colonial catalog, which region, which period of assignment.
+         - If it is influenced by globalism, use the naming influences would be in use in that time and place.
+         - If there is regional variation, this should be considered.
+         - If there are rural vs city differences, such as a rural grandmother is going to name differently than upwardly mobile city parents.
+         - If there are common nickname structures and diminutives.
+         - Other elements to consider include religious and calendrical naming, clan and lineage structures, generational naming logic, cross-tradition blending, etc.
+
+      For each major character, record the naming tradition operating, the specific influences on this character's name, and why those influences apply given their position, region, generation, and family context.
    ```
 
 3. **Naturalize each constraint:**

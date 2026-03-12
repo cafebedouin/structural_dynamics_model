@@ -1,0 +1,22 @@
+## On Reciprocity
+
+There is a confusion lodged in the word itself. *Reciprocity* seems to promise symmetry—a hand extended, a hand returned, the scales settling. We imagine a ledger. We imagine justice, at least of the commercial kind. But this is precisely the confusion that poisons most accounts of human obligation.
+
+Cicero noticed it early. He observed that many people recognize nothing as good unless it brings some profit, and regard their friends much as they regard cattle—ranked according to who promises the largest gain. This is not a medieval observation. It is visible at every dinner party, in every professional network, in every friendship where the calculations run quietly behind the eyes. We call this reciprocity. It is actually barter.
+
+The distinction matters. Barter closes. A trade concluded is a trade done; each party walks away owing nothing—that is the whole point. But real obligation opens. Certain folk traditions encode this asymmetry with precision: you owe once for a simple trade, twice for freely-given aid. The compounding is not a bookkeeping error. It is the entire structure. When something is given without condition, the gift exceeds any possible return, and so the debt compounds—not because the giver demands it, but because the recipient, if honest, knows it cannot be settled. This is not burdensome. It is, in fact, the texture of love.
+
+*You love what you give to.* This is not a platitude; it is a mechanism. Cicero's cattle-trading friends have it backwards: they think they will give once they feel the attachment, once they are certain the friend is worth it. But the attachment comes *from* the giving. The parent who wakes at three in the morning does not do so because she has calculated the eventual return on her investment. She does it because the doing creates the bond. And the bond creates more doing. This is the positive direction of obligation—not closing a debt, but deepening a connection.
+
+And yet. The essay always arrives at a complication. Generosity without discrimination is not virtue; it is performance. The person who opens equally to all comers, who refuses to close any door—a friend to all is a friend to none, as Aristotle had it, and he was being precise, not cold. The word *friend* requires selectivity, not because we are licensed to be cruel to strangers, but because the quality of attention friendship demands cannot be distributed without limit. Finite creatures have finite capacity. To pretend otherwise feels like virtue while functioning as evasion.
+
+Here is where the manual of a well-lived life diverges from both sentimentality and commerce: the circle must be deliberately chosen. Not inherited, not assembled by convenience or proximity. Chosen—with the care one brings to any serious commitment. Trust that is deserved before the web is extended, not assumed and then devastated. The deliberateness is not coldness; it is what makes the warmth inside the circle real.
+
+What, then, is the practice? Zeckhauser—a man more comfortable with probability than with philosophy—arrives at the right answer through a side door: *practice asynchronous reciprocity.* Don't wait for the exchange to balance in real time. Give now to this person, knowing they may not give back to you, knowing perhaps they will give forward to someone else entirely. The ledger need not close. The ledger is not the point. The point is that generosity flows through a network of chosen people and compounds in ways no accountant could track.
+
+And so we arrive at the paradox: genuine reciprocity is asymmetrical, directional, and non-closing. The obligation runs forward in time and outward in connection, not backward in settlement. You give not because you will receive, but because you love—and you love in part because you have given. The circle you choose defines the territory of your moral attention. Inside it, you owe everything. Outside it—not cruelty, but a recognition that your capacity to give *well* is not unlimited, and that pretending otherwise serves no one.
+
+Master Po, of all people, formulates the stakes with appropriate directness: do you seek love or barter? If I love others and they do not love me, I will feel great pain. That is what you risk—great pain or great joy. The ledger offers neither. It offers only equilibrium. And equilibrium, as anyone who has been fully inside a chosen circle knows, is not the goal.
+
+Save yourself first. Then help those you trust. Then give without reservation, without limit, without keeping count.
+

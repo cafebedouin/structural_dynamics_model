@@ -49,6 +49,12 @@
     % Corpus-level analysis
     corpus_cohomology/1,            % corpus_cohomology(Summary)
 
+    % Contextuality fraction (Abramsky-Brandenburger)
+    constraint_contextuality/2,     % constraint_contextuality(C, CF)
+    contextuality_fraction/1,       % contextuality_fraction(CF)
+    contextuality_by_type/1,        % contextuality_by_type(TypeCFs)
+    contextuality_summary/1,        % contextuality_summary(Summary)
+
     % Cache management
     cohomology_cleanup/0,
 
@@ -296,6 +302,105 @@ analytical_type(C, Type) :-
     drl_core:dr_type(C, Ctx, Type).
 
 /* ================================================================
+   CONTEXTUALITY FRACTION (Abramsky-Brandenburger)
+
+   The contextuality fraction measures the proportion of an empirical
+   model that cannot be explained by any non-contextual (global) hidden
+   variable assignment. On this 4-point site:
+
+     - A constraint is contextual iff H0 = 0 (no global section).
+     - Binary CF (corpus) = |{C : H0(C)=0}| / N = 1 - descent_rate.
+     - Graded CF (per-constraint) = H1 / 6 (fraction of C(4,2) pairs
+       that disagree). By Theorem 2's gap, H1 in {0,3,4,5,6}, so
+       the graded CF takes values in {0, 0.5, 0.667, 0.833, 1.0}.
+
+   The graded corpus mean reflects the gap structure: the absence of
+   H1 in {1,2} means low-contextuality constraints do not exist —
+   contextuality, when present, is always at least half-maximal.
+   ================================================================ */
+
+%% constraint_contextuality(+Constraint, -CF)
+%  Per-constraint contextuality fraction: CF = H1 / 6.
+%  CF = 0.0 means non-contextual (global section exists).
+%  CF = 1.0 means maximally contextual (all 6 pairs disagree).
+%  Works without corpus precomputation.
+constraint_contextuality(C, CF) :-
+    cohomological_obstruction(C, _, H1),
+    CF is H1 / 6.
+
+%% contextuality_fraction(-CF)
+%  Corpus-level binary contextuality fraction: CF = 1 - descent_rate.
+%  Requires cached_obstruction/3 to be populated (calls corpus_cohomology
+%  if cache is empty).
+contextuality_fraction(CF) :-
+    ensure_corpus_computed,
+    findall(C, cached_obstruction(C, _, _), AllCs),
+    length(AllCs, N),
+    (   N > 0
+    ->  findall(C, cached_obstruction(C, 0, _), CtxCs),
+        length(CtxCs, NCtx),
+        CF is NCtx / N
+    ;   CF = 0.0
+    ).
+
+%% contextuality_by_type(-TypeCFs)
+%  Binary contextuality fraction broken down by analytical-perspective type.
+%  TypeCFs = [Type-CF, ...] for each type with at least one constraint.
+contextuality_by_type(TypeCFs) :-
+    ensure_corpus_computed,
+    findall(AnalType-CF,
+        (   member(AnalType, [mountain, rope, tangled_rope, snare, scaffold,
+                               piton, naturalized, unknown]),
+            findall(C, (cached_obstruction(C, _, _), analytical_type(C, AnalType)), AllOfType),
+            AllOfType \= [],
+            length(AllOfType, NType),
+            findall(C, (cached_obstruction(C, 0, _), analytical_type(C, AnalType)), CtxOfType),
+            length(CtxOfType, NCtxType),
+            CF is NCtxType / NType
+        ),
+        TypeCFs).
+
+%% contextuality_summary(-Summary)
+%  Aggregate contextuality metrics.
+%  Summary = cf_summary(corpus_cf(CF), graded_mean(Mean),
+%                       by_type(TypeCFs), distribution(Dist))
+%  graded_mean = mean of H1/6 across the corpus — the more theoretically
+%  interesting number, as its discrete support reflects the H1 gap.
+contextuality_summary(Summary) :-
+    contextuality_fraction(CF),
+    contextuality_by_type(TypeCFs),
+    % Graded mean: mean(H1_i / 6) over all constraints
+    findall(H1, cached_obstruction(_, _, H1), AllH1),
+    length(AllH1, N),
+    (   N > 0
+    ->  sum_list(AllH1, SumH1),
+        Mean is SumH1 / (6 * N)
+    ;   Mean = 0.0
+    ),
+    % Distribution: count of constraints at each graded CF level
+    findall(GradedCF-Cnt,
+        (   member(H1Val, [0, 3, 4, 5, 6]),
+            GradedCF is H1Val / 6,
+            findall(C, cached_obstruction(C, _, H1Val), Cs),
+            length(Cs, Cnt),
+            Cnt > 0
+        ),
+        Dist),
+    Summary = cf_summary(
+        corpus_cf(CF),
+        graded_mean(Mean),
+        by_type(TypeCFs),
+        distribution(Dist)
+    ).
+
+%% ensure_corpus_computed
+%  Populates the cached_obstruction/3 cache if it is empty.
+ensure_corpus_computed :-
+    cached_obstruction(_, _, _), !.
+ensure_corpus_computed :-
+    corpus_cohomology(_).
+
+/* ================================================================
    SELFTEST
    ================================================================ */
 
@@ -375,5 +480,24 @@ cohomology_selftest :-
             )
         )
     ),
+
+    % Contextuality fraction
+    format('~n--- Contextuality Fraction (AB) ---~n'),
+    contextuality_summary(CFSummary),
+    CFSummary = cf_summary(
+        corpus_cf(CorpusCF),
+        graded_mean(GradedMean),
+        by_type(TypeCFs),
+        distribution(CFDist)
+    ),
+    format('  Corpus CF (binary):  ~4f~n', [CorpusCF]),
+    format('  Graded mean (H1/6): ~4f~n', [GradedMean]),
+    format('  Cross-check: 1 - descent_rate = ~4f~n', [1.0 - Rate]),
+    format('~n  CF by analytical type:~n'),
+    forall(member(AT2-TCF, TypeCFs),
+           format('    ~w: ~4f~n', [AT2, TCF])),
+    format('~n  Graded CF distribution:~n'),
+    forall(member(GCF-GCnt, CFDist),
+           format('    CF=~4f: ~w constraints~n', [GCF, GCnt])),
 
     format('~n=== Selftest Complete ===~n').
