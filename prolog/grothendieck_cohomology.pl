@@ -55,6 +55,12 @@
     contextuality_by_type/1,        % contextuality_by_type(TypeCFs)
     contextuality_summary/1,        % contextuality_summary(Summary)
 
+    % Power-chain monotonicity
+    extraction_rank/2,              % extraction_rank(Type, Rank)
+    orbit_monotonicity/2,           % orbit_monotonicity(C, Status)
+    transition_boundaries/2,        % transition_boundaries(C, Boundaries)
+    corpus_monotonicity/1,          % corpus_monotonicity(Summary)
+
     % Cache management
     cohomology_cleanup/0,
 
@@ -401,6 +407,147 @@ ensure_corpus_computed :-
     corpus_cohomology(_).
 
 /* ================================================================
+   POWER-CHAIN MONOTONICITY
+
+   The 4 standard contexts form a linear chain ordered by power:
+     U_1(powerless) -> U_2(moderate) -> U_3(institutional) -> U_4(analytical)
+
+   The extraction ordering on types is:
+     mountain(0) < rope(1) < tangled_rope(2) < snare(3)
+
+   A constraint's orbit vector [T_1, T_2, T_3, T_4] is monotone along
+   the power chain if its extraction rank is non-decreasing (ascending)
+   or non-increasing (descending). Non-monotone orbits oscillate —
+   a qualitatively different kind of perspectival fracture.
+
+   The transition boundary position (1, 2, or 3) identifies WHERE in
+   the chain the type changes. This connects H^1 to the invariant
+   analysis finding that institutional power (pi = -0.2) is a phase
+   transition point.
+   ================================================================ */
+
+%% extraction_rank(+Type, -Rank)
+%  Position on the extraction chain. Types outside the chain
+%  (scaffold, piton, naturalized, unknown) get rank -1.
+extraction_rank(mountain, 0).
+extraction_rank(rope, 1).
+extraction_rank(tangled_rope, 2).
+extraction_rank(snare, 3).
+extraction_rank(_, -1).
+
+%% orbit_monotonicity(+Constraint, -Status)
+%  Analyzes the orbit vector for monotonicity along the power chain.
+%  Status is one of:
+%    constant(Type)           - all 4 contexts agree (H^0 = 1)
+%    monotone_ascending       - extraction rank non-decreasing, >= 1 strict increase
+%    monotone_descending      - extraction rank non-increasing, >= 1 strict decrease
+%    non_monotone(Reversals)  - direction changes; Reversals = count of sign changes
+%    incomparable             - orbit contains types outside the extraction chain
+orbit_monotonicity(C, Status) :-
+    orbit_vector(C, TypeVector),
+    sort(TypeVector, Unique),
+    (   Unique = [SingleType]
+    ->  Status = constant(SingleType)
+    ;   maplist(extraction_rank, TypeVector, Ranks),
+        (   member(-1, Ranks)
+        ->  Status = incomparable
+        ;   adjacent_deltas(Ranks, Deltas),
+            classify_deltas(Deltas, Status)
+        )
+    ).
+
+%% adjacent_deltas(+Ranks, -Deltas)
+%  Computes the list of rank differences between adjacent positions.
+%  For a 4-element list, returns 3 deltas.
+adjacent_deltas([], []).
+adjacent_deltas([_], []).
+adjacent_deltas([R1, R2 | Rest], [D | Ds]) :-
+    D is R2 - R1,
+    adjacent_deltas([R2 | Rest], Ds).
+
+%% classify_deltas(+Deltas, -Status)
+%  Classifies a delta sequence as ascending, descending, or non-monotone.
+classify_deltas(Deltas, monotone_ascending) :-
+    forall(member(D, Deltas), D >= 0),
+    member(D, Deltas), D > 0, !.
+classify_deltas(Deltas, monotone_descending) :-
+    forall(member(D, Deltas), D =< 0),
+    member(D, Deltas), D < 0, !.
+classify_deltas(Deltas, non_monotone(Reversals)) :-
+    count_reversals(Deltas, Reversals).
+
+%% count_reversals(+Deltas, -Count)
+%  Counts direction changes in the delta sequence.
+%  A reversal occurs when consecutive non-zero deltas have opposite signs.
+count_reversals(Deltas, Count) :-
+    include(\=(0), Deltas, NonZero),
+    count_sign_changes(NonZero, 0, Count).
+
+count_sign_changes([], Acc, Acc).
+count_sign_changes([_], Acc, Acc).
+count_sign_changes([A, B | Rest], Acc, Count) :-
+    (   A > 0, B < 0 -> Acc1 is Acc + 1
+    ;   A < 0, B > 0 -> Acc1 is Acc + 1
+    ;   Acc1 = Acc
+    ),
+    count_sign_changes([B | Rest], Acc1, Count).
+
+%% transition_boundaries(+Constraint, -Boundaries)
+%  Returns boundary positions where the type changes in the orbit vector.
+%  Boundaries = [boundary(Pos, TypeLeft, TypeRight), ...]
+%  Pos in {1,2,3}: 1 = U1->U2, 2 = U2->U3, 3 = U3->U4.
+transition_boundaries(C, Boundaries) :-
+    orbit_vector(C, TypeVector),
+    find_boundaries(TypeVector, 1, Boundaries).
+
+find_boundaries([_], _, []).
+find_boundaries([T1, T2 | Rest], Pos, Boundaries) :-
+    (   T1 \= T2
+    ->  Boundaries = [boundary(Pos, T1, T2) | MoreBs]
+    ;   Boundaries = MoreBs
+    ),
+    Pos1 is Pos + 1,
+    find_boundaries([T2 | Rest], Pos1, MoreBs).
+
+%% corpus_monotonicity(-Summary)
+%  Aggregate monotonicity and boundary statistics across the corpus.
+corpus_monotonicity(Summary) :-
+    ensure_corpus_computed,
+    findall(C, cached_obstruction(C, _, _), AllCs),
+    classify_all_monotonicity(AllCs, 0, 0, 0, 0, 0, NConst, NAsc, NDesc, NNon, NInc),
+    count_boundary_positions(AllCs, N1, N2, N3),
+    Summary = monotonicity_summary(
+        constant(NConst),
+        monotone_ascending(NAsc),
+        monotone_descending(NDesc),
+        non_monotone(NNon),
+        incomparable(NInc),
+        boundary_distribution([pos(1, N1), pos(2, N2), pos(3, N3)])
+    ).
+
+classify_all_monotonicity([], NC, NA, ND, NN, NI, NC, NA, ND, NN, NI).
+classify_all_monotonicity([C | Rest], NC0, NA0, ND0, NN0, NI0, NC, NA, ND, NN, NI) :-
+    orbit_monotonicity(C, Status),
+    (   Status = constant(_)        -> NC1 is NC0+1, NA1=NA0, ND1=ND0, NN1=NN0, NI1=NI0
+    ;   Status = monotone_ascending -> NC1=NC0, NA1 is NA0+1, ND1=ND0, NN1=NN0, NI1=NI0
+    ;   Status = monotone_descending-> NC1=NC0, NA1=NA0, ND1 is ND0+1, NN1=NN0, NI1=NI0
+    ;   Status = non_monotone(_)    -> NC1=NC0, NA1=NA0, ND1=ND0, NN1 is NN0+1, NI1=NI0
+    ;   /* incomparable */             NC1=NC0, NA1=NA0, ND1=ND0, NN1=NN0, NI1 is NI0+1
+    ),
+    classify_all_monotonicity(Rest, NC1, NA1, ND1, NN1, NI1, NC, NA, ND, NN, NI).
+
+count_boundary_positions(Constraints, N1, N2, N3) :-
+    findall(Pos,
+        (   member(C, Constraints),
+            transition_boundaries(C, Bs),
+            member(boundary(Pos, _, _), Bs)
+        ),
+        AllPositions),
+    include(=(1), AllPositions, P1s), length(P1s, N1),
+    include(=(2), AllPositions, P2s), length(P2s, N2),
+    include(=(3), AllPositions, P3s), length(P3s, N3).
+
+/* ================================================================
    SELFTEST
    ================================================================ */
 
@@ -499,5 +646,48 @@ cohomology_selftest :-
     format('~n  Graded CF distribution:~n'),
     forall(member(GCF-GCnt, CFDist),
            format('    CF=~4f: ~w constraints~n', [GCF, GCnt])),
+
+    % Power-chain monotonicity
+    format('~n--- Power-Chain Monotonicity ---~n'),
+    corpus_monotonicity(MonoSummary),
+    MonoSummary = monotonicity_summary(
+        constant(MConst),
+        monotone_ascending(MAsc),
+        monotone_descending(MDesc),
+        non_monotone(MNon),
+        incomparable(MInc),
+        boundary_distribution([pos(1, B1), pos(2, B2), pos(3, B3)])
+    ),
+    format('  Constant (H0=1):      ~w~n', [MConst]),
+    format('  Monotone ascending:   ~w~n', [MAsc]),
+    format('  Monotone descending:  ~w~n', [MDesc]),
+    format('  Non-monotone:         ~w~n', [MNon]),
+    format('  Incomparable:         ~w~n', [MInc]),
+    MTotal is MConst + MAsc + MDesc + MNon + MInc,
+    format('  Total (cross-check):  ~w~n', [MTotal]),
+    format('~n  Boundary distribution (where type changes occur):~n'),
+    format('    Pos 1 (U1->U2, powerless->moderate):        ~w~n', [B1]),
+    format('    Pos 2 (U2->U3, moderate->institutional):    ~w~n', [B2]),
+    format('    Pos 3 (U3->U4, institutional->analytical):  ~w~n', [B3]),
+
+    % Sample orbits for each monotonicity category
+    format('~n  Sample orbits:~n'),
+    findall(C, cached_obstruction(C, _, _), AllCached),
+    forall(
+        member(Cat, [monotone_ascending, monotone_descending]),
+        (   (   member(SC, AllCached),
+                orbit_monotonicity(SC, Cat)
+            ->  orbit_vector(SC, SOV),
+                format('    ~w: ~w  orbit=~w~n', [Cat, SC, SOV])
+            ;   format('    ~w: (none)~n', [Cat])
+            )
+        )
+    ),
+    (   member(NMC, AllCached),
+        orbit_monotonicity(NMC, non_monotone(_))
+    ->  orbit_vector(NMC, NMOV),
+        format('    non_monotone: ~w  orbit=~w~n', [NMC, NMOV])
+    ;   format('    non_monotone: (none)~n')
+    ),
 
     format('~n=== Selftest Complete ===~n').
