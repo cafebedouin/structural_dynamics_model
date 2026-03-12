@@ -11,6 +11,12 @@
 :- use_module(constraint_indexing). % Canonical source for power_modifier/2
 :- use_module(config).             % Single source of truth for thresholds
 
+%% DEPRECATED PATH: This code uses power_modifier/2 (direct multiplication) for χ computation.
+%% The primary classification path (drl_core:dr_type/3) uses the sigmoid pipeline via
+%% derive_directionality/3 → sigmoid_f/2, which reads canonical_d_* params, not power_modifier_*.
+%% Perturbing power_modifier_analytical does not affect dr_type/3 output.
+%% TODO: Migrate to sigmoid pipeline. See issue: legacy-power-modifier-migration.
+%% Audit date: 2026-03-12
 % --- II-D: CHI CALCULATION (chi) ---
 % chi(C, P) = X_base(C) * pi(P)
 % Uses constraint_indexing:power_modifier/2 as the single source of truth.

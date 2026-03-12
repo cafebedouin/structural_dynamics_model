@@ -109,6 +109,12 @@ degradation_chain(C, Chain, evidence(time_span, T1, T2)) :-
     Sorted = [T1-_|_],
     last(Sorted, T2-_).
 
+%% DEPRECATED PATH: This code uses power_modifier/2 (direct multiplication) for χ computation.
+%% The primary classification path (drl_core:dr_type/3) uses the sigmoid pipeline via
+%% derive_directionality/3 → sigmoid_f/2, which reads canonical_d_* params, not power_modifier_*.
+%% Perturbing power_modifier_analytical does not affect dr_type/3 output.
+%% TODO: Migrate to sigmoid pipeline. See issue: legacy-power-modifier-migration.
+%% Audit date: 2026-03-12
 %% classify_snapshot(+C, +Time, -Type)
 %  Classifies a constraint at a specific time using measurements available.
 classify_snapshot(C, Time, Type) :-

@@ -60,6 +60,11 @@ param(power_modifier_powerful, 0.6).       % Extraction reduced
 param(power_modifier_organized, 0.4).      % Shared burden (collective)
 param(power_modifier_institutional, -0.2). % Net beneficiary
 param(power_modifier_analytical, 1.15).    % Analytical clarity: detects extraction moderate agents normalize
+%% NOTE: power_modifier_analytical (1.15) is read only by the legacy χ path
+%% (drl_composition, transition_paths, drl_audit_core). The primary classification
+%% path reads canonical_d_analytical (line ~108) whose sigmoid output is calibrated
+%% to match this value. Bifurcation sweep confirmed: perturbing this param produces
+%% zero dr_type flips [0.5x, 2.0x]. See TODO: legacy-power-modifier-migration.
 
 /* ================================================================
    4A. COALITION MODELING (The "Who" Extension)

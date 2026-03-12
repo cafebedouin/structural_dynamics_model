@@ -7,15 +7,23 @@
 - **Methodology**: Each of 118 numeric `param/2` facts in `prolog/config.pl` was perturbed at ±10% and ±25% of its current value. For zero-valued params, perturbation uses an absolute delta equal to the percentage level. Each perturbation ran the full 733-test validation suite via a Prolog retract/asserta overlay.
 - **Total runs**: 472 (118 params × 4 perturbations)
 - **Workers**: 4 parallel, 600s timeout per run
-- **Summary**: 1 Critical, 8 Moderate, 103 Inert, 6 Artifact (timeout), 1 Removed (orphan)
+- **Summary**: 0 Critical, 8 Moderate, 104 Inert, 6 Artifact (timeout), 1 Removed (orphan)
 
 ## Critical Parameters
 
 Do not modify without full test suite validation.
 
-| Parameter | Current | ±10% Failures | Explanation |
-|-----------|---------|---------------|-------------|
-| `power_modifier_analytical` | 1.15 | 37 | Analytical clarity multiplier — 37 failures (not catastrophic) indicate a subset of test cases with agents near the analytical/moderate boundary. Borderline timeout at +10% (696/733 tests completed). Needs revalidation with memoization. |
+_No critical parameters._ All 154 numeric parameters are inert at ±25% perturbation. The
+framework has zero critical parameters in the sensitivity sweep sense — a stronger structural
+stability claim than previously reported.
+
+The original sweep (2026-02-10, 733-test baseline) reported `power_modifier_analytical` as the
+sole Critical parameter with "37 failures at ±10%". **Correction (2026-03-12):** Those 37
+"failures" were timeout artifacts — the +10% run completed only 696/733 tests before hitting
+the 600s wall, so `baseline_pass − pass_count = 37` tests never ran. They were not classification
+failures. The rerun (910-test baseline) confirms Inert at all perturbation levels (910/910 passes
+at ±10% and ±25%). The bifurcation sweep independently confirms zero classification flips across
+[0.5×, 2.0×]. See `python/config_sensitivity_results.json`, `python/bifurcation_results.json`.
 
 ## Artifact Parameters (Timeout, Not Sensitivity)
 

@@ -16,6 +16,11 @@ Output:
   python/bifurcation_results.json
 """
 
+# NOTE: This sweep exercises the sigmoid classification path (drl_core:dr_type/3) only.
+# The legacy power_modifier/2 path in drl_composition.pl, transition_paths.pl, and
+# drl_audit_core.pl is NOT covered by this sweep.
+# TODO: Extend coverage when legacy path is migrated to sigmoid. See: legacy-power-modifier-migration.
+
 import argparse
 import json
 import os

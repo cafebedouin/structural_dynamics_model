@@ -167,6 +167,12 @@ constraint_history(C, Timeline) :-
 %% dr_type_at(+C, +Time, +Context, -Type)
 % Determines constraint type at specific time FROM SPECIFIC CONTEXT
 % Delegates to drl_core:classify_from_metrics/6 (Single Source of Truth)
+%% DEPRECATED PATH: This code uses power_modifier/2 (direct multiplication) for χ computation.
+%% The primary classification path (drl_core:dr_type/3) uses the sigmoid pipeline via
+%% derive_directionality/3 → sigmoid_f/2, which reads canonical_d_* params, not power_modifier_*.
+%% Perturbing power_modifier_analytical does not affect dr_type/3 output.
+%% TODO: Migrate to sigmoid pipeline. See issue: legacy-power-modifier-migration.
+%% Audit date: 2026-03-12
 dr_type_at(C, Time, Context, Type) :-
     (narrative_ontology:measurement(_, C, suppression_requirement, Time, Supp) -> true ; Supp = 0.5),
     (narrative_ontology:measurement(_, C, extractiveness, Time, BaseX) -> true ; BaseX = 0.5),
