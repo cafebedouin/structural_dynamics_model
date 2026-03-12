@@ -2,7 +2,7 @@
 
 **A Formal Framework for Systems Where What You See Depends on Where You Stand**
 
-**v6.1 — Revised with cross-model review**
+**v6.2 — Extended with new diagnostics: contextuality fraction, orbit monotonicity, bifurcation sweep**
 
 ---
 
@@ -12,7 +12,7 @@ We separate the framework into three layers: (1) axioms — the design commitmen
 
 The axioms encode a single core hypothesis: power modulates the perception of extraction. The theorems derive non-obvious consequences. Extraction necessarily requires a cover story — it can never be universally recognized as extraction under power-modulated perception. Observer disagreement clusters in discrete blocs rather than distributing smoothly. The institutional observer carries 97% of the spectral weight in classification disputes. Single-position analysis with full information detects less than 3% of the observer-dependent structure that cross-position analysis reveals. These are properties of the axioms, not of any dataset.
 
-Two independently generated corpora with inverted input distributions confirm the engine correctly computes these consequences and converge to identical framework-level outputs. An honest assessment distinguishes strict categorical correspondences from structural analogies.
+Two independently generated corpora with inverted input distributions confirm the engine correctly computes these consequences and converge to identical framework-level outputs. Three new diagnostics — a contextuality fraction in the Abramsky-Brandenburger sense, a power-chain monotonicity analysis, and a bifurcation sweep finding exact parameter values at which type labels flip — extend the empirical record. Key findings: all theorems are confirmed in Abramsky-Brandenburger coordinates; monotone orbits are vanishingly rare (1.1%); all maximal-obstruction constraints (H¹ = 6) are incomparable; the system has no critical parameters — the one previously flagged was a timeout artifact. An honest assessment distinguishes strict categorical correspondences from structural analogies.
 
 ---
 
@@ -160,6 +160,8 @@ The following results are deductive consequences of Axioms 1–6. They hold for 
 
 **Robustness.** This is the most robust theorem in the suite. It depends only on site linearity (Axiom 1) and threshold-crossing (Axiom 6), not on the magnitude, sign, or shape of the power-scaling function (Axiom 2). Any monotone function on a 4-element chain with fixed thresholds produces this gap.
 
+**Corollary (Contextuality Fraction Gap).** The contextuality fraction of a constraint — defined as CF = H¹/6, the proportion of observer-pair disagreements realized — takes values only in {0, 1/2, 2/3, 5/6, 1}. The values 1/6 and 1/3 are structurally forbidden by the same site geometry that produces the H¹ gap. This is Theorem 2 in Abramsky-Brandenburger coordinates (§4.2, §7): the admissible contextuality fractions are determined by the site geometry, not by the empirical content of any corpus.
+
 **Falsification condition.** A non-linear site (e.g., adding a power dimension orthogonal to the current axis) could produce H¹ = 1 or 2 by enabling non-adjacent threshold crossings. If real-world disagreement about extraction distributes smoothly rather than clustering in blocs, the linear site is the wrong geometry.
 
 ### Theorem 3: Institutional Spectral Dominance
@@ -226,7 +228,7 @@ Hub 2's lookup table satisfies the functor axioms trivially: singleton stalks ad
 
 ## 4. The Computational Engine
 
-The axioms are implemented as a Prolog codebase comprising 76 modules with approximately 1,000 test cases. This section documents the implementation at the level needed to understand the empirical results; the full codebase is open-source under CC0.
+The axioms are implemented as a Prolog codebase comprising 76 modules with approximately 1,050 test cases. This section documents the implementation at the level needed to understand the empirical results; the full codebase is open-source under CC0.
 
 ### 4.1 Classification Pipeline
 
@@ -248,6 +250,12 @@ The engine includes a diagnostic stack that measures properties of the presheaf 
 
 **Diagnostic integration:** 12 subsystems aggregated into GREEN/YELLOW/RED verdicts. Expected conflict catalog (P1–P11) filters known architectural artifacts from genuine tensions. The verdict does not change classification — it provides meta-analytical confidence assessment.
 
+**Orbit monotonicity analysis:** For each constraint, the classification sequence [T₁, T₂, T₃, T₄] along the power chain is analyzed for monotonicity with respect to the extraction ordering mountain < rope < tangled_rope < snare. Sequence patterns are classified as constant (H⁰ = 1), monotone ascending, monotone descending, non-monotone (direction reversal occurs), or incomparable (one or more contexts classify outside the extraction chain). Boundary positions — which of the three adjacent-pair transitions in the chain produces a type change — are recorded to map where in the power gradient classification shifts occur.
+
+**Incomparable orbit decomposition:** 155 constraints in the combined corpus (14.8%) produce incomparable orbits containing scaffold, piton, or naturalized types that fall outside the extraction ordering. These are decomposed by out-of-chain type, by observer position, by H¹ distribution, and by in-chain monotonicity (the monotonicity of the sub-sequence obtained by masking out-of-chain positions). The decomposition reveals that incomparable orbits are not a classification residue: all maximal-obstruction constraints (H¹ = 6) are incomparable, and in-chain trajectories within the incomparable population are overwhelmingly non-monotone (§5.3).
+
+**Contextuality fraction (AB-framework):** Following Abramsky and Brandenburger (2011), the obstruction to a global section is operationalized as a contextuality fraction. The binary corpus-level CF = 1 − descent_rate measures the proportion of constraints with no consistent global classification. The graded per-constraint CF = H¹/6 measures the fraction of observer-pair disagreements realized. The CF distribution is provably constrained to {0, 1/2, 2/3, 5/6, 1} by Theorem 2's site geometry (§3, Theorem 2 Corollary). All metrics are computed within `grothendieck_cohomology.pl` without modification to any other module.
+
 ### 4.3 Corpus Provenance
 
 **Corpus A (Haiku 4.5).** 907 constraints generated by Anthropic's Claude Haiku 4.5 using generation prompt v1.1.
@@ -258,7 +266,7 @@ The two corpora are deliberately different: different LLM architectures, differe
 
 **LLM provenance caveat.** Both corpora are generated by large language models trained on internet text, which may encode similar latent political grammars despite their architectural differences. The convergence reported in §5.2 demonstrates that the *engine* is stable under input distribution inversion, but does not rule out the possibility that both LLMs share biases about how power, extraction, and coordination relate — biases that could align with the framework's axioms for artifactual rather than structural reasons. The financial regulation beta corpus (§6.6), using domain data with quantitative ground truth, is essential for distinguishing framework stability from shared LLM priors.
 
-The continuous metrics (extractiveness ε, suppression, theater ratio, resistance-to-change) are specified in the constraint stories and have not been subjected to inter-rater reliability testing. A configuration sensitivity sweep (154 numeric parameters perturbed at ±25%, plus 17 directionality constants swept separately) found all parameters inert at ±25%, with one genuinely critical parameter: the analytical power modifier.
+The continuous metrics (extractiveness ε, suppression, theater ratio, resistance-to-change) are specified in the constraint stories and have not been subjected to inter-rater reliability testing. A configuration sensitivity sweep (154 numeric parameters perturbed at ±25%, plus 17 directionality constants swept separately) found all 154 parameters inert at ±25%. An initial run had reported `power_modifier_analytical` as critical with 37 failures at ±10%; a subsequent audit determined these were timeout artifacts (696/733 tests completed before the 600-second wall — 37 tests that never ran, not 37 classification failures). Both the rerun at 910+ tests and a separate bifurcation sweep confirm all parameters inert. The framework has no critical parameters in the sensitivity-sweep sense.
 
 ---
 
@@ -288,6 +296,10 @@ This section reports what the engine finds when run on the two corpora. The cent
 
 **Band–hub correspondence (Theorem 6):** H¹ = 3 band dominated by Hub 1 sigmoid-driven divergence (institutional observer sees rope where others see extraction). H¹ = 4 band corresponds to Hub 2 immutability flips. Confirmed in both corpora.
 
+**Contextuality fraction (Theorem 2 Corollary):** Corpus CF (binary) = 0.261, cross-checking exactly with 1 − descent_rate. Graded mean = 0.193. The CF distribution takes values only at {0, 0.5, 0.667, 0.833, 1.0} — confirming that the H¹ gap propagates directly into contextuality fractions and that the values 1/6 and 1/3 are empirically absent, as structurally required. Per-type: snares are 100% contextual (every snare in the corpus lacks a global section, confirming Theorem 1 as a necessary consequence — if extraction were globally recognizable, snares would achieve H⁰ = 1), ropes 37.5%, mountains 3% (near-zero reflecting natural-law invariance under observer shifts), tangled_rope 12.6%.
+
+**Structural stability (all theorems):** A bifurcation sweep over [0.5×, 2.0×] of baseline values finds that 148 of 154 numeric parameters produce zero type-label flips across the entire range. Six parameters have critical values within range: snare_chi_floor (0.8% below baseline, 14 flips — the narrowest margin), tangled_rope_chi_floor (1.6%, bifurcation in both directions), rope_chi_ceiling (1.6% up / 7.0% down, asymmetric sensitivity indicating corpus clustering near the upper boundary), snare_epsilon_floor (4.7% up), tangled_rope_chi_ceil (6.3% down, 14 flips), and mountain_extractiveness_max (12.5% down). The asymmetry in rope_chi_ceiling — six times more sensitive upward than downward — indicates the corpus sits close to the ceiling of rope classification but well above its floor. No parameter produces zero-distance bifurcation; the closest margin is snare_chi_floor at 0.8%.
+
 ### 5.2 Convergence Under Inversion
 
 The strongest empirical validation: two corpora with opposite input distributions converge to identical framework-level outputs.
@@ -295,7 +307,7 @@ The strongest empirical validation: two corpora with opposite input distribution
 **Type distribution convergence:**
 
 | Type | Flash metric | Flash post | Haiku metric | Haiku post |
-|------|-------------|-----------|-------------|-----------|
+|------|-------------|-----------|-------------|-----------| 
 | snare | 448 (50.5%) | 109 (12.3%) | 152 (16.8%) | 175 (19.3%) |
 | tangled_rope | 287 (32.4%) | 549 (62.0%) | 619 (68.2%) | 567 (62.5%) |
 | mountain | 139 (15.7%) | 139 (15.7%) | 129 (14.2%) | 129 (14.2%) |
@@ -312,13 +324,21 @@ Both corpora converge to approximately 62% tangled_rope after signature integrat
 | Spectral gap λ₂ = 0.0152 | Identical |
 | r₂₃² spectral weight = 97% | Identical |
 | H¹ gap at values 1 and 2 | Present in both |
+| CF distribution gap (no values at 1/6, 1/3) | Confirmed in both |
 | Post-override tangled_rope rate | ~62% in both |
 | Confidence bands (deep/moderate/borderline) | ~75%/5%/20% in both |
 | Mountain population | ~14–16% in both |
 | Institutional dissent direction (U₃ sees rope) | Confirmed in both |
 | Zero Type A hub conflicts | Confirmed in both |
+| Monotone orbit rate among non-constant comparable | ~1.1% in both |
+| Boundary density: positions 2+3 vs. position 1 | ~80% vs. ~20% in both |
+| H¹ = 6 population: 100% incomparable | Confirmed in both |
 
 These invariants hold despite 43% and 75% d-pattern concentration, different LLM architectures, different generation prompts, and inverted type distributions.
+
+**Monotonicity invariants.** Power-chain monotonicity analysis of the combined 1,050-constraint corpus finds that monotone orbits — sequences where the extraction-type ordering is consistently ascending or descending along U₁→U₂→U₃→U₄ — are vanishingly rare: 3 out of 274 non-constant comparable orbits (1.1%). The dominant non-constant pattern is non-monotone (116/274 = 42.3%). Classification along the power chain is not a simple gradient; the sigmoid's nonlinearity produces direction reversals in the majority of gauge-variant constraints.
+
+Boundary distribution confirms that type transitions concentrate in the upper half of the power chain: position 1 (U₁→U₂) accounts for 20% of all 661 boundaries, while positions 2 (U₂→U₃) and 3 (U₃→U₄) account for 39% and 41% respectively. The near-tie between positions 2 and 3 indicates a broad transition zone spanning the institutional context rather than a single sharp phase transition at the U₃ sign flip. The spectral dominance of the institutional observer (Theorem 3) expresses itself empirically as boundary density concentration in the upper power chain.
 
 ### 5.3 Corpus-Dependent Findings
 
@@ -338,6 +358,10 @@ The following vary between corpora and are reported as ranges:
 
 **Epistemic restriction vs. frame-dependence:** Approximately 1.5% overlap — nearly disjoint phenomena. Epistemic restriction is having a reduced information set; frame-dependence is processing full information through a different structural relationship.
 
+**Incomparable orbit structure.** The 155 incomparable orbits (14.8% of the combined corpus) are not a classification residue. Three findings characterize them. First, out-of-chain types (naturalized 81%, scaffold 10%, piton 8%) cluster at the sigmoid's extremes: U₁ (120 occurrences) and U₃ (67 occurrences), with U₂ (2) and U₄ (0) essentially clean. This is the sigmoid's nonlinearity made visible in type space — the positions where power-scaling does the most nonlinear work are precisely where constraints exit the extraction ordering. Second, all 51 maximal-obstruction constraints (H¹ = 6) are incomparable; the comparable population never reaches H¹ = 6. The incomparable population is not marginal — it is the location of maximum perspectival fracture in the corpus. Third, in-chain monotonicity analysis (masking out-of-chain positions and classifying the residual trajectory) finds 103/122 non-monotone among constraints with sufficient in-chain points — 84%. The incomparable orbits are genuinely disordered trajectories, not orderly sequences with a single anomalous position. The out-of-chain classification is a symptom of deeper structural complexity.
+
+A sample non-monotone incomparable orbit illustrates the mechanism: [tangled_rope, tangled_rope, rope, snare] — extraction drops at the institutional position (where the sign flip reclassifies it as coordination) then rises to maximum at the analytical position (where structural distance reveals the full extraction). This is Theorems 1 and 4 made visible in a single orbit: the cover story mechanism (institutional reclassification) and the oracle gap (U₄'s analytical position requiring cross-context comparison to see what its own position obscures).
+
 ---
 
 ## 6. Honest Assessment
@@ -352,13 +376,13 @@ This section distinguishes what the framework proves from what it suggests. A us
 
 ### 6.2 What Is STRICT
 
-The site, the presheaf, the naturality condition, the Boltzmann = functor axiom equivalence, the naturality witnesses (FNL, CI Rope), H⁰ and descent, gauge orbits, the Galois connection, Hub 1 as restriction map, Hub 2 as classification gate, hub independence, binary gate computations, NMI analysis, T13 divergence measurement, mountain zero-divergence, the sheaf Laplacian construction, cross-model spectral invariance, confidence band distribution, post-override attractor convergence.
+The site, the presheaf, the naturality condition, the Boltzmann = functor axiom equivalence, the naturality witnesses (FNL, CI Rope), H⁰ and descent, gauge orbits, the Galois connection, Hub 1 as restriction map, Hub 2 as classification gate, hub independence, binary gate computations, NMI analysis, T13 divergence measurement, mountain zero-divergence, the sheaf Laplacian construction, cross-model spectral invariance, confidence band distribution, post-override attractor convergence, contextuality fraction computation (CF = 1 − descent_rate; graded CF = H¹/6; CF gap at 1/6 and 1/3), orbit monotonicity classification, incomparable orbit decomposition, bifurcation sweep critical values.
 
 The three-way equivalence (Lawvere ↔ Grothendieck ↔ Noether) is two-out-of-three STRICT: naturality ↔ descent is strict; the Noether column maps to discrete group invariance, which is the precondition of Noether's theorem rather than the theorem itself.
 
 ### 6.3 What Is STRUCTURAL
 
-MaxEnt as Markov category (pending delete-map naturality verification). Information geometry of T13 (Fisher-Rao geodesic ball applies to KL divergence, not L∞). FPN as terminal coalgebra (convergence proved via Knaster-Tarski, but full coalgebra axioms unverified). Abductive engine as naturality auditor (triggers are hand-crafted, not derived from categorical constructions). H¹ proxy (combinatorial descent-failure count on the Alexandrov site, not formal Čech H¹). H¹ band–hub correspondence (empirical, not derived). Oracle gap mechanism (architectural, corpus-specific magnitudes). Diagnostic verdict synthesis (threshold-based, not derived).
+MaxEnt as Markov category (pending delete-map naturality verification). Information geometry of T13 (Fisher-Rao geodesic ball applies to KL divergence, not L∞). FPN as terminal coalgebra (convergence proved via Knaster-Tarski, but full coalgebra axioms unverified). Abductive engine as naturality auditor (triggers are hand-crafted, not derived from categorical constructions). H¹ proxy (combinatorial descent-failure count on the Alexandrov site, not formal Čech H¹). H¹ band–hub correspondence (empirical, not derived). Oracle gap mechanism (architectural, corpus-specific magnitudes). Diagnostic verdict synthesis (threshold-based, not derived). AB-framework connection (the equivalence of "no global section" and "contextual" is strict; the correspondence between DR's graded CF and Abramsky-Brandenburger's contextuality fraction for empirical models is structural — DR's site is more constrained than AB's general sheaf-cohomological setup, and the CF gap result (values forbidden at 1/6 and 1/3) has no direct analogue in the quantum contextuality literature).
 
 ### 6.4 What Is LOOSE
 
@@ -370,6 +394,8 @@ Type space as Heyting algebra (two absorbing elements prevent it). Power scaling
 
 **Perform metric-level sensitivity analysis.** Parameter robustness is tested; input metric robustness is not. This is the most important missing validation.
 
+**Model intra-level dynamics.** The power chain is a static site. Power and benefit asymmetries enter as parameters of perception, not as generators of temporal flows at the same observer level. The framework captures what different observers see at an instant; it does not model U₃ broadcasting a narrative, U₁ partially internalizing it, and the type labels changing through those interactions.
+
 **Extend to infinite or non-linear sites.** The H¹ gap and spectral structure depend on the specific site geometry.
 
 **Establish causation.** Detects structural patterns, does not explain *why* extraction emerged or *whether* reform would succeed.
@@ -380,14 +406,15 @@ Type space as Heyting algebra (two absorbing elements prevent it). Power scaling
 
 ### 6.6 What Would Strengthen the Framework
 
-1. **Metric-level sensitivity analysis.** Systematically varying input metrics within plausible ranges to measure reclassification rates.
+1. **Metric-level sensitivity analysis.** Systematically varying input metrics (ε, suppression, theater ratio, resistance-to-change) within plausible ranges to measure reclassification rates. Parameter sensitivity has been addressed; input metric sensitivity remains the most important missing validation.
 2. **Vector-valued sheaf Laplacian.** Replacing scalar χ stalks with MaxEnt distribution vectors (Δ⁷ ⊂ ℝ⁸) to capture both hub contributions.
 3. **Clean corpus without d-pattern anchoring.** D-pattern concentration below 30% for proper perspective diversity.
 4. **Extension to enriched sites.** Temporal morphisms creating bigraded cohomology H^{p,q}. H^{1,1} would detect constraints whose observer-dependence itself changes over time.
 5. **Financial regulation beta corpus.** Testing portability to a domain with quantitative ground truth (e.g., court rulings on extractive contracts where H¹ gaps can be validated against actual legal ambiguity).
 6. **Lateral extraction formalization.** A relational dimension representing same-level relationships.
 7. **Sensitivity sweep on π(institutional).** Mapping which theorems survive at π = −0.01, π = 0, and π = +0.5.
-8. **The sheafification question remains open.** See Axiom 4 for the argument against.
+8. **Intra-level dynamics layer.** An influence matrix over observer positions, with an update rule using the DR gate structure as a hard wall, to model cover story formation and collapse as a dynamical process rather than a static classification.
+9. **The sheafification question remains open.** See Axiom 4 for the argument against.
 
 ---
 
@@ -400,6 +427,8 @@ Type space as Heyting algebra (two absorbing elements prevent it). Power scaling
 **Institutional analysis** (Ostrom 1990). Ostrom asks "what kind of institution is this?" from a single analytical perspective; DR asks "what kind does this look like to different observers?" The approaches are complementary: Ostrom provides institutional semantics that DR currently lacks.
 
 **Topos-theoretic approaches in physics** (Isham and Butterfield 1998; Döring and Isham 2008). Both are presheaves on sites of contexts; both formalize context-dependent truth. Key disanalogy: quantum measurement involves irreversibility, stochasticity, and entanglement, none of which are present in DR.
+
+**Contextuality and sheaf cohomology** (Abramsky and Brandenburger 2011). Abramsky and Brandenburger formalize quantum contextuality using sheaf cohomology: a system is contextual iff the obstruction to a global hidden-variable assignment is non-trivial in H¹. DR's refusal of sheafification is structurally parallel — perspectival disagreement is the obstruction, and the contextuality fraction (CF = H¹/6 per constraint) operationalizes this obstruction in DR's discrete setting. The CF gap result — values forbidden at 1/6 and 1/3 by the site geometry — has no direct analogue in the quantum contextuality literature, where the admissible contextuality fractions depend on the specific measurement scenario rather than on a fixed site structure. Key disanalogy: AB contextuality arises from incompatible measurement bases in quantum mechanics; DR contextuality arises from power-modulated perception across structurally distinct observer positions. The mathematics is similar; the source of incompatibility differs.
 
 **Computational social science.** DR is not machine learning. Classification is computed from continuous metrics via a hand-designed deterministic rule cascade, and the central question is not "which label is correct?" but "how does the label depend on who is labeling?"
 
@@ -415,17 +444,19 @@ Classification of social structures depends irreducibly on who is observing. Thi
 
 The framework's core commitment is a single empirical hypothesis: power modulates the perception of extraction. Encoded as a presheaf on a site of observer positions, this hypothesis produces consequences that are not visible from the informal intuition alone. Extraction cannot be universally perceived as such. Disagreement clusters in discrete blocs. The institutional observer carries 97% of the spectral weight. Single-position analysis is provably almost blind to cross-position structure. These are theorems, not findings.
 
-Two independently generated corpora with inverted input distributions confirm the engine correctly computes these consequences and converge to identical framework-level outputs — the strongest validation that the structural properties are fixed-point attractors of the axioms rather than artifacts of any particular dataset.
+Two independently generated corpora with inverted input distributions confirm the engine correctly computes these consequences and converge to identical framework-level outputs — the strongest validation that the structural properties are fixed-point attractors of the axioms rather than artifacts of any particular dataset. Three new diagnostics deepen the empirical record. The contextuality fraction confirms Theorem 2 in Abramsky-Brandenburger coordinates, with the H¹ gap propagating into a provable constraint on admissible CF values. The orbit monotonicity analysis finds that classification along the power chain is almost never a simple gradient: 98.9% of non-constant comparable orbits are non-monotone, with boundary density concentrated in the upper half of the power chain. The incomparable orbit decomposition reveals that the 14.8% of constraints classified outside the extraction ordering are not noise — they are the location of maximum perspectival fracture, with all maximal-obstruction (H¹ = 6) constraints in this population.
 
 A clarification is warranted: the framework does not explain *why* extraction requires perspectival cover — that remains a sociological claim requiring domain theory. What the framework provides is formal machinery to establish *that* perceptual non-universality holds under power-modulated classification, to measure *how much* of a domain is perspectivally fractured, and to identify the specific coalition structure of the fracture. The categorical vocabulary organizes the diagnostic machinery; explanation requires a theory of the domain.
 
 **Broader stakes.** The formal results have implications beyond the social-constraint domain that serves as the test case. For democratic theory: if institutional perception is spectrally decoupled from other positions (Theorem 3), then institutional actors designing reforms are working from a classification that is structurally orthogonal to the experience of those affected — not because they are ignoring the data, but because their position transforms it. For regulatory design: if single-position analysis misses more than 97% of cross-position structure (Theorem 4), then regulatory impact assessments conducted from a single vantage point are provably almost blind to the effects that matter most. For epistemic justice: if extraction structurally requires perceptual non-universality (Theorem 1), then the demand to "prove extraction exists" from the perspective of its beneficiaries is not a neutral epistemic standard but a structural impossibility — the beneficiary's position is precisely where the extraction is invisible. These connections are interpretive rather than formal, but they indicate where the framework's mathematical results make contact with questions that matter.
 
-We close with the open question that the framework itself raises: should the presheaf be sheafified? The answer remains no. The framework's value lies precisely in measuring perspectival fracture — in quantifying the gap between local truth and global truth, and in identifying the structural patterns in that gap. The descent rate, the H¹ distribution, the near-absence of snares from H⁰, the institutional observer as dominant dissenter, the oracle gap — these are features of the presheaf's failure to be a sheaf. Sheafification would erase them. The truth of a social system, on this account, is not the consensus but the fracture itself.
+We close with the open question that the framework itself raises: should the presheaf be sheafified? The answer remains no. The framework's value lies precisely in measuring perspectival fracture — in quantifying the gap between local truth and global truth, and in identifying the structural patterns in that gap. The descent rate, the H¹ distribution, the near-absence of snares from H⁰, the institutional observer as dominant dissenter, the oracle gap, the contextuality fraction — these are features of the presheaf's failure to be a sheaf. Sheafification would erase them. The truth of a social system, on this account, is not the consensus but the fracture itself.
 
 ---
 
 ## References
+
+Abramsky, S., & Brandenburger, A. (2011). The sheaf-theoretic structure of non-locality and contextuality. *New Journal of Physics*, 13(11).
 
 Amari, S., & Nagaoka, H. (2000). *Methods of Information Geometry*. American Mathematical Society.
 

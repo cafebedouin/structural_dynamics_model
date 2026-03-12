@@ -429,10 +429,11 @@ ensure_corpus_computed :-
 %% extraction_rank(+Type, -Rank)
 %  Position on the extraction chain. Types outside the chain
 %  (scaffold, piton, naturalized, unknown) get rank -1.
-extraction_rank(mountain, 0).
-extraction_rank(rope, 1).
-extraction_rank(tangled_rope, 2).
-extraction_rank(snare, 3).
+%  Deterministic: cuts prevent the catch-all from shadowing known types.
+extraction_rank(mountain, 0) :- !.
+extraction_rank(rope, 1) :- !.
+extraction_rank(tangled_rope, 2) :- !.
+extraction_rank(snare, 3) :- !.
 extraction_rank(_, -1).
 
 %% orbit_monotonicity(+Constraint, -Status)
@@ -546,6 +547,106 @@ count_boundary_positions(Constraints, N1, N2, N3) :-
     include(=(1), AllPositions, P1s), length(P1s, N1),
     include(=(2), AllPositions, P2s), length(P2s, N2),
     include(=(3), AllPositions, P3s), length(P3s, N3).
+
+/* ================================================================
+   INCOMPARABLE ORBIT DECOMPOSITION
+   155 constraints (14.8%) have orbits with types outside the
+   extraction chain. This section decomposes them by mechanism,
+   position, and residual in-chain monotonicity.
+   ================================================================ */
+
+%% incomparable_decomposition(-Summary)
+%  Structured breakdown of incomparable orbits by OOC type,
+%  position, H1 distribution, and in-chain monotonicity.
+incomparable_decomposition(Summary) :-
+    ensure_corpus_computed,
+    findall(C,
+        (cached_obstruction(C, _, _),
+         once(orbit_monotonicity(C, Status)),
+         Status == incomparable),
+        IncompCs),
+    length(IncompCs, NTotal),
+    count_ooc_by_type(IncompCs, naturalized, NNat),
+    count_ooc_by_type(IncompCs, scaffold, NScaff),
+    count_ooc_by_type(IncompCs, piton, NPiton),
+    count_ooc_by_position(IncompCs, N1, N2, N3, N4),
+    incomparable_h1_dist(IncompCs, H1Dist),
+    in_chain_monotonicity(IncompCs, ICMSummary),
+    Summary = incomparable_decomposition(
+        total(NTotal),
+        by_type([naturalized-NNat, scaffold-NScaff, piton-NPiton]),
+        by_position([u1-N1, u2-N2, u3-N3, u4-N4]),
+        h1_distribution(H1Dist),
+        in_chain_monotonicity(ICMSummary)
+    ).
+
+%% count_ooc_by_type(+Constraints, +Type, -Count)
+%  Count constraints whose orbit vector contains the given OOC type.
+count_ooc_by_type(Constraints, Type, Count) :-
+    include(has_ooc_type(Type), Constraints, Matching),
+    length(Matching, Count).
+
+has_ooc_type(Type, C) :-
+    orbit_vector(C, Vec),
+    member(Type, Vec).
+
+%% count_ooc_by_position(+Constraints, -N1, -N2, -N3, -N4)
+%  Count OOC occurrences at each of the 4 canonical positions.
+count_ooc_by_position(Constraints, N1, N2, N3, N4) :-
+    foldl(acc_ooc_positions, Constraints, 0-0-0-0, N1-N2-N3-N4).
+
+acc_ooc_positions(C, A1-A2-A3-A4, B1-B2-B3-B4) :-
+    orbit_vector(C, [T1, T2, T3, T4]),
+    (is_ooc(T1) -> B1 is A1+1 ; B1 = A1),
+    (is_ooc(T2) -> B2 is A2+1 ; B2 = A2),
+    (is_ooc(T3) -> B3 is A3+1 ; B3 = A3),
+    (is_ooc(T4) -> B4 is A4+1 ; B4 = A4).
+
+%% is_ooc(+Type)
+%  True if Type is outside the extraction chain. Deterministic.
+is_ooc(Type) :-
+    once(extraction_rank(Type, R)),
+    R =:= -1.
+
+%% det_extraction_rank(+Type, -Rank)
+%  Deterministic wrapper around extraction_rank/2.
+det_extraction_rank(Type, Rank) :-
+    once(extraction_rank(Type, Rank)).
+
+%% incomparable_h1_dist(+Constraints, -Distribution)
+%  H1 frequency distribution for incomparable subset.
+%  Returns sorted list of H1Value-Count pairs.
+incomparable_h1_dist(Constraints, Dist) :-
+    findall(H1,
+        (member(C, Constraints), cached_obstruction(C, _, H1)),
+        AllH1),
+    msort(AllH1, Sorted),
+    clumped(Sorted, Dist).
+
+%% in_chain_monotonicity(+Constraints, -Summary)
+%  For each incomparable constraint, mask OOC positions and classify
+%  the remaining in-chain ranks for monotonicity.
+%  Summary = icm_summary(ascending(Na), descending(Nd),
+%                        non_monotone(Nn), too_few(Nt))
+in_chain_monotonicity(Constraints, icm_summary(ascending(Na), descending(Nd),
+                                               non_monotone(Nn), too_few(Nt))) :-
+    foldl(acc_icm, Constraints, 0-0-0-0, Na-Nd-Nn-Nt).
+
+acc_icm(C, A-D-N-F, A2-D2-N2-F2) :-
+    orbit_vector(C, Vec),
+    maplist(det_extraction_rank, Vec, Ranks),
+    include(\=(-1), Ranks, InChainRanks),
+    length(InChainRanks, Len),
+    (   Len >= 3
+    ->  adjacent_deltas(InChainRanks, Deltas),
+        (   classify_deltas(Deltas, monotone_ascending)
+        ->  A2 is A+1, D2=D, N2=N, F2=F
+        ;   classify_deltas(Deltas, monotone_descending)
+        ->  A2=A, D2 is D+1, N2=N, F2=F
+        ;   A2=A, D2=D, N2 is N+1, F2=F
+        )
+    ;   A2=A, D2=D, N2=N, F2 is F+1
+    ).
 
 /* ================================================================
    SELFTEST
@@ -689,5 +790,33 @@ cohomology_selftest :-
         format('    non_monotone: ~w  orbit=~w~n', [NMC, NMOV])
     ;   format('    non_monotone: (none)~n')
     ),
+
+    % Incomparable orbit decomposition
+    format('~n--- Incomparable Orbit Decomposition ---~n'),
+    incomparable_decomposition(IncompSummary),
+    IncompSummary = incomparable_decomposition(
+        total(ITotal),
+        by_type(TypeBreakdown),
+        by_position(PosBreakdown),
+        h1_distribution(IH1Dist),
+        in_chain_monotonicity(icm_summary(
+            ascending(ICMAsc), descending(ICMDesc),
+            non_monotone(ICMNon), too_few(ICMFew)))
+    ),
+    format('  Total incomparable: ~w~n', [ITotal]),
+    format('~n  By OOC type:~n'),
+    forall(member(T-Cnt, TypeBreakdown),
+           format('    ~w: ~w~n', [T, Cnt])),
+    format('~n  By position (OOC count at each U):~n'),
+    forall(member(U-Cnt, PosBreakdown),
+           format('    ~w: ~w~n', [U, Cnt])),
+    format('~n  H1 distribution (incomparable only):~n'),
+    forall(member(H1V-H1Cnt, IH1Dist),
+           format('    H1=~w: ~w~n', [H1V, H1Cnt])),
+    format('~n  In-chain monotonicity (OOC positions masked):~n'),
+    format('    ascending:   ~w~n', [ICMAsc]),
+    format('    descending:  ~w~n', [ICMDesc]),
+    format('    non_monotone: ~w~n', [ICMNon]),
+    format('    too_few:     ~w~n', [ICMFew]),
 
     format('~n=== Selftest Complete ===~n').
