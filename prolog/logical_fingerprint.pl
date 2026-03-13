@@ -49,6 +49,7 @@
 
     % Discovery
     known_constraint/1,             % All discoverable constraint IDs (atoms only)
+    known_constraint_set/1,         % Sorted deduplicated list of all constraint IDs
 
     % Grouping utilities
     shift_family/2,                 % All constraints sharing a shift pattern
@@ -455,10 +456,21 @@ categorize_coupling(_, _, _, _, weakly_coupled).
 
 %% known_constraint(-C)
 %  Enumerates all discoverable constraint IDs (atoms only, deduplicated).
-%  Use findall + sort for the full list, or call directly for backtracking.
+%  Uses findall + sort internally so each ID is yielded exactly once,
+%  regardless of how many constraint_metric/constraint_claim/constraint_classification
+%  facts exist per constraint. Safe for both backtracking and findall usage.
 known_constraint(C) :-
-    known_constraint_raw(C),
-    atom(C).
+    known_constraint_set(Cs),
+    member(C, Cs).
+
+%% known_constraint_set(-Cs)
+%  Returns the sorted, deduplicated list of all known constraint IDs.
+%  Note: recomputes on every call. For ~1000 constraints this is negligible.
+%  If corpus size grows significantly, consider tabling or assert-caching
+%  with invalidation from corpus_loader:ensure_corpus_loaded/0.
+known_constraint_set(Cs) :-
+    findall(C, (known_constraint_raw(C), atom(C)), Cs0),
+    sort(Cs0, Cs).
 
 known_constraint_raw(C) :-
     narrative_ontology:constraint_metric(C, _, _).

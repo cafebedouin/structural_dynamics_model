@@ -7,6 +7,11 @@ collecting per-constraint orbit data, H1 cohomology, and FCR detection status.
 Produces a comparison table answering whether the ~62% tangled_rope convergence
 is driven by the FCR override or reflects a structural tendency.
 
+Reports TWO type distributions per condition:
+  - Analytical perspective: the type at the highest-power context
+  - Modal (orbit majority): majority type across all 4 perspectives,
+    which is what the paper's §5.2 convergence table uses
+
 Uses the Prolog overlay pattern from config_sensitivity_sweep.py.
 
 Usage:
@@ -34,8 +39,17 @@ FCR_STATES = {
     "disabled": 0,
 }
 
+# Tie-breaking precedence for 2-2 orbit splits.
+# Matches batch_claim_reconciliation.py:TIE_PRECEDENCE.
+TIE_PRECEDENCE = [
+    "snare", "tangled_rope", "piton", "scaffold",
+    "rope", "mountain", "naturalized",
+]
+
 # Prolog overlay template: sets fcr_override_enabled and corpus_path,
 # then collects per-constraint orbit + H1 + FCR detection data.
+# Uses findall+sort for deduplication (known_constraint/1 source fix
+# is also applied, but belt+suspenders).
 OVERLAY_TEMPLATE = """\
 %% FCR ablation overlay — auto-generated
 :- use_module(config).
@@ -51,8 +65,10 @@ OVERLAY_TEMPLATE = """\
 
 :- corpus_loader:ensure_corpus_loaded,
    grothendieck_cohomology:cohomology_cleanup,
+   findall(C0, logical_fingerprint:known_constraint(C0), Cs0),
+   sort(Cs0, Cs),
    forall(
-     logical_fingerprint:known_constraint(C),
+     member(C, Cs),
      (   catch(
            (   grothendieck_cohomology:orbit_vector(C, [T1, T2, T3, T4]),
                grothendieck_cohomology:cohomological_obstruction(C, H0, H1),
@@ -130,6 +146,26 @@ def run_ablation_query(corpus_name, corpus_dir, fcr_flag, timeout_sec):
             pass
 
 
+def resolve_modal_type(types):
+    """Compute majority type with principled tie-breaking.
+
+    For 4 perspectives, ties occur on 2-2 splits. Uses TIE_PRECEDENCE
+    (matching batch_claim_reconciliation.py) to resolve deterministically.
+
+    Returns (modal_type, is_tie).
+    """
+    counter = Counter(types)
+    max_count = counter.most_common(1)[0][1]
+    tied = [t for t, c in counter.items() if c == max_count]
+    if len(tied) == 1:
+        return tied[0], False
+    # Tie: resolve by precedence
+    for pref in TIE_PRECEDENCE:
+        if pref in tied:
+            return pref, True
+    return tied[0], True
+
+
 def compute_metrics(rows):
     """Compute all metrics from parsed row data."""
     n = len(rows)
@@ -139,13 +175,15 @@ def compute_metrics(rows):
     # Post-override type distribution (analytical perspective as reference)
     type_counts = Counter(r["t_analytical"] for r in rows)
 
-    # Also compute "majority type" from orbit
+    # Modal type (orbit majority) with tie tracking
     orbit_types = Counter()
+    tie_count = 0
     for r in rows:
         types = [r["t_powerless"], r["t_moderate"],
                  r["t_institutional"], r["t_analytical"]]
-        # Use the most common type in the orbit
-        mc = Counter(types).most_common(1)[0][0]
+        mc, is_tie = resolve_modal_type(types)
+        if is_tie:
+            tie_count += 1
         orbit_types[mc] += 1
 
     # H1 distribution
@@ -170,6 +208,7 @@ def compute_metrics(rows):
         "n": n,
         "type_dist_analytical": dict(type_counts.most_common()),
         "type_dist_orbit_majority": dict(orbit_types.most_common()),
+        "tie_count": tie_count,
         "h1_dist": {k: h1_dist[k] for k in sorted(h1_dist)},
         "descent_rate": round(descent_rate, 1),
         "gauge_variance_rate": round(gauge_variance_rate, 1),
@@ -241,10 +280,20 @@ def main():
               f"H\u00b9=2 {'empty' if m['h1_2_empty'] else 'OCCUPIED'} "
               f"\u2014 {'HOLDS' if m['superselection_gap'] else 'BROKEN'}")
 
-        print(f"\n### Post-override type distribution (analytical perspective)\n")
+        print(f"\n### Type distribution — analytical perspective\n")
         print(f"| {'Type':<15} | {'Count':>5} |   {'%':>5} |")
         print(f"|{'-'*17}|{'-'*7}|{'-'*8}|")
         print(format_type_dist(m["type_dist_analytical"], m["n"]))
+
+        print(f"\n### Type distribution — modal (orbit majority)\n")
+        if m["tie_count"] > 0:
+            print(f"*{m['tie_count']} constraints "
+                  f"({m['tie_count']/m['n']*100:.1f}%) had 2-2 ties, "
+                  f"resolved by TIE_PRECEDENCE "
+                  f"(snare > tangled_rope > ...)*\n")
+        print(f"| {'Type':<15} | {'Count':>5} |   {'%':>5} |")
+        print(f"|{'-'*17}|{'-'*7}|{'-'*8}|")
+        print(format_type_dist(m["type_dist_orbit_majority"], m["n"]))
 
         print(f"\n### H\u00b9 distribution\n")
         print(f"| H\u00b9 | Count | % |")
@@ -255,9 +304,38 @@ def main():
             print(f"| {h1_val} | {cnt} | {pct:.1f}% |")
 
     # -----------------------------------------------------------------------
-    # Convergence comparison
+    # Convergence comparison (uses modal type — matches paper §5.2)
     # -----------------------------------------------------------------------
-    print("\n\n## Convergence Comparison\n")
+    print("\n\n## Convergence Comparison (modal type)\n")
+
+    for fcr_name in FCR_STATES:
+        print(f"\n### FCR {fcr_name}\n")
+        print(f"| {'Type':<15} | {'Flash %':>8} | {'Haiku %':>8} | {'Delta':>6} |")
+        print(f"|{'-'*17}|{'-'*10}|{'-'*10}|{'-'*8}|")
+
+        flash_key = f"Flash (B) / FCR {fcr_name}"
+        haiku_key = f"Haiku (A) / FCR {fcr_name}"
+        flash_m = results.get(flash_key)
+        haiku_m = results.get(haiku_key)
+
+        if flash_m and haiku_m:
+            all_types = sorted(set(
+                list(flash_m["type_dist_orbit_majority"]) +
+                list(haiku_m["type_dist_orbit_majority"])
+            ))
+            for t in all_types:
+                f_cnt = flash_m["type_dist_orbit_majority"].get(t, 0)
+                h_cnt = haiku_m["type_dist_orbit_majority"].get(t, 0)
+                f_pct = f_cnt / flash_m["n"] * 100
+                h_pct = h_cnt / haiku_m["n"] * 100
+                delta = h_pct - f_pct
+                print(f"| {t:<15} | {f_pct:>7.1f}% | {h_pct:>7.1f}% | "
+                      f"{delta:>+5.1f}% |")
+
+    # -----------------------------------------------------------------------
+    # Convergence comparison (analytical perspective — for reference)
+    # -----------------------------------------------------------------------
+    print("\n\n## Convergence Comparison (analytical perspective)\n")
 
     for fcr_name in FCR_STATES:
         print(f"\n### FCR {fcr_name}\n")
@@ -283,7 +361,7 @@ def main():
                 print(f"| {t:<15} | {f_pct:>7.1f}% | {h_pct:>7.1f}% | "
                       f"{delta:>+5.1f}% |")
 
-    # Key question
+    # Key finding
     print("\n\n## Key Finding\n")
     flash_en = results.get("Flash (B) / FCR enabled")
     flash_dis = results.get("Flash (B) / FCR disabled")
@@ -291,18 +369,24 @@ def main():
     haiku_dis = results.get("Haiku (A) / FCR disabled")
 
     if all(m is not None for m in [flash_en, flash_dis, haiku_en, haiku_dis]):
-        def tr_pct(m):
-            return m["type_dist_analytical"].get("tangled_rope", 0) / m["n"] * 100
+        def tr_pct_modal(m):
+            return m["type_dist_orbit_majority"].get(
+                "tangled_rope", 0) / m["n"] * 100
 
+        def tr_pct_analytical(m):
+            return m["type_dist_analytical"].get(
+                "tangled_rope", 0) / m["n"] * 100
+
+        print("### Modal type (orbit majority — paper §5.2 unit)\n")
         print(f"- Flash tangled_rope: "
-              f"{tr_pct(flash_en):.1f}% (enabled) -> "
-              f"{tr_pct(flash_dis):.1f}% (disabled)")
+              f"{tr_pct_modal(flash_en):.1f}% (enabled) -> "
+              f"{tr_pct_modal(flash_dis):.1f}% (disabled)")
         print(f"- Haiku tangled_rope: "
-              f"{tr_pct(haiku_en):.1f}% (enabled) -> "
-              f"{tr_pct(haiku_dis):.1f}% (disabled)")
+              f"{tr_pct_modal(haiku_en):.1f}% (enabled) -> "
+              f"{tr_pct_modal(haiku_dis):.1f}% (disabled)")
 
-        en_delta = abs(tr_pct(flash_en) - tr_pct(haiku_en))
-        dis_delta = abs(tr_pct(flash_dis) - tr_pct(haiku_dis))
+        en_delta = abs(tr_pct_modal(flash_en) - tr_pct_modal(haiku_en))
+        dis_delta = abs(tr_pct_modal(flash_dis) - tr_pct_modal(haiku_dis))
 
         print(f"- Convergence gap (enabled): {en_delta:.1f}pp")
         print(f"- Convergence gap (disabled): {dis_delta:.1f}pp")
@@ -316,7 +400,24 @@ def main():
                   f"The FCR override is the primary attractor mechanism.")
         else:
             print(f"\n**Partial convergence** (gap {dis_delta:.1f}pp). "
-                  f"FCR accelerates convergence but does not fully manufacture it.")
+                  f"FCR accelerates convergence but does not fully "
+                  f"manufacture it.")
+
+        print(f"\n### Analytical perspective (for reference)\n")
+        print(f"- Flash tangled_rope: "
+              f"{tr_pct_analytical(flash_en):.1f}% (enabled) -> "
+              f"{tr_pct_analytical(flash_dis):.1f}% (disabled)")
+        print(f"- Haiku tangled_rope: "
+              f"{tr_pct_analytical(haiku_en):.1f}% (enabled) -> "
+              f"{tr_pct_analytical(haiku_dis):.1f}% (disabled)")
+
+        en_delta_a = abs(
+            tr_pct_analytical(flash_en) - tr_pct_analytical(haiku_en))
+        dis_delta_a = abs(
+            tr_pct_analytical(flash_dis) - tr_pct_analytical(haiku_dis))
+
+        print(f"- Convergence gap (enabled): {en_delta_a:.1f}pp")
+        print(f"- Convergence gap (disabled): {dis_delta_a:.1f}pp")
 
 
 if __name__ == "__main__":
