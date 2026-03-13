@@ -28,6 +28,7 @@
 :- use_module(covering_analysis).
 :- use_module(maxent_classifier).
 :- use_module(grothendieck_cohomology).
+:- use_module(measurement_layer).
 :- use_module(diagnostic_summary).
 :- use_module(post_synthesis).
 :- use_module(drl_fpn, [fpn_ep/3, fpn_intrinsic/2]).
@@ -54,12 +55,13 @@ run_json_report :-
     length(Constraints, CorpusSize),
     format(user_error, '[json] Found ~w constraints.~n', [CorpusSize]),
 
-    % Precompute MaxEnt distributions for all constraints
+    % Precompute MaxEnt at all 4 Wasserstein contexts (includes analytical = default)
     constraint_indexing:default_context(MaxEntCtx),
-    maxent_classifier:maxent_precompute(Constraints, MaxEntCtx),
-    format(user_error, '[json] MaxEnt precompute done.~n', []),
+    measurement_layer:wasserstein_contexts(WCtxs),
+    catch(maxent_classifier:maxent_multi_run(WCtxs, _WMSummaries), _, true),
+    format(user_error, '[json] MaxEnt multi-context (Wasserstein) done.~n', []),
 
-    % Run indexed MaxEnt (uses power-scaled χ; requires priors from precompute)
+    % Run indexed MaxEnt (uses power-scaled χ; profiles from multi-run's last context)
     catch(maxent_classifier:maxent_indexed_run(MaxEntCtx, _IndexedSummary), _, true),
     format(user_error, '[json] MaxEnt indexed run done.~n', []),
 
@@ -382,6 +384,44 @@ write_per_constraint_entry(S, C, Comma, MaxEntCtx) :-
     ;   format(S, '      "h1_band": null,~n', [])
     ),
 
+    % wasserstein transport (continuous complement to H1)
+    (   catch(measurement_layer:wasserstein_transport_profile(C, WProfile), _, fail)
+    ->  WProfile = transport_profile(edge(u1_u2, W12), edge(u2_u3, W23), edge(u3_u4, W34)),
+        WTotal is W12 + W23 + W34,
+        format(S, '      "wasserstein_profile": {"u1_u2": ~6f, "u2_u3": ~6f, "u3_u4": ~6f},~n', [W12, W23, W34]),
+        format(S, '      "wasserstein_total_fracture": ~6f,~n', [WTotal]),
+        measurement_layer:wasserstein_contexts([WCtx1, WCtx2, WCtx3, WCtx4]),
+        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx1, WM1), _, (WM1 = 0.0)) -> true ; WM1 = 0.0),
+        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx2, WM2), _, (WM2 = 0.0)) -> true ; WM2 = 0.0),
+        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx3, WM3), _, (WM3 = 0.0)) -> true ; WM3 = 0.0),
+        (catch(measurement_layer:wasserstein_incomparable_mass(C, WCtx4, WM4), _, (WM4 = 0.0)) -> true ; WM4 = 0.0),
+        format(S, '      "wasserstein_incomparable_mass": {"u1": ~6f, "u2": ~6f, "u3": ~6f, "u4": ~6f},~n', [WM1, WM2, WM3, WM4])
+    ;   format(S, '      "wasserstein_profile": null,~n', []),
+        format(S, '      "wasserstein_total_fracture": null,~n', []),
+        format(S, '      "wasserstein_incomparable_mass": null,~n', [])
+    ),
+
+    % contextuality_fraction (per-constraint: H1/6, Abramsky-Brandenburger)
+    (   catch(grothendieck_cohomology:constraint_contextuality(C, CxFrac), _, fail)
+    ->  format(S, '      "contextuality_fraction": ~6f,~n', [CxFrac])
+    ;   format(S, '      "contextuality_fraction": null,~n', [])
+    ),
+
+    % orbit_monotonicity (power-chain extraction monotonicity)
+    (   catch(grothendieck_cohomology:orbit_monotonicity(C, MonoStatus), _, fail)
+    ->  mono_status_to_string(MonoStatus, MonoStr),
+        format(S, '      "orbit_monotonicity": "~w",~n', [MonoStr])
+    ;   format(S, '      "orbit_monotonicity": null,~n', [])
+    ),
+
+    % transition_boundaries (where type-switching occurs in orbit)
+    (   catch(grothendieck_cohomology:transition_boundaries(C, TBounds), _, fail)
+    ->  format(S, '      "transition_boundaries": [', []),
+        write_boundary_array(S, TBounds),
+        format(S, '],~n', [])
+    ;   format(S, '      "transition_boundaries": [],~n', [])
+    ),
+
     % drift_events (per-constraint structural drift indicators)
     findall(drift(DType, DSeverity), (
         catch(drl_lifecycle:scan_constraint_drift(C, DriftEvents), _, (DriftEvents = [])),
@@ -550,6 +590,38 @@ write_drift_array(S, [drift(DType, DSev)]) :-
 write_drift_array(S, [drift(DType, DSev)|Rest]) :-
     format(S, '{"type": "~w", "severity": "~w"}, ', [DType, DSev]),
     write_drift_array(S, Rest).
+
+%% mono_status_to_string(+Status, -String)
+%  Converts orbit_monotonicity/2 term to a JSON-safe string.
+mono_status_to_string(constant(_), constant).
+mono_status_to_string(monotone_ascending, monotone_ascending).
+mono_status_to_string(monotone_descending, monotone_descending).
+mono_status_to_string(non_monotone(_), non_monotone).
+mono_status_to_string(incomparable, incomparable).
+
+%% write_boundary_array(+Stream, +Boundaries)
+%  Writes transition boundary objects: [{"position": N, "from": T1, "to": T2}, ...].
+write_boundary_array(_, []).
+write_boundary_array(S, [boundary(Pos, From, To)]) :-
+    !,
+    format(S, '{"position": ~w, "from": "~w", "to": "~w"}', [Pos, From, To]).
+write_boundary_array(S, [boundary(Pos, From, To)|Rest]) :-
+    format(S, '{"position": ~w, "from": "~w", "to": "~w"}, ', [Pos, From, To]),
+    write_boundary_array(S, Rest).
+
+%% write_type_cf_object(+Stream, +TypeCFs)
+%  Writes contextuality-by-type object: {"mountain": 0.03, "rope": 0.38, ...}.
+write_type_cf_object(S, TypeCFs) :-
+    format(S, '{', []),
+    write_type_cf_entries(S, TypeCFs),
+    format(S, '}', []).
+
+write_type_cf_entries(_, []).
+write_type_cf_entries(S, [Type-CF]) :- !,
+    format(S, '"~w": ~6f', [Type, CF]).
+write_type_cf_entries(S, [Type-CF|Rest]) :-
+    format(S, '"~w": ~6f, ', [Type, CF]),
+    write_type_cf_entries(S, Rest).
 
 /* ================================================================
    PERSPECTIVES
@@ -1003,7 +1075,35 @@ write_diagnostic_object(S, Constraints, CorpusSize) :-
     ),
     format(S, '    "network_stability": ', []),
     write_json_string(S, StabAssessment),
-    format(S, '~n', []),
+    format(S, ',~n', []),
+
+    % corpus_wasserstein_fracture (total W1 across all constraints)
+    (   catch(measurement_layer:wasserstein_corpus_fracture(CorpusW1), _, fail)
+    ->  format(S, '    "corpus_wasserstein_fracture": ~6f,~n', [CorpusW1])
+    ;   format(S, '    "corpus_wasserstein_fracture": null,~n', [])
+    ),
+
+    % contextuality (Abramsky-Brandenburger: corpus fraction + by-type breakdown)
+    (   catch(grothendieck_cohomology:contextuality_fraction(CorpusCF), _, fail)
+    ->  format(S, '    "contextuality": {"corpus_fraction": ~6f, "by_type": ', [CorpusCF]),
+        (   catch(grothendieck_cohomology:contextuality_by_type(TypeCFs), _, fail)
+        ->  write_type_cf_object(S, TypeCFs)
+        ;   format(S, '{}', [])
+        ),
+        format(S, '},~n', [])
+    ;   format(S, '    "contextuality": null,~n', [])
+    ),
+
+    % monotonicity (power-chain monotonicity distribution + boundary positions)
+    (   catch(grothendieck_cohomology:corpus_monotonicity(CorpusMonoSum), _, fail),
+        CorpusMonoSum = monotonicity_summary(
+            constant(MNC), monotone_ascending(MNA),
+            monotone_descending(MND), non_monotone(MNN), incomparable(MNI),
+            boundary_distribution([pos(1, MB1), pos(2, MB2), pos(3, MB3)]))
+    ->  format(S, '    "monotonicity": {"constant": ~w, "ascending": ~w, "descending": ~w, "non_monotone": ~w, "incomparable": ~w, "boundary_distribution": {"pos_1": ~w, "pos_2": ~w, "pos_3": ~w}}~n',
+               [MNC, MNA, MND, MNN, MNI, MB1, MB2, MB3])
+    ;   format(S, '    "monotonicity": null~n', [])
+    ),
 
     format(S, '  }', []).
 

@@ -18,6 +18,7 @@
 :- use_module(drl_lifecycle).
 :- use_module(report_generator).
 :- use_module(logical_fingerprint).
+:- use_module(measurement_layer).
 
 % Run all registered test cases from validation_suite, or fall back to single ID
 run_all_tests :-
@@ -66,6 +67,15 @@ run_all_tests(IntervalID, _Context) :-
     format('  Formula: χ = ε × f(d) × σ(S)~n'),
     forall(narrative_ontology:constraint_claim(C, _),
            report_scope_effect(C)),
+
+    % Step 5b2: Wasserstein Transport Analysis
+    format('~n--- WASSERSTEIN TRANSPORT ---~n'),
+    forall(narrative_ontology:constraint_claim(CW, _),
+           report_wasserstein_transport(CW)),
+    (   catch(measurement_layer:wasserstein_corpus_fracture(CorpusW1), _, fail)
+    ->  format('  Corpus perspectival fracture (W1): ~4f~n', [CorpusW1])
+    ;   true
+    ),
 
     % Step 5c: Logical Fingerprint
     format('~n--- LOGICAL FINGERPRINT ---~n'),
@@ -164,3 +174,26 @@ scope_effect_standard_context(analytical,
             time_horizon(civilizational),
             exit_options(analytical),
             spatial_scope(global))).
+
+%% report_wasserstein_transport(+Constraint)
+%  Shows Wasserstein L1 transport profile across the 4 canonical observer
+%  positions. Requires MaxEnt distributions at all 4 contexts (silently
+%  skips if unavailable).
+report_wasserstein_transport(C) :-
+    (   catch(measurement_layer:wasserstein_transport_profile(C, Profile), _, fail)
+    ->  Profile = transport_profile(edge(u1_u2, W12), edge(u2_u3, W23), edge(u3_u4, W34)),
+        TotalW is W12 + W23 + W34,
+        format('  ~w:~n', [C]),
+        format('    Edge U1~cU2: ~4f | U2~cU3: ~4f | U3~cU4: ~4f | Total: ~4f~n',
+               [0x2192, W12, 0x2192, W23, 0x2192, W34, TotalW]),
+        measurement_layer:wasserstein_contexts([Ctx1, Ctx2, Ctx3, Ctx4]),
+        forall(
+            (   member(Ctx-Label, [Ctx1-u1, Ctx2-u2, Ctx3-u3, Ctx4-u4]),
+                catch(measurement_layer:wasserstein_incomparable_mass(C, Ctx, Mass), _, fail),
+                Mass > 0.4
+            ),
+            format('    ~c High incomparable mass at ~w: ~4f ~c W1 estimate partial~n',
+                   [0x26A0, Label, Mass, 0x2014])
+        )
+    ;   true  % silently skip — MaxEnt data not available at all 4 contexts
+    ).

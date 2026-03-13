@@ -1130,6 +1130,133 @@ _TRIGGER_GLOSSES = {
 }
 
 
+# --- Section E2: WASSERSTEIN TRANSPORT ---
+
+
+def build_wasserstein_section(constraint_id, pipeline_data):
+    """Section E2: WASSERSTEIN TRANSPORT — continuous perspectival fracture."""
+    lines = ["", "--- WASSERSTEIN TRANSPORT ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  Not yet in batch — run full pipeline to include.")
+        return "\n".join(lines)
+
+    profile = entry.get("wasserstein_profile")
+    total = entry.get("wasserstein_total_fracture")
+    incomp = entry.get("wasserstein_incomparable_mass")
+
+    if profile is None:
+        lines.append("  [MaxEnt multi-context data not available]")
+        return "\n".join(lines)
+
+    h1 = entry.get("h1_band")
+    w12 = profile.get("u1_u2", 0)
+    w23 = profile.get("u2_u3", 0)
+    w34 = profile.get("u3_u4", 0)
+
+    # Incomparable mass warnings FIRST — reader must know W1 reliability
+    # before interpreting the numbers
+    if incomp:
+        for ctx, label in [("u1", "U1"), ("u2", "U2"), ("u3", "U3"), ("u4", "U4")]:
+            mass = incomp.get(ctx, 0)
+            if mass > 0.4:
+                lines.append(
+                    f"  \u26a0 High incomparable mass at {label}: "
+                    f"{mass:.4f} \u2014 W\u2081 estimate partial"
+                )
+
+    lines.append(
+        f"  Edge U1\u2192U2: {w12:.4f} | "
+        f"U2\u2192U3: {w23:.4f} | "
+        f"U3\u2192U4: {w34:.4f} | "
+        f"Total: {total:.4f}"
+    )
+
+    # Identify highest-transport edge
+    edges = {"U1\u2192U2": w12, "U2\u2192U3": w23, "U3\u2192U4": w34}
+    if total > 0.001:
+        max_edge = max(edges, key=edges.get)
+        lines.append(f"  Peak transport:  {max_edge} ({edges[max_edge]:.4f})")
+
+    # H1 vs W1 diagnostic
+    if h1 is not None:
+        if h1 >= 3 and total < 0.001:
+            lines.append(
+                f"  H\u00b9={h1} but W\u2081\u22480 \u2014 discrete type-switching "
+                "invisible to continuous distributions"
+            )
+        elif h1 == 0 and total > 0.1:
+            lines.append(
+                f"  H\u00b9=0 but W\u2081={total:.3f} \u2014 sub-threshold "
+                "distributional shift despite unanimous discrete classification"
+            )
+
+    return "\n".join(lines)
+
+
+# --- Section E3: CONTEXTUALITY & MONOTONICITY ---
+
+# Map position integers to edge labels
+_BOUNDARY_EDGE = {1: "U1\u2192U2", 2: "U2\u2192U3", 3: "U3\u2192U4"}
+
+_MONO_GLOSS = {
+    "constant": "all contexts agree (global section)",
+    "monotone_ascending": "extraction increases with observer power",
+    "monotone_descending": "extraction decreases with observer power",
+    "non_monotone": "extraction reverses along power axis",
+    "incomparable": "orbit includes non-chain types (piton/naturalized/scaffold)",
+}
+
+
+def build_cohomology_section(constraint_id, pipeline_data):
+    """Section E3: CONTEXTUALITY & MONOTONICITY \u2014 classification geometry."""
+    lines = ["", "--- CONTEXTUALITY & MONOTONICITY ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  Not yet in batch \u2014 run full pipeline to include.")
+        return "\n".join(lines)
+
+    cf = entry.get("contextuality_fraction")
+    mono = entry.get("orbit_monotonicity")
+    bounds = entry.get("transition_boundaries", [])
+    h1 = entry.get("h1_band")
+
+    if cf is None and mono is None:
+        lines.append("  [cohomology data not available]")
+        return "\n".join(lines)
+
+    # Contextuality fraction
+    if cf is not None:
+        h1_str = f" (H\u00b9={h1}, {h1} of 6 context-pairs disagree)" if h1 is not None else ""
+        lines.append(f"  Contextuality:   {cf:.3f}{h1_str}")
+
+    # Orbit monotonicity
+    if mono is not None:
+        gloss = _MONO_GLOSS.get(mono, "")
+        lines.append(f"  Monotonicity:    {mono}" + (f" \u2014 {gloss}" if gloss else ""))
+
+    # Transition boundaries
+    if bounds:
+        parts = []
+        for b in bounds:
+            pos = b.get("position", "?")
+            edge = _BOUNDARY_EDGE.get(pos, f"pos{pos}")
+            parts.append(f"{edge} ({b.get('from', '?')}\u2192{b.get('to', '?')})")
+        lines.append(f"  Boundaries:      {', '.join(parts)}")
+
+    return "\n".join(lines)
+
+
 # --- Section F: ABDUCTIVE FLAGS ---
 
 def build_abductive_section(constraint_id, pipeline_data):
@@ -1501,6 +1628,8 @@ def generate_report(constraint_id, data, iteration_round=None):
     l2_convergence = build_level2_convergence(constraint_id, data["pipeline"])
     l2_maxent = build_maxent_section(constraint_id, data["pipeline"])
     # Indexed-mode MaxEnt now embedded in build_maxent_section (Gap analysis Change 5 — resolved)
+    l2_wasserstein = build_wasserstein_section(constraint_id, data["pipeline"])
+    l2_cohomology = build_cohomology_section(constraint_id, data["pipeline"])
     l2_abductive = build_abductive_section(constraint_id, data["pipeline"])
     l2_verdict = build_level2_verdict_body(constraint_id, data["pipeline"])
     l2_theorems = build_theorem_instantiation(
@@ -1525,7 +1654,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_abductive, l2_verdict, l2_theorems,
+        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_abductive, l2_verdict, l2_theorems,
         build_level_header(3, "CORPUS POSITIONING"),
         l3_distribution, l3_structural,
     ]

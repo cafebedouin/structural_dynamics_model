@@ -188,6 +188,14 @@ PIPELINE_FIELDS = [
     ("diagnostic_verdict",          dict,         True),   # null if diagnostic_summary fails
     # --- Post-synthesis divergence flags (T12) ---
     ("post_synthesis_flags",        list,         False),  # [] when no divergence
+    # --- Wasserstein transport (continuous perspectival fracture) ---
+    ("wasserstein_profile",         dict,         True),   # null if MaxEnt multi-context unavailable
+    ("wasserstein_total_fracture",  (int, float), True),   # null if MaxEnt multi-context unavailable
+    ("wasserstein_incomparable_mass", dict,       True),   # null if MaxEnt multi-context unavailable
+    # --- Contextuality & monotonicity (cohomological geometry) ---
+    ("contextuality_fraction",  (int, float), True),   # H1/6, null if obstruction unavailable
+    ("orbit_monotonicity",      str,          True),   # constant|monotone_ascending|monotone_descending|non_monotone|incomparable
+    ("transition_boundaries",   list,         False),  # [{position, from, to}, ...], empty if no transitions
 ]
 
 ENRICHED_EXTRA_FIELDS = [
