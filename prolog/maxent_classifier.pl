@@ -326,7 +326,11 @@ apply_override_for_sig(coupling_invariant_rope, DistIn, DistOut) :-
 
 %% Conditional overrides: boost target by factor of 3
 apply_override_for_sig(false_ci_rope, DistIn, DistOut) :-
-    !, override_conditional(tangled_rope, 3.0, DistIn, DistOut).
+    !,
+    (   config:param(fcr_override_enabled, 1)
+    ->  override_conditional(tangled_rope, 3.0, DistIn, DistOut)
+    ;   DistOut = DistIn                % Ablation: no boost
+    ).
 apply_override_for_sig(coordination_scaffold, DistIn, DistOut) :-
     !, override_conditional(rope, 3.0, DistIn, DistOut).
 apply_override_for_sig(constructed_low_extraction, DistIn, DistOut) :-

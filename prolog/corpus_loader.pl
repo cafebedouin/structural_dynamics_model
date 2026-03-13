@@ -20,6 +20,7 @@
     ensure_corpus_loaded/0
 ]).
 
+:- use_module(config).
 :- use_module(config_validation).
 
 :- dynamic corpus_loaded/0.
@@ -35,7 +36,9 @@ ensure_corpus_loaded :-
 load_all_testsets :-
     (   corpus_loaded
     ->  true
-    ;   expand_file_name('testsets/*.pl', Files),
+    ;   config:param(corpus_path, Dir),
+        atom_concat(Dir, '/*.pl', Pattern),
+        expand_file_name(Pattern, Files),
         length(Files, N),
         format(user_error, '[corpus] Loading ~w testset files...~n', [N]),
         load_testset_list(Files, 0, Loaded),

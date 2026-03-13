@@ -400,6 +400,8 @@ param(network_cluster_degraded_floor,          0.40).  % Below → cluster degra
 param(fpn_epsilon,                             0.001). % Convergence threshold (< min zone gap 0.20)
 param(fpn_max_iterations,                      20).    % Hard cap (2x theoretical worst case)
 param(fpn_enabled,                             1).     % Graduated Phase 7-T2: FPN iteration enabled
+param(fcr_override_enabled,                    1).     % 1=FCR overrides classification, 0=detection only (ablation)
+param(corpus_path,                       'testsets').   % Directory to load testsets from (relative to prolog/)
 
 /* ================================================================
    10. NETWORK DRIFT DYNAMICS PARAMETERS (v5.2)

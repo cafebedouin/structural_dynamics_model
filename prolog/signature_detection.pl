@@ -629,10 +629,13 @@ resolve_with_perspectival_check(C, piton, false_ci_rope, piton) :-
     drl_core:coordination_dead(C), !.
 resolve_with_perspectival_check(C, ModalType, false_ci_rope, AdjustedType) :-
     !,
-    (   ModalType \= unknown,
-        has_metric_perspectival_variance(C)
-    ->  AdjustedType = ModalType    % Preserve: indexical differentiation detected
-    ;   AdjustedType = tangled_rope % Override: uniform or unknown classification
+    (   config:param(fcr_override_enabled, 1)
+    ->  (   ModalType \= unknown,
+            has_metric_perspectival_variance(C)
+        ->  AdjustedType = ModalType    % Preserve: indexical differentiation detected
+        ;   AdjustedType = tangled_rope % Override: uniform or unknown classification
+        )
+    ;   AdjustedType = ModalType        % Ablation: preserve metric-based type
     ).
 resolve_with_perspectival_check(_C, ModalType, Signature, AdjustedType) :-
     resolve_modal_signature_conflict(ModalType, Signature, AdjustedType).
@@ -694,7 +697,12 @@ resolve_modal_signature_conflict(_, coupling_invariant_rope, Result) :- !, Resul
 %   resolve_with_perspectival_check/4 when has_metric_perspectival_variance
 %   fails. Direct callers of resolve_modal_signature_conflict still see
 %   the unconditional override for backward compatibility.
-resolve_modal_signature_conflict(_, false_ci_rope, Result) :- !, Result = tangled_rope.
+resolve_modal_signature_conflict(ModalType, false_ci_rope, Result) :-
+    !,
+    (   config:param(fcr_override_enabled, 1)
+    ->  Result = tangled_rope
+    ;   Result = ModalType              % Ablation: preserve metric-based type
+    ).
 
 % Coordination scaffolds should be ROPES not mountains
 resolve_modal_signature_conflict(mountain, coordination_scaffold, Result) :- !, Result = rope.

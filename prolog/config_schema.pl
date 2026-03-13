@@ -302,6 +302,8 @@ param_spec(network_cluster_degraded_floor,       number, range(0.0, 1.0), "Below
 param_spec(fpn_epsilon,        number, positive,        "FPN convergence threshold (divisor, must be > 0)").
 param_spec(fpn_max_iterations, integer, positive,        "FPN hard iteration cap").
 param_spec(fpn_enabled,        integer, oneof([0, 1]),  "0=one-hop propagation, 1=fixed-point iteration").
+param_spec(fcr_override_enabled, integer, oneof([0, 1]), "1=FCR overrides classification, 0=detection only (ablation)").
+param_spec(corpus_path,          atom,    any,            "Directory to load testsets from (relative to prolog/)").
 
 % ============================================================
 % 29. NETWORK DRIFT DYNAMICS
