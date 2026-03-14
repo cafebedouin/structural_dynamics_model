@@ -1257,6 +1257,84 @@ def build_cohomology_section(constraint_id, pipeline_data):
     return "\n".join(lines)
 
 
+# --- Section: GAME-THEORETIC STRUCTURE ---
+
+_STABILITY_GLOSS = {
+    "vulnerable": "orbit flips under single-agent power perturbation",
+    "latent_vulnerable": "orbit stable now but structurally fragile",
+    "resistant": "orbit survives all tested perturbations",
+    "not_applicable": "constant orbit, stability undefined",
+}
+
+_COVER_GLOSS = {
+    "no_cover": "no FCR effect \u2014 classification is transparent",
+    "nash_forced": "FCR forces a Nash equilibrium shift",
+    "type_relabeled": "FCR changes type label but structural disagreement persists",
+    "fcr_no_structural_effect": "FCR active but orbit structure unchanged",
+}
+
+
+def build_game_theory_section(constraint_id, pipeline_data):
+    """GAME-THEORETIC STRUCTURE \u2014 Nash equilibrium, stability, and cover story analysis."""
+    lines = ["", "--- GAME-THEORETIC STRUCTURE ---", ""]
+
+    if pipeline_data is None:
+        lines.append("  [enriched_pipeline.json not available]")
+        return "\n".join(lines)
+
+    entry = find_constraint_entry(pipeline_data, constraint_id)
+    if entry is None:
+        lines.append("  Not yet in batch \u2014 run full pipeline to include.")
+        return "\n".join(lines)
+
+    nds = entry.get("nash_distance_structural")
+    ss = entry.get("strategic_stability")
+    meq = entry.get("mixed_equilibrium_quality")
+    cst = entry.get("cover_story_type")
+
+    if all(v is None for v in [nds, ss, meq, cst]):
+        lines.append("  [game-theory data not available \u2014 run game_theory_*.py scripts]")
+        return "\n".join(lines)
+
+    # Nash distance
+    if nds is not None:
+        stable = entry.get("nash_stable_structural")
+        stable_str = "stable" if stable else "resolvable"
+        lines.append(f"  Nash distance:   {nds} ({stable_str})")
+
+        # Flag maximally entrenched
+        h1 = entry.get("h1_band")
+        if nds == 3 and h1 is not None:
+            lines.append(f"    \u26a0 Maximally entrenched (H\u00b9={h1})")
+
+        vuln = entry.get("vulnerable_positions") or []
+        if vuln:
+            vuln_str = ", ".join(f"{v}" for v in vuln)
+            lines.append(f"  Vulnerable at:   {vuln_str}")
+
+    # Strategic stability
+    if ss is not None:
+        gloss = _STABILITY_GLOSS.get(ss, "")
+        hpm = entry.get("h1_persistence_max")
+        persist_str = f" (H\u00b9 persistence: {hpm:.3f})" if hpm is not None else ""
+        lines.append(f"  Stability:       {ss}{persist_str}" + (f" \u2014 {gloss}" if gloss else ""))
+
+    # Mixed equilibrium
+    if meq is not None:
+        md = entry.get("max_deviation")
+        md_str = f" (max deviation: {md:.4f})" if md is not None else ""
+        lines.append(f"  Equilibrium:     {meq}{md_str}")
+        if meq == "loose":
+            lines.append("    2-vs-2 split: loose mixed equilibrium exists")
+
+    # Cover story
+    if cst is not None:
+        gloss = _COVER_GLOSS.get(cst, "")
+        lines.append(f"  Cover story:     {cst}" + (f" \u2014 {gloss}" if gloss else ""))
+
+    return "\n".join(lines)
+
+
 # --- Section E4: PARAMETRIC PERSISTENCE ---
 
 def build_persistence_section(constraint_id, persistence_data):
@@ -1762,6 +1840,7 @@ def generate_report(constraint_id, data, iteration_round=None):
     # Indexed-mode MaxEnt now embedded in build_maxent_section (Gap analysis Change 5 — resolved)
     l2_wasserstein = build_wasserstein_section(constraint_id, data["pipeline"])
     l2_cohomology = build_cohomology_section(constraint_id, data["pipeline"])
+    l2_game_theory = build_game_theory_section(constraint_id, data["pipeline"])
     l2_persistence = build_persistence_section(constraint_id, data["persistence"])
     l2_abductive = build_abductive_section(constraint_id, data["pipeline"])
     l2_verdict = build_level2_verdict_body(constraint_id, data["pipeline"])
@@ -1794,7 +1873,7 @@ def generate_report(constraint_id, data, iteration_round=None):
         build_level_header(1, "SELF-CONSISTENCY"),
         l1_identity, l1_contamination, l1_orbit, l1_omega,
         build_level_header(2, "DIAGNOSTIC CONVERGENCE"),
-        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems,
+        l2_convergence, l2_maxent, l2_wasserstein, l2_cohomology, l2_game_theory, l2_persistence, l2_abductive, l2_axiom2, l2_verdict, l2_theorems,
         build_level_header(3, "CORPUS POSITIONING"),
         l3_distribution, l3_structural,
     ]

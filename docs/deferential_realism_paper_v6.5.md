@@ -2,7 +2,7 @@
 
 **A Formal Framework for Systems Where What You See Depends on Where You Stand**
 
-**v6.4 — Axiom 2 metric validation, game-theoretic structure, persistence barcodes, W₁ transport, π sensitivity**
+**v6.5 — Theorem qualification, χ worked example, invariant glossary, falsifiability condition, scope statement**
 
 ---
 
@@ -24,7 +24,7 @@ The classification of social structures — laws, norms, institutions, regulator
 
 The standard response to perspectival dependence is to resolve it — to identify the "correct" classification by privileging one observer position or aggregating across positions. This paper takes the opposite approach. We model perspectival dependence using presheaf theory, where disagreement has formal mathematical structure, and the standard tools of topos theory — cohomology, descent, naturality — produce quantitative invariants that characterize any domain where classification depends on perspective.
 
-The framework, *Deferential Realism* (DR), is *realist* in that it treats constraints as having objective structural properties (extractiveness, suppression, coordination function) that exist independently of any observer; it is *deferential* in that it treats the *classification* of those properties as irreducibly dependent on the observer's structural position. The presheaf is emphatically not a sheaf: the gluing axiom is intentionally violated because perspectival disagreement is a diagnostic signal, not a defect.
+The framework, *Deferential Realism* (DR), is *realist* in that it treats constraints as having objective structural properties (extractiveness, suppression, coordination function) that exist independently of any observer; it is *deferential* in that it treats the *classification* of those properties as irreducibly dependent on the observer's structural position. The presheaf is emphatically not a sheaf: the gluing axiom is intentionally violated because perspectival disagreement is a diagnostic signal, not a defect. DR is a meter for perspectival fracture, not a machine for identifying the correct political line. The invariants it produces measure how disagreement is structured; they do not adjudicate whose classification is right.
 
 The paper separates cleanly what earlier versions interleaved: §2 states the axioms as design commitments, §3 derives the theorems that follow from those axioms alone, §4 presents the computational engine, §5 reports empirical findings, §6 provides the honest assessment, §7 discusses related work, and §8 connects the formal results to broader implications.
 
@@ -65,11 +65,13 @@ where d(P) is a directionality value derived from the observer's structural rela
 
 The directionality sigmoid: f(d) = L + (U−L)/(1 + e^(−k(d−d₀))) with L=−0.20, U=1.50, d₀=0.50, k=6.0. At the canonical institutional d=0.00, f(d) ≈ −0.12 — making χ negative, pushing the institutional observer below the rope threshold. This is the only observer position where f(d) can go negative under the canonical calibration, and it is the structural source of the institutional phase transition.
 
+**Worked example.** Consider a non-compete agreement with ε = 0.70 (high extraction, worker cannot exit the constraint). At U₁ (powerless, d=1.00): χ = 0.70 × 1.42 × 0.8 = 0.79 — above the snare threshold, classified as snare. At U₃ (institutional, d=0.00): χ = 0.70 × (−0.12) × 1.0 = −0.08 — negative, below the rope ceiling, classified as rope (coordination mechanism). Same constraint, same metrics, opposite classifications: Theorem 1 instantiated in a single pair of observers.
+
 The scope modifier σ = [0.8, 1.0, 1.0, 1.2] for [U₁, U₂, U₃, U₄] is observer-specific and constraint-independent: it encodes verification difficulty (harder to verify extraction claims at global scope) rather than constraint visibility. Making σ constraint-specific would reframe it from observer verification capacity to constraint visibility, which is a different theoretical concept requiring new per-constraint metadata.
 
 **Why this choice.** Power asymmetry is the domain's central structural feature. The multiplicative formula ensures that observer-independent extractiveness is preserved while experienced extractiveness varies continuously with position.
 
-**What would change.** If the empirical anchor fails — if power does not in fact reduce experienced extraction — the theorems remain derivable within the model but lose their world-referential claim. The model would remain formally coherent but empirically vacuous.
+**What would change.** If the empirical anchor fails — if power does not in fact reduce experienced extraction — the theorems remain derivable within the model but lose their world-referential claim. The model would remain formally coherent but empirically vacuous. A concrete falsification condition: if domain experts with direct knowledge of a constraint domain — including experts who occupy powerless structural positions — consistently rated as non-extractive the same constraints that trapped workers identify as total barriers to exit, that finding would challenge Axiom 2's claim that power position modulates perception of extraction rather than access to information. The axiom predicts a systematic pattern in which the institutional sign-flip is a structural consequence of position, not ignorance; evidence that the institutional classification is simply more accurate (that U₃ is right and U₁ is wrong about the same constraint) would require revising the empirical anchor.
 
 ### Axiom 3: Six Structural Types
 
@@ -105,7 +107,9 @@ When the Boltzmann independence test detects cross-perspectival coupling alongsi
 
 ## 3. The Theorems
 
-The theorems are structural consequences of the axioms alone. They hold regardless of corpus content. Each is confirmed empirically, but empirical confirmation is not what makes them true — the axioms make them true.
+The following consequences hold within the model defined by Axioms 1–6. We call them theorems because they follow deductively from the axioms; their status as claims about the world depends entirely on Axiom 2's empirical correspondence. If the empirical anchor maps correctly to the domain, the theorems describe structural necessities; if it does not, they remain valid within the model but describe a model that does not correspond to reality. Each theorem is confirmed empirically on the current corpus, but confirmation is not what makes it true within the model — the axioms do.
+
+A brief orientation: H¹ measures how large disagreement clusters must be (on this site, always 3 or more observers); spectral dominance measures which observer position controls the variance in disputes (97% concentrated at U₃); W₁ transport measures how far apart the underlying probability distributions are even when discrete type assignments agree; Nash distance measures the minimum coordinated reclassification effort required to make extraction invisible. These four invariants characterize the same presheaf from different angles.
 
 ### Theorem 1: Extraction Requires Perspectival Cover
 
@@ -179,7 +183,7 @@ The corpus is generated by large language models given constraint descriptions a
 
 **Wasserstein L¹ transport.** The Wasserstein distance W₁ between adjacent observers' MaxEnt distributions provides a continuous complement to discrete H¹ counting. For discrete distributions over the extraction chain, W₁ reduces to L¹ distance between CDFs — computable without linear programming. H¹ and W₁ measure genuinely different features and diverge in both directions. Constraints with H¹ = 3 can have W₁ ≈ 0 (discrete type-switching invisible to continuous distributions — the classifier commits to a different label but with similar uncertainty profiles, indicating a classification boundary artifact). Constraints with H¹ = 0 can have W₁ = 0.99 (unanimous discrete classification masking substantial distributional shift — observers agree on the label but their underlying probability mass is moving, a sub-threshold fracture H¹ cannot detect). The boundary distribution confirms that transport costs concentrate at the U₂→U₃ and U₃→U₄ edges (80% of transitions), consistent with the spectral dominance of the institutional phase transition.
 
-**Axiom 2 metric validation.** Variance decomposition of χ = ε × f(d(P)) × σ(S(P)) across 3,252 constraints (1 null excluded, 1 missing data) confirms that directionality f(d(P)) accounts for 98.6% of inter-observer variance in experienced extractiveness, with scope σ(S(P)) contributing 6.5% and a cross-term of −5.1%. The negative cross-term reflects the site geometry's partial cancellation: observers with high f(d) (U₁, victim position) have low σ (local scope), while U₄ (global scope) has the largest σ but a directionality value closer to neutral. The pattern holds across all constraint types: 95.4% of constraints are directionality-dominated, and no type falls below 94.6% f(d)-dominance. The scope modifier σ is architecturally constant ([0.8, 1.0, 1.0, 1.2] for all 3,253 constraints): it encodes observer verification capacity, not constraint visibility. A constraint-specific σ would require new per-constraint scope metadata and is expected to have minimal classification impact given that σ accounts for less than 7% of inter-observer χ variance and all scope parameters are classification-inert under ±25% perturbation. This decomposition is the first direct metric-level confirmation that power-modulated directionality, not scope amplification, is the primary driver of observer-dependent classification divergence.
+**Axiom 2 metric validation.** Variance decomposition of χ = ε × f(d(P)) × σ(S(P)) across 3,252 constraints (1 null excluded, 1 missing data) confirms that directionality f(d(P)) accounts for 98.6% of inter-observer variance in experienced extractiveness, with scope σ(S(P)) contributing 6.5% and a cross-term of −5.1%. The negative cross-term reflects the site geometry's partial cancellation: observers with high f(d) (U₁, victim position) have low σ (local scope), while U₄ (global scope) has the largest σ but a directionality value closer to neutral. Critically, the 98.6% figure is not merely a consequence of f(d) varying more than σ in magnitude: it reflects the sign reversal at U₃ — the qualitative inversion that drives the cover story mechanism — which σ, a positive scalar bounded between 0.8 and 1.2, cannot produce. The pattern holds across all constraint types: 95.4% of constraints are directionality-dominated, and no type falls below 94.6% f(d)-dominance. The scope modifier σ is architecturally constant ([0.8, 1.0, 1.0, 1.2] for all 3,253 constraints): it encodes observer verification capacity, not constraint visibility. A constraint-specific σ would require new per-constraint scope metadata and is expected to have minimal classification impact given that σ accounts for less than 7% of inter-observer χ variance and all scope parameters are classification-inert under ±25% perturbation. This decomposition is the first direct metric-level confirmation that power-modulated directionality, not scope amplification, is the primary driver of observer-dependent classification divergence.
 
 ### 5.2 Convergence Under Inversion
 
@@ -220,7 +224,7 @@ The type distributions after signature integration differ between corpora. Mount
 
 ### 5.3 Corpus-Dependent Findings
 
-**Type distribution (3,253 classified constraints; 1 null excluded).** Tangled_rope is the dominant type at 68.3% (2,221 constraints), followed by snare at 17.2% (560), mountain at 12.3% (401), rope at 1.4% (46), piton at 0.4% (14), and scaffold at 0.3% (11). The tangled_rope population decomposes bimodally on the coordination-extraction balance: 454 rope-lean (20.4%), 1,620 genuine (72.9%), 147 snare-lean (6.6%).
+**Type distribution (3,253 classified constraints; 1 null excluded).** Tangled_rope is the dominant type at 68.3% (2,221 constraints), followed by snare at 17.2% (560), mountain at 12.3% (401), rope at 1.4% (46), piton at 0.4% (14), and scaffold at 0.3% (11). Type counts reflect pipeline claimed_type at time of analysis. The tangled_rope population decomposes bimodally on the coordination-extraction balance: 454 rope-lean (20.4%), 1,620 genuine (72.9%), 147 snare-lean (6.6%).
 
 **Descent and H¹ distribution.** Descent rate (fraction of constraints achieving H⁰ = 1, global perceptual agreement) is 74.8%. The H¹ distribution: {0: 2,434, 3: 255, 4: 50, 5: 362, 6: 153}. Values 1 and 2 are absent, confirming the gap structure at corpus scale. All 153 maximal-obstruction constraints (H¹ = 6) are incomparable — classified outside the extraction ordering at at least one observer position.
 
@@ -242,9 +246,9 @@ The type distributions after signature integration differ between corpora. Mount
 
 ### 5.5 Game-Theoretic Structure
 
-Von Neumann's insight in game theory is that when the environment contains other optimizing agents, the interaction requires a mediating structure irreducible to either player's perspective. DR's presheaf is the same structure: the classification of a constraint is mediated by the site, not reducible to any single observer's view. H¹ obstruction measures how far local classifications fail to compose into a global one. This section formalizes the game-theoretic structure latent in the presheaf.
+Von Neumann's insight in game theory is that when the environment contains other optimizing agents, the interaction requires a mediating structure irreducible to either player's perspective. DR's presheaf is the same structure: the classification of a constraint is mediated by the site, not reducible to any single observer's view. H¹ obstruction measures how far local classifications fail to compose into a global one. This section formalizes the game-theoretic structure latent in the presheaf. Observers are not players with utility functions; the classification game is not a strategic interaction in the classical sense. The Nash distance formalism measures structural distance to consensus — the minimum coordinated reclassification effort required to make extraction globally invisible — which is a related but distinct concept from Nash equilibrium.
 
-**Nash equilibrium orbits.** For each non-constant orbit (820 constraints), the structural Nash distance is the minimum number of single-observer reclassifications (to any chain type) required to achieve global consistency (H¹ = 0). Of 820 non-constant orbits, 568 (69.3%) are Nash-stable (distance ≥ 2): no single observer's unilateral reclassification can render the extraction invisible. The institutional position is the uniquely vulnerable observer in 237 of 252 resolvable cases (94%), confirming that the institutional phase transition is the structurally thinnest point of the presheaf. H¹ perfectly determines Nash distance: H¹ ∈ {3} maps to distance 1, H¹ ∈ {4,5} to distance 2, and H¹ ∈ {6} to distance 3. The forbidden H¹ values {1, 2} correspond to Nash distances that cannot exist on a 4-observer extraction-chain site — a game-theoretic derivation of the H¹ gap theorem independent of the cohomological argument.
+**Nash equilibrium orbits.** For each non-constant orbit (820 constraints), the structural Nash distance is the minimum number of single-observer reclassifications (to any chain type) required to achieve global consistency (H¹ = 0). Of 820 non-constant orbits, 568 (69.3%) are Nash-stable (distance ≥ 2): no single observer's unilateral reclassification can render the extraction invisible. Nash-stable disagreement orbits correspond to extraction disputes that cannot be dissolved by any single actor changing their story — the disagreement is structurally locked. The institutional position is the uniquely vulnerable observer in 237 of 252 resolvable cases (94%), confirming that the institutional phase transition is the structurally thinnest point of the presheaf. H¹ perfectly determines Nash distance: H¹ ∈ {3} maps to distance 1, H¹ ∈ {4,5} to distance 2, and H¹ ∈ {6} to distance 3. The forbidden H¹ values {1, 2} correspond to Nash distances that cannot exist on a 4-observer extraction-chain site — a game-theoretic derivation of the H¹ gap theorem independent of the cohomological argument.
 
 **Institutional vulnerability is structural.** A π sensitivity sweep varying the institutional power modifier f(d) across [−0.30, +1.50] confirms the 94% concentration is not a calibration artifact. U₃ vulnerability remains at 99.2% for f(d) ∈ [−0.30, +0.60]: the sign change at zero produces no detectable effect. Two independent mechanisms sustain the concentration throughout this plateau: 131 metric-based cases where institutional χ falls below rope_chi_ceiling regardless of sign, and 106 signature-based cases where naturalized/scaffold assignments are π-invariant by construction. The transition at f(d) ≈ 0.65 increases rather than decreases the resolvable count (252 → 321), as resolving some disagreements reconfigures others — the classification game is not monotone in the institutional power modifier.
 
@@ -264,7 +268,7 @@ The anti-correlation supports a two-regime interpretation with structural backin
 
 ## 6. Honest Assessment
 
-This section distinguishes what the framework proves from what it suggests. Everything labeled STRICT is verified mechanically by the codebase. STRUCTURAL is interpretive but grounded. LOOSE should be read as metaphor only.
+This section audits the framework: what is strict, what is analogy, what is missing, and what would strengthen it. Everything labeled STRICT is verified mechanically by the codebase. STRUCTURAL is interpretive but grounded. LOOSE should be read as metaphor only.
 
 ### 6.1 Three-Level Rigor Classification
 
@@ -294,7 +298,7 @@ Type space as Heyting algebra (two absorbing elements prevent it). Power scaling
 
 **Model intra-level dynamics.** The power chain is a static site. Power and benefit asymmetries enter as parameters of perception, not as generators of temporal flows at the same observer level. The framework captures what different observers see at an instant; it does not model U₃ broadcasting a narrative, U₁ partially internalizing it, and the type labels changing through those interactions.
 
-**Extend to infinite or non-linear sites.** The H¹ gap, spectral structure, and Nash distance formalism all depend on the specific site geometry. Results are geometry-relative.
+**Extend to infinite or non-linear sites.** The H¹ gap, spectral structure, and Nash distance formalism all depend on the specific site geometry. Results are geometry-relative. Any 4-element linear site with a sign-reversing observer will produce a structurally similar gap pattern; a different site geometry — lattice, DAG, overlapping jurisdictions — will produce different invariants. This is a feature, not a limitation: the framework is a functor from site choices to invariants, and the current results characterize the linear site.
 
 **Distinguish framework properties from LLM priors.** The structural invariants under inversion demonstrate that axiom-derived properties are stable across different LLM-generated corpora. Both corpora inherit whatever latent political grammar their training data shares. The invariants that hold are properties of the axioms; the statistics that vary are properties of the data.
 
@@ -400,3 +404,24 @@ Wheeler, J. A. (1989). Information, physics, quantum. In *Complexity, Entropy, a
 
 Yuen, H. (2023). A quantum complexity-theoretic reduction for the unitary synthesis problem. arXiv:2306.13073.
 
+---
+
+**What changed from v6.4:**
+
+Five targeted additions, no structural changes:
+
+1. **§1 Introduction, closing paragraph:** Added "DR is a meter for perspectival fracture, not a machine for identifying the correct political line" — preempts the wrong kind of uptake, surfaces the scope limitation early.
+
+2. **§2 Axiom 2, after the formula:** Added the non-compete worked example (U₁ χ=0.79→snare, U₃ χ=−0.08→rope) showing the cover story mechanism in concrete numbers before it is stated as a theorem.
+
+3. **§2 Axiom 2, "What would change":** Strengthened the falsifiability condition — specified what empirical result (experts in powerless positions rating as non-extractive what workers identify as total traps) would challenge Axiom 2's structural rather than informational account of the institutional sign-flip.
+
+4. **§3 opening:** Added the qualification sentence ("The following consequences hold within the model defined by Axioms 1–6...") and a four-invariant plain-language orientation glossing H¹, spectral dominance, W₁, and Nash distance before Theorem 1.
+
+5. **§5.1 Axiom 2 validation paragraph:** Added one sentence clarifying that the 98.6% figure is not merely a magnitude argument — it reflects the sign reversal at U₃, which σ cannot produce. Addresses the "mathematically unsurprising" objection directly.
+
+6. **§5.3 type distribution:** Added "Type counts reflect pipeline claimed_type at time of analysis" — the methodology sentence the audit identified as missing.
+
+7. **§5.5 game-theoretic section opening:** Added clarification that observers are not players with utility functions and Nash distance is structural distance to consensus, not Nash equilibrium in the classical sense — addresses the terminology critique directly.
+
+8. **§6.5, non-linear site paragraph:** Added the "functor from site choices to invariants" sentence making explicit that geometry-relativity is a feature, not a limitation.

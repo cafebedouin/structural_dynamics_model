@@ -8,7 +8,7 @@ Two contracts:
   PipelineConstraint  -- per-constraint entry in pipeline_output.json
                          (27 fields emitted by Prolog json_report.pl)
   EnrichedConstraint  -- per-constraint entry in enriched_pipeline.json
-                         (PipelineConstraint + 12 fields from enrich_pipeline_json.py)
+                         (PipelineConstraint + 20 fields from enrich_pipeline_json.py)
 
 Two public validators:
   validate_pipeline_output(data)   -> list[str]   (empty = valid)
@@ -106,7 +106,7 @@ class PipelineConstraint:
 class EnrichedConstraint(PipelineConstraint):
     """Contract for a single per_constraint entry in enriched_pipeline.json.
 
-    Strict superset of PipelineConstraint with 12 additional fields
+    Strict superset of PipelineConstraint with 20 additional fields
     computed by enrich_pipeline_json.py.
     """
 
@@ -132,6 +132,16 @@ class EnrichedConstraint(PipelineConstraint):
     # --- Abductive (always set, defaults to []) ---
     abductive_triggers: list = field(default_factory=list)
 
+    # --- Game theory (None when constraint absent from game-theory JSONs) ---
+    nash_distance_structural: int | None = None       # 0-3, structural Nash distance
+    nash_stable_structural: bool | None = None        # Nash stability flag
+    vulnerable_positions: list | None = None           # e.g. ["institutional"]
+    strategic_stability: str | None = None             # vulnerable|latent_vulnerable|resistant|not_applicable
+    h1_persistence_max: float | None = None            # [0, 1] max H1 persistence
+    mixed_equilibrium_quality: str | None = None       # dominant_strategy|no_equilibrium|loose
+    max_deviation: float | None = None                 # max deviation from equilibrium
+    cover_story_type: str | None = None                # no_cover|nash_forced|type_relabeled|fcr_no_structural_effect
+
 
 # ===================================================================
 # Field specification tables (drive the validation engine)
@@ -145,6 +155,9 @@ _PERSPECTIVE_KEYS = {"powerless", "moderate", "institutional", "analytical"}
 
 _CONFIDENCE_BANDS = {"deep", "moderate", "borderline"}
 _TANGLED_BANDS = {"rope_leaning", "genuinely_tangled", "snare_leaning"}
+_STRATEGIC_STABILITY_VALUES = {"vulnerable", "latent_vulnerable", "resistant", "not_applicable"}
+_MIXED_EQ_QUALITY_VALUES = {"dominant_strategy", "no_equilibrium", "loose"}
+_COVER_STORY_TYPES = {"no_cover", "nash_forced", "type_relabeled", "fcr_no_structural_effect"}
 
 PIPELINE_FIELDS = [
     # (field_name, expected_type, nullable)
@@ -211,6 +224,15 @@ ENRICHED_EXTRA_FIELDS = [
     ("tangled_psi",         (int, float), True),
     ("tangled_band",        str,         True),
     ("abductive_triggers",  list,        False),
+    # --- Game theory ---
+    ("nash_distance_structural",  int,          True),
+    ("nash_stable_structural",    bool,         True),
+    ("vulnerable_positions",      list,         True),
+    ("strategic_stability",       str,          True),
+    ("h1_persistence_max",        (int, float), True),
+    ("mixed_equilibrium_quality", str,          True),
+    ("max_deviation",             (int, float), True),
+    ("cover_story_type",          str,          True),
 ]
 
 _PIPELINE_FIELD_NAMES = {f[0] for f in PIPELINE_FIELDS}
@@ -444,6 +466,27 @@ def _check_enriched_structure(entry, cid):
     boundary = entry.get("boundary")
     if boundary is not None and isinstance(boundary, str) and "->" not in boundary:
         errors.append(f"[{cid}] boundary '{boundary}' missing '->' separator")
+
+    # --- Game-theory field value checks ---
+    ss = entry.get("strategic_stability")
+    if ss is not None and isinstance(ss, str) and ss not in _STRATEGIC_STABILITY_VALUES:
+        errors.append(f"[{cid}] strategic_stability '{ss}' not in {sorted(_STRATEGIC_STABILITY_VALUES)}")
+
+    meq = entry.get("mixed_equilibrium_quality")
+    if meq is not None and isinstance(meq, str) and meq not in _MIXED_EQ_QUALITY_VALUES:
+        errors.append(f"[{cid}] mixed_equilibrium_quality '{meq}' not in {sorted(_MIXED_EQ_QUALITY_VALUES)}")
+
+    cst = entry.get("cover_story_type")
+    if cst is not None and isinstance(cst, str) and cst not in _COVER_STORY_TYPES:
+        errors.append(f"[{cid}] cover_story_type '{cst}' not in {sorted(_COVER_STORY_TYPES)}")
+
+    nds = entry.get("nash_distance_structural")
+    if nds is not None and isinstance(nds, int) and not (0 <= nds <= 3):
+        errors.append(f"[{cid}] nash_distance_structural={nds}, expected [0..3]")
+
+    hpm = entry.get("h1_persistence_max")
+    if hpm is not None and isinstance(hpm, (int, float)) and not (0.0 <= hpm <= 1.0):
+        errors.append(f"[{cid}] h1_persistence_max={hpm}, expected [0.0..1.0]")
 
     # Confidence fields must be all-null or all-non-null together
     conf_fields = ["confidence", "rival_type", "rival_prob",

@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
-"""Produce enriched_pipeline.json from pipeline_output.json (v1.1)
+"""Produce enriched_pipeline.json from pipeline_output.json (v1.2)
 
-Reads pipeline_output.json (immutable after Prolog) plus orbit_data.json, computes
-all derived per-constraint fields, and writes the superset to enriched_pipeline.json.
+Reads pipeline_output.json (immutable after Prolog) plus orbit_data.json,
+abductive_data.json, and game_theory_*.json files, computes all derived
+per-constraint fields, and writes the superset to enriched_pipeline.json.
 pipeline_output.json is never modified.
 
 Enriched fields per constraint:
   confidence, rival_type, rival_prob, confidence_margin, confidence_entropy,
-  confidence_band, boundary, raw_rival_prob, coalition_type, tangled_psi, tangled_band
+  confidence_band, boundary, raw_rival_prob, coalition_type, tangled_psi, tangled_band,
+  nash_distance_structural, nash_stable_structural, vulnerable_positions,
+  strategic_stability, h1_persistence_max, mixed_equilibrium_quality,
+  max_deviation, cover_story_type
 
 Usage:
   python3 python/enrich_pipeline_json.py
@@ -29,13 +33,45 @@ from shared.schemas import validate_pipeline_output, validate_enriched_pipeline
 
 ORBIT_JSON = OUTPUT_DIR / "orbit_data.json"
 ABDUCTIVE_JSON = OUTPUT_DIR / "abductive_data.json"
+NASH_JSON = OUTPUT_DIR / "game_theory_nash.json"
+STABILITY_JSON = OUTPUT_DIR / "game_theory_stability.json"
+MIXED_JSON = OUTPUT_DIR / "game_theory_mixed_strategy.json"
+COVER_JSON = OUTPUT_DIR / "game_theory_cover_story.json"
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _safe_load(path, label):
+    """Load a JSON file, returning None on failure."""
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError) as e:
+        print(f"[ENRICH] Warning: Could not load {label}: {e}", file=sys.stderr)
+        return None
+
+
+def _build_lookup(data):
+    """Convert a {per_constraint: [{id, ...}, ...]} structure to {id: entry} dict."""
+    if data is None:
+        return {}
+    lookup = {}
+    for entry in data.get("per_constraint", []):
+        cid = entry.get("id")
+        if cid:
+            lookup[cid] = entry
+    return lookup
 
 
 # ---------------------------------------------------------------------------
 # Enrichment
 # ---------------------------------------------------------------------------
 
-def enrich_entry(entry, orbit_data, abd_data=None):
+def enrich_entry(entry, orbit_data, abd_data=None,
+                 nash_data=None, stability_data=None,
+                 mixed_data=None, cover_data=None):
     """Add all derived fields to a single per_constraint entry."""
     dist = entry.get("maxent_probs")
     raw_dist = entry.get("raw_maxent_probs")
@@ -114,6 +150,32 @@ def enrich_entry(entry, orbit_data, abd_data=None):
         abd_data = {}
     entry["abductive_triggers"] = abd_data.get(cid, [])
 
+    # --- Game-theory fields (from external JSONs) ---
+    if nash_data is None:
+        nash_data = {}
+    if stability_data is None:
+        stability_data = {}
+    if mixed_data is None:
+        mixed_data = {}
+    if cover_data is None:
+        cover_data = {}
+
+    nash_entry = nash_data.get(cid, {})
+    entry["nash_distance_structural"] = nash_entry.get("nash_distance_structural")
+    entry["nash_stable_structural"] = nash_entry.get("nash_stable_structural")
+    entry["vulnerable_positions"] = nash_entry.get("vulnerable_positions")
+
+    stab_entry = stability_data.get(cid, {})
+    entry["strategic_stability"] = stab_entry.get("strategic_stability")
+    entry["h1_persistence_max"] = stab_entry.get("h1_persistence_max")
+
+    mixed_entry = mixed_data.get(cid, {})
+    entry["mixed_equilibrium_quality"] = mixed_entry.get("mixed_equilibrium_quality")
+    entry["max_deviation"] = mixed_entry.get("max_deviation")
+
+    cover_entry = cover_data.get(cid, {})
+    entry["cover_story_type"] = cover_entry.get("cover_story_type")
+
 
 # ---------------------------------------------------------------------------
 # Main
@@ -157,12 +219,20 @@ def main():
     except (FileNotFoundError, json.JSONDecodeError) as e:
         print(f"[ENRICH] Warning: Could not load {ABDUCTIVE_JSON}: {e}", file=sys.stderr)
 
+    # Load game-theory JSONs
+    print("[ENRICH] Loading game-theory data...", file=sys.stderr)
+    nash_data = _build_lookup(_safe_load(NASH_JSON, "game_theory_nash.json"))
+    stability_data = _build_lookup(_safe_load(STABILITY_JSON, "game_theory_stability.json"))
+    mixed_data = _build_lookup(_safe_load(MIXED_JSON, "game_theory_mixed_strategy.json"))
+    cover_data = _build_lookup(_safe_load(COVER_JSON, "game_theory_cover_story.json"))
+
     # Enrich each per_constraint entry
     per_constraint = pipeline.get("per_constraint", [])
     print(f"[ENRICH] Enriching {len(per_constraint)} constraints...", file=sys.stderr)
 
     for entry in per_constraint:
-        enrich_entry(entry, orbit_data, abd_data)
+        enrich_entry(entry, orbit_data, abd_data,
+                     nash_data, stability_data, mixed_data, cover_data)
 
     # Validate enriched output schema
     errors = validate_enriched_pipeline(pipeline)
@@ -186,8 +256,9 @@ def main():
         if band:
             bands[band] = bands.get(band, 0) + 1
     tangled_count = sum(1 for e in per_constraint if e.get("tangled_psi") is not None)
+    gt_count = sum(1 for e in per_constraint if e.get("nash_distance_structural") is not None)
 
-    print(f"[ENRICH] Done. Bands: {bands}, tangled_psi computed: {tangled_count}", file=sys.stderr)
+    print(f"[ENRICH] Done. Bands: {bands}, tangled_psi computed: {tangled_count}, game_theory: {gt_count}", file=sys.stderr)
 
 
 if __name__ == "__main__":
